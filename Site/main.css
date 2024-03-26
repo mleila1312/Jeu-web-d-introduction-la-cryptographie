@@ -1,0 +1,486 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2E5077;
+    color: #4DCCBD;
+    font-size: 1rem;
+    line-height: 22px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    font-size: 6vw;  /* Taille du texte en fonction de la largeur de l'écran */
+    color: #080808;
+    text-align: center; /* Centrer le texte */
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+h1 span {
+    display: block;
+    font-size: 0.5em;
+    line-height: 1.3;
+}
+
+h1 em {
+    font-style: normal;
+    font-weight: 600;
+}
+
+.one h1 {
+    text-align:center; 
+    font-size:5vw; /*50px*/
+    text-transform:uppercase; 
+    color:#4DCCBD; 
+    letter-spacing:1px;
+    font-family:"Playfair Display", serif; 
+    font-weight:400;
+}
+.one h1 span {
+    margin-top: 5px;
+    font-size:15px; 
+    color:#759FBC; 
+    word-spacing:1px; 
+    font-weight:normal; 
+    letter-spacing:2px;
+    text-transform: uppercase; 
+    font-family:"Raleway", sans-serif; 
+    font-weight:500;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.one h1 span:after,.one h1 span:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    height: 5px;
+    background-color:hsl(203, 44%, 32%);
+}
+
+.one h1:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    height: 5px;
+    background-color:hsl(203, 44%, 32%);
+    margin-bottom: 15px;
+}
+
+/* Sous-Titres */
+
+h2 {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: #4DCCBD;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+h2 span {
+    display: block;
+    font-size: 0.5em;
+    line-height: 1.3;
+}
+h2 em {
+    font-style: normal;
+    font-weight: 600;
+}
+
+.two h2 {
+    text-align:center;
+    text-transform:uppercase;
+    font-size:26px; letter-spacing:1px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 16px 0;
+    grid-gap: 22px;
+}
+  
+.two h2:after,.two h2:before {
+    content: " ";
+    display: block;
+    border-bottom: 2px solid #759FBC;
+    background-color:hsl(203, 44%, 32%);
+}
+
+h3 {
+    padding-bottom: 5px;
+}
+
+.source a:link {
+    color :#5ae53f
+}
+.source a:visited{
+    color :#14be7f
+}
+figcaption a:link {
+    color :#5ae53f
+}
+figcaption a:visited{
+    color :#14be7f
+}
+/* Auteurs */
+
+.three h2 {
+    font-size:26px; 
+    font-weight:700;  
+    letter-spacing:1px; 
+    text-transform:uppercase; 
+    width:160px; 
+    text-align:center; 
+    margin:auto; 
+    white-space:nowrap; 
+    padding-bottom:13px;
+}
+
+.three h2:before {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 5px;
+}
+
+.three h2:after {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    position:absolute; 
+    right:0; 
+    bottom:0;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 0.25em;
+}
+
+/*----------*/
+
+/*-----Menu-----*/
+
+a {
+    text-decoration: none;
+    color: #4DCCBD;
+}
+
+nav {
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 3;
+    margin-bottom: 1px;
+    background-color:#213a57
+}
+
+nav ul {
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 250px;
+    z-index: 3;
+}
+
+nav li a {
+    display: block;
+    padding: 18px;
+    transition: transform 0.3s;
+}
+
+nav li:hover a{
+    background-color: hsl(163, 55%, 55%);
+    color: hsl(202, 44%, 32%);
+    transform: scale(1.05);
+}
+
+nav li:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu {
+    border-top: #2e4e75;
+    display: none;
+    position: absolute;
+    background-color: #4DCCBD;
+    width: 250px;
+    z-index: 3;
+}
+
+.sub-menu li {
+    display: block;
+    z-index: 3;
+}
+
+.sub-menu li a {
+    color: #2E5077;
+    z-index: 3;
+    transition: transform 0.3s;
+}
+
+.sub-menu li:hover a {
+    background-color: #EEE5E9;
+    color: hsl(203, 44%, 32%);
+    transform: scale(1);
+    z-index: 4;
+}
+
+section.wrapper {
+    margin-top: 32px;
+}
+
+/*----------*/
+
+.kartoffel {
+    width: 400px;
+    height: 400px;
+    border: solid 5px #4DCCBD;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    top: 200px;
+    left: 50%;
+    transform: translate(-55%,-55%);
+    transition: transform 0.3s;
+    margin: 20px;
+    z-index: 2;
+}
+    
+.kartoffel:hover {
+    width: 400px;
+    height: 400px;
+    border: solid 5px #4DCCBD;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    top: 200px;
+    left: 50%;
+    transform: translate(-55%,-55%) scale(1.05);
+    margin: 20px;
+    z-index: 2;
+}
+
+/*-----Poles-----*/
+
+table, tr, th, td, caption {
+    border: 1px solid #eee;
+    font-family: 'Courier New', Courier, monospace;
+    border-collapse: collapse;
+    padding: 0.5rem;
+}
+
+/*----------*/
+
+/*-----Membres-----*/
+
+.member-box {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #4DCCBD;
+}
+
+.member {
+    min-width: 275px;
+    padding: 15px;
+    background: hsl(203, 44%, 32%);
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.photo-wrapper {
+    vertical-align: top;
+    width: 16%;
+    display: inline-block;
+}
+
+.photo {
+    margin-right: 15px;
+    display: inline-block;
+    background: #FFFFFF;
+    border: 1px solid #A1A0A0;
+    border-radius: 4px;
+    vertical-align: top;
+    max-width: 10px;
+    max-height: 10px;
+}
+
+.infos {
+    display: inline-block;
+    min-width: 200px;
+    width: 33.3%;
+    vertical-align: top;
+    color: #4DCCBD;
+    font-size: 14px;
+    font-family: 'latoregular',Helvetica,Arial,sans-serif;
+}
+
+.name {
+    color: #759FBC;
+    font-family: 'latobold',Helvetica,Arial,sans-serif;
+}
+.fonction{
+    color: #4DCCBD;
+    font-family: 'latoregular',Helvetica,Arial,sans-serif;
+}
+
+.service {
+    font-family: 'latobold',Helvetica,Arial,sans-serif;
+    color: #4DCCBD;
+}
+
+.contact {
+    color: #4DCCBD;
+    float: right;
+    min-width: 300px;
+    vertical-align: top;
+    width: 50%;
+    font-family: 'latoregular',Helvetica,Arial,sans-serif;
+}
+
+.email a {
+    color: #759FBC;
+    font-family: 'latoregular',Helvetica,Arial,sans-serif;
+}
+
+.member .contact .email a::before {
+    color: #4DCCBD;
+    content: "\f0e0";
+    font-family: 'FontAwesome';
+    display: inline-block;
+    margin-right: 0.6em;
+    min-width: 15px;
+    text-align: center;
+}
+
+.member::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/*----------*/
+/*-----Bibliographie-----*/
+
+/*----------*/
+#Article {
+    padding: 70px;
+}
+.code {
+    border-radius: 30px;
+    padding : 20px;
+    background-color: #0c0b19;
+}
+
+.Articlesection {
+    padding: 10px;
+}
+ .boxSection{
+    padding: 20px;
+    background-color: #213a57;
+ }
+
+
+.Articlesubsection {
+    padding: 20px;
+}
+
+.boxSubsection{
+    padding: 25px;
+    background-color: #365c89;
+    border-radius: 30px;
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.twotab {
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.threetab {
+    display: inline-block;
+    margin-left: 120px;
+}
+
+/*-----Couleurs-----*/
+
+section .couleurs {
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    font-size: 3rem;
+    padding: 30px;
+    width: 100%;
+  }
+
+  .bleu {
+    width: 15%;
+    height: 30px;
+    display: inline-block;
+    background-color: #2E5077;
+  }
+
+  .light-blue {
+    width: 15%;
+    height: 30px;
+    display: inline-block;
+    background-color: #759FBC;
+  }
+
+  .vert {
+    width: 15%;
+    height: 30px;
+    display: inline-block;
+    background-color: #4DCCBD;
+  }
+
+  .jaune {
+    width: 15%;
+    height: 30px;
+    display: inline-block;
+    background-color: #FAA916;
+  }
+
+  .blanc {
+    width: 15%;
+    height: 30px;
+    display: inline-block;
+    background-color: #EEE5E9;
+  }
+
+  .gris {
+    width: 15%;
+    height: 30px;
+    display: inline-block;
+    background-color: #465362;
+  }
