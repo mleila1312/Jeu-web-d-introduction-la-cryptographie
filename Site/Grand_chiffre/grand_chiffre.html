@@ -10,20 +10,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="Auteur" content="les bg">
     <meta name="Description" content="jeu crypto">
+    <script src="..\main.js"></script>
 </head>
 
 <body>
 
     <header>
         <center>
-        Projet fait au sein de l'unité d'eneignement Proj104 de Télécom Paris
+        Projet fait au sein de l'unité d'enseignement Proj104 de Télécom Paris
         </center>
     </header>
 
     <main>
         <section id="Titre">
             <div class="one">
-                <h1>Jeu web d'introduction à la cryptographie <span>J'ai perdu</span></h1>
+                <h1>Jeu web d'introduction à la cryptographie
+                    <br>
+                    <br>
+                    <span>J'ai perdu</span>
+                </h1>
             </div>
         </section>
         <nav>
@@ -77,11 +82,14 @@
                         </li>
                     </ul>
                 </li>
+                <li>
+                    <a href="..\A_propos\A_propos.html" title="A_propos">A propos</a>
+                </li>
             </ul>
         </nav>
-        <section id="Titre">
-            <div class="two">
-                <h2>La Grand Chiffre</h2>
+        <section id="Titre" class="two">
+            <div>
+                <h2><a href="#">La Grand Chiffre</a></h2>
             </div>
         </section>
         <section id="Article">
@@ -104,7 +112,7 @@
                 <h3><u>Histoire</u></h3>
                 <center>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Great_Cipher.png" width="350"/>
-                    <figcaption> Grand Chiffre,<a href ="https://fr.wikipedia.org/wiki/Grand_Chiffre">Wikipédia</a> </figcaption>
+                    <figcaption> Grand Chiffre, <a target="_blank" href ="https://fr.wikipedia.org/wiki/Grand_Chiffre">Wikipédia</a> </figcaption>
                 </center>
                 Antoine Rossignol et son fils Bonaventure créèrent alors le Grand Chiffre pour Louis XIV. (exemple au dessus) Ils étaient les seuls à en connaître les détails, donc le Grand Chiffre est tombé en désuétude après leur mort, et il fallu plus de deux siècles aux cryptanalystes du monde entier pour réussir à déchiffrer les documents chiffrés par le Grand Chiffre.  <br>
 
@@ -137,7 +145,7 @@
                 <div class="source">
                     <div class="boxSection">
             <h3><u>Sources</u></h3>
-            <a href = "https://fr.wikipedia.org/wiki/Grand_Chiffre">Wikipédia : Grand Chiffre</a><br>
+            <a target="_blank" href = "https://fr.wikipedia.org/wiki/Grand_Chiffre">Wikipédia : Grand Chiffre</a><br>
             The Code Book, Simon Singh <br>
         </div></div></div></div>
         </section>
@@ -148,9 +156,8 @@
     <footer>
         <address>TELECOM Paris, 19 Pl. Marguerite Perey, 91120 Palaiseau</address>
 
-        <hr>
-
-        <p><a href="#">Back to Top</a></p> 
+        <p id="clock"></p>
+        <br>
     </footer>
 
 </body>

@@ -10,20 +10,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="Auteur" content="les bg">
     <meta name="Description" content="jeu crypto">
+    <script src="..\main.js"></script>
 </head>
 
 <body>
 
     <header>
         <center>
-        Projet fait au sein de l'unité d'eneignement Proj104 de Télécom Paris
+        Projet fait au sein de l'unité d'enseignement Proj104 de Télécom Paris
         </center>
     </header>
 
     <main>
         <section id="Titre">
             <div class="one">
-                <h1>Jeu web d'introduction à la cryptographie <span>J'ai perdu</span></h1>
+                <h1>Jeu web d'introduction à la cryptographie 
+                    <br>
+                    <br>
+                    <span>J'ai perdu</span>
+                </h1>
             </div>
         </section>
         <nav>
@@ -77,11 +82,14 @@
                         </li>
                     </ul>
                 </li>
+                <li>
+                    <a href="..\A_propos\A_propos.html" title="A_propos">A propos</a>
+                </li>
             </ul>
         </nav>
-        <section id="Titre">
-            <div class="two">
-                <h2>Chiffre de Vigenère</h2>
+        <section id="Titre" class="two">
+            <div >
+                <h2><a href="#">Chiffre de Vigenère</a></h2>
             </div>
         </section>
         <section id="Article">
@@ -112,7 +120,7 @@
             <center>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Vigenère_square_shading.svg/langfr-1200px-Vigenère_square_shading.svg.png
                 " width = "50%" height="50%"/>
-                <figcaption>Wikipédia,<a href ="https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher">Vigenère Cipher</a> </figcaption>
+                <figcaption>Wikipédia,<a target="_blank" href ="https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher">Vigenère Cipher</a> </figcaption>
             </center>
 
             Pour utiliser le chiffre de Vigenère, il faut avoir en sa possession : la table de Vigenère (représentée ci-dessus), une phrase à modifier pour lui donner un sens incompréhensible et un mot clé. <br>
@@ -217,10 +225,10 @@
                 <div class="source">
                     <div class="boxSection">
             <h3>Sources</h3>
-            <a href = "https://fr.wikipedia.org/wiki/Chiffre_de_Vigenère">Wikipédia, Chiffre de Vigenère</a><br>
-            <a href = "https://fr.vikidia.org/wiki/Chiffre_de_Vigenère">Vikidia, Chiffre de Vigenère</a><br>
-            <a href = "https://www.bibmath.net/crypto/index.php?action=affiche&quoi=poly/vigenere">Bibmath, Vigenère</a><br>
-            <a href = "https://fr.wikipedia.org/wiki/Cryptanalyse_du_chiffre_de_Vigenère">Wikipédia, cryptanalyse du Chiffre de Vigenère</a><br>
+            <a target="_blank" href = "https://fr.wikipedia.org/wiki/Chiffre_de_Vigenère">Wikipédia, Chiffre de Vigenère</a><br>
+            <a target="_blank" href = "https://fr.vikidia.org/wiki/Chiffre_de_Vigenère">Vikidia, Chiffre de Vigenère</a><br>
+            <a target="_blank" href = "https://www.bibmath.net/crypto/index.php?action=affiche&quoi=poly/vigenere">Bibmath, Vigenère</a><br>
+            <a target="_blank" href = "https://fr.wikipedia.org/wiki/Cryptanalyse_du_chiffre_de_Vigenère">Wikipédia, cryptanalyse du Chiffre de Vigenère</a><br>
         </div></div></div>
         </section>
         
@@ -230,9 +238,8 @@
     <footer>
         <address>TELECOM Paris, 19 Pl. Marguerite Perey, 91120 Palaiseau</address>
 
-        <hr>
-
-        <p><a href="#">Back to Top</a></p> 
+        <p id="clock"></p>
+        <br>
     </footer>
 
 </body>

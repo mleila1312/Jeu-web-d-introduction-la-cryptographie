@@ -1,5 +1,8 @@
+# Planning
+
 ## Phase 1 [15/02 au 28/02] : Bibliographie
 Réalisation des bibliographies durant les vacances.
+
 Bibliographies à réaliser : 
 + Chiffre de Vigenère
 + Fonctionnement des clés publiques
@@ -32,7 +35,7 @@ Les personnes construisant le site devront :
 Les personnes s'occupant  de trouver les scénarios de chaque phase de jeu devront :
 + Faire des schémas des pièces, des objets éventuellement(si ce n'est pas évident) avec lesquels le joueur sera en contact
 + Scénario de la phase : éléments clés, ce qui permet de passer d'une étape à une autre
-+ Décrire ameplay de la phase
++ Décrire gameplay de la phase
 + Expliquer en quoi c'est intéressant pédagogiquement de faire cette phase ainsi
 + Faire éventuellement un mode difficile
 
@@ -50,10 +53,13 @@ La base du site devra être fini, les premiers jeux commenceront à être implé
 équipe 2 : Nathan, Leïla  
 équipe 3 : Sarah, Jennifer  
 
-[20/03 -> 25/03] équipe 1 et 2 travaillent sur deux phases distinctes qu'ils choisiront, équipe 3 travaille sur le site  
-[26/03 -> 01/04] équipe 3 et 2 travaillent sur deux phases distinctes qu'ils choisiront, équipe 1 travaille sur le site  
+[20/03 -> 25/03] équipe 1 et 2 travaillent sur deux phases distinctes qu'ils choisiront, équipe 3 travaille sur le site.
+[26/03 -> 01/04] équipe 3 et 2 travaillent sur deux phases distinctes qu'ils choisiront, équipe 1 travaille sur le site.   
+**respo github : Leïla**   
+
 Réunion le 9 avril à 10h en salle 4C38  
-[02/04 -> 08/04] équipe 3 et 1 travaillent sur deux phases distinctes qu'ils choisiront, équipe 2 travaille sur le site  
+[02/04 -> 08/04] équipe 3 et 1 travaillent sur deux phases distinctes qu'ils choisiront, équipe 2 travaille sur le site.  
+**respo github : Vivien**
  
 ## Phase 4 [09/04 au 22/05] : Implémentation des différents phases de jeux 
 
@@ -67,13 +73,18 @@ Travail par deux d'implémentations de phases du jeu.
 équipe 3 :  Lyla, Nathan  
 
 [09/04 -> 24/04] Décision sur la manière d'implémenter, familiarisation avec le langage qui sera utilisé en Web  
+**respo github : Lyla, puis Jennifer**  
 [24/04 -> 08/05] Travail en binôme sur différentes implémentations  
+**respo github : Nathan, puis Sarah**
 
 équipe 1 : Leïla, Vivien  
 équipe 2 : Nathan, Jennifer  
 équipe 3 : Vivien, Sarah  
 [08/05 -> 22/05] Travail en binôme sur différentes implémentations  
+
+**respo github : Leïla puis Vivien**  
 Réunion le 22 mai à 15h, salle à déterminer  
+
 ## Phase 5 [22/05 au 24/06] : Design et animations
 Pour les design :
 + un sous dossier dans le git pour chaque phase devra être créé
@@ -84,21 +95,24 @@ Nous ferons en priorité les design, puis si le temps le permet, des animations.
 équipe 3 : Leïla, Sarah  
 
 [22/05 -> 05/06] Travail en duo sur des design de certains niveaux.  
+**Respo github :  Lyla puis Jennifer**
 
 équipe 1 : Leïla, Vivien, Jennifer  
 équipe 2 : Lyla, Sarah, Nathan  
 [05/06 -> 12/06] Travail en trio sur des design de certains niveaux.  
-
+**respo github : Nathan**
 
 équipe 1 : Leïla, Sarah, Lyla  
 équipe 2 : Vivien, Jennifer, Nathan  
 [12/06  -> 19/06] Travail en trio sur des design de certains niveaux.  
+**respo github : Sarah**  
 
 équipe 1 : Jennifer, Vivien, Lyla  
 équipe 2 : Leïla, Sarah, Nathan  
 [19/06-> 24/06] Travail en trio sur des design de certains niveaux.  
-
+**respo github : Leïla**  
 
 ## Dernière phase [24/06 au 28/06] : Débuggage
 Réunion le 24 juin à 10h, salle à déterminer  
 débuggage  
+**respo github : Vivien, Lyla, Jennifer, Nathan et enfin Sarah (1 par jour, à voir en fonction des commits sur gitlab)**

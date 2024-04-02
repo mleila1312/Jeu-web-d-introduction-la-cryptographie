@@ -23,7 +23,6 @@ Elaboration du planning, rédaction et choix concernant le scénario global (pre
 
 
 # Entre le 28/02/2024 et le 20/03/2024
-
 - 01/03 **Nathan**  : création d'une base du squelette du site à partir du site réalisé dans le cadre d'ARTEFACT. Remarque : certains éléments inutiles dans le CSS doivent être supprimés.
 - 02/03 **Leïla** : dépôt d'illustrations explicitant les étapes de l'introduction et de la fin du jeu
 - 06/03 **Leïla** : dépôt de 3 scénarios possibles un peu détaillés pour la phase de jeu sur le Grand Chiffre
@@ -52,3 +51,20 @@ Elaboration du planning, rédaction et choix concernant le scénario global (pre
 - 26/03 :
     + **Tout le monde** : récapitulatif écrit de l'avancement global du projet avec annonce des objectifs pour les prochaines semaines puis envoie du document à l'encadrant.
     + **Sarah** : Fusion sur le site des bibliographies de la méthode de César et de la cryptanalyse en une seule fiche.
+    + **Nathan** et **Leïla** : ajouts d'énigmes pour énigma (mot croisé, petite phase, code pour ouvrir une porte)
+    + **Vivien** : Recherche de documentation pour le jeu en JS/HTML
+    + **Lyla** : Amélioration de la page de présentation des créateurs sur le site et création page "A propos" distincte de l'accueil; contribution à l'ergonomie du site
++ 28/03 : 
+    - **Leïla** et **Nathan** : changement de place de la phase du labyrinthe de l'échange de clé vers Enigma
+    - **Leïla** : ajout de propositions d'énigmes pour César, création d'un fichier listant ce qu'il reste à faire avant la fin de la phase en cours
+- 31/03
+	- **Nathan** : Ajout d'énigmes pour la Scytale et révision d'un bout du scénario
+    - **Sarah** : Révision du scénario César / Recherche d'énigmes sur un livre emprunté au CRDN.
+- 01/04
+    - **Lyla** : pimp de la page web autour de la barre de navigation et d'une image de fond
+- Séance du 02/04
+    + **Sarah** : ajout et recherches d'énigmes (test de jeux pour avoir de l'inspiration) / correction de typo sur certains fichiers du site.
+    + **Lyla** : commentaire précis du CSS pour faciliter la compréhension du fichier par tous
+    + **Leïla** et **Nathan** : réalisation des pages web des bibliographies pour la cryptographie à clé publique et les certificats. Recherche sur comment incorporer le jeu dans la page web, deux pistes : soit jeu unity que l'on incorpore dans la page web, soit un jeu js.
+    + **Vivien** : énigmes pour la cryptographie asymétrique
+    + **Tous** : décision sur le lien entre le job du stagiaire et la cryptographie.

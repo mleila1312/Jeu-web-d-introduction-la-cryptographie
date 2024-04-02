@@ -1,4 +1,17 @@
-Le joueur est téléporté à Londres, où il fait la rencontre d'Alan Turing. Après avoir discuté, Turing l'invite à le rejoindre à Bletchley Park pour tenter de casser Enigma. 
+# Scène 1
+Le joueur est téléporté à Londres, et il se réveille sur une table dans un gymnase devant un mot croisé. Il trouve sur son front un post-it disant "T'as intérêt à te faire recruter, si tu l'es, pour sortir de cette époque, tu devra récupérer et décrypter un message que tu recevras le 25 mars à 3h45 du matin. Tu auras besoin des rotors 15, 21, 63."  
+Le joueur devra alors résoudre le mot croisé, et il sera recruté. Il sera ensuite amené devant un grand bâtiment, les personnes l'accompagnant lui diront de trouver son chemin, que ce serait le dernier test pour voir si il était fait pour travailler ici et si on pouvait lui faire confiance.
+
+# Scène 2
+Phase de labyrinthe pour rentrer dans l'entrepôt. Il peut à chaque fois aller tout droit, à gauche ou a droite 
+
+## Principe du labyrinthe 
+Le joueur arrivera à des croisements. Il se dira "encore une étape...". Devant chaque direction possible, se trouvera une icône (ex : lampe, coffre aux trésors, etc). Au début, il devra suivre les icônes montrant un plan. Une fois arriver au bout, il se trouvera dans une salle vide, avec un papier au sol, indiquant un ordre d'icônes à suivre pour arriver à la base. Il devra ensuite suivre ces icônes dans l'ordre pour pouvoir enfin pénétrer dans la base.  
+Petit piège : si il suit les icônes coffre au trésors trois fois, il arrivera dans une salle au trésor, et lorsqu'il cliquera pour récupérer l'argent, le trésor se révèlera être un monstre, qui va le tunnel sur le fait qu'il est choisi l'argent plutôt que sa mission, qu'il devrait avoir honte, puis va le manger, telle la société mange le travailleur. Il se retrouvera téléporté au début du labyrinthe ayant eu l'impression d'avoir fait un mauvais rêve et étant soudainement très motivé pour faire partie de l'équipe sans contrepartie monétaire incroyable.
+
+# Scène 3
+Il fait la rencontre d'Alan Turing. Après avoir discuté, Turing l'invite à le rejoindre à Bletchley Park pour tenter de casser Enigma. 
+Lorsqu'il arrive, Turing lui dit "voilà les bombes", le joueur commence à s'enfuir, et Turing rigole. "non, pas des bombes bombes, ces bombes sont des ordinateurs permettant de déchiffrer une ancienne version d'Enigma, moins complexe."  
 
 Devant le joueur se trouve une machine Enigma, 5 rotors identifiables et 10 câbles. 
 
@@ -49,4 +62,5 @@ Le joueur appuie sur A, H s'illumine.
 "Tu avais raison ! Et maintenant, à chaque fois que tu appuies sur une touche, les rotors font changer la configuration, ce qui fait d'Enigma une machine très complexe. Avec mes collègues, nous essayons de trouver un moyen de décoder les messages des Allemands mais nous n'y arrivons pas, as-tu-une idée ?"
 
 Le joueur lui donne l'objet venu de sa machine : un rapport de météo allemand.
-Et ensuite Turing explique des trucs sur la régularité dans la cryptographie, puis le joueur l'aide à construire la vraie bombe (éventuellement avant Turing a parlé des bombes polonaises)
+Et ensuite Turing explique des trucs sur la régularité dans la cryptographie, puis le joueur l'aide à construire la vraie bombe (éventuellement avant Turing a parlé des bombes polonaises)  
+Le soir venu, sachant que les chercheurs d'un salle vont dormir à 3h30, le joueur décide d'aller récupérer son message. Cependant, pour cela, il doit rester discret, car recevoir un message dans la nuit est suspect. Il aura accès à un plan des lieux, et pourra se cacher derrière les murs et vérifier si dans les couloirs qu'il veut emprunter il n'y a personne. Il aura x minutes pour se rendre dans la salle, si il ne se rend pas dans la salle à temps, il sera attrapé par quelqu'un qui le tunnelera sur l'importance du sommeil pour bien travailler. S'il se fait attraper et va dans un couloir où il y a quelqu'un qui surveille, il se fera également tunnel sur l'amour de la couronne qu'il doit protéger. Une fois arriver dans la salle, il recevra le message et Enigma se lancera, il devra trouver dans la salle les trois rotors nécessaires pour décrypter, puis il aura juste à placer les bons câbles pour finir de décrypter. Le message contiendra un code, à 10 chiffres qui permettra d'ouvrir une porte que le joueur aura remarqué depuis son arrivée (on rajoutera des petites pensées dès que la porte sera de son champs de vision pour que le joueur le remarque bien). Derrière la porte sera une salle vide, contenant seulement une maquette d'un sous-marin. Le joueur la prendra dans ses mains, et sera alors téléporté à l'époque suivante.

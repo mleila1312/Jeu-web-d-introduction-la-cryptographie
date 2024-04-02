@@ -80,16 +80,8 @@ Sinon "si tu veux plus de sauce, dis moi yC"
 
 Le joueur en déduit les coordonnées de la base (comme c'est un espion il n'en avait pas connaissances contrairement aux allemands). Il peut se diriger vers la base dans une salle avec une croix directionnelle + affichage des co (éventuellement un radar)
 
-# Scène 2
-Le joueur est arrivé sur la base militaire en pleine mer. Il doit à présent réussir à obtenir un objet qui lui permet de récupérer le carnet de clés. Trouver un chemin en regardant des indices sur la vue. S'il se trompe il est démasqué. Phase de labyrinthe pour rentrer dans la base. Il peut à chaque fois aller tout droit, à gauche ou a droite 
-
-## Principe du labyrinthe 
-Le joueur arrivera à des croisements. Il se dira "encore une étape...". Devant chaque direction possible, se trouvera une icône (ex : lampe, coffre aux trésors, etc). Au début, il devra suivre les icônes montrant un plan. Une fois arriver au bout, il se trouvera dans une salle vide, avec un papier au sol, indiquant un ordre d'icônes à suivre pour arriver à la base. Il devra ensuite suivre ces icônes dans l'ordre pour pouvoir enfin pénétrer dans la base.  
-Petit piège : si il suit les icônes coffre au trésors trois fois, il arrivera dans une salle au trésor, et lorsqu'il cliquera pour récupérer l'argent, le trésor se révèlera être un monstre, qui va le tunnel sur le fait qu'il est choisi l'argent plutôt que sa mission, qu'il devrait avoir honte, puis va le manger, telle la société mange le travailleur. Il se retrouvera téléporté au début du labyrinthe ayant eu l'impression d'avoir fait un mauvais rêve et étant soudainement très motivé pour faire sa mission.
-
-
 # Scène 3
-
+Une fois arrivé à la base, il est acceuilli par un général lui disant qu'il est entard, et que c'est l'heure de la pause, mais qu'il peut aller voir sa salle de travail, qu'il lui indique.
 Il arrive dans une salle avec ?? machines Enigma. Au moment où il rentre une alarme sonne et tous les allemands vont manger. Il est seul dans la pièce et doit résoudre des trucs :
 Le nouveau carnet contenant les clés pour la marine allemande est prêt à être envoyé, il est placé dans une boite fermée avec un code au milieu de la pièce.  
 

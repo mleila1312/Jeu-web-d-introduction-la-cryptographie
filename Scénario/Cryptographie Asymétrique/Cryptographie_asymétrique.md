@@ -1,6 +1,6 @@
 # Scénario de la cryptographie asymétrique
 
-Nous voilà alors en 2002. Nous sommes presque arrivés, c’est la dernière étape : on a atteint une méthode qui propose un niveau de sécurité qui n’est pas crackable par des ordinateurs classiques.
+Nous voilà alors en 2002. On a atteint une méthode qui propose un niveau de sécurité qui n’est pas crackable par des ordinateurs classiques.
 
 Le joueur se trouve dans un petit bureau. En regardant à la fenêtre, il se rend compte qu’il est au MIT. Il cherche, comme à son habitude, dans ses poches ; puis trouve dans sa celle-ci un petit message. Il y lit l’inscription suivante :
 « Trouve Ron Rivest. Il est professeur ici et pourra t’aiguiller. Voici le message : »
@@ -10,8 +10,13 @@ Il retourne le post-it et y voit ceci :
 Et encore un nombre énorme.
 
 Bien embêté, il continue de chercher dans ses poches et trouve un deuxième post-it, avec une petite feuille vierge et un stylo.
-« écris sur ce papier le lieux et la date où tu veux rencontrer M. Rivest, puis pose le dans le coffre-fort au fond de la salle et ferme le coffre. Il t’y retrouvera »
-Le joueur écrit donc l’adresse du café qu’il voit à la fenêtre, pour le soir-même. Il pose le message dans le coffre ouvert, puis cherche dans ses poches une clé pour le fermer. Introuvable. Il claque alors la porte puis se rend compte que le coffre s’est fermé tout seul : il n’y avait pas besoin de clé. Alors qu’il sort de la salle, il lit dessus : « Dr. Ron Rivest », et commence à comprendre.
+« écris sur ce papier le lieux et la date où tu veux rencontrer M. Rivest, puis pose le dans le coffre-fort au fond de la salle et ferme le coffre. Il t’y retrouvera ».    
+
+Le joueur est dans le bureau. À la fenêtre, on aperçoit un restaurant. On peut cliquer sur la fenêtre pour voir le nom du restaurant (le Sulmona), et l'heure du premier service. On remplit ensuite le papier en choisissant parmi une liste de lieux qui ne se trouvent pas au MIT, et on choisit l'heure du premier service.   
+
+Dans le bureau, il y des objets inutiles, comme : une trousse, un ordinateur éteint, un papier vierge, un porte-manteau. Et, sous un drap, on distingue la forme du coffre-fort. On interagit avec le coffre-fort pour enlever le drap et pouvoir déposer le papier sur lequel on a écrit.  
+
+  Le joueur écrit donc l’adresse du café qu’il voit à la fenêtre, pour le soir-même. Il pose le message dans le coffre ouvert, puis cherche dans ses poches une clé pour le fermer. Introuvable. Il claque alors la porte puis se rend compte que le coffre s’est fermé tout seul : il n’y avait pas besoin de clé. Alors qu’il sort de la salle, il lit dessus : « Dr. Ron Rivest », et commence à comprendre.
 
 Le soir, le professeur ne manque pas l’heure d’une minute et arrive au café.
 « J’ai eu votre message. Et vous savez bien que je suis Ron Rivest, car personne d’autre n’aurait pu ouvrir ce coffre ! ». 

@@ -22,5 +22,5 @@ TO-DO :
 TO-DO :
 + créer un code documenté qui gérera les déplacement du personnage
 + le code devra gérer la prise d'objet
-+ le code devra gérer l'intéraction avec certaines machines qui devront être présentent lors de la phase de jeu à implémenter
++ le code devra gérer l'intraction avec certaines machines qui devront être présentent lors de la phase de jeu à implémenter  
 

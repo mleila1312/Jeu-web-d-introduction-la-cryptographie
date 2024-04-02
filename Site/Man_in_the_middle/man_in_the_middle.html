@@ -10,20 +10,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="Auteur" content="les bg">
     <meta name="Description" content="jeu crypto">
+    <script src="..\main.js"></script>
 </head>
 
 <body>
 
     <header>
         <center>
-        Projet fait au sein de l'unité d'eneignement Proj104 de Télécom Paris
+        Projet fait au sein de l'unité d'enseignement Proj104 de Télécom Paris
         </center>
     </header>
 
     <main>
         <section id="Titre">
             <div class="one">
-                <h1>Jeu web d'introduction à la cryptographie <span>J'ai perdu</span></h1>
+                <h1>Jeu web d'introduction à la cryptographie
+                    <br>
+                    <br>
+                    <span>J'ai perdu</span>
+                </h1>
             </div>
         </section>
         <nav>
@@ -77,11 +82,14 @@
                         </li>
                     </ul>
                 </li>
+                <li>
+                    <a href="..\A_propos\A_propos.html" title="A_propos">A propos</a>
+                </li>
             </ul>
         </nav>
-        <section id="Titre">
-            <div class="two">
-                <h2>Man in the middle (MITM) ou Attaque de l'homme au milieu</h2>
+        <section id="Titre" class="two">
+            <div>
+                <h2><a href="#">Man in the middle (MITM) ou Attaque de l'homme au milieu</a></h2>
             </div>
         </section>
         <section id="Article">
@@ -101,7 +109,7 @@
                 <h3><u>Exemple</u></h3>
                 <center>
                     <img src="https://www.pandasecurity.com/fr/mediacenter/src/uploads/2022/04/man-in-the-middle-attack-FR_02-Phases-of-man-in-middle-attack.png" height="50%" width ="50%"/>
-                    <figcaption> Schéma MITM,<a href ="https://www.pandasecurity.com/en/mediacenter/man-in-the-middle-attack/">Panda</a> </figcaption>
+                    <figcaption> Schéma MITM,<a target="_blank" href ="https://www.pandasecurity.com/en/mediacenter/man-in-the-middle-attack/">Panda</a> </figcaption>
                     </center>
 
                     Supposons qu'Alice souhaite communiquer avec Bob. Pendant ce temps, Mallory souhaite intercepter la conversation pour écouter (violant la confidentialité) avec la possibilité de transmettre un faux message à Bob sous l'apparence d'Alice (violant la non-répudiation). Mallory effectuerait une attaque de l'homme du milieu comme décrit dans la séquence d'événements suivante.
@@ -141,9 +149,8 @@
     <footer>
         <address>TELECOM Paris, 19 Pl. Marguerite Perey, 91120 Palaiseau</address>
 
-        <hr>
-
-        <p><a href="#">Back to Top</a></p> 
+        <p id="clock"></p>
+        <br>
     </footer>
 
 </body>

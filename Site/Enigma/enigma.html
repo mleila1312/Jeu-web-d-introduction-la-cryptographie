@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<<head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jeu crypto</title>
@@ -10,20 +10,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="Auteur" content="les bg">
     <meta name="Description" content="jeu crypto">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+    <script src="..\main.js"></script>
 </head>
 
 <body>
 
     <header>
         <center>
-        Projet fait au sein de l'unité d'eneignement Proj104 de Télécom Paris
+        Projet fait au sein de l'unité d'enseignement Proj104 de Télécom Paris
         </center>
     </header>
 
     <main>
         <section id="Titre">
             <div class="one">
-                <h1>Jeu web d'introduction à la cryptographie <span>J'ai perdu</span></h1>
+                <h1>Jeu web d'introduction à la cryptographie
+                    <br>
+                    <br>
+                    <span>J'ai perdu</span>
+                </h1>
             </div>
         </section>
         <nav>
@@ -77,11 +83,14 @@
                         </li>
                     </ul>
                 </li>
+                <li>
+                    <a href="..\A_propos\A_propos.html" title="A_propos">A propos</a>
+                </li>
             </ul>
         </nav>
-        <section id="Titre">
-            <div class="two">
-                <h2>La machine Enigma</h2>
+        <section id="Titre" class="two">
+            <div>
+                <h2><a href="#">La machine Enigma</a></h2>
             </div>
         </section>
         <section id="Article">
@@ -91,7 +100,7 @@
             <h3><u>Comment ça marche ?</u></h3>
             <center>
             <img src ="https://upload.wikimedia.org/wikipedia/commons/b/bd/Enigma_%28crittografia%29_-_Museo_scienza_e_tecnologia_Milano.jpg" width = "20%" height="20%">
-            <figcaption> Machine Enigma,<a href ="https://fr.wikipedia.org/wiki/Enigma_(machine)">Wikipédia</a> </figcaption>
+            <figcaption> Machine Enigma, <a target="_blank" href ="https://fr.wikipedia.org/wiki/Enigma_(machine)">Wikipédia</a> </figcaption>
             </center>
             La machine Enigma est composée de 3 éléments principaux connectés par des fils : un clavier pour entrer chacun des messages, un mécanisme d'encryptage qui crypte chaque lettre entrée/ chaque message entré, et un tableau indiquant par une lumière en quelle lettre, chaque lettre entrée a été encryptée, ou décryptée.  <br>       
 
@@ -103,7 +112,7 @@
             <center>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Enigma_rotor_exploded_view.png/252px-Enigma_rotor_exploded_view.png
                 " width = "20%" height="20%"/>
-                <figcaption> Schéma d'un rotor,<a href ="https://fr.wikipedia.org/wiki/Enigma_(machine)">Wikipédia</a> </figcaption>
+                <figcaption> Schéma d'un rotor, <a target="_blank" href ="https://fr.wikipedia.org/wiki/Enigma_(machine)">Wikipédia</a> </figcaption>
             </center>
             Considérons une machine composée d'un clavier, d'un rotor pour crypter chaque lettre, et d'un tableau d'affichage.  <br>
             Le rotor permet de faire passer le courant venant des lettres sur le clavier aux lettres sur le tableau d'affichage. Chaque fil relie deux lettres.  <br>
@@ -118,7 +127,7 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Enigma-rotor-stack-cropped.jpg/300px-Enigma-rotor-stack-cropped.jpg
                 " width = "22%" height="22%"/>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Enigma_rotor_set.png/300px-Enigma_rotor_set.png" width = "25%" height="25%"/>
-                <figcaption> Image et schéma des 3 rotors,<a href ="https://fr.wikipedia.org/wiki/Enigma_(machine)">Wikipédia</a> </figcaption>
+                <figcaption> Image et schéma des 3 rotors, <a target="_blank" href ="https://fr.wikipedia.org/wiki/Enigma_(machine)">Wikipédia</a> </figcaption>
                 </center>
                 Dans la machine Enigma, il y a 3 rotors. Ils fonctionnent de la même manière sur le principe, mais effectuent des rotations que lorsque le rotor précédent aura effectué une rotation complète. Ainsi, le second rotor n'effectuera une rotation de 1/26 que lorsque le premier rotor aura effectué 26 rotations de 1/26. Le 3ème rotor effectuera une rotation que lorsque que le deuxième rotor aura effectué 26 rotations de 1/26, c'est-à-dire que lorsque le premier rotor aura effectué 26 x 26 rotations de 1/26.
                 </div>
@@ -129,7 +138,7 @@
             <h3>Le fonctionnement du réflecteur</h3>
             <center>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Enigma-action-fr.svg/396px-Enigma-action-fr.svg.png" width = "20%" height="20%"/>
-                <figcaption> Schéma représentant le chiffrement de deux lettre A consécutives,<a href ="https://fr.wikipedia.org/wiki/Enigma_(machine)">Wikipédia</a> </figcaption>
+                <figcaption> Schéma représentant le chiffrement de deux lettre A consécutives, <a target="_blank" href ="https://fr.wikipedia.org/wiki/Enigma_(machine)">Wikipédia</a> </figcaption>
                 </center>
                 Le réflecteur n'effectue aucune rotation, cependant, il reçoit les encryptages des lettres entrées à la sortie des rotors, et renvoie la lettre encryptée à travers les 3 rotors, dans un chemin différent. Le réflecteur n'est pas utile pour encrypter les messages, il est cependant nécessaire pour les décrypter. L'utilisateur voulant déchiffrer un message devra avoir les rotors dans les mêmes positions que celui qui a encrypté le message, et ainsi, en tapant simplement dans la machine le message encrypté, il obtiendra le message décrypté.
                 </div>
@@ -191,7 +200,7 @@
                 Pour décrypter des messages, Rejewski s'intéressa aux répétitions, en effet, les répétitions sont les ennemies de la sécurité! <br>
                 <center>
                     <img src="https://www.cryptomuseum.com/crypto/bombe/img/bomba_3_small.jpg" width = "20%" height="20%"/>
-                    <figcaption> Bombe de Rejewski,<a href ="https://www.cryptomuseum.com/crypto/bombe/img/bomba_3_small.jpg" >Cryptomuseum</a> </figcaption>
+                    <figcaption> Bombe de Rejewski, <a target="_blank" href ="https://www.cryptomuseum.com/crypto/bombe/img/bomba_3_small.jpg" >Cryptomuseum</a> </figcaption>
                 </center> 
                 Il s'interessa donc aux répétitions des clés lors des débuts de conversations. Avec assez de clés, il pouvait déduire des relations entre les lettres et trouver des tables de correspondance, bien qu'il ne connaisse pas du tout la clé du jour! Il pu même trouver une astuce pour ne pase se soucier des câblages entre diverses lettres pour pouvoir estimer la clé du jour(pour plus de précisions, page 174 du The Code Book). <br> 
 
@@ -215,7 +224,7 @@
                 En 1939, Alan Turing fut recruté pour travailler à Bletchey Park. Turing s'est concentré sur le fait qu'il était possible que les allemand ne demandent plus à leurs troupes de répéter deux fois la clé, si ils se rendaient compte que cela permettaient de craquer leur code, et qu'ils ne tarderaient pas à le remarquer. Il s'est alors interessé à la grande quantité de messages déjà décryptés, et s'est rendu compte que leur construction était assez rigide. Par exemple, tous les jour, à environ 6h, un rapport météo était envoyé, et donc contenait presque toujours le mot "wetter", soit en français "météo".  <br>
                 <center>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Wartime_picture_of_a_Bletchley_Park_Bombe.jpg/330px-Wartime_picture_of_a_Bletchley_Park_Bombe.jpg" width = "20%" height="20%"/>
-                    <figcaption> Machine de Turing,<a href ="https://en.wikipedia.org/wiki/Bombe">Wikipédia</a> </figcaption>
+                    <figcaption> Machine de Turing, <a target="_blank" href ="https://en.wikipedia.org/wiki/Bombe">Wikipédia</a> </figcaption>
                 </center>
                 Il voulut alors construire une machine composée de plusieurs machines Enigma, fonctionnant en parallèle, essayant de faire correspondre, à partir d'un mot crypté, le mot décrypté qui devrait correspondre. Les résultats de chaque machine seraient  communiqués à la suivante. Sa machine lui permettait également de s'affranchir des échanges de lettres. Pour construire sa machine, il avait besoin de 60 groupes de 3 machines Enigma fonctionnant en parallèle, un groupe pour chaque possibilité d'ordre des rotors. Turing finalisa le design de sa machine en 1940, et Bletchley pu lui trouver les fonds nécessaires à sa construction.  <br>
 
@@ -230,9 +239,9 @@
                 <div class="source">
                     <div class="boxSection">
             <h3><u>Sources</u></h3>
-            <a href = "https://fr.wikipedia.org/wiki/Enigma_(machine)">Wikipédia : Enigma(machine)</a><br>
+            <a target="_blank" href = "https://fr.wikipedia.org/wiki/Enigma_(machine)">Wikipédia : Enigma(machine)</a><br>
             The Code Book, Simon Singh (pages 146 à 211)  <br>
-            <a href = "https://www.codesandciphers.org.uk/enigma/steckercount.htm">Nombre de câblages possibles</a><br>
+            <a target="_blank" href = "https://www.codesandciphers.org.uk/enigma/steckercount.htm">Nombre de câblages possibles</a><br>
         </div></div></div>
         </section>
         
@@ -242,9 +251,8 @@
     <footer>
         <address>TELECOM Paris, 19 Pl. Marguerite Perey, 91120 Palaiseau</address>
 
-        <hr>
-
-        <p><a href="#">Back to Top</a></p> 
+        <p id="clock"></p>
+        <br>
     </footer>
 
 </body>

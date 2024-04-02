@@ -10,20 +10,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="Auteur" content="les bg">
     <meta name="Description" content="jeu crypto">
+    <script src="..\main.js"></script>
 </head>
 
 <body>
 
     <header>
         <center>
-        Projet fait au sein de l'unité d'eneignement Proj104 de Télécom Paris
+        Projet fait au sein de l'unité d'enseignement Proj104 de Télécom Paris
         </center>
     </header>
 
     <main>
         <section id="Titre">
             <div class="one">
-                <h1>Jeu web d'introduction à la cryptographie <span>J'ai perdu</span></h1>
+                <h1>Jeu web d'introduction à la cryptographie 
+                    <br>
+                    <br>
+                    <span>J'ai perdu</span>
+                </h1>
             </div>
         </section>
         <nav>
@@ -77,11 +82,14 @@
                         </li>
                     </ul>
                 </li>
+                <li>
+                    <a href="..\A_propos\A_propos.html" title="A_propos">A propos</a>
+                </li>
             </ul>
         </nav>
-        <section id="Titre">
-            <div class="two">
-                <h2>Scytale</h2>
+        <section id="Titre" class="two">
+            <div>
+                <h2><a href="#">Scytale</a></h2>
             </div>
         </section>
         <section id="Article">
@@ -93,7 +101,7 @@
             <center>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Skytale.png
                 " width = "50%" height="50%"/>
-                <figcaption>Wikipédia : <a href ="https://fr.wikipedia.org/wiki/Scytale">La Scytale</a> </figcaption>
+                <figcaption>Wikipédia : <a target="_blank" href ="https://fr.wikipedia.org/wiki/Scytale">La Scytale</a> </figcaption>
             </center>
             </div>
             </div>
@@ -205,8 +213,8 @@
                 <div class="source">
                     <div class="boxSection">
             <h3>Sources</h3>
-            <a href = "https://fr.wikipedia.org/wiki/Scytale">Wikipédia, La Scytale</a><br>
-            <a href = "https://www.iparcours.fr/ouvrages/medias/Complements/correctionPDF/Cahier52019/corpdfcahier52019a1p124.pdf">IParcours, Fiche 2 : utiliser des chiffrements</a><br>
+            <a target="_blank" href = "https://fr.wikipedia.org/wiki/Scytale">Wikipédia, La Scytale</a><br>
+            <a target="_blank" href = "https://www.iparcours.fr/ouvrages/medias/Complements/correctionPDF/Cahier52019/corpdfcahier52019a1p124.pdf">IParcours, Fiche 2 : utiliser des chiffrements</a><br>
         </div></div></div>
         </section>
         
@@ -216,9 +224,9 @@
     <footer>
         <address>TELECOM Paris, 19 Pl. Marguerite Perey, 91120 Palaiseau</address>
 
-        <hr>
+        <p id="clock"></p>
 
-        <p><a href="#">Back to Top</a></p> 
+        <br>
     </footer>
 
 </body>
