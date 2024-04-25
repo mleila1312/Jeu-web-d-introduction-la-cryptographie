@@ -1,50 +1,107 @@
-Transition entre le chiffre de César et le chiffre de Vigenère : 
+**Petite remarque :** normalement le texte est déjà rédigé de sorte qu'il puisse être utilisé 
+
+# Transition entre le chiffre de César et le chiffre de Vigenère 
 
 Bien que les failles de la cryptographie par substitution soient connues depuis longtemps, aucun nouveau procédé cryptographique réellement sécurisé (pour l'époque) et facile à utiliser n'a émergé entre l'époque de César et le XVIe siècle ! 
 
-Petit point historique : 
+# Petit point historique 
 
 Blaise de Vigenère, né en 1523, fut pionnier dans l'élaboration d'une méthode de chiffrement qui défia les cryptanalystes pendant trois siècles : le chiffre de Vigenère. Figure aux multiples talents, il jonglait entre les rôles d'alchimiste, d'écrivain, d'historien et de diplomate au service des ducs de Nevers et des rois de France. Ce n'est qu'en 1586 qu'il dévoila son nouveau système de chiffrement, connu sous le nom de chiffre de Vigenère, dans son ouvrage intitulé "Traicté des chiffres, ou Secrètes manières d'escrire".
 
-Mise en place du contexte/scénario : 
+# Mise en place du contexte
 
 Bienvenue dans le rôle d'Antoine de Montaigne, personnage central de notre jeu de cryptographie en pleine Renaissance !
 
 Vigenère, éminent cryptographe, a servi de nombreux rois, dont Henri IV. Ce souverain, régnant sur la France de 1589 à 1610, est particulièrement connu pour ses intrigues amoureuses, notamment avec Gabrielle d'Estrées, une favorite influente qui a donné naissance à plusieurs enfants légitimés. Gabrielle est souvent considérée comme l'une des maîtresses les plus notables d'Henri IV.
 
-Avant que vous n'entriez en scène, Henri IV et Gabrielle ont échangé les clés de chiffrement, et le roi lui a expliqué le fonctionnement du chiffrement offerte par Vigenère.
-Ajouter idée bout de papier .?
+Henri IV et Gabrielle souhaitent maintenir leur relation secrète et éviter que leur correspondance ne soit lue par des yeux indiscrets. C'est pourquoi ils ont eu l'idée de chiffrer leurs lettres. Henri IV et Gabrielle se sont alors échangé les clés de chiffrement, et le roi lui a expliqué le fonctionnement du chiffrement offert par Vigenère.
 
-Votre mission en tant qu'Antoine de Montaigne est cruciale : Henri IV a rédigé une lettre passionnée, mais le fastidieux travail de chiffrement nécessite votre expertise. Vous êtes le confident privilégié du roi, un homme d'origine noble, issu d'une famille respectée dans la France du XVIe siècle. Né dans la magnificence de la Renaissance, vous possédez une intelligence vive et une éducation soignée, rendant hommage aux traditions familiales. Vos traits distingués et votre politesse raffinée font de vous un personnage parfaitement adapté aux intrigues de la cour.
+## Sur le personnage
+
+Vous êtes le confident privilégié du roi, un homme d'origine noble, issu d'une famille respectée dans la France du XVIe siècle. Né dans la magnificence de la Renaissance, vous possédez une intelligence vive et une éducation soignée, rendant hommage aux traditions familiales. Vos traits distingués et votre politesse raffinée font de vous un personnage parfaitement adapté aux intrigues de la cour.
 
 Votre lien avec Henri IV remonte à l'enfance, une complicité forgée dans les jardins du château royal. Lorsque Henri accéda au trône, il fit appel à vous comme confident. Votre rôle va au-delà de la simple observation : vous êtes un conseiller dévoué, capable d'allier loyauté envers le roi et souci du bien-être du royaume. Votre vie s'est déroulée au carrefour des intrigues de cour, de la diplomatie délicate et de l'amitié sincère avec le roi. Votre nom est respecté à la cour, et votre influence discrète fut un pilier important pour Henri IV, marquant ainsi une page tumultueuse de la Renaissance française.
 
-La lettre et la clé sont maintenant entre vos mains. Plongez-vous dans cette aventure palpitante et assurez-vous que les secrets d'Henri IV restent bien gardés. Bonne chance, Antoine de Montaigne !
+# Mission Chiffrement
+
+Votre mission en tant qu'Antoine de Montaigne est cruciale : Henri IV a rédigé une lettre passionnée, mais le fastidieux travail de chiffrement nécessite votre expertise. Votre mission consiste à chiffrer l'intégralité de cette lettre.
+
+_Remarque : pour pouvoir réaliser sa mission le joueur doit avoir en main les éléments suivants :_
+
+- _une explication du principe du chiffre de Vigenère_
+- _la clé de chiffrement_
+- _la lettre à chiffrer_
+- _le tableau de correspondances permettant d'accélérer le processus de chiffrement_
+
+_La lettre à chiffrer va être directement fournie par Henri IV. Une page de notes de Vigenère sur le fonctionnement de son chiffre avec un tableau de correspondances vont se retrouver dans un coffret. La clé de chiffrement sera a retrouvé également par le biais d'un énigme._
+
+_Le joueur se retrouve dans une salle d'escape game qui ressemble à un bureau abandonné. Sur le bureau, il y a une vieille machine à écrire et un livre de poésie ouvert. Sur les murs sont accrochés côte à côte 4 peintures._
+
+## Enigme 1 : ouvrir le coffret pour pouvoir accéder aux notes de Vigenère expliquant le principe de son chiffre
+
+_Outil : livre de poésie ouvert et les 4 peintures._ 
+
+_Le coffret est fermé par un cadenas qui s'ouvre après avoir saisi la bonne combinaison de quatre chiffres._
+
+_Dans le livre de poésie ouvert, le joueur trouve un poème intitulé "Les Saisons de l'Amour". Le poème est écrit de manière à ce que certains mots soient mis en évidence en étant écrits en gras._
+
+**Les Saisons de l'Amour**
+
+Dans le jardin de mon cœur,
+
+S'épanouissent les fleurs du bonheur.
+
+Chaque pétale évoque un souvenir,
+
+Chaque bourgeon un désir.
+
+**Le printemps, temps de renouveau,**
+
+Où chaque éclat de rire est un cadeau.
+
+**L'été, brûlant de passion,**
+
+Où nos cœurs battent à l'unisson.
+
+**L'automne vient avec sa mélancolie,**
+
+Les feuilles tombent, comme une symphonie.
+
+**L'hiver, froid et solitaire,**
+
+Mais nos cœurs demeurent solidaires.
+
+Dans chaque saison, dans chaque temps,
+
+Notre amour demeure, éternellement.
 
 
+_Par ailleurs, quatre tableaux sont exposés côte à côte, représentant clairement chacun l'une des quatre saisons. Le premier représente l'hiver, le deuxième le printemps, le troisième l'été et le quatrième l'automne._
+
+_Solution de l'énigme : Le joueur doit comprendre que chaque mot (printemps, été, automne, hiver) est un indice pour la combinaison. En leur attribuant des chiffres selon leur ordre d'apparition dans la poésie (ici, printemps = 1, été = 2, automne = 3, hiver = 4), ils peuvent former une séquence numérique. Ensuite, l'ordre des chiffres est établi en se basant sur l'ordre des tableaux accrochés au mur. Tout d'abord, le tableau correspondant à l'hiver est affiché, donc le chiffre 4 est positionné en premier, puis le tableau suivant correspondant au printemps, donc le chiffre suivant est le chiffre 1, et ainsi de suite. Ainsi, le code formé est 4123._
+
+_Cette combinaison 4123 permet d'offrir le coffret et d'accéder aux notes de Vigenère, ainsi qu'au tableau de correspondances permettant d'encoder plus rapidement les messages._
+
+## Enigme 2 : retrouver la clé de chiffrement 
+
+_Clé de chiffrement : coeur._
+
+_Outil : machine à écrire_
+
+_Le joueur sera que la clé de chiffrement correspond à la forme géométrique du puzzle assemblé. D'abord, il devra retrouver tous les bouts du puzzle dans la chambre et, ensuite, en les rassemblant il s'apercevra que la forme de ce dernier est un coeur._ 
+
+_Le joueur examine la machine à écrire et remarque qu'il y a des lettres qui sont plus usées que d'autres. En alignant ces lettres, le joueur arrive à former le mot-clé._Clé
+
+_Donc, les lettres usées corresponderont alors à C, O, E, U, R._
+
+## Chiffrage de la lettre
+
+La lettre et la clé sont désormais entre vos mains, et vous êtes familiarisé avec le principe de chiffrement à appliquer.
+
+Plongez-vous dans cette aventure palpitante et veillez à ce que les secrets d'Henri IV demeurent bien protégés. Bonne chance, Antoine de Montaigne !
 
 
-FAUT RETRANSCRIRE TOUT CE QUI EN BAS EN UN TEXTE UTILISABLE
-
-Idée : 
-
-Vigenère était au service de nombreux rois, dont Henri IV.
-
-Henri IV, roi de France de 1589 à 1610, notamment connu pour ses liaisons amoureuses. L'une de ses relations les plus célèbres était avec Gabrielle d'Estrées, une favorite influente de la cour. Leur liaison a donné naissance à plusieurs enfants légitimés. Gabrielle d'Estrées est souvent considérée comme l'une des maîtresses les plus notables d'Henri IV.
-
-Au préalable, Henri IV et Gabrielle se sont échangés sur papier les clés de chiffrement et le roi lui a expliqué le mode de fonctionnement du chiffre. 
-
-Henri IV a déjà rédigé sa lettre, le travail de chiffrement étant fastidieux, il demanda d’effectuer le chiffrement à son confident - le joueur - Antoine de Montaigne. 
-
-Antoine de Montaigne était un homme d'origine noble, issu d'une famille respectée dans les cercles aristocratiques de la France du XVIe siècle. Né dans la magnificence de la Renaissance, Antoine possédait une intelligence vive et une éducation soignée, héritage des traditions familiales. Ses traits distingués, associés à une politesse raffinée, le rendaient particulièrement bien adapté aux intrigues de la cour.
-
-Son lien avec Henri IV remontait à l'enfance, où ils partagèrent des leçons et des jeux dans les jardins du château royal. La complicité forgée au fil des années devint indéfectible, et lorsque Henri accéda au trône, il fit appel à Antoine de Montaigne comme confident.
-
-Antoine possédait une sagesse discrète et une capacité à percevoir les subtilités politiques. Son rôle de confident était bien plus que celui d'un simple spectateur : il était un conseiller dévoué, sachant allier loyauté envers le roi et le souci du bien-être du royaume. Antoine de Montaigne vécut une vie au carrefour des intrigues de cour, de la diplomatie délicate et de l'amitié sincère avec le roi. Son nom était respecté à la cour, et son influence discrète fut un pilier important pour Henri IV, marquant ainsi une page de l'histoire tumultueuse de la Renaissance française.
-
-Vous avez donc à votre disposition la lettre et la clé. 
-
-Lettre de Henri IV à Gabrielle : (chiffrer en intégralité ou qu’une partie ?)
+**Voici la lettre :**
 
 Ma chère Gabrielle,
 
@@ -53,154 +110,67 @@ En ces temps tourmentés, ton sourire illumine mes jours. Accorderas-tu la grâc
 Avec tout mon amour,
 Henri
 
+**Voici la lettre chiffrée avec la clé COEUR :**
 
-Clé : …
+OO GBVTS KUSTWIFCG, 
 
-Le roi vous explique le principe de chiffrement et vous fournit un tableau qui va vous faciliter le travail.
+SR WVU HIGGU HSOIOSRNVU, HSH JQIVCIG WPFLOWRY DGG NILTG. EWTQFHYICG-XO CC UVUTG R'YHV UCMLVG SR GR ECQJRIBMY, CQWR XVU WRNIKUYYJ FS PU TQIV ? NR RFIMVPQI YJV IR LVECRZFTH UOV LS HYJKFI UIFSQGVPH. 
 
-…
+EPVE HSOK OCR UDQIV, BVPFM
 
-tableau 
+_Remarque : Le joueur n'aura pas à chiffrer toute la lettre, mais seulement le début (trop long, et sans grande valeur pédagogique). Le reste de la lettre chiffrée se complétera automatiquement._
 
+# Cryptanalyse
 
-(Remarque : idée le tableau et la lettre faire en style)
+Après avoir crypté la lettre, le roi attend avec impatience la réponse de Gabrielle. 
 
+Mais lorsqu'il reçoit la réponse, il s'aperçoit qu'il a perdu la clé qu'a utilisé Gabrielle pour chiffer sa lettre réponse. 
 
-Après avoir chiffré la lettre, le roi reçoit la réponse de la part de Gabrielle. 
+Dans son désespoir, Henri IV se tourne vers son confident, le joueur, Antoine de Montaigne, déjà familiarisé avec le chiffre de César et son cryptanalyse par la méthode fréquentielle. 
 
-Impatient de découvrir la réponse de son amante, il s’aperçoit qu’il a perdu le papier avec la clé de chiffrement. 
+_L'idée consiste à pousser le joueur à retrouver une méthode de cryptanalyse du chiffre de Vigenère à partir de celle du chiffre de César et plus précisément de l'analyse fréquentielle._
 
-Désespéré il s’adresse à son confident, Antoine de Montaigne, doué d’un esprit très fin et d’une intelligence exceptionnelle. 
+**Lettre à déchiffrer**
 
-Antoine de Montaigne, ayant un intérêt dans la cryptanalyse, s’est déjà intéressé à la méthode de cryptanalyse du chiffre de César, et connaissant le principe du chiffre de Vigenère, décida d’accepter le défi et aider son ami d’enfance tombé en désespoir. 
+Hwr Mwm wqii-imhm,
 
-Inspirée de la méthode de cryptanalyse du chiffre de César, il se lança au travail.
+Xza qjbw nwro crz lspki hmpjlmz yyd nedb zdjvzz qjv gjmym, crz uigwhdm hjcgz, crz uigwhdm gcmvz. Ri hm pvvkpqw hwm vcwnq hz kin qrnbeibw qwpza, pjqr ymw mmkvzhn agmcxvbipzw, gwmi lin wvzqpgmw hipqmmgteibw. Vkgzxxz usi pyhjpz igxwvy mx kmvhmxn-usd l'iozi gm vzxmo yyz by xpimklza, upm xp linqvza. Hvvw g'wqwzi ym pv vydb, rja wzkvzbw nmvjvx ymw zbsdtin jvdtpvvxza, io vsn zmmmw, ymw ewcvcb dvinbmhifgmw, ymw ewcvcb zuimdidtpza. Nz b'eobiilvvq eqmg dutvbmzvgz.
 
-… 
+I nvueda xdmrim,
+Kvjvdmpgm
 
-Penser au mode de difficulté facile/difficile. 
+**Pour pouvoir déchiffrer la lettre, il faut retrouver sa clé de chiffrement !**
 
-Lettre à déchiffrer 
+## Etape 1 : retrouver la longueur de la clé sachant que le roi se rappelle qu'elle est plus petite que 5 et plus grande que 2
 
-Réponse de Gabrielle à Henri IV :
+Hwr Mwm wqii-imhm,
 
-Mon Roi bien-aimé,
+Xza qjbw nwro **crz** lspki hmpjlmz yyd nedb zdjvzz qjv gjmym, **crz uigwhdm** hjcgz, **crz uigwhdm** gcmvz. Ri hm pvvkpqw hwm vcwnq hz kin qrnbeibw qwpza, pjqr **ymw** mmkvzhn agmcxvbipzw, gwmi lin wvzqpgmw hipqmmgteibw. Vkgzxxz usi pyhjpz igxwvy mx kmvhmxn-usd l'iozi gm vzxmo yyz by xpimklza, upm xp linqvza. Hvvw g'wqwzi ym pv vydb, rja wzkvzbw nmvjvx **ymw** zbsdtin jvdtpvvxza, io vsn zmmmw, **ymw** ewcvcb dvinbmhifgmw, **ymw** ewcvcb zuimdidtpza. Nz b'eobiilvvq eqmg dutvbmzvgz.
 
-Tes mots réchauffent mon cœur. Une soirée en ta compagnie serait un délice. Dans l'ombre, nos rires brilleront comme des étoiles. J'attends avec impatience ce moment.
+I nvueda xdmrim,
 
-Toujours à toi,
-Gabrielle
+Kvjvdmpgm
 
-Penser à ajouter des répétitions ou des choses de ce style permettant de détecter la longueur de la clé, plus que ça soit cohérent avec les plus grandes fréquences 
+_En raisonnant sur les multiples (nombres de chiffres entre chaque répétition successive), le joueur arrive à conclure que la clé est de longueur 3._
 
+## Etape 2 : retrouver la clé à l'aide de l'analyse fréquentielle
 
+_La méthode de cryptanalyse par analyse fréquentielle est rappellée au joueur. Le joueur doit comprendre qu'il faut se ramener à cette méthode de cryptanalyse. Dans l'onglet aide est fournie l'indication d'effectuer une subdivision par tranches avant d'effectuer l'analyse fréquentielle._
 
+_Un outil d'analyse fréquentielle serait fourni._
 
+**Solution : VIE**
 
+_Le joueur pourra directement tester sa clé et afficher la version déchiffrée avec la clé saisie._
 
-
-
-
-
-
-
-
-
-
-Vigenère, au service de ce dernier, lui a confié une méthode de chiffrement : le chiffre de Vigenère. 
-
-
-
-Donc l’idée, c’est d’être le confident de Henri IV et envoyer une lettre à Gabrielle avec le code qu’HIV et Gabrielle se sont prépartagés -> il va chiffrer, 
-
-ensuite hIV par sa débilité a oublié le code et est super triste car il veut et impatient de découvrir la réponse de Gabrielle -> pour ne pas être executé (vraiment dans le désespoir le roi -> ou tout simplement pour aider son cher ami d’enfance) 
-
-Ce qu’il faut trouver une lettre à coder et à décoder (mode difficile et facile)
-
-
-Antoine de Montaigne était un homme d'origine noble, issu d'une famille respectée dans les cercles aristocratiques de la France du XVIe siècle. Né dans la magnificence de la Renaissance, Antoine possédait une intelligence vive et une éducation soignée, héritage des traditions familiales. Ses traits distingués, associés à une politesse raffinée, le rendaient particulièrement bien adapté aux intrigues de la cour.
-
-Son lien avec Henri IV remontait à l'enfance, où ils partagèrent des leçons et des jeux dans les jardins du château royal. La complicité forgée au fil des années devint indéfectible, et lorsque Henri accéda au trône, il fit appel à Antoine de Montaigne comme confident.
-
-Antoine possédait une sagesse discrète et une capacité à percevoir les subtilités politiques. Son rôle de confident était bien plus que celui d'un simple spectateur : il était un conseiller dévoué, sachant allier loyauté envers le roi et le souci du bien-être du royaume. Sa présence rassurante était une bouffée d'air dans l'atmosphère parfois tendue de la cour.
-
-Outre son rôle officiel, Antoine de Montaigne avait des talents littéraires qui trouvaient écho dans les salons intellectuels de l'époque. Il écrivait des poèmes et des lettres qui captivaient l'attention de la noblesse, tout en restant dévoué à Henri IV.
-
-Antoine de Montaigne vécut une vie au carrefour des intrigues de cour, de la diplomatie délicate et de l'amitié sincère avec le roi. Son nom était respecté à la cour, et son influence discrète fut un pilier important pour Henri IV, marquant ainsi une page de l'histoire tumultueuse de la Renaissance française.
-
-
-
-Lettres 
-
-V1 LONGUE
-
-Lettre de Henri IV à Gabrielle :
-
-Ma chère Gabrielle,
-
-En ces temps tourmentés, ton sourire illumine mes jours. Accorderas-tu la grâce d'une soirée en ma compagnie, loin des intrigues de la cour ? Ta présence est un réconfort que je désire ardemment.
-
-Avec tout mon amour,
-Henri
-
----
-
-Réponse de Gabrielle à Henri IV :
+**Lettre déchiffrée**
 
 Mon Roi bien-aimé,
 
-Tes mots réchauffent mon cœur. Une soirée en ta compagnie serait un délice. Dans l'ombre, nos rires brilleront comme des étoiles. J'attends avec impatience ce moment.
-
-Toujours à toi,
-Gabrielle
-
-
-
-V1 COURTE 
-
-Lettre de Henri IV à Gabrielle :
-
-Gabrielle,
-
-Un dîner en ta compagnie ce soir ? Mon cœur languit.
-
-Henri
-
----
-
-Réponse de Gabrielle à Henri IV :
-
-Henri,
-
-Tout mon désir. J'attends.
-
-Gabrielle
-
-
-VERSIONS LONGUES DES LETTRES (utile surtout pour la cryptanalyse) : 
-
-Lettre de Henri IV à Gabrielle :
-
-Ma chère Gabrielle,
-
-Les affaires de l'État peuvent être lourdes à porter, mais ton sourire éclaire mes jours sombres. En ces heures où la couronne pèse sur mes épaules, ta présence demeure mon refuge. Accepterais-tu de partager une soirée à mes côtés, loin des intrigues et des masques qui peuplent notre quotidien ? Ton absence me laisse languir, et ton rire, que j'imagine déjà, serait le baume à mon cœur fatigué.
-
-Avec toute ma tendresse,
-Henri
-
----
-
-Réponse de Gabrielle à Henri IV :
-
-Mon Roi bien-aimé,
-
-Tes mots sont une douce mélodie qui fait vibrer mon cœur. Je me languis moi aussi de ces instants volés, loin des regards scrutateurs. Accepte mon humble accord et permets-moi d'être le répit que tu cherches. Dans l'ombre de la nuit, nos secrets seront des étoiles brillantes, et nos rires, des joyaux inestimables. Je t'attendrai avec impatience.
+Tes mots sont une douce mélodie qui fait vibrer mon cœur, une mélodie douce, une mélodie chère. Je me languis moi aussi de ces instants volés, loin des regards scrutateurs, loin des oreilles malveillants. Accepte mon humble accord et permets-moi d'être le répit que tu cherches, que tu désires. Dans l'ombre de la nuit, nos secrets seront des étoiles brillantes, et nos rires, des joyaux inestimables, des joyaux émerveillés. Je t'attendrai avec impatience.
 
 À jamais tienne,
 Gabrielle
-
-
-Inclure du code Python ?? programme informatique de cryptanalyse ???
 
 
 

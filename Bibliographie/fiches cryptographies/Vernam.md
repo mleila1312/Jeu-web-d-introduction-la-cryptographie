@@ -1,7 +1,7 @@
 # Chiffre de Vernam - aussi appelé le masque jetable
 
 ## Présentation
-Code de Vigenère, avec des oblogations sur le choix de la clé :
+Code de Vigenère, avec des obligations sur le choix de la clé :
 - aussi longue que le texte
 - parfaitement aléatoire
 - à usage unique
@@ -9,7 +9,7 @@ Code de Vigenère, avec des oblogations sur le choix de la clé :
 ## Histoire
 Créé en 1926 par Gilbert Vernam, ingénieur au laboratoire de recherche de la compagnie "American Telephone & Telegraph".
 
-Ce chiffre n'est que très peu utilisé à cause de la difficulté de sa mise en oeuvre :
+Ce chiffre n'est que très peu utilisé à cause de la difficulté de sa mise en œuvre :
 - les clés doivent être extrêmement longues !
 - on doit éditer des livres entiers de clés à usage unique et les distribuer secrètement (un exemplaire entre les mains de l'ennemi et c'est foutu, mais un livre c'est vachement dur à planquer)
 - l'émetteur et le récepteur doivent être synchrones : si un message de l'émetteur se perd, ils vont se décaler dans les clés utilisées, et c'est foutu...

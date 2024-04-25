@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jeu crypto</title>
+    <link rel="icon" href="..\img/image.png">
+    <link rel="stylesheet" href="..\main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="Auteur" content="les bg">
+    <meta name="Description" content="jeu crypto">
+    <script src="..\main.js"></script>
+</head>
+
+<body>
+    <main>
+        <section id="Titre">
+            <div class="one">
+                <h1>Jeu web d'introduction à la cryptographie 
+                    <br>
+                    <br>
+                    <span>J'ai perdu</span>
+                </h1>
+            </div>
+        </section>
+        <nav>
+            <ul>
+                <li>
+                    <a href="..\main.html" title="Accueil">Accueil</a>
+                </li>
+                <li>
+                    <a href="" title="Bibliographie">Bibliographie</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="..\Vigenere\Vigenere.html" title="Chiffre de Vigenère">Chiffre de Vigenère</a>
+                        </li>
+                        <li>
+                            <a href="..\Cle_publique\cle_publique.html" title="Clé publique">Clé publique</a>
+                        </li>
+                        <li>
+                            <a href="..\Cryptanalyse_cesar\cryptanalyse_cesar.html" title="Méthode et cryptanalyse de César">Méthode et cryptanalyse de César</a>
+                        </li>
+                        <li>
+                            <a href="..\Enigma\enigma.html" title="Machine Enigma">Machine Enigma</a>
+                        </li>
+                        <li>
+                            <a href="..\Grand_chiffre\grand_chiffre.html" title="Le grand chiffre">Le Grand Chiffre</a>
+                        </li>
+                        <li>
+                            <a href="..\Echange_cle\echange_cle.html" title="Principe de l'échange de clé">Principe de l'échange de clé</a>
+                        </li>
+                        <li>
+                            <a href="..\Man_in_the_middle\man_in_the_middle.html" title="Man in the middle">Attaque Man in the Middle</a>
+                        </li>
+                        <li>
+                            <a href="..\Scytale\scytale.html" title="Scytale">Scytale</a>
+                        </li>
+                        <li>
+                            <a href="..\Vernam\vernam.html" title="Vernam">Méthode de Vernam</a>
+                        </li>
+                        <li>
+                            <a href="..\Certificat\certificat.html" title="Certificat">Principe de Certificat</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" title="Chaptires">Chapitres</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="..\ch1\ch1.html" title="Chapitre 1">Chapitre 1</a>
+                        </li>
+                        <li>
+                            <a href="..\ch2\ch2.html" title="Chapitre 2">Chapitre 2</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="../A_propos/A_propos.html" title="A_propos">A propos</a>
+                </li>
+            </ul>
+        </nav>
+        <section id="Titre" class="two">
+            <div>
+                <h2><a href="#">Chiffre de Vernam</a></h2>
+            </div>
+        </section>
+        <section id="Article">
+            <div class="Articlesection">
+                <div class="boxSection">
+                    <h3> Le chiffre de Vernam : un chiffre parfaitement sûr ! </h3>
+                    <br>
+                    <p>Un chiffre parfaitement sûr est un chiffre tel que, même si un adversaire intercepte le message, même avec une puissance de calcul infinie à sa disposition, il ne peut pas obtenir la moindre information concernant le message clair à partir du message chiffré.</p>
+                </div>
+            </div>
+
+            <div class="Articlesection">
+                <div class="boxSection">
+                    <h3>Point historique</h3>
+                    <br>
+                    <p>Créé en 1926 par Gilbert Vernam, ingénieur au laboratoire de recherche de la compagnie "American Telephone & Telegraph".</p>
+                    <br>
+                    <p>Ce chiffre n'est que très peu utilisé à cause de la difficulté de sa mise en oeuvre :</p>
+                    <ul>
+                        <li>les clés doivent être extrêmement longues !</li>
+                        <li>on doit éditer des livres entiers de clés à usage unique et les distribuer secrètement (un exemplaire entre les mains de l'ennemi et tout est compromis)</li>
+                        <li>l'émetteur et le récepteur doivent être synchrones : si un message de l'émetteur se perd, ils vont se décaler dans les clés utilisées, et c’est raté…</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="Articlesection">
+                <div class="boxSection">
+                    <h3>Principe</h3>
+                    <br>
+                    <p>Le chiffre de Vernam (aussi connu sous le nom de masque jetable, pour mettre en avant l'importance de l'utilisation d'une clé unique à chaque fois) est mis en œuvre de la manière suivante.<br>
+                    <br> 
+                    <p>Tout d'abord, le message est converti en séquences de bits, c'est-à-dire de 0 et de 1, de manière informatique.</p> <p>Ensuite, une clé, générée de façon totalement aléatoire, est créée, composée également d'une suite de 0 et de 1, de même longueur que le message à chiffrer. </p><p>Chaque bit du message clair est ensuite combiné, via l'opération XOR, avec le bit correspondant dans la clé.</p>
+                    <br>
+                    <p>Par exemple, si le message clair est 101110011 et que la clé est 011101000, alors le message chiffré serait 110011011.</p>
+                    <br>
+                    <style>
+                        img {
+                            display: block;
+                            margin: auto;
+                        }
+                    </style>
+                    
+                    <img src="VernamImg.jpg" alt="Description de l'image" width="500">
+                    
+
+                    <br>
+                    <p> À réception du message, le destinataire effectue la même opération sur le message chiffré : il prend ainsi chaque bit du message chiffré et effectue l'opération XOR avec le bit correspondant de la clé. Cela lui permet de retrouver le message initial, par la propriété du XOR (0 xor b xor b = 0 et 1 xor b xor b = 1). </p>
+                </div>
+            </div>
+
+            <div class="Articlesection">
+                <div class="boxSection">
+                    <h3>Anecdote</h3>
+                    <br>
+                    <p>Résultat : Il fut ainsi utilisé pour sécuriser le téléphone rouge, ligne directe entre la Maison Blanche et le Kremlin du temps de la guerre froide. Les clés circulaient dans les valises diplomatiques, transportées dans des avions bourrés d'agents secrets.</p>
+                </div>
+            </div>
+
+            <div class="Articlesection">
+                <div class="source">
+                    <div class="boxSection">
+                        <h3>Sources</h3>
+                        <ul>
+                            <li><a target="_blank" href="https://www.bibmath.net/crypto/index.php?action=affiche&quoi=moderne/vernam">Bibmath, Vernam</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+
+    <footer>
+        <address>TELECOM Paris, 19 Pl. Marguerite Perey, 91120 Palaiseau 🦆</address>
+
+        <p id="clock"></p>
+        <br>
+    </footer>
+    <header>
+        <center>
+        Projet fait au sein de l'unité d'enseignement Proj104 de Télécom Paris
+        </center>
+    </header>
+
+</body>
+
+</html>

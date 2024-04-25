@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jeu crypto</title>
+    <link rel="icon" href="..\img\image.png">
+    <link rel="stylesheet" href="..\main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="Auteur" content="les bg">
+    <meta name="Description" content="jeu crypto">
+    <script src="..\main.js"></script>
+</head>
+
+<body>
+
+    <main>
+        <section id="Titre">
+            <div class="one">
+                <h1>Jeu web d'introduction à la cryptographie
+                    <br>
+                    <br>
+                    <span>J'ai perdu</span>
+                </h1>
+            </div>
+        </section>
+        <nav>
+            <ul>
+                <li>
+                    <a href="..\main.html" title="Accueil">Accueil</a>
+                </li>
+                <li>
+                    <a href="" title="Bibliographie">Bibliographie</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="..\Vigenere\Vigenere.html" title="Chiffre de Vigenère">Chiffre de Vigenère</a>
+                        </li>
+                        <li>
+                            <a href="..\Cle_publique\cle_publique.html" title="Clé publique">Clé publique</a>
+                        </li>
+                        <li>
+                            <a href="..\Cryptanalyse_cesar\cryptanalyse_cesar.html" title="Méthode et cryptanalyse de César">Méthode et cryptanalyse de César</a>
+                        </li>
+                        <li>
+                            <a href="..\Enigma\enigma.html" title="Machine Enigma">Machine Enigma</a>
+                        </li>
+                        <li>
+                            <a href="..\Grand_chiffre\grand_chiffre.html" title="Le grand chiffre">Le Grand Chiffre</a>
+                        </li>
+                        <li>
+                            <a href="..\Echange_cle\echange_cle.html" title="Principe de l'échange de clé">Principe de l'échange de clé</a>
+                        </li>
+                        <li>
+                            <a href="..\Man_in_the_middle\man_in_the_middle.html" title="Man in the middle">Attaque Man in the Middle</a>
+                        </li>
+                        <li>
+                            <a href="..\Scytale\scytale.html" title="Scytale">Scytale</a>
+                        </li>
+                        <li>
+                            <a href="..\Vernam\vernam.html" title="Vernam">Méthode de Vernam</a>
+                        </li>
+                        <li>
+                            <a href="..\Certificat\certificat.html" title="Certificat">Principe de Certificat</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" title="Chapitres">Chapitres</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="..\ch1\ch1.html" title="Chapitre 1">Chapitre 1</a>
+                        </li>
+                        <li>
+                            <a href="..\ch2\ch2.html" title="Chapitre 2">Chapitre 2</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="..\A_propos\A_propos.html" title="A_propos">A propos</a>
+                </li>
+            </ul>
+        </nav>
+        <section id="Titre" class="two">
+            <div>
+                <h2><a href="#">Méthode et cryptanalyse de César</a></h2>
+            </div>
+        </section>
+        <section id="Article">
+
+            <div class="Articlesection"><div class="boxSection">
+                
+            <h3>Histoire et principe de la méthode</h3>
+            La méthode de César tire son nom de Jules César, qui l'aurait utilisée pour communiquer avec ses généraux. Bien que simple, elle était efficace pour protéger les messages des ennemis, car seuls ceux qui connaissaient le décalage pouvaient déchiffrer les messages.
+            <br><br>
+            La méthode de César est une technique de chiffrement par substitution où chaque lettre dans le texte est remplacée par une lettre décalée d'un certain nombre de positions dans l'alphabet. Par exemple, avec un décalage de 3 (utilisé par Jules César), A devient D, B devient E, et ainsi de suite. Ce décalage est souvent appelé la "clé" du chiffrement.
+            </div>
+            </div>
+
+            <div class="Articlesection">
+                <div class="boxSection">
+            <h3>Cryptanalyse</h3>
+            La méthode de César, bien que simple, peut être facilement cassée à l'aide de techniques de cryptanalyse. Dans cette section, nous détaillons quelques méthodes courantes pour décrypter un message chiffré avec la méthode de César.
+        </div>
+    </div>
+
+            <div class="Articlesection">
+                <div class="boxSection">
+                <h3>Attaque par force brute</h3>
+                L'une des méthodes les plus simples pour casser un message chiffré avec la méthode de César est l'attaque par force brute. Étant donné qu'il n'y a que 25 décalages possibles dans l'alphabet (à l'exception du décalage de 0 qui est équivalent au texte en clair), un attaquant peut simplement essayer chaque décalage possible jusqu'à ce que le message soit déchiffré avec succès. 
+                Le programme Python suivant effectue une attaque par force brute :
+                <div class = "code">
+                    def decrypter_par_force_brute(message_chiffre):<br>
+                    <span class="tab"></span>for decalage in range(1, 26):<br>
+                    <span class="twotab"></span>message_clair = ""<br>
+                    <span class="twotab"></span>for lettre in message_chiffre:<br>
+                    <span class="threetab"></span>if lettre.isalpha():<br>
+                    <span class="tab"></span><span class="threetab"></span>decalage_base = ord('A' if lettre.isupper() else 'a')<br>
+                    <span class="tab"></span><span class="threetab"></span>message_clair += chr((ord(lettre) - decalage_base - decalage) % 26 + decalage_base)<br>
+                    <span class="threetab"></span>else:<br>
+                                <span class="tab"></span><span class="threetab"></span>message_clair += lettre<br>
+                                <span class="twotab"></span>print("Décalage {}: {}".format(decalage, message_clair))<br>
+                </div>
+            </div>
+            </div>
+            <div class="Articlesection">
+                <div class="boxSection">
+            <h3>Analyse des fréquences et l'apport d'Al-Kindi</h3>
+            Une méthode plus sophistiquée pour casser la méthode de César est l'analyse des fréquences, qui repose sur le fait que certaines lettres sont plus courantes que d'autres dans une langue donnée. Cette technique est attribuée à Al-Kindi, un mathématicien et cryptographe arabe du IXe siècle.<br>
+
+            Al-Kindi est célèbre pour son ouvrage intitulé "Manuscrit sur le déchiffrement des messages cryptographiques", dans lequel il a décrit en détail diverses méthodes de cryptanalyse, y compris l'analyse des fréquences. Dans son travail, Al-Kindi a souligné que les lettres de la langue arabe n'ont pas toutes la même fréquence d'apparition et a développé des techniques pour exploiter ces différences afin de casser des chiffres de substitution comme celui de César.<br>
+
+            Cette approche implique de compter la fréquence d'apparition de chaque lettre dans le message chiffré, puis de comparer ces fréquences avec celles des lettres dans la langue cible. En se basant sur les probabilités d'occurrence des lettres, un cryptanalyste peut faire des suppositions éclairées sur le décalage utilisé dans le chiffrement de César.<br>
+
+            Par exemple, en français, la lettre la plus fréquente est généralement "e". En trouvant la lettre la plus fréquente dans le message chiffré, un attaquant peut estimer le décalage.<br>
+                </div>
+            </div>
+
+            <div class="Articlesection">
+                <div class="boxSection">
+            <h3>Analyse des paires de lettres</h3>
+            Une autre technique consiste à analyser les paires de lettres dans le message chiffré. Par exemple, dans certaines langues, certaines paires de lettres sont plus fréquentes que d'autres (comme "le" en français). En trouvant ces schémas dans le message chiffré, un attaquant peut déduire le décalage utilisé.
+            </div>
+            </div>
+
+            <div class="Articlesection">
+                <div class="source">
+                    <div class="boxSection">
+                        <h3 class = "sources">Sources</h3>
+                        <a target="_blank" href = "https://www.etaletaculture.fr/geek/le-chiffre-de-cesar/">Etale ta culture</a><br>
+                        <a target="_blank" href = "https://etablissementbertrandeborn.net/IMG/pdf/indice9_maths.pdf">Cité scolaire Bertran-de-Borne</a><br>
+                        <a target="_blank" href = "https://www.dcode.fr/chiffre-cesar">Code-César</a><br>
+                        Sujets de Travaux pratiques <br>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+
+    <footer>
+        <address>TELECOM Paris, 19 Pl. Marguerite Perey, 91120 Palaiseau 🦆</address>
+
+        <p id="clock"></p>
+        <br>
+    </footer>
+    <header>
+        <center>
+        Projet fait au sein de l'unité d'enseignement Proj104 de Télécom Paris
+        </center>
+    </header>
+
+</body>
+
+</html>

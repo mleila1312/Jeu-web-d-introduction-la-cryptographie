@@ -62,9 +62,29 @@ Elaboration du planning, rédaction et choix concernant le scénario global (pre
     - **Sarah** : Révision du scénario César / Recherche d'énigmes sur un livre emprunté au CRDN.
 - 01/04
     - **Lyla** : pimp de la page web autour de la barre de navigation et d'une image de fond
+    - **Jennifer** : recherche d'énigmes pour le scénario Vigenère
 - Séance du 02/04
     + **Sarah** : ajout et recherches d'énigmes (test de jeux pour avoir de l'inspiration) / correction de typo sur certains fichiers du site.
     + **Lyla** : commentaire précis du CSS pour faciliter la compréhension du fichier par tous
     + **Leïla** et **Nathan** : réalisation des pages web des bibliographies pour la cryptographie à clé publique et les certificats. Recherche sur comment incorporer le jeu dans la page web, deux pistes : soit jeu unity que l'on incorpore dans la page web, soit un jeu js.
     + **Vivien** : énigmes pour la cryptographie asymétrique
+    + **Jennifer** : recherches et ajout sur le site de la bibliographie Vernam
     + **Tous** : décision sur le lien entre le job du stagiaire et la cryptographie.
+- 06/04 : **Nathan** : fin de la page "cryptographie publique" de la bibliographie sur le site
+- 08/04 : 
+    + **Leïla** : finition des énigmes pour César, le Grand Chiffre, dialogues dans MITM, mise à jour des étapes retsant à faire durant la phase
+    + **Leïla, Vivien, Nathan, Jennifer** : Scénario vernam
+    + **Jennifer** : remise en forme du scénario sur Vigenère, ajout d'énigmes
+    + **Sarah** : Ajout d'énigmes.
+    + **Lyla** : amélioration de l'apparence du site
+- 09/04 :
+    + **Tous** : point sur l'avancement, brainstorming sur les différentes manières d'implémenter notre jeu, rdv à 10h avec l'encadrant.
+- 12/04 :
+    + **Lyla** : amélioration de l'apparence du site
+- 19/04 :
+    + **Sarah** : tuto Godo partie1
+- 24/04 :
+    + **Tous** : écriture du rapport de mi-parcours.
+    + **Sarah/Leïla** : Modification du planning pour fusionner la phase implémentation et la phase de design
+    
+

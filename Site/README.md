@@ -1,3 +1,8 @@
+# Lancer le server
+
+Pour lancer le server, il vous suffit de faire `python server.py`  
+Ensuite, le server se lancera et les IP sur lequel le server est lancé localement s'afficheront(du moins dans VScode) dans le terminal, cliquez sur suivre le lien.
+
 # Ce qu'il faut faire sur le site / ce qui a été fait
 
 ## Phase 3 [28/02 au 17/04] 

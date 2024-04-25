@@ -36,11 +36,18 @@ Ensuite, il est affiché :
 "- et si cette suite 124-22-125-46-345  correspondait à "les ennemis"? Après tout, cette cryptographie était utilisée pour les conversations secrètes et donc les conversations en tant de guerre. Essaye de voir si ça pourrait être une solution pour ce texte."  
 Le joueur devra ensuite placer les lettres/syllabes/mots correspondants aux nombres associés.  
 Le message :  
-124-22-125-46-345 - 
-les-en-ne -mi  -s - ne - veu- le - nt- pas - r-en-dre - les- pri- son- ni- er-s- . Je-veu-x-la re-mi-se- des- pri- son- ni - er- s-en-temps-et-en-heu-re. les-en-ne-mi-s -ne - pas-se-r-ont-pas-les-pas-se-re-lle-s.
-Le joueur décrypte ce premier message (des associations d'indices seront aussi sur son bureau, il avait déjà commencé à faire des suppositions) et apprend que certaines syllabes sont associées à des chiffres et il retient ces associations. Il note sur une fiche les associations découvertes(servira à auto-fill certaines lettres après). Time-lapse où le joueur décrypte d'autres lettres qui lui permettent de découvrir des associations de lettres. Puis la nuit tombe, Etienne s'en va, mais notre personnage reste à réfléchir. Il peut alors fouiller des documents, et il faut que le joueur pense à lire les notes de bas de page d'un des documents (histoire sur la période de Louis XIV). Sur l'une des notes de bas de page, il y a inscrit qu'il faut regarder un livre particulier à la page 24, livre sur les prisonniers anonymes de cette époque. Cependant, il n'y a pas de page 24, car elle est collée avec la suivante, le joueur doit alors récupérer un coupe papier caché dans le bureau. Il découpe la page et un papier crypté en tombe, la page du livre porte sur l'homme au masque de fer. Le joueur pense alors:  
+
+les-en-ne -mi  -s - ne - veu- le - nt- pas - r-en-dre - les- pri- son- ni- er-s- . Je-veu-x-la re-mi-se- des- pri- son- ni - er- s-en-temps-et-en-heu-re. les-en-ne-mi-s -ne - pas-se-r-ont-pas-les-pas-se-re-lle-s.  
+
+Le joueur décrypte ce premier message (des associations d'indices seront aussi sur son bureau, il avait déjà commencé à faire des suppositions) et apprend que certaines syllabes sont associées à des chiffres et il retient ces associations. Il note sur une fiche les associations découvertes(servira à auto-fill certaines lettres après). Time-lapse où le joueur décrypte d'autres lettres qui lui permettent de découvrir des associations de lettres.  
+* Je ne pen-se pas que cet-te stra-té-gie soit la me-il-leur-e. Par-les -en a-vec sa ma-je-s-tée, cet a-c-te n'est pas à pren-dre à la lé-gè-re.
+* En-fer-mez les pri-son-nier-s. Ils on é-té a-re -t -té-s cet-te a-près mi-di.
+* La nuit du 13 fé-v-ri-er est cel-le des é-toi-le-s fi-lan-te-s. Ve-nez sur le par-vi-s les o-bser-ver.
+
+ Puis la nuit tombe, Etienne s'en va, mais notre personnage reste à réfléchir. Il peut alors fouiller des documents, et il faut que le joueur pense à lire les notes de bas de page d'un des documents (histoire sur la période de Louis XIV). Sur l'une des notes de bas de page, il y a inscrit qu'il faut regarder un livre particulier à la page 24, livre sur les prisonniers anonymes de cette époque. Cependant, il n'y a pas de page 24, car elle est collée avec la suivante, le joueur doit alors récupérer un coupe papier caché dans le bureau. Il découpe la page et un papier crypté en tombe, la page du livre porte sur l'homme au masque de fer. Le joueur pense alors:  
 "L'homme au masque de fer? Cela me rappelle quelque chose, c'était un prisonnier dont l'identité avait été gardée secrète et qui marchait sur les remparts d'une prison avec un masque de fer. Il y a eu beaucoup de suppositions sur son identité mais elle n'a pas encore été révélée. Allons voir ce que ce papier contient."  
 Le joueur doit alors décrypter le message :  
+
 Sa Majesté voit mieux que personne les conséquences de cet acte, et est consciente du préjudice qu'il a porté à notre cause en ne réussissant pas à prendre la place, un échec qu'il va falloir réparer durant l'hiver.
 Sa Majesté désire que vous arrêtiez immédiatement le général de Bulonde, et qu'il soit conduit à la forteresse de Pignerol, où il sera enfermé dans une cellule gardée la nuit, et où il pourra se promener sur les remparts dans la journée, en portant un 330 309  
 Coordonnées : se rendre au lac, faire 52 pas au nord et 21 pas à l'est, creuser.  
