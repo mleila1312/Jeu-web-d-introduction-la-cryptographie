@@ -40,7 +40,7 @@ Elaboration du planning, rédaction et choix concernant le scénario global (pre
 - 17/03 : **Leïla** : ajout d'un scénario possible (avec énigmes, dialogues, explications) pour les certificats
 
 
-# Entre le 20/03/2024 et le 17/04/2024 
+# Entre le 20/03/2024 et le 09/04/2024 
 - 20/03 : 
     + **Lyla** : ajout d'icônes pour simplifier l'implémentation du scénario certificat, idées pour le scénario et fin du scénario développée pour Man In The Middle
     + **Vivien** : Travail aussi sur Man In The Middle pour l'histoire et un dialogue, dessiné des illustrations explicatives
@@ -77,6 +77,8 @@ Elaboration du planning, rédaction et choix concernant le scénario global (pre
     + **Jennifer** : remise en forme du scénario sur Vigenère, ajout d'énigmes
     + **Sarah** : Ajout d'énigmes.
     + **Lyla** : amélioration de l'apparence du site
+
+# Entre le 09/04/2024 et le 12/06/2024 
 - 09/04 :
     + **Tous** : point sur l'avancement, brainstorming sur les différentes manières d'implémenter notre jeu, rdv à 10h avec l'encadrant.
 - 12/04 :
@@ -86,5 +88,11 @@ Elaboration du planning, rédaction et choix concernant le scénario global (pre
 - 24/04 :
     + **Tous** : écriture du rapport de mi-parcours.
     + **Sarah/Leïla** : Modification du planning pour fusionner la phase implémentation et la phase de design
-    
+    + **Leïla** : création du server, début du travail sur la phase de jeu certificat, début du travail sur les pages web des différents dossiers : homepage et server qui vérifie le mot de passe pour se connecter.
+- 25/04 : **Leïla** : avancement sur site web du dossier 5 pour la phase sur les certificats -> 2 pages du sites web faites(au moins leur squelette) et dissimulation des chemins vers les fichiers sur l'url du site web du dossier 5(nom B)
+
+-26/04 : **Leila** : ajout de la page dettes au dossier 5
+
+- 27/04 : **Leïla** : presque finalisation du site du dossier 5, il ne manque plus que les objets à mettre sur la page achats. Ajout de la page attaque, quelques correction dans les autres pages et dans le css. ajout d'images faites avec canvas(image ajoutée les jours d'avant aussi réalisées avec canvas)
+
 
