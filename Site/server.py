@@ -105,9 +105,9 @@ def serve(port, run_browser):
     if run_browser:
         # Open the served page in the user's default browser
         print("Opening the served URL in the default browser (use `--no-browser` or `-n` to disable this).")
-        webbrowser.open_new_tab(f"http://127.0.0.1:{port}")
+        webbrowser.open_new_tab(f"https://cryptoquest.rezel.net:{port}")
 
-    app.run(host='127.0.0.1', port=port)
+    app.run(host='https://cryptoquest.rezel.net/', port=port)
 
 # lance le server
 if __name__ == "__main__":
