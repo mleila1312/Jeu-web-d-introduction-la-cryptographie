@@ -24,31 +24,31 @@ def accueil():
     return app.send_static_file('main.html')
 
 @app.route('/Home')
-def site_dossier5_certif():
+def Home():
     return app.send_static_file('main.html')
 
 @app.route('/Certificat')
-def site_dossier5_certif():
+def Certificat():
     return app.send_static_file("Certificat/certificat.html")
 
 @app.route('/Cle_publique')
-def site_dossier5_certif():
+def Cle_publique():
     return app.send_static_file("Cle_publique/cle_publique.html")
 
 @app.route('/Cesar')
-def site_dossier5_certif():
+def site_ceser():
     return app.send_static_file("Cryptanalyse_cesar/cryptanalyse_cesar.html")
 
 @app.route('/Echange_cle')
-def site_dossier5_certif():
+def site_Echange_cle():
     return app.send_static_file("Echange_cle/echange_cle.html")
 
 @app.route('/Enigma')
-def site_dossier5_certif():
+def site_Enigma():
     return app.send_static_file("Enigma/enigma.html")
 
 @app.route('/Grand_chiffre')
-def site_dossier5_certif():
+def site_Grand_chiffre():
     return app.send_static_file("Grand_chiffre/grand_chiffre.html")
 
 @app.route('/Scytale')
@@ -56,15 +56,15 @@ def site_dossier5_certif():
     return app.send_static_file("Scytale/scytale.html")
 
 @app.route('/Man_in_the_middle')
-def site_dossier5_certif():
+def site_Scytale():
     return app.send_static_file("Man_in_the_middle/man_in_the_middle.html")
 
 @app.route('/Vernam')
-def site_dossier5_certif():
+def site_Vernam():
     return app.send_static_file("Vernam/vernam.html")
 
 @app.route('/Vigenere')
-def site_dossier5_certif():
+def site_Vigenere():
     return app.send_static_file("Vigenere/vigenere.html")
 
 # Site du dossier 5, fait pour masquer le chemin jusqu'au fichier
