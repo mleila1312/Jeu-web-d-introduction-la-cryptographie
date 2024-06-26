@@ -101,23 +101,9 @@ def add_header_home(response):
     return response
 
 # lance le server et ouvre la page d'acceuil
-def serve(port, run_browser):
-    
+def serve(port):
     app.run(host='0.0.0.0', port=port)
 
 # lance le server
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("-p", "--port", help="port to listen on", default=4444, type=int)
-    parser.add_argument(
-        "-r", "--root", help="path to serve as root (relative to the script's location)", default="../../bin"
-    )
-    browser_parser = parser.add_mutually_exclusive_group(required=False)
-    browser_parser.add_argument(
-        "-n", "--no-browser", help="don't open default web browser automatically", dest="browser", action="store_false"
-    )
-    parser.set_defaults(browser=True)
-    args = parser.parse_args()
-    print(args.root)
-
-    serve(args.port, args.browser)
+    app.run(host='0.0.0.0', port=4444)
