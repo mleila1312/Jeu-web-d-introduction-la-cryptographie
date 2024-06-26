@@ -100,10 +100,7 @@ def add_header_home(response):
     response.headers['Cross-Origin-Opener-Policy'] = 'same-origin'
     return response
 
-# lance le server et ouvre la page d'acceuil
-def serve(port):
-    app.run(host='0.0.0.0', port=port)
 
 # lance le server
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=4444)
+    app.run(debug = False, host='0.0.0.0', port=80)
