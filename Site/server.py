@@ -52,7 +52,7 @@ def site_Grand_chiffre():
     return app.send_static_file("Grand_chiffre/grand_chiffre.html")
 
 @app.route('/Scytale')
-def site_dossier5_certif():
+def scytale():
     return app.send_static_file("Scytale/scytale.html")
 
 @app.route('/Man_in_the_middle')
