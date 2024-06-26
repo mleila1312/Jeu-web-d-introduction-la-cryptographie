@@ -102,12 +102,8 @@ def add_header_home(response):
 
 # lance le server et ouvre la page d'acceuil
 def serve(port, run_browser):
-    if run_browser:
-        # Open the served page in the user's default browser
-        print("Opening the served URL in the default browser (use `--no-browser` or `-n` to disable this).")
-        webbrowser.open_new_tab(f"https://cryptoquest.rezel.net:{port}")
-
-    app.run(host='https://cryptoquest.rezel.net/', port=port)
+    
+    app.run(host='0.0.0.0', port=port)
 
 # lance le server
 if __name__ == "__main__":
