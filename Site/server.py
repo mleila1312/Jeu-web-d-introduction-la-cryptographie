@@ -23,10 +23,54 @@ def gerer_erreur(e):
 def accueil():
     return app.send_static_file('main.html')
 
+@app.route('/Home')
+def site_dossier5_certif():
+    return app.send_static_file('main.html')
+
+@app.route('/Certificat')
+def site_dossier5_certif():
+    return app.send_static_file("Certificat/certificat.html")
+
+@app.route('/Cle_publique')
+def site_dossier5_certif():
+    return app.send_static_file("Cle_publique/cle_publique.html")
+
+@app.route('/Cesar')
+def site_dossier5_certif():
+    return app.send_static_file("Cryptanalyse_cesar/cryptanalyse_cesar.html")
+
+@app.route('/Echange_cle')
+def site_dossier5_certif():
+    return app.send_static_file("Echange_cle/echange_cle.html")
+
+@app.route('/Enigma')
+def site_dossier5_certif():
+    return app.send_static_file("Enigma/enigma.html")
+
+@app.route('/Grand_chiffre')
+def site_dossier5_certif():
+    return app.send_static_file("Grand_chiffre/grand_chiffre.html")
+
+@app.route('/Scytale')
+def site_dossier5_certif():
+    return app.send_static_file("Scytale/scytale.html")
+
+@app.route('/Man_in_the_middle')
+def site_dossier5_certif():
+    return app.send_static_file("Man_in_the_middle/man_in_the_middle.html")
+
+@app.route('/Vernam')
+def site_dossier5_certif():
+    return app.send_static_file("Vernam/vernam.html")
+
+@app.route('/Vigenere')
+def site_dossier5_certif():
+    return app.send_static_file("Vigenere/vigenere.html")
+
 # Site du dossier 5, fait pour masquer le chemin jusqu'au fichier
 @app.route('/B')
 def site_dossier5_certif():
-    return app.send_static_file(f"jeu-chapitres/Certificat/dossier5/secret-site/home.html")
+    return app.send_static_file("jeu-chapitres/Certificat/dossier5/secret-site/home.html")
 
 # pages du dossier 5
 @app.route('/B/<page>')
@@ -103,4 +147,4 @@ def add_header_home(response):
 
 # lance le server
 if __name__ == "__main__":
-    app.run(debug = False, host='0.0.0.0', port=5000)
+    app.run(debug = False, host='::', port=4444)
