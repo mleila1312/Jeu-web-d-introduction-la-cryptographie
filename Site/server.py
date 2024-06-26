@@ -35,7 +35,7 @@ def Certificat():
 def Cle_publique():
     return app.send_static_file("Cle_publique/cle_publique.html")
 
-@app.route('/Cesar')
+@app.route('/Cryptanalyse_cesar')
 def site_ceser():
     return app.send_static_file("Cryptanalyse_cesar/cryptanalyse_cesar.html")
 
