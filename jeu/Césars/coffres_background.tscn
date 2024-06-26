@@ -1,0 +1,332 @@
+[gd_scene load_steps=21 format=3 uid="uid://vrehjh0b7kp"]
+
+[ext_resource type="Texture2D" uid="uid://bpcwkkq6tbhia" path="res://img/img_salle_coffres/fonds/fond coffres.png" id="1_xjfs5"]
+[ext_resource type="Script" path="res://coffres_background.gd" id="2_3bfoa"]
+[ext_resource type="Texture2D" uid="uid://c8o4wumbmuw6r" path="res://img/img_salle_coffres/coffres/coffre1 fermé.png" id="3_pyo1v"]
+[ext_resource type="Texture2D" uid="uid://beqcqoja3r1sb" path="res://img/img_salle_coffres/coffres/coffre2 fermé.png" id="4_a085b"]
+[ext_resource type="Texture2D" uid="uid://dh0jefqtpf8pq" path="res://img/img_salle_coffres/coffres/coffre3 fermé.png" id="5_8doku"]
+[ext_resource type="Texture2D" uid="uid://bml1dbjv7bw8g" path="res://img/img_salle_coffres/coffres/coffre4 fermé.png" id="6_2lqn7"]
+[ext_resource type="Texture2D" uid="uid://co453qel170io" path="res://img/img_salle_coffres/boutons/écusson.png" id="7_ad4dr"]
+[ext_resource type="Texture2D" uid="uid://dem2f33601riy" path="res://img/img_salle_coffres/coffres/coffre1 ouvert.png" id="8_88o0n"]
+[ext_resource type="Texture2D" uid="uid://bqtnk7jnxd0ah" path="res://img/img_salle_coffres/coffres/coffre2 ouvert.png" id="9_jv0k5"]
+[ext_resource type="Texture2D" uid="uid://t3qb8q3iyb7l" path="res://img/img_salle_coffres/objets coffres/objet-indice1.png" id="9_ypowp"]
+[ext_resource type="Texture2D" uid="uid://btxhmqqrtefej" path="res://img/img_salle_coffres/coffres/coffre3 ouvert.png" id="10_77fu0"]
+[ext_resource type="Texture2D" uid="uid://cakbt1ehxodf0" path="res://img/img_salle_coffres/indices/indice1 ardoise.png" id="10_j10sr"]
+[ext_resource type="Texture2D" uid="uid://co8ug5ifpk7xi" path="res://img/img_salle_coffres/objets coffres/objet-indice2.png" id="12_k7v13"]
+[ext_resource type="Texture2D" uid="uid://comrlykxrojqa" path="res://img/img_salle_coffres/indices/indice2 règnes.png" id="13_pbaha"]
+[ext_resource type="Texture2D" uid="uid://b3mx1y5rqmusd" path="res://img/img_salle_coffres/objets coffres/objet-indice3.png" id="14_nwd1q"]
+[ext_resource type="Texture2D" uid="uid://ydq1vyu0w4vg" path="res://img/img_salle_coffres/indices/indice3 poème.png" id="15_1hjxf"]
+[ext_resource type="Texture2D" uid="uid://c0hdiwpgs5itl" path="res://img/img_salle_coffres/objets coffres/objet-indice4.png" id="17_xrgcg"]
+[ext_resource type="Texture2D" uid="uid://difcx8sc6molr" path="res://img/img_salle_coffres/indices/indice4 symboles.png" id="18_hn1l8"]
+[ext_resource type="Texture2D" uid="uid://d3qg5taw8mt7" path="res://img/img_salle_coffres/objets coffres/objet-indice5.png" id="19_hqcpb"]
+[ext_resource type="Texture2D" uid="uid://bsxnv5sq21yhm" path="res://img/img_salle_coffres/indices/objets carrés.png" id="20_2up4d"]
+
+[node name="coffres_background" type="Sprite2D"]
+position = Vector2(578, 327)
+texture = ExtResource("1_xjfs5")
+script = ExtResource("2_3bfoa")
+
+[node name="coffre1" type="TextureButton" parent="."]
+offset_left = 13.0
+offset_top = -139.0
+offset_right = 183.0
+offset_bottom = 111.0
+scale = Vector2(1.4, 1.4)
+texture_normal = ExtResource("3_pyo1v")
+
+[node name="explications1" type="Label" parent="coffre1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.05042
+anchor_top = 0.268571
+anchor_right = -0.00336115
+anchor_bottom = 0.860571
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(0.9, 0.9)
+text = "Je suis un nombre premier
+à deux chiffres.
+La somme de mes chiffres
+est égale à 10. 
+Qui suis-je?"
+metadata/_edit_use_anchors_ = true
+
+[node name="code1" type="LineEdit" parent="coffre1"]
+layout_mode = 0
+offset_left = -143.571
+offset_top = -34.2857
+offset_right = -52.5714
+offset_bottom = 46.7143
+
+[node name="coffre2" type="TextureButton" parent="."]
+visible = false
+offset_left = 13.0
+offset_top = -139.0
+offset_right = 183.0
+offset_bottom = 111.0
+scale = Vector2(1.4, 1.4)
+texture_normal = ExtResource("4_a085b")
+
+[node name="explications2" type="Label" parent="coffre2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.05042
+anchor_top = 0.268571
+anchor_right = -0.00336115
+anchor_bottom = 0.860571
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(0.9, 0.9)
+text = "Pour ouvrir le coffre,
+résous cette suite logique :
+2, 6, 12, 20, ?"
+metadata/_edit_use_anchors_ = true
+
+[node name="code2" type="LineEdit" parent="coffre2"]
+layout_mode = 0
+offset_left = -143.571
+offset_top = -34.2857
+offset_right = -52.5714
+offset_bottom = 46.7143
+
+[node name="coffre3" type="TextureButton" parent="."]
+visible = false
+offset_left = 13.0
+offset_top = -139.0
+offset_right = 183.0
+offset_bottom = 111.0
+scale = Vector2(1.4, 1.4)
+texture_normal = ExtResource("5_8doku")
+
+[node name="explications3" type="Label" parent="coffre3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.05042
+anchor_top = 0.268571
+anchor_right = -0.00336115
+anchor_bottom = 0.860571
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(0.9, 0.9)
+text = "Je suis un nombre à deux
+ chiffres. Mon chiffre des
+ unités est le carré de mon
+ chiffre des dizaines.
+Qui suis-je ?"
+metadata/_edit_use_anchors_ = true
+
+[node name="code3" type="LineEdit" parent="coffre3"]
+layout_mode = 0
+offset_left = -143.571
+offset_top = -34.2857
+offset_right = -52.5714
+offset_bottom = 46.7143
+
+[node name="coffre4" type="TextureButton" parent="."]
+visible = false
+offset_left = 13.0
+offset_top = -139.0
+offset_right = 183.0
+offset_bottom = 111.0
+scale = Vector2(1.4, 1.4)
+texture_normal = ExtResource("6_2lqn7")
+
+[node name="explications4" type="Label" parent="coffre4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.11345
+anchor_top = 0.268571
+anchor_right = -0.0663863
+anchor_bottom = 0.860571
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(0.9, 0.9)
+text = "Pour ouvrir le coffre,
+résous cette énigme :
+Quelle est la prochaine
+lettre dans cette séquence :
+U, D, T, Q, C, S, S, H, ?"
+metadata/_edit_use_anchors_ = true
+
+[node name="code4" type="LineEdit" parent="coffre4"]
+layout_mode = 0
+offset_left = -143.571
+offset_top = -34.2857
+offset_right = -52.5714
+offset_bottom = 46.7143
+
+[node name="coffre5" type="TextureButton" parent="."]
+visible = false
+offset_left = 13.0
+offset_top = -139.0
+offset_right = 183.0
+offset_bottom = 111.0
+scale = Vector2(1.4, 1.4)
+texture_normal = ExtResource("3_pyo1v")
+
+[node name="explications5" type="Label" parent="coffre5"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.05042
+anchor_top = 0.268571
+anchor_right = -0.00336115
+anchor_bottom = 0.860571
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(0.9, 0.9)
+text = "Je suis un nombre à trois
+chiffres. La somme de mes
+ chiffres est égale à 6.
+Mon chiffre des centaines
+est égal à mon chiffre des
+unités. Qui suis-je?"
+metadata/_edit_use_anchors_ = true
+
+[node name="code5" type="LineEdit" parent="coffre5"]
+layout_mode = 0
+offset_left = -143.571
+offset_top = -34.2857
+offset_right = -52.5714
+offset_bottom = 46.7143
+
+[node name="commentaires" type="Label" parent="."]
+offset_left = -188.0
+offset_top = -265.0
+offset_right = 251.0
+offset_bottom = -202.0
+theme_override_font_sizes/font_size = 24
+text = "Entre un nombre pour ouvrir le coffre"
+
+[node name="retour_button" type="Button" parent="."]
+offset_left = -188.0
+offset_top = 155.0
+offset_right = 320.0
+offset_bottom = 663.0
+scale = Vector2(0.25, 0.25)
+icon = ExtResource("7_ad4dr")
+
+[node name="coffre1_ouvert" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(155, 46)
+scale = Vector2(1.45, 1.45)
+texture = ExtResource("8_88o0n")
+
+[node name="indice1" type="TextureButton" parent="coffre1_ouvert"]
+offset_left = -34.4828
+offset_top = 13.7931
+offset_right = 465.517
+offset_bottom = 513.793
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("9_ypowp")
+
+[node name="indice1_background" type="TextureButton" parent="coffre1_ouvert"]
+offset_left = -568.966
+offset_top = -284.828
+offset_right = 583.034
+offset_bottom = 363.172
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("10_j10sr")
+
+[node name="coffre2_ouvert" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(146, 42)
+scale = Vector2(1.9, 1.9)
+texture = ExtResource("9_jv0k5")
+
+[node name="indice2" type="TextureButton" parent="coffre2_ouvert"]
+offset_left = -0.52631
+offset_top = 3.15789
+offset_right = 499.474
+offset_bottom = 503.158
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("12_k7v13")
+
+[node name="indice2_background" type="TextureButton" parent="coffre2_ouvert"]
+offset_left = -445.789
+offset_top = -237.895
+offset_right = 706.211
+offset_bottom = 410.105
+scale = Vector2(0.65, 0.65)
+texture_normal = ExtResource("13_pbaha")
+
+[node name="coffre3_ouvert" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(137, 42)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("9_jv0k5")
+
+[node name="indice3" type="TextureButton" parent="coffre3_ouvert"]
+offset_left = -8.75
+offset_top = 15.0
+offset_right = 491.25
+offset_bottom = 515.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("14_nwd1q")
+
+[node name="indice3_background" type="TextureButton" parent="coffre3_ouvert"]
+offset_left = -463.75
+offset_top = -241.25
+offset_right = 688.25
+offset_bottom = 406.75
+scale = Vector2(0.65, 0.65)
+texture_normal = ExtResource("15_1hjxf")
+
+[node name="coffre4_ouvert" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(125, 41)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("10_77fu0")
+
+[node name="indice4" type="TextureButton" parent="coffre4_ouvert"]
+offset_left = -39.4286
+offset_top = 4.0
+offset_right = 460.571
+offset_bottom = 504.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("17_xrgcg")
+
+[node name="indice4_background" type="TextureButton" parent="coffre4_ouvert"]
+offset_left = -472.0
+offset_top = -278.857
+offset_right = 680.0
+offset_bottom = 369.143
+scale = Vector2(0.72, 0.72)
+texture_normal = ExtResource("18_hn1l8")
+
+[node name="coffre5_ouvert" type="Sprite2D" parent="."]
+position = Vector2(149, 45)
+scale = Vector2(1.45, 1.45)
+texture = ExtResource("8_88o0n")
+
+[node name="indice5" type="TextureButton" parent="coffre5_ouvert"]
+offset_left = -40.0
+offset_top = 14.4828
+offset_right = 460.0
+offset_bottom = 514.483
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("19_hqcpb")
+
+[node name="indice5_background" type="TextureButton" parent="coffre5_ouvert"]
+offset_left = -291.035
+offset_top = -228.276
+offset_right = 860.965
+offset_bottom = 419.724
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("20_2up4d")
+
+[connection signal="text_submitted" from="coffre1/code1" to="." method="_on_code_1_text_submitted"]
+[connection signal="text_submitted" from="coffre2/code2" to="." method="_on_code_2_text_submitted"]
+[connection signal="text_submitted" from="coffre3/code3" to="." method="_on_code_3_text_submitted"]
+[connection signal="text_submitted" from="coffre4/code4" to="." method="_on_code_4_text_submitted"]
+[connection signal="text_submitted" from="coffre5/code5" to="." method="_on_code_5_text_submitted"]
+[connection signal="pressed" from="retour_button" to="." method="_on_retour_button_pressed"]
+[connection signal="pressed" from="coffre1_ouvert/indice1" to="." method="_on_indice_1_pressed"]
+[connection signal="pressed" from="coffre1_ouvert/indice1_background" to="." method="_on_indice_1_background_pressed"]
+[connection signal="pressed" from="coffre2_ouvert/indice2" to="." method="_on_indice_2_pressed"]
+[connection signal="pressed" from="coffre2_ouvert/indice2_background" to="." method="_on_indice_2_background_pressed"]
+[connection signal="pressed" from="coffre3_ouvert/indice3" to="." method="_on_indice_3_pressed"]
+[connection signal="pressed" from="coffre3_ouvert/indice3_background" to="." method="_on_indice_3_background_pressed"]
+[connection signal="pressed" from="coffre4_ouvert/indice4" to="." method="_on_indice_4_pressed"]
+[connection signal="pressed" from="coffre4_ouvert/indice4_background" to="." method="_on_indice_4_background_pressed"]
+[connection signal="pressed" from="coffre5_ouvert/indice5" to="." method="_on_indice_5_pressed"]
+[connection signal="pressed" from="coffre5_ouvert/indice5_background" to="." method="_on_indice_5_background_pressed"]

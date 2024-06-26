@@ -1,0 +1,98 @@
+[gd_scene load_steps=4 format=3 uid="uid://6jyye5sal5ls"]
+
+[ext_resource type="Script" path="res://Turing/rotors.gd" id="1_23gui"]
+[ext_resource type="PackedScene" uid="uid://bq0184ht436ev" path="res://Turing/label_rotor.tscn" id="2_agx6e"]
+[ext_resource type="PackedScene" uid="uid://bwt8kxfsa04ax" path="res://Turing/choix_rotor.tscn" id="2_vywyp"]
+
+[node name="Rotors" type="Node2D"]
+position = Vector2(56, 0)
+script = ExtResource("1_23gui")
+
+[node name="AffichageRotors" type="Node2D" parent="."]
+
+[node name="LabelRotor" parent="AffichageRotors" instance=ExtResource("2_agx6e")]
+offset_left = 773.0
+offset_top = 80.0
+offset_right = 864.0
+offset_bottom = 168.0
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelRotor2" parent="AffichageRotors" instance=ExtResource("2_agx6e")]
+offset_left = 773.0
+offset_top = 193.0
+offset_right = 864.0
+offset_bottom = 281.0
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelRotor3" parent="AffichageRotors" instance=ExtResource("2_agx6e")]
+offset_left = 773.0
+offset_top = 309.0
+offset_right = 864.0
+offset_bottom = 397.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Interne" type="Node2D" parent="."]
+
+[node name="Rotor1" parent="Interne" instance=ExtResource("2_vywyp")]
+offset_left = 437.0
+offset_right = 501.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Rotor2" parent="Interne" instance=ExtResource("2_vywyp")]
+offset_left = 221.0
+offset_right = 285.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Rotor3" parent="Interne" instance=ExtResource("2_vywyp")]
+offset_left = 2.0
+offset_right = 66.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Good" type="ColorRect" parent="Interne"]
+offset_left = 522.0
+offset_top = 47.0
+offset_right = 540.0
+offset_bottom = 65.0
+color = Color(0, 1, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Bad" type="ColorRect" parent="Interne"]
+offset_left = 522.0
+offset_top = 47.0
+offset_right = 540.0
+offset_bottom = 65.0
+color = Color(1, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Interne"]
+offset_left = 599.0
+offset_top = 16.0
+offset_right = 719.0
+offset_bottom = 44.0
+theme_override_font_sizes/font_size = 14
+text = "Retour à Enigma"
+metadata/_edit_use_anchors_ = true
+
+[node name="Reset" type="Button" parent="Interne"]
+offset_left = 518.0
+offset_right = 585.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 10
+text = "Réinitialiser 
+positions"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="interne" from="Interne/Rotor1" to="." method="update_interne"]
+[connection signal="item_selected" from="Interne/Rotor1" to="Interne/Rotor2" method="_disabled1"]
+[connection signal="item_selected" from="Interne/Rotor1" to="Interne/Rotor3" method="_disabled2"]
+[connection signal="rotor_changed" from="Interne/Rotor1" to="." method="one_rotor_changed"]
+[connection signal="interne" from="Interne/Rotor2" to="." method="update_interne"]
+[connection signal="item_selected" from="Interne/Rotor2" to="Interne/Rotor1" method="_disabled2"]
+[connection signal="item_selected" from="Interne/Rotor2" to="Interne/Rotor3" method="_disabled1"]
+[connection signal="rotor_changed" from="Interne/Rotor2" to="." method="one_rotor_changed"]
+[connection signal="interne" from="Interne/Rotor3" to="." method="update_interne"]
+[connection signal="item_selected" from="Interne/Rotor3" to="Interne/Rotor1" method="_disabled1"]
+[connection signal="item_selected" from="Interne/Rotor3" to="Interne/Rotor2" method="_disabled2"]
+[connection signal="rotor_changed" from="Interne/Rotor3" to="." method="one_rotor_changed"]
+[connection signal="pressed" from="Interne/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Interne/Reset" to="." method="reset_positions"]

@@ -105,7 +105,7 @@ Plongez-vous dans cette aventure palpitante et veillez à ce que les secrets d'H
 
 Ma chère Gabrielle,
 
-En ces temps tourmentés, ton sourire illumine mes jours. Accorderas-tu la grâce d'une soirée en ma compagnie, loin des intrigues de la cour ? Ta présence est un réconfort que je désire ardemment.
+En ces temps tourmentés, ton sourire illumine mes jours. Accorderas-tu la grâce d'une soirée en ma compagnie, loin des intrigues de la cour ? Ta présence est un réconfort que je désire.
 
 Avec tout mon amour,
 Henri
@@ -114,7 +114,7 @@ Henri
 
 OO GBVTS KUSTWIFCG, 
 
-SR WVU HIGGU HSOIOSRNVU, HSH JQIVCIG WPFLOWRY DGG NILTG. EWTQFHYICG-XO CC UVUTG R'YHV UCMLVG SR GR ECQJRIBMY, CQWR XVU WRNIKUYYJ FS PU TQIV ? NR RFIMVPQI YJV IR LVECRZFTH UOV LS HYJKFI UIFSQGVPH. 
+SR WVU HIGGU HSOIOSRNVU, HSH JQIVCIG WPFLOWRY DGG NILTG. EWTQFHYICG-XO CC UVUTG R'YHV UCMLVG SR GR ECQJRIBMY, CQWR XVU WRNIKUYYJ FS PU TQIV ? NR RFIMVPQI YJV IR LVECRZFTH UOV LS HYJKFI. 
 
 EPVE HSOK OCR UDQIV, BVPFM
 

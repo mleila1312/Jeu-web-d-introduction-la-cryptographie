@@ -1,0 +1,298 @@
+[gd_scene load_steps=36 format=3 uid="uid://21aewwvo8ecb"]
+
+[ext_resource type="Script" path="res://explication.gd" id="1_bv47u"]
+[ext_resource type="Resource" uid="uid://dq81hdnw4tmc4" path="res://inventory/playerInv.tres" id="2_opoxj"]
+[ext_resource type="Texture2D" uid="uid://dq1l7j4c2g5ns" path="res://images/ATHENES.png" id="2_vjhj6"]
+[ext_resource type="Texture2D" uid="uid://cty4ws6jtw68o" path="res://images/ATHENES_colline.png" id="3_8kgvc"]
+[ext_resource type="Script" path="res://post_it.gd" id="4_vt0wh"]
+[ext_resource type="Texture2D" uid="uid://bnvrpb1bvgev6" path="res://images/messager/bouclier_leve.png" id="5_l05wp"]
+[ext_resource type="Texture2D" uid="uid://chjhvt1dfnl6" path="res://images/post_it_menace.png" id="5_ydark"]
+[ext_resource type="Texture2D" uid="uid://gkelif6k1xqp" path="res://images/messager/course1.png" id="6_f3uve"]
+[ext_resource type="Texture2D" uid="uid://cca17uy7xafi0" path="res://images/scytale/scytale_vide.png" id="6_o4tdh"]
+[ext_resource type="Script" path="res://messager_explication.gd" id="6_xakxy"]
+[ext_resource type="Texture2D" uid="uid://d4aktq2oiqjp2" path="res://images/messager/course2.png" id="7_d5m60"]
+[ext_resource type="Texture2D" uid="uid://c4hgdi5h58l3h" path="res://images/scytale/scytale_1.png" id="7_eat1d"]
+[ext_resource type="Texture2D" uid="uid://3p273aryx5ko" path="res://images/scytale/scytale_2.png" id="8_ntfsx"]
+[ext_resource type="Texture2D" uid="uid://bea1kq0bqyw3i" path="res://images/messager/course3.png" id="8_vv6om"]
+[ext_resource type="Texture2D" uid="uid://bt1flim07dx3d" path="res://images/scytale/scytale_3.png" id="9_q1tcm"]
+[ext_resource type="Texture2D" uid="uid://ctp1iv0raj8mf" path="res://images/scytale/scytale_4.png" id="10_44em2"]
+[ext_resource type="Texture2D" uid="uid://ctqki178qyxcu" path="res://images/scytale/scytale_5.png" id="11_jk5ju"]
+[ext_resource type="Script" path="res://scytale.gd" id="12_l73xu"]
+[ext_resource type="Texture2D" uid="uid://dg0nu3l6lgv2g" path="res://images/scytale/scytale_6.png" id="12_m7tqn"]
+[ext_resource type="Texture2D" uid="uid://rkdwm471653q" path="res://images/scytale/scytale_7.png" id="13_wtpe3"]
+[ext_resource type="Texture2D" uid="uid://csbu3bdwsph0c" path="res://images/scytale/scytale_8.png" id="14_cj81r"]
+[ext_resource type="Texture2D" uid="uid://bgghi0s6yhmjk" path="res://images/rubanCrypte_scotch.png" id="14_k38gd"]
+[ext_resource type="Script" path="res://rubanCrypte.gd" id="14_r5svk"]
+[ext_resource type="Texture2D" uid="uid://p5s0j2afbj0c" path="res://images/rubanCrypte.png" id="14_v08ra"]
+[ext_resource type="Texture2D" uid="uid://b42btpoiv1u8x" path="res://images/scytale/scytale_9.png" id="15_xpb7t"]
+[ext_resource type="Script" path="res://text_test.gd" id="19_keihq"]
+[ext_resource type="Texture2D" uid="uid://cbbeajirufr3y" path="res://images/messager/bras_leve.png" id="21_jur23"]
+[ext_resource type="Texture2D" uid="uid://c0hgym38qqqbh" path="res://images/machine/machine_porteOuverte_background.png" id="27_dlfmw"]
+[ext_resource type="Script" path="res://materiel_ecriture.gd" id="27_yk61w"]
+[ext_resource type="Texture2D" uid="uid://cfhu4rxmjbe84" path="res://images/materiel_ecriture.png" id="28_wqdn2"]
+[ext_resource type="Script" path="res://papier_tests.gd" id="30_5s3w3"]
+[ext_resource type="Texture2D" uid="uid://dlcueivaw4ohq" path="res://images/bande_papier.png" id="31_1mi4u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dyfni"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_o4tdh")
+}],
+"loop": false,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_o4tdh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_eat1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ntfsx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_q1tcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_44em2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_jk5ju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_m7tqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_wtpe3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_cj81r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_xpb7t")
+}],
+"loop": false,
+"name": &"9",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_xpb7t")
+}],
+"loop": true,
+"name": &"full_enroule",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1seos"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_l05wp")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_f3uve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_d5m60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vv6om")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_jur23")
+}],
+"loop": false,
+"name": &"scytale",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s03x6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_v08ra")
+}],
+"loop": false,
+"name": &"pas_scotch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_k38gd")
+}],
+"loop": false,
+"name": &"scotch",
+"speed": 5.0
+}]
+
+[node name="explication" type="Node2D"]
+position = Vector2(1004, 567)
+script = ExtResource("1_bv47u")
+inventory = ExtResource("2_opoxj")
+
+[node name="fond" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vjhj6")
+stretch_mode = 3
+
+[node name="fond_colline" type="TextureRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1005.0
+offset_top = -179.0
+offset_right = 1731.0
+offset_bottom = 1360.0
+grow_horizontal = 2
+scale = Vector2(0.735732, 0.746254)
+texture = ExtResource("3_8kgvc")
+stretch_mode = 3
+
+[node name="post-it" type="Node2D" parent="."]
+position = Vector2(238, -125)
+script = ExtResource("4_vt0wh")
+
+[node name="Sprite2D" type="Sprite2D" parent="post-it"]
+position = Vector2(8, -38)
+texture = ExtResource("5_ydark")
+
+[node name="messager" type="Node2D" parent="."]
+script = ExtResource("6_xakxy")
+
+[node name="scytale" type="Control" parent="messager"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -151.0
+offset_top = 12.0
+offset_right = -151.0
+offset_bottom = 12.0
+scale = Vector2(0.65, 0.65)
+script = ExtResource("12_l73xu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="messager/scytale"]
+position = Vector2(-815.385, 652.308)
+rotation = 0.715585
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_dyfni")
+animation = &"full_enroule"
+
+[node name="Label" type="Label" parent="messager/scytale"]
+visible = false
+offset_left = -381.539
+offset_top = -150.769
+offset_right = 968.461
+offset_bottom = 49.2308
+rotation = -0.0698132
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -28
+theme_override_font_sizes/font_size = 90
+text = "L    F    A    O     A    E    E     P    R
+ C    S    R    N    T     E    T     R     B"
+autowrap_mode = 3
+max_lines_visible = 4
+visible_characters = 380
+visible_ratio = 34.5455
+
+[node name="RichTextLabel" type="RichTextLabel" parent="messager/scytale"]
+offset_left = -381.539
+offset_top = -150.769
+offset_right = 968.461
+offset_bottom = 69.231
+rotation = -0.0698132
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -28
+theme_override_font_sizes/normal_font_size = 90
+bbcode_enabled = true
+text = "N  N   N   N    N   N   N   N   N
+ A    A    A    A    A    A    A    A    A"
+scroll_following = true
+context_menu_enabled = true
+visible_characters = 380
+visible_ratio = 34.5455
+script = ExtResource("19_keihq")
+
+[node name="TextureButton" type="TextureButton" parent="messager/scytale"]
+offset_left = -418.462
+offset_top = -160.0
+offset_right = -378.462
+offset_bottom = -120.0
+rotation = -0.0698132
+scale = Vector2(38.8013, 5.58307)
+
+[node name="Control" type="Control" parent="messager/scytale"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -381.539
+offset_top = -150.769
+offset_right = 968.461
+offset_bottom = 69.231
+rotation = -0.0698132
+
+[node name="corps" type="AnimatedSprite2D" parent="messager"]
+visible = false
+position = Vector2(-325, 250)
+scale = Vector2(1.1, 1.1)
+sprite_frames = SubResource("SpriteFrames_1seos")
+animation = &"scytale"
+
+[node name="rubanCrypte" type="Node2D" parent="."]
+script = ExtResource("14_r5svk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="rubanCrypte"]
+position = Vector2(374, 92)
+rotation = 0.963422
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_s03x6")
+animation = &"pas_scotch"
+
+[node name="materiel_ecriture" type="Node2D" parent="."]
+position = Vector2(-317, 37)
+scale = Vector2(0.4, 0.4)
+script = ExtResource("27_yk61w")
+
+[node name="machine_bg" type="Sprite2D" parent="materiel_ecriture"]
+position = Vector2(797, -408)
+texture = ExtResource("27_dlfmw")
+
+[node name="papier_crayon" type="TextureButton" parent="materiel_ecriture"]
+offset_left = -7.5
+offset_top = 35.0
+offset_right = 305.5
+offset_bottom = 672.0
+texture_normal = ExtResource("28_wqdn2")
+
+[node name="papier_tests" type="Node2D" parent="."]
+script = ExtResource("30_5s3w3")
+
+[node name="papier" type="Sprite2D" parent="papier_tests"]
+position = Vector2(287, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("31_1mi4u")
+
+[node name="Label" type="Label" parent="papier_tests"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="debut_tests" from="." to="messager/scytale/RichTextLabel" method="_on_debut_tests"]
+[connection signal="debut_tests" from="." to="messager/scytale" method="_on_debut_tests"]
+[connection signal="pressed" from="messager/scytale/TextureButton" to="." method="_on_close_ruban_crypte_pressed"]
+[connection signal="mouse_entered" from="messager/scytale/Control" to="messager/scytale/RichTextLabel" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="messager/scytale/Control" to="messager/scytale/RichTextLabel" method="_on_control_mouse_exited"]

@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhyppnbgrlc4t"]
+
+[ext_resource type="PackedScene" uid="uid://tkrt246cfqwk" path="res://Turing/cable.tscn" id="1_2grov"]
+[ext_resource type="Script" path="res://Turing/cables.gd" id="1_ihvg4"]
+
+[node name="Cables" type="Node2D"]
+script = ExtResource("1_ihvg4")
+
+[node name="Cable" parent="." instance=ExtResource("1_2grov")]
+
+[node name="Cable2" parent="." instance=ExtResource("1_2grov")]
+position = Vector2(0, 130)
+
+[node name="Cable3" parent="." instance=ExtResource("1_2grov")]
+position = Vector2(0, 260)
+
+[node name="Retour" type="Button" parent="."]
+offset_left = 377.0
+offset_top = 138.0
+offset_right = 573.0
+offset_bottom = 214.0
+text = "Retour à Enigma"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 375.0
+offset_right = 616.0
+offset_bottom = 124.0
+text = "Un câble n'est considéré attaché entre deux lettres que si l'indicateur est vert. Les lettres sont alors échangées"
+autowrap_mode = 3
+justification_flags = 171
+
+[connection signal="reset" from="." to="Cable" method="_on_cables_reset"]
+[connection signal="reset" from="." to="Cable2" method="_on_cables_reset"]
+[connection signal="connect" from="Cable" to="." method="_on_cable_connect"]
+[connection signal="connect" from="Cable2" to="." method="_on_cable_2_connect"]
+[connection signal="connect" from="Cable3" to="." method="_on_cable_3_connect"]
+[connection signal="pressed" from="Retour" to="." method="_on_retour_pressed"]

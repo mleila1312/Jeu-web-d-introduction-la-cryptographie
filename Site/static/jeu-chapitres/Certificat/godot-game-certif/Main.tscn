@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxrhakv7k2op7"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_g0341"]
+[ext_resource type="PackedScene" uid="uid://coktt7fyua8ej" path="res://display.tscn" id="2_kftuk"]
+[ext_resource type="Script" path="res://Dialogue_texte.gd" id="3_3erju"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_g0341")
+
+[node name="display" parent="." instance=ExtResource("2_kftuk")]
+
+[node name="Dialogue_texte" type="CanvasLayer" parent="."]
+script = ExtResource("3_3erju")
+
+[node name="outside" type="Polygon2D" parent="Dialogue_texte"]
+polygon = PackedVector2Array(10, 551, 1143, 556, 1141, 640, 10, 642)
+
+[node name="inside" type="Polygon2D" parent="Dialogue_texte"]
+position = Vector2(0.166075, 106.324)
+scale = Vector2(0.984902, 0.810811)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(18.1073, 562, 19.1226, 650.8, 1147.15, 650.8, 1148.17, 562)
+
+[node name="Dialogue" type="Label" parent="Dialogue_texte"]
+offset_left = 29.0
+offset_top = 570.0
+offset_right = 1131.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 18
+text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaa"
+autowrap_mode = 2
+justification_flags = 171
+visible_characters_behavior = 1
+
+[node name="fond" type="Polygon2D" parent="."]
+position = Vector2(11, 1)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-1, -1, -1, 647, 1149, 648, 1150, 0)

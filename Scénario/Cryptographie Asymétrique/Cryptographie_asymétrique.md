@@ -25,7 +25,10 @@ Le joueur réfléchit une seconde, ce qui semble être trop long pour le profess
 Le joueur est encore un peu perplexe, et n’a pas le temps d’en placer une avant que le professeur recommence à parler très vite :
 « La méthode qu’on a utilisée t’a permis de t’assurer que seul le détenteur de la clé du coffre pouvait recevoir ton message.
 Tu poses ton message dans un coffre destiné à une personne en particulier, que tu fermes. Tout le monde peut te voir mettre ton papier dans le coffre, même voir vers qui va le coffre. Mais lorsque tu l’as fermé, seul le destinataire peut l’ouvrir. L’expéditeur a donc la certitude de l’identité du destinataire !
-On va dire que c’est Alice qui essaie d’envoyer un message à Bob, comme d’habitude. Tout le monde sait où est le coffre de Bob : c’est une clé publique. Alice pose le message dans le coffre et le referme. Ensuite, Bob vient l’ouvrir avec une clé que seul lui possède : c’est sa clé privée. 
+On va dire que c’est Alice qui essaie d’envoyer un message à Bob, comme d’habitude. Tout le monde sait où est le coffre de Bob : c’est une clé publique. Alice pose le message dans le coffre et le referme. Ensuite, Bob vient l’ouvrir avec une clé que seul lui possède : c’est sa clé privée."
+
+Il y a alors une phase de jeu où le joueur doit crypter un message, envoyer, décrypter. Il peut changer de vue de personnage. 
+
 -	Très bien, j’ai compris, dit le joueur en coupant le professeur avant qu’il reparte. Mais comment est-ce que tout cela m’aide à décrypter cet immonde message ? »
 Et il montre le message au professeur qui commence à rire.
 « Aah, j’ai compris pourquoi on t’a envoyé ici. C’est un chiffrement RSA. Viens dans mon bureau, je ne pourrai pas décrypter ça à la main ! »

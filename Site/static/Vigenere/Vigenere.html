@@ -69,7 +69,7 @@
                     <a href="" title="Chapitres">Chapitres</a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="..\ch1\ch1.html" title="Chapitre 1">Chapitre 1</a>
+                            <a href="http://127.0.0.1:4444/Chapitre-certificat" title="Chapitre Certificat">Chapitre Certificat</a>
                         </li>
                         <li>
                             <a href="..\ch2\ch2.html" title="Chapitre 2">Chapitre 2</a>
@@ -89,72 +89,152 @@
         <section id="Article">
             <div class="Articlesection">
                 <div class="boxSection">
-            <h3>Point Historique</h3>
-            Même si l'on connaissait depuis fort longtemps les faiblesses de la cryptographie par substitution, il n'y eut pas entre César et le XVI è s. de véritable nouveau procédé cryptographique, à la fois sûr (pour les moyens de l'époque) et facile à utiliser! Blaise de Vigenère, né en 1523, fut l'initiateur d'une nouvelle façon de chiffrer les messages qui mit en échec les cryptanalystes trois siècles durant. Vigenère était un personnage à multiples facettes, tantôt alchimiste, écrivain, historien, il était aussi diplomate au service des ducs de Nevers et des rois de France. C'est en 1586 qu'il publie son Traicté des chiffres ou Secrètes manières d'écrire, qui explique son nouveau chiffre, le chiffre de Vigenère.
+                    <h3>Point Historique</h3>
+                    
+                    &nbsp&nbsp&nbsp Même si l'on connaissait depuis fort longtemps les faiblesses de la cryptographie par substitution, il n'y eut pas entre César et le XVIe siècle de véritable nouveau procédé cryptographique, à la fois sûr (pour les moyens de l'époque) et facile à utiliser !
+                    
+                    <br>
+                    &nbsp&nbsp&nbsp Blaise de Vigenère, né en 1523, fut l'initiateur d'une nouvelle façon de chiffrer les messages qui mit en échec les cryptanalystes trois siècles durant.
+                    Vigenère était un personnage à multiples facettes, tantôt alchimiste, écrivain, historien, il était aussi diplomate au service des ducs de Nevers et des rois de France. 
+                    <br>
+                    &nbsp&nbsp&nbsp C'est en 1586 qu'il publie son <i>Traité des chiffres ou Secrètes manières d'écrire</i>, qui explique son nouveau chiffre, le chiffre de Vigenère.
                 </div>
             </div>
 
             <div class="Articlesection">
                 <div class="boxSection">
-            <h3>Principe</h3>
-            Ce chiffrement introduit la notion de clé. Une clé se présente généralement sous la forme d'un mot ou d'une phrase. Pour pouvoir chiffrer le texte, chaque caractère utilise une lettre de la clé pour effectuer la substitution. Plus la clé est longue et variée, mieux le texte est chiffré.
-<br>
-            Le prinicpe consiste à utiliser successivement plusieurs systèmes de César (plusieurs substitutions) avec des décalages différents. 
-            <br>
-
-            Exemple avec la clé KEY et le message MESSAGE: M est chiffré par le chiffre de César avec la clé K, puis E avec la clé E, S avec la clé Y, puis on recommence : S avec la clé K, A avec la clé E, G avec Y, et E avec K.
-            <br>
-            Mathématiquement, on identifie les lettres de l'alphabet aux nombres de 0 à 25 (A=0, B=1...). Les opérations de chiffrement et de déchiffrement sont, pour chaque lettre, celles du chiffre de César. En désignant la ie lettre du texte clair par Texte[i], la ie du chiffré par Chiffré[i], et la ie lettre de la clé, répétée suffisamment de fois, par Clés[i], elle se formalise par :<br>
-            Chiffré[i] = (Texte[i] + Clés[i]) modulo 26<br>
-            Texte[i] = (Chiffré[i] - Clés[i]) modulo 26<br>
-            où x modulo 26 désigne le reste de la division entière de x par 26. Pour le chiffrement il suffit d'effectuer l'addition des deux lettres puis de soustraire 26 si le résultat dépasse 26. Pour le déchiffrement il suffit d'effectuer la soustraction et d'additionner 26 si le résultat est négatif. Le déchiffrement est aussi une opération identique à celle du chiffrement pour la clé obtenue par Clé'[i] = 26 - Clé[i]. </div></div>
-
-            <div class="Articlesection">
-                <div class="boxSection">
-            <h3>Outil indispensable du chiffrement de Vigenère</h3>
-            Pour réaliser directement les opérations de chiffrement et de déchiffrement possédant la clé, un outil indispensable devient "la table de Vigenère".
-            <center>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Vigenère_square_shading.svg/langfr-1200px-Vigenère_square_shading.svg.png
-                " width = "50%" height="50%"/>
-                <figcaption>Wikipédia,<a target="_blank" href ="https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher">Vigenère Cipher</a> </figcaption>
-            </center>
-
-            Pour utiliser le chiffre de Vigenère, il faut avoir en sa possession : la table de Vigenère (représentée ci-dessus), une phrase à modifier pour lui donner un sens incompréhensible et un mot clé. <br>
-            
-            Prenons un exemple concret :<br>
-            
-            phrase : je suis en vacances en Espagne.<br>
-            mot clé : balais.<br>
+                    <h3>Principe</h3>
+                    &nbsp&nbsp&nbsp Ce chiffrement introduit la notion de clé. 
+                    Une clé se présente généralement sous la forme d'un mot ou d'une phrase. 
+                    Pour pouvoir chiffrer le texte, chaque caractère utilise une lettre de la clé pour effectuer la substitution. 
+                    Plus la clé est longue et variée, mieux le texte est chiffré.
+                    <br>
+                    <br>
+                    &nbsp&nbsp&nbsp Le principe consiste à utiliser successivement plusieurs systèmes de César 
+                    (plusieurs substitutions) avec des décalages différents. 
+                    <br>
+                     Exemple avec la clé KEY et le message MESSAGE: M est chiffré par le chiffre de César avec la clé K, 
+                     puis E avec la clé E, S avec la clé Y, puis on recommence : 
+                     S avec la clé K, A avec la clé E, G avec Y, et E avec K.
+                    <br>
+                    <br>
+                    &nbsp&nbsp&nbsp Mathématiquement, on identifie les lettres de l'alphabet aux nombres de 0 à 25 (A=0, B=1...). 
+                    Les opérations de chiffrement et de déchiffrement sont, pour chaque lettre, celles du chiffre de César. 
+                    En désignant la i<sup>ème</sup> lettre du texte clair par Texte[i], 
+                    la i<sup>ème</sup> du chiffré par Chiffré[i], et la i<sup>ème</sup> lettre de la clé, 
+                    répétée suffisamment de fois, par Clé[i], elle se formalise par :
+                    <br>
+                    <p class="tab">
+                        Chiffré[i] = (Texte[i] + Clé[i]) modulo 26<br>
+                        Texte[i] = (Chiffré[i] - Clé[i]) modulo 26
+                    </p>
+                    <br>
+                    où x modulo 26 désigne le reste de la division entière de x par 26. 
+                    Pour le chiffrement il suffit d'effectuer l'addition des deux lettres puis de soustraire 26 
+                    si le résultat dépasse 26. Pour le déchiffrement il suffit d'effectuer la soustraction et d'additionner 26 
+                    si le résultat est négatif. Le déchiffrement est aussi une opération identique à celle du chiffrement pour 
+                    la clé obtenue par Clé'[i] = 26 - Clé[i].
+                </div>
             </div>
+
+            <div class="Articlesection">
+                <div class="boxSection">
+                    <h3>Outil indispensable du chiffrement de Vigenère</h3>
+                    <div>
+                    &nbsp&nbsp&nbsp Pour réaliser directement les opérations de chiffrement et de déchiffrement possédant la clé, un outil indispensable devient "la table de Vigenère".
+                    <center>
+                        <br>
+                        <img src="Vigenere_cipher.png" width = "50%" height="50%"/>
+                        <figcaption>Wikipédia,<a target="_blank" href ="https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher">Vigenère Cipher</a> </figcaption>
+                        <br>
+                    </center>
+
+                    &nbsp&nbsp&nbsp Pour utiliser le chiffre de Vigenère, il faut avoir en sa possession : la table de Vigenère (représentée ci-dessus), une phrase à modifier pour lui donner un sens incompréhensible et un mot clé.
+                    <br>
+                    Prenons un exemple concret :
+                    </div>
+                        <p class="tab">
+                        <U>Phrase :</U> je suis en vacances en Espagne.<br>
+                        <U>Mot clé :</U> balais.<br>
+                        </p>
+                </div>
             </div>
 
             <div class="Articlesection">
                 <div class="boxSection">
-            <h3>Chiffrement</h3>
-            Pour que ça marche il faudra qu'il y ait le même nombre de lettres dans le mot clé que dans la phrase, pour ça il faudra répéter les lettres qu'il y a dans le mot balais pour qu'il y en ait autant que dans la phrase ce qui donne :<br>
-            
-            phrase: je suis en vacances en Espagne<br>
-            mot clé: ba lais ba laisbala is balaisb<br>
-
-            Maintenant qu'on a autant de lettres dans la phrase que dans le mot clé, voyons comment transformer cette phrase banale en une phrase chiffrée, incompréhensible pour les personnes ne connaissant pas cette méthode de chiffrement.<br>
-            
-            Pour cela il suffit de prendre la colonne correspondant à la première lettre de la phrase et la rangée (ligne horizontale) de la première lettre de la clé, et au croisement de ces lignes vous trouverez une lettre étant la première lettre de votre phrase chiffrée.<br>
-            
-            Ce qui donne avec notre exemple au croisement de la colonne J (première lettre du mot je) et de la rangée B (première lettre du mot-clé balais la lettre K pour chiffrer la lettre J de je). Pour chiffrer le E(seconde lettre du mot je) de je on croise la colonne E avec la rangée A (seconde lettre de balais) ce qui donne un E; pour chiffrer le S du mot suis (troisième lettre de la phrase à chiffrer) on croise la colonne S avec la rangée L (troisième lettre de balais) ce qui correspond à la lettre D et ainsi de suite: la phrase à chiffer donnera la suite suivante de lettres : KeduqkfngaksocpsmfFsaaoff.</div></div>
+                    <h3>Chiffrement</h3>
+                    <div>
+                    Pour que ça marche il faut qu'il y ait le même nombre de lettres dans le mot clé que dans la phrase. On répète à cette fin le mot <B>balais</B> jusqu'à ce qu'il y ait autant de lettres dans le mot clé que dans la phrase. Cela donne :<br>
+                    </div>
+                    <table class = "tab">
+                        <tr><td><U>Phrase:</U></td><td></td><td>j</td><td>e</td><td>s</td><td>u</td><td>i</td><td>s</td><td>en vacances en Espagne</td></tr>
+                        <tr><td><U>Mot clé:</U></td><td></td><td>b</td><td>a</td><td>l</td><td>a</td><td>i</td><td>s<td>b</td><td>a</td><td>l</td><td>a</td><td>i</td><td>s</td><td>b</td><td>a</td><td>l</td><td>a</td><td>i</td><td>s</td><td>b</td><td>a</td><td>l</td><td>a</td><td>i</td><td>s</td><td>b</td></tr>
+                    </table>
+                    <br>
+                    &nbsp&nbsp&nbsp Maintenant qu'on a autant de lettres dans la phrase que dans le mot clé, 
+                    voyons comment transformer cette phrase banale en une phrase chiffrée, incompréhensible 
+                    pour les personnes ne connaissant pas cette méthode de chiffrement.
+                    <br>
+                    &nbsp&nbsp&nbsp Pour cela il suffit de prendre la colonne correspondant à la première lettre de la phrase 
+                    et la rangée (ligne horizontale) de la première lettre de la clé, et au croisement de ces 
+                    lignes vous trouverez une lettre étant la première lettre de votre phrase chiffrée.
+                    <br>
+                    <br>
+                    &nbsp&nbsp&nbsp Ce qui donne avec notre exemple au croisement de la colonne J (première lettre du mot <B>je</B>) 
+                    et de la rangée B (première lettre du mot-clé <B>balais</B>) la lettre K pour chiffrer la lettre J de <B>je</B>.
+                    <br>
+                    Pour chiffrer le E (seconde lettre du mot <B>je</B>) on croise la colonne E avec la rangée A 
+                    (seconde lettre de balais) ce qui donne un E; 
+                    <br>
+                    pour chiffrer le S (troisième lettre de la phrase à chiffrer) du mot <B>suis</B> on croise la colonne S 
+                    avec la rangée L (troisième lettre de <B>balais</B>) ce qui correspond à la lettre D et ainsi de suite: 
+                    la phrase à chiffer donnera la suite suivante de lettres : <B>ke duqk fn gaksocps mf fsaaoff</B>.
+                </div>
+            </div>
 
             <div class="Articlesection">
                 <div class="boxSection">
-            <h3>Déhiffrement</h3>
-            Pour déchiffrer il suffit de prendre la colonne correspondant à la première lettre de la clé et de chercher dans cette colonne la lettre correspondant à la première lettre de la phrase codée, elle sera sur la ligne de la première lettre de la phrase normale (lettre qui se trouve dans la colonne la plus à gauche). Ainsi dans l'exemple choisi: dans la colonne de B la première lettre de balais le K correspond à la lettre J dans la colonne de gauche, donc il s'agit de la première lettre du mot je. La lettre A seconde lettre du mot-clé balais croisé avec la lettre E seconde lettre du mot à déchiffrer donne E dans la colonne de gauche., ce qui correspond au E seconde lettre de la phrase d'origine: la lettre L troisième lettre du mot-clé balais croisé avec la lettre D troisième lettre du mot chiffré correspond au S dans la colonne de gauche soit la troisième lettre du mot de la phrase d'origine (le premier S du mot suis). Il n'y a plus qu'à reproduire cette étape pour toutes les lettres.</div></div>
+                    <h3>Déchiffrement</h3>
+                    &nbsp&nbsp&nbsp Pour déchiffrer il suffit de prendre la colonne correspondant à la première lettre de la clé 
+                    et de chercher dans cette colonne la lettre correspondant à la première lettre de la phrase codée, 
+                    elle sera sur la ligne de la première lettre de la phrase normale (lettre qui se trouve dans la colonne 
+                    la plus à gauche). 
+                    <br>
+                    <br>
+                    &nbsp&nbsp&nbsp Ainsi dans l'exemple choisi: dans la colonne de B (la première lettre de <B>balais</B>) 
+                    le K (première lettre du message codé) est sur la ligne de la lettre J (colonne de gauche). 
+                    Ensuite dans la colonne A (seconde lettre du mot-clé <B>balais</B>) la seconde lettre 
+                    du mot codé, le E, donne E dans la colonne de gauche. On a donc obtenu les lettres J et E, qui 
+                    correspondent au <B>je</B> du début du message original !
+                    <br>
+                    Il n'y a plus qu'à reproduire cette étape pour toutes les lettres.
+                </div>
+            </div>
 
             <div class="Articlesection">
                 <div class="boxSection">
-            <h3>Cryptanalyse</h3>
-            Si l'on connait le nombre de symboles que comporte la clé, il devient possible de procéder par analyse de fréquences sur chacun des sous-textes déterminés en sélectionnant des lettres du message clair à intervalle la longueur de la clef (autant de sous-textes que la longueur de la clef). C'est l'attaque bien connue sur les chiffrements mono-alphabétiques.<br>
-
-            Pour déterminer la longueur de la clé, il faut chercher des répétitions de séquences (par exemple de 3 lettres), en faisant le pari qu'elle correspond à un même txete clair chiffré avec la même clé. Puis, regarder la distance entre ces répétitions en faisant le pari que c'est un multiple du nombre de substitutions. Enfin, prendre le diviseur commun et avec une bonne probabilité, c'est le nombre de substitutions.<br>
-
-            Pour chaque longueur de clé, utiliser la cryptanalyse de César sur chacun des sous-textes. </div></div>
+                    <h3>Cryptanalyse</h3>
+                    &nbsp&nbsp&nbsp Si l'on connait le nombre de symboles que comporte la clé, 
+                    on peut procéder par analyse de fréquences en divisant le texte codé en autant de parties que de 
+                    lettres dans la clé. On peut en effet regrouper ensemble toutes les lettres codées que l'on sait être codées
+                    par la même lettre du mot-clé.
+                    il devient possible 
+                    de procéder par analyse de fréquences sur chacun des sous-textes déterminés 
+                    en sélectionnant des lettres du message clair à intervalle la longueur de la clef 
+                    (autant de sous-textes que la longueur de la clef). 
+                    <br>
+                    C'est l'attaque bien connue sur les chiffrements mono-alphabétiques.
+                    <br><br>
+                    &nbsp&nbsp&nbsp Pour déterminer la longueur de la clé, il faut chercher des répétitions 
+                    de séquences (par exemple de 3 lettres), en faisant le pari qu'elles correspondent à 
+                    un même texte clair chiffré avec la même clé. Puis il faut regarder la distance entre ces 
+                    répétitions en assumant qu'elle est un multiple de la longueur de la clé. 
+                    Enfin, il faut prendre le diviseur commun et avec une bonne probabilité, on trouve la longueur de la clé.
+                    <br><br>
+                    &nbsp&nbsp&nbsp Pour chaque longueur de clé, utiliser la cryptanalyse de César sur chacun 
+                    des sous-textes. 
+                </div>
+            </div>
 
             <div class="Articlesection">
                 <div class="boxSection">

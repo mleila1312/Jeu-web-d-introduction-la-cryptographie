@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://butoewhekedxf"]
+
+[ext_resource type="Script" path="res://phase1/phase1.gd" id="1_tks82"]
+
+[node name="display" type="Node2D"]
+
+[node name="phase1" type="Node2D" parent="."]
+script = ExtResource("1_tks82")
+
+[node name="small_Z" type="Label" parent="phase1"]
+offset_left = 631.0
+offset_top = 75.0
+offset_right = 705.0
+offset_bottom = 144.0
+theme_override_font_sizes/font_size = 50
+text = "Z"
+
+[node name="big_Z" type="Label" parent="phase1"]
+offset_left = 172.0
+offset_top = 291.0
+offset_right = 266.0
+offset_bottom = 496.0
+theme_override_font_sizes/font_size = 150
+text = "Z"
+
+[node name="middle_Z" type="Label" parent="phase1"]
+offset_left = 520.0
+offset_top = 222.0
+offset_right = 612.0
+offset_bottom = 359.0
+theme_override_font_sizes/font_size = 100
+text = "Z"

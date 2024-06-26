@@ -1,0 +1,191 @@
+[gd_scene load_steps=14 format=3 uid="uid://c6wogw72gpeh7"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_st20j"]
+[ext_resource type="Resource" uid="uid://dq81hdnw4tmc4" path="res://inventory/playerInv.tres" id="2_ls27q"]
+[ext_resource type="Script" path="res://Boite_dialogue.gd" id="2_nr2xe"]
+[ext_resource type="PackedScene" uid="uid://cv2rpiirlmx7h" path="res://display.tscn" id="2_qc3fx"]
+[ext_resource type="PackedScene" uid="uid://baw61c3djmv4o" path="res://transition_screen.tscn" id="4_065o7"]
+[ext_resource type="PackedScene" uid="uid://21aewwvo8ecb" path="res://explication.tscn" id="4_apoe6"]
+[ext_resource type="PackedScene" uid="uid://mnxdo3y1mvcg" path="res://inventory/inv_ui.tscn" id="5_au0eu"]
+[ext_resource type="Script" path="res://dague.gd" id="8_fnqo4"]
+[ext_resource type="Texture2D" uid="uid://cgo325dhifxgg" path="res://images/dague.png" id="9_guimf"]
+[ext_resource type="Script" path="res://machine.gd" id="10_i5hn6"]
+[ext_resource type="Texture2D" uid="uid://dfbrstaawl885" path="res://images/machine/machine.png" id="11_d1b0m"]
+[ext_resource type="Texture2D" uid="uid://yqejfrwm5xi5" path="res://images/machine/machine_porteOuverte.png" id="12_yk35s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6l8hr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_d1b0m")
+}],
+"loop": false,
+"name": &"ferme",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_yk35s")
+}],
+"loop": false,
+"name": &"ouvert",
+"speed": 5.0
+}]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_st20j")
+inventory = ExtResource("2_ls27q")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-2, -3, 0, 648, 1151, 649, 1149, -1)
+
+[node name="display" parent="." instance=ExtResource("2_qc3fx")]
+
+[node name="explication" parent="." instance=ExtResource("4_apoe6")]
+position = Vector2(576, 323)
+scale = Vector2(0.571744, 0.570371)
+
+[node name="Boite_dialogue" type="CanvasLayer" parent="."]
+layer = 0
+script = ExtResource("2_nr2xe")
+
+[node name="outside" type="Polygon2D" parent="Boite_dialogue"]
+polygon = PackedVector2Array(1, 540, 1149, 541, 1149, 647, 1149, 647, -1, 649)
+
+[node name="inside" type="Polygon2D" parent="Boite_dialogue"]
+position = Vector2(0, -3)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(10, 550, 9, 641, 1142, 642, 1142, 552)
+
+[node name="text" type="Label" parent="Boite_dialogue"]
+visible = false
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = -89.0
+offset_right = -20.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+vertical_alignment = 3
+autowrap_mode = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Boite_dialogue"]
+offset_left = 18.0
+offset_top = 554.0
+offset_right = 1138.0
+offset_bottom = 637.0
+bbcode_enabled = true
+text = "chdjchjxhjckxhcxjhck"
+scroll_active = false
+visible_characters = 360
+visible_characters_behavior = 1
+visible_ratio = 18.0
+
+[node name="transition_screen" parent="." instance=ExtResource("4_065o7")]
+
+[node name="Inv_UI" parent="." instance=ExtResource("5_au0eu")]
+light_mask = 0
+z_index = 2
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1021.0
+offset_top = -0.5
+offset_right = 1150.0
+offset_bottom = 644.5
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 8
+
+[node name="invDague" type="TextureButton" parent="Inv_UI"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 21.0
+offset_right = 103.0
+offset_bottom = 95.0
+
+[node name="invRubanCrypte" type="TextureButton" parent="Inv_UI"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 124.5
+offset_right = 68.0
+offset_bottom = 164.5
+scale = Vector2(1.85875, 1.87194)
+
+[node name="invPapierCrayon" type="TextureButton" parent="Inv_UI"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 228.5
+offset_right = 68.0
+offset_bottom = 268.5
+scale = Vector2(1.86193, 1.88684)
+
+[node name="invMachine" type="TextureButton" parent="Inv_UI"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 436.5
+offset_right = 68.0
+offset_bottom = 476.5
+scale = Vector2(1.87677, 1.88183)
+
+[node name="Objets_inventaire" type="Node" parent="."]
+
+[node name="dague" type="Node2D" parent="Objets_inventaire"]
+z_index = 1
+script = ExtResource("8_fnqo4")
+
+[node name="dague" type="TextureButton" parent="Objets_inventaire/dague"]
+z_index = 1
+offset_left = 448.0
+offset_top = 88.0
+offset_right = 872.0
+offset_bottom = 512.0
+texture_normal = ExtResource("9_guimf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="machine" type="Node2D" parent="Objets_inventaire"]
+z_index = 2
+position = Vector2(362, 292)
+scale = Vector2(0.6, 0.6)
+script = ExtResource("10_i5hn6")
+
+[node name="machine_fg" type="AnimatedSprite2D" parent="Objets_inventaire/machine"]
+position = Vector2(334, -39)
+scale = Vector2(0.354, 0.354)
+sprite_frames = SubResource("SpriteFrames_6l8hr")
+animation = &"ferme"
+
+[node name="bouton_machine" type="TextureButton" parent="Objets_inventaire/machine"]
+offset_left = 55.0
+offset_top = -431.667
+offset_right = 1888.0
+offset_bottom = 1839.33
+scale = Vector2(0.298827, 0.224381)
+stretch_mode = 0
+
+[node name="bouton_porte" type="TextureButton" parent="Objets_inventaire/machine"]
+offset_left = 12.0
+offset_top = 80.0
+offset_right = 52.0
+offset_bottom = 120.0
+scale = Vector2(3.95897, 6.88556)
+
+[connection signal="machine_closed" from="." to="explication" method="_on_machine_closed"]
+[connection signal="lance_dialogue" from="explication" to="Boite_dialogue" method="dialogue"]
+[connection signal="papier_crayon_obtained" from="explication" to="." method="_on_papier_crayon_obtained"]
+[connection signal="ruban_in_inventaire" from="explication" to="." method="_on_ruban_in_inventaire"]
+[connection signal="pressed" from="Inv_UI/invDague" to="." method="_on_inv_dague_pressed"]
+[connection signal="pressed" from="Inv_UI/invPapierCrayon" to="explication" method="_on_inv_papier_crayon_pressed"]
+[connection signal="pressed" from="Inv_UI/invMachine" to="." method="_on_inv_machine_pressed"]
+[connection signal="pressed" from="Objets_inventaire/dague/dague" to="." method="_on_dague_pressed"]
+[connection signal="pressed" from="Objets_inventaire/machine/bouton_machine" to="." method="_on_machine_pressed"]
+[connection signal="pressed" from="Objets_inventaire/machine/bouton_machine" to="Objets_inventaire/machine" method="_on_machine_pressed"]
+[connection signal="pressed" from="Objets_inventaire/machine/bouton_porte" to="explication" method="_on_machine_opened"]
+[connection signal="pressed" from="Objets_inventaire/machine/bouton_porte" to="Objets_inventaire/machine" method="_on_bouton_porte_pressed"]

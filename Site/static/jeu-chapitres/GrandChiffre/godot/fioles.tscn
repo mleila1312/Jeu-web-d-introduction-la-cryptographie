@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://cd2igud8hu6ar"]
+
+[ext_resource type="Texture2D" uid="uid://vpatqfefysj8" path="res://images/etagere_sans_fioles.png" id="1_4govu"]
+[ext_resource type="Script" path="res://fioles.gd" id="1_8exd3"]
+[ext_resource type="Texture2D" uid="uid://dymwje4fq8j2" path="res://images/fiole0.png" id="3_61w7p"]
+[ext_resource type="Texture2D" uid="uid://b0pygiqmni1kb" path="res://images/halo_fioles_finished.png" id="3_shoiq"]
+[ext_resource type="Texture2D" uid="uid://clkblyhup4hvr" path="res://images/rond8.png" id="4_h2b45"]
+[ext_resource type="Texture2D" uid="uid://dwuio25ndry1t" path="res://images/tube0.png" id="5_thgme"]
+
+[node name="fioles" type="Node2D"]
+script = ExtResource("1_8exd3")
+
+[node name="EtagereSansFioles" type="Sprite2D" parent="."]
+position = Vector2(576, 325)
+texture = ExtResource("1_4govu")
+
+[node name="finished" type="TextureRect" parent="."]
+offset_left = 21.0
+offset_top = -78.0
+offset_right = 661.0
+offset_bottom = 533.0
+texture = ExtResource("3_shoiq")
+
+[node name="fiole" type="TextureButton" parent="."]
+offset_left = 205.0
+offset_top = 317.0
+offset_right = 340.0
+offset_bottom = 495.0
+texture_normal = ExtResource("3_61w7p")
+
+[node name="rond" type="TextureButton" parent="."]
+offset_left = 382.0
+offset_top = 208.0
+offset_right = 539.0
+offset_bottom = 474.0
+texture_normal = ExtResource("4_h2b45")
+
+[node name="tube" type="TextureButton" parent="."]
+offset_left = 607.0
+offset_top = 150.0
+offset_right = 759.0
+offset_bottom = 505.0
+texture_normal = ExtResource("5_thgme")
+
+[node name="go_back" type="Button" parent="."]
+offset_left = 369.0
+offset_top = 594.0
+offset_right = 743.0
+offset_bottom = 637.0
+theme_override_font_sizes/font_size = 25
+text = "Retour"
+
+[connection signal="pressed" from="fiole" to="." method="_on_fiole_pressed"]
+[connection signal="pressed" from="rond" to="." method="_on_rond_pressed"]
+[connection signal="pressed" from="tube" to="." method="_on_tube_pressed"]
+[connection signal="pressed" from="go_back" to="." method="_on_button_pressed"]

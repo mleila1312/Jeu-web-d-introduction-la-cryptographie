@@ -1,0 +1,92 @@
+[gd_scene load_steps=9 format=3 uid="uid://c7t3p6ocjkfc8"]
+
+[ext_resource type="Script" path="res://feuilles_post_dechiffre.gd" id="1_80vty"]
+[ext_resource type="Texture2D" uid="uid://gcdtrxns75vb" path="res://images/bureau_couteau.png" id="1_pjt12"]
+[ext_resource type="Texture2D" uid="uid://b2f1eivnjnbem" path="res://images/livres.png" id="2_kqieq"]
+[ext_resource type="Texture2D" uid="uid://cielitovm3o7m" path="res://images/lettre_fenelon.png" id="3_oxacw"]
+[ext_resource type="Texture2D" uid="uid://bs1nhavqs0sla" path="res://images/masque_fer_feuille.png" id="4_j1j4l"]
+[ext_resource type="Texture2D" uid="uid://cc67o8rrttft2" path="res://images/planning2.png" id="5_i26rc"]
+[ext_resource type="Texture2D" uid="uid://bo5hl8x1s4iqr" path="res://images/turing.png" id="6_0d3o5"]
+[ext_resource type="Texture2D" uid="uid://2duprks4ouql" path="res://images/planning1.png" id="7_7cmnn"]
+
+[node name="feuilles_post_dechiffre" type="Node2D"]
+script = ExtResource("1_80vty")
+
+[node name="bg" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_pjt12")
+
+[node name="feuille6" type="TextureRect" parent="."]
+offset_left = 347.0
+offset_top = 9.0
+offset_right = 868.0
+offset_bottom = 374.0
+texture = ExtResource("2_kqieq")
+
+[node name="feuille5" type="TextureRect" parent="."]
+offset_left = 457.0
+offset_top = 26.0
+offset_right = 824.0
+offset_bottom = 545.0
+texture = ExtResource("3_oxacw")
+
+[node name="feuille4" type="TextureRect" parent="."]
+offset_left = 360.0
+offset_top = 20.0
+offset_right = 766.0
+offset_bottom = 311.0
+texture = ExtResource("4_j1j4l")
+
+[node name="feuille3" type="TextureRect" parent="."]
+offset_left = 356.0
+offset_top = 25.0
+offset_right = 723.0
+offset_bottom = 544.0
+texture = ExtResource("5_i26rc")
+
+[node name="feuille2" type="TextureRect" parent="."]
+offset_left = 243.0
+offset_top = 34.0
+offset_right = 610.0
+offset_bottom = 553.0
+texture = ExtResource("6_0d3o5")
+
+[node name="feuille1" type="TextureRect" parent="."]
+offset_left = 300.0
+offset_top = 55.0
+offset_right = 698.0
+offset_bottom = 574.0
+texture = ExtResource("7_7cmnn")
+
+[node name="poignard_button" type="TextureButton" parent="."]
+offset_left = 872.0
+offset_top = 488.0
+offset_right = 1136.0
+offset_bottom = 583.0
+
+[node name="suivante" type="Button" parent="."]
+offset_left = 951.0
+offset_top = 226.0
+offset_right = 1051.0
+offset_bottom = 279.0
+text = "Feuille suivante"
+
+[node name="precedente" type="Button" parent="."]
+offset_left = 53.0
+offset_top = 227.0
+offset_right = 204.0
+offset_bottom = 258.0
+text = "Feuille précédente"
+
+[node name="retour" type="Button" parent="."]
+offset_left = 485.0
+offset_top = 587.0
+offset_right = 603.0
+offset_bottom = 624.0
+text = "Retour"
+
+[connection signal="pressed" from="poignard_button" to="." method="_on_poignard_button_pressed"]
+[connection signal="pressed" from="suivante" to="." method="_on_suivante_pressed"]
+[connection signal="pressed" from="precedente" to="." method="_on_precedente_pressed"]
+[connection signal="pressed" from="retour" to="." method="_on_retour_pressed"]

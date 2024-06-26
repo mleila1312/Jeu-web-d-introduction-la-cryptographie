@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://vyxcceae0fny"]
+
+[ext_resource type="Script" path="res://etienne.gd" id="1_0guyd"]
+[ext_resource type="Texture2D" uid="uid://dgpkcaw2dvdn6" path="res://images/etienne.png" id="1_uarem"]
+[ext_resource type="PackedScene" uid="uid://cd2igud8hu6ar" path="res://fioles.tscn" id="3_gtlkb"]
+[ext_resource type="Texture2D" uid="uid://dsnoqo8kd3qy1" path="res://images/gauche.png" id="3_o7r6r"]
+[ext_resource type="Texture2D" uid="uid://dcuyqekexg7lf" path="res://images/droite.png" id="4_do4nn"]
+
+[node name="Etienne" type="Node2D"]
+script = ExtResource("1_0guyd")
+
+[node name="fond" type="TextureRect" parent="."]
+offset_right = 1149.0
+offset_bottom = 650.0
+texture = ExtResource("1_uarem")
+
+[node name="fioles_button" type="TextureButton" parent="."]
+offset_left = 95.0
+offset_top = 152.0
+offset_right = 499.0
+offset_bottom = 325.0
+
+[node name="gauche" type="TextureButton" parent="."]
+offset_left = 12.0
+offset_top = 290.0
+offset_right = 69.0
+offset_bottom = 375.0
+texture_normal = ExtResource("3_o7r6r")
+
+[node name="droite" type="TextureButton" parent="."]
+offset_left = 1078.0
+offset_top = 279.0
+offset_right = 1135.0
+offset_bottom = 364.0
+texture_normal = ExtResource("4_do4nn")
+
+[node name="fioles" parent="." instance=ExtResource("3_gtlkb")]
+
+[connection signal="pressed" from="fioles_button" to="." method="_on_fioles_button_pressed"]
+[connection signal="pressed" from="gauche" to="." method="_on_gauche_pressed"]
+[connection signal="pressed" from="droite" to="." method="_on_droite_pressed"]
+[connection signal="finished_game" from="fioles" to="." method="_on_fioles_finished_game"]
+[connection signal="retour_etienne" from="fioles" to="." method="_on_fioles_retour_etienne"]

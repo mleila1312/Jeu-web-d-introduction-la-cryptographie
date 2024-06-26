@@ -1,0 +1,214 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmxtben3f7b2x"]
+
+[ext_resource type="Script" path="res://mot_croise.gd" id="1_36j1r"]
+[ext_resource type="Texture2D" uid="uid://s2n0tu2jugmp" path="res://art/mot_croise.PNG" id="1_jiqky"]
+[ext_resource type="PackedScene" uid="uid://d0hfuyigelxr0" path="res://mot_croise_case.tscn" id="5_uaale"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_36j1r")
+
+[node name="vertical" type="Sprite2D" parent="."]
+position = Vector2(874.556, 311.388)
+scale = Vector2(0.658462, 0.658462)
+
+[node name="horizontal" type="Sprite2D" parent="."]
+position = Vector2(875.667, 543.394)
+scale = Vector2(0.680223, 0.680223)
+
+[node name="mot_croise" type="Sprite2D" parent="."]
+position = Vector2(299.037, 326.575)
+scale = Vector2(0.81151, 0.81151)
+texture = ExtResource("1_jiqky")
+
+[node name="case1" parent="." instance=ExtResource("5_uaale")]
+offset_left = 331.0
+offset_top = 16.0
+offset_right = 380.0
+offset_bottom = 65.0
+
+[node name="case2" parent="." instance=ExtResource("5_uaale")]
+offset_left = 331.0
+offset_top = 68.0
+offset_right = 380.0
+offset_bottom = 117.0
+
+[node name="case3" parent="." instance=ExtResource("5_uaale")]
+offset_left = 331.0
+offset_top = 120.0
+offset_right = 380.0
+offset_bottom = 169.0
+
+[node name="case4" parent="." instance=ExtResource("5_uaale")]
+offset_left = 331.0
+offset_top = 170.0
+offset_right = 380.0
+offset_bottom = 219.0
+
+[node name="case5" parent="." instance=ExtResource("5_uaale")]
+offset_left = 331.0
+offset_top = 221.0
+offset_right = 380.0
+offset_bottom = 270.0
+
+[node name="case6" parent="." instance=ExtResource("5_uaale")]
+offset_left = 331.0
+offset_top = 273.0
+offset_right = 380.0
+offset_bottom = 322.0
+
+[node name="case7" parent="." instance=ExtResource("5_uaale")]
+offset_left = 330.0
+offset_top = 324.0
+offset_right = 379.0
+offset_bottom = 373.0
+
+[node name="case8" parent="." instance=ExtResource("5_uaale")]
+offset_left = 485.0
+offset_top = 274.0
+offset_right = 534.0
+offset_bottom = 323.0
+
+[node name="case9" parent="." instance=ExtResource("5_uaale")]
+offset_left = 485.0
+offset_top = 325.0
+offset_right = 534.0
+offset_bottom = 374.0
+
+[node name="case10" parent="." instance=ExtResource("5_uaale")]
+offset_left = 485.0
+offset_top = 376.0
+offset_right = 534.0
+offset_bottom = 425.0
+
+[node name="case11" parent="." instance=ExtResource("5_uaale")]
+offset_left = 485.0
+offset_top = 429.0
+offset_right = 534.0
+offset_bottom = 478.0
+
+[node name="case12" parent="." instance=ExtResource("5_uaale")]
+offset_left = 485.0
+offset_top = 479.0
+offset_right = 534.0
+offset_bottom = 528.0
+
+[node name="case13" parent="." instance=ExtResource("5_uaale")]
+offset_left = 175.0
+offset_top = 326.0
+offset_right = 224.0
+offset_bottom = 375.0
+
+[node name="case14" parent="." instance=ExtResource("5_uaale")]
+offset_left = 175.0
+offset_top = 376.0
+offset_right = 224.0
+offset_bottom = 425.0
+
+[node name="case15" parent="." instance=ExtResource("5_uaale")]
+offset_left = 175.0
+offset_top = 428.0
+offset_right = 224.0
+offset_bottom = 477.0
+
+[node name="case16" parent="." instance=ExtResource("5_uaale")]
+offset_left = 176.0
+offset_top = 480.0
+offset_right = 225.0
+offset_bottom = 529.0
+
+[node name="case17" parent="." instance=ExtResource("5_uaale")]
+offset_left = 176.0
+offset_top = 531.0
+offset_right = 225.0
+offset_bottom = 580.0
+
+[node name="case18" parent="." instance=ExtResource("5_uaale")]
+offset_left = 176.0
+offset_top = 582.0
+offset_right = 225.0
+offset_bottom = 631.0
+
+[node name="case19" parent="." instance=ExtResource("5_uaale")]
+offset_left = 228.0
+offset_top = 324.0
+offset_right = 277.0
+offset_bottom = 373.0
+
+[node name="case20" parent="." instance=ExtResource("5_uaale")]
+offset_left = 279.0
+offset_top = 325.0
+offset_right = 328.0
+offset_bottom = 374.0
+
+[node name="case21" parent="." instance=ExtResource("5_uaale")]
+offset_left = 331.0
+offset_top = 324.0
+offset_right = 380.0
+offset_bottom = 373.0
+
+[node name="case22" parent="." instance=ExtResource("5_uaale")]
+offset_left = 382.0
+offset_top = 324.0
+offset_right = 431.0
+offset_bottom = 373.0
+
+[node name="case23" parent="." instance=ExtResource("5_uaale")]
+offset_left = 433.0
+offset_top = 324.0
+offset_right = 482.0
+offset_bottom = 373.0
+
+[node name="case24" parent="." instance=ExtResource("5_uaale")]
+offset_left = 537.0
+offset_top = 324.0
+offset_right = 586.0
+offset_bottom = 373.0
+
+[node name="case25" parent="." instance=ExtResource("5_uaale")]
+offset_left = 22.0
+offset_top = 531.0
+offset_right = 71.0
+offset_bottom = 580.0
+
+[node name="case26" parent="." instance=ExtResource("5_uaale")]
+offset_left = 73.0
+offset_top = 531.0
+offset_right = 122.0
+offset_bottom = 580.0
+
+[node name="case27" parent="." instance=ExtResource("5_uaale")]
+offset_left = 124.0
+offset_top = 531.0
+offset_right = 173.0
+offset_bottom = 580.0
+
+[node name="case28" parent="." instance=ExtResource("5_uaale")]
+offset_left = 227.0
+offset_top = 531.0
+offset_right = 276.0
+offset_bottom = 580.0
+
+[node name="Explications" type="Label" parent="."]
+layout_mode = 0
+offset_left = 614.0
+offset_top = 25.0
+offset_right = 1138.0
+offset_bottom = 167.0
+text = "Il est temps de mettre en pratique tes connaissances. 
+Pour ajouter une lettre dans une case, mets ta souris sur cette case.
+Si la réponse est fausse, attends un peu et réessaie.
+
+Bonne chance !"
+
+[node name="bravo" type="Label" parent="."]
+layout_mode = 0
+offset_left = 616.0
+offset_top = 45.0
+offset_right = 796.0
+offset_bottom = 150.0
+theme_override_font_sizes/font_size = 44
+text = "Bravo !"

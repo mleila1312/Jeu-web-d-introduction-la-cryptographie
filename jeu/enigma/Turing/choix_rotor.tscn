@@ -1,0 +1,268 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwt8kxfsa04ax"]
+
+[ext_resource type="Script" path="res://Turing/choix_rotor.gd" id="1_i24uo"]
+[ext_resource type="Script" path="res://Turing/Label.gd" id="2_fsc7v"]
+[ext_resource type="Texture2D" uid="uid://gwhxqr7w8rxu" path="res://art/droite.png" id="3_x0xps"]
+[ext_resource type="Script" path="res://Turing/Labels.gd" id="4_grr4v"]
+
+[node name="OptionButton" type="OptionButton"]
+offset_left = 1.0
+offset_right = 65.0
+offset_bottom = 66.0
+theme_override_font_sizes/font_size = 20
+item_count = 6
+selected = 0
+popup/item_0/text = ""
+popup/item_0/id = 0
+popup/item_1/text = "1"
+popup/item_1/id = 1
+popup/item_2/text = "2"
+popup/item_2/id = 2
+popup/item_3/text = "3"
+popup/item_3/id = 3
+popup/item_4/text = "4"
+popup/item_4/id = 4
+popup/item_5/text = "5"
+popup/item_5/id = 5
+script = ExtResource("1_i24uo")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 101.0
+offset_right = 53.0
+offset_bottom = 155.0
+text = "
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_fsc7v")
+
+[node name="down" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 126.0
+offset_right = 129.0
+offset_bottom = 211.0
+rotation = 1.5708
+texture_normal = ExtResource("3_x0xps")
+
+[node name="up" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -12.0
+offset_top = 125.0
+offset_right = 45.0
+offset_bottom = 210.0
+rotation = -1.5708
+texture_normal = ExtResource("3_x0xps")
+
+[node name="Labels" type="Node2D" parent="."]
+script = ExtResource("4_grr4v")
+
+[node name="Label" type="Label" parent="Labels"]
+offset_left = -44.0
+offset_top = 178.0
+offset_right = 11.0
+offset_bottom = 206.0
+theme_override_font_sizes/font_size = 20
+text = "A → A"
+
+[node name="Label2" type="Label" parent="Labels"]
+offset_left = -44.0
+offset_top = 205.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 20
+text = "B → B"
+
+[node name="Label3" type="Label" parent="Labels"]
+offset_left = -44.0
+offset_top = 228.0
+offset_bottom = 251.0
+theme_override_font_sizes/font_size = 20
+text = "C → C"
+
+[node name="Label4" type="Label" parent="Labels"]
+offset_left = -44.0
+offset_top = 251.0
+offset_right = 2.0
+offset_bottom = 274.0
+theme_override_font_sizes/font_size = 20
+text = "D → D"
+
+[node name="Label5" type="Label" parent="Labels"]
+offset_left = -44.0
+offset_top = 274.0
+offset_bottom = 297.0
+theme_override_font_sizes/font_size = 20
+text = "E → E"
+
+[node name="Label6" type="Label" parent="Labels"]
+offset_left = -44.0
+offset_top = 298.0
+offset_bottom = 321.0
+theme_override_font_sizes/font_size = 20
+text = "F → F"
+
+[node name="Label7" type="Label" parent="Labels"]
+offset_left = -44.0
+offset_top = 321.0
+offset_right = 2.0
+offset_bottom = 344.0
+theme_override_font_sizes/font_size = 20
+text = "G → G"
+
+[node name="Label8" type="Label" parent="Labels"]
+offset_left = -44.0
+offset_top = 344.0
+offset_right = 3.0
+offset_bottom = 367.0
+theme_override_font_sizes/font_size = 20
+text = "H → H"
+
+[node name="Label9" type="Label" parent="Labels"]
+offset_left = -44.0
+offset_top = 367.0
+offset_bottom = 390.0
+theme_override_font_sizes/font_size = 20
+text = "I → I"
+
+[node name="Label10" type="Label" parent="Labels"]
+offset_left = -44.0
+offset_top = 390.0
+offset_bottom = 413.0
+theme_override_font_sizes/font_size = 20
+text = "J → J"
+
+[node name="Label11" type="Label" parent="Labels"]
+offset_left = -44.0
+offset_top = 414.0
+offset_bottom = 437.0
+theme_override_font_sizes/font_size = 20
+text = "K → K"
+
+[node name="Label12" type="Label" parent="Labels"]
+offset_left = -44.0
+offset_top = 438.0
+offset_bottom = 461.0
+theme_override_font_sizes/font_size = 20
+text = "L → L"
+
+[node name="Label13" type="Label" parent="Labels"]
+offset_left = -44.0
+offset_top = 462.0
+offset_right = 8.0
+offset_bottom = 485.0
+theme_override_font_sizes/font_size = 20
+text = "M → M"
+
+[node name="Label14" type="Label" parent="Labels"]
+offset_left = 57.0
+offset_top = 178.0
+offset_right = 105.0
+offset_bottom = 201.0
+theme_override_font_sizes/font_size = 20
+text = "N → N"
+
+[node name="Label15" type="Label" parent="Labels"]
+offset_left = 57.0
+offset_top = 206.0
+offset_right = 105.0
+offset_bottom = 229.0
+theme_override_font_sizes/font_size = 20
+text = "O → O"
+
+[node name="Label16" type="Label" parent="Labels"]
+offset_left = 57.0
+offset_top = 229.0
+offset_right = 101.0
+offset_bottom = 252.0
+theme_override_font_sizes/font_size = 20
+text = "P → P"
+
+[node name="Label17" type="Label" parent="Labels"]
+offset_left = 57.0
+offset_top = 252.0
+offset_right = 105.0
+offset_bottom = 275.0
+theme_override_font_sizes/font_size = 20
+text = "Q → Q"
+
+[node name="Label18" type="Label" parent="Labels"]
+offset_left = 57.0
+offset_top = 275.0
+offset_right = 101.0
+offset_bottom = 298.0
+theme_override_font_sizes/font_size = 20
+text = "R → R"
+
+[node name="Label19" type="Label" parent="Labels"]
+offset_left = 57.0
+offset_top = 299.0
+offset_right = 101.0
+offset_bottom = 322.0
+theme_override_font_sizes/font_size = 20
+text = "S → S"
+
+[node name="Label20" type="Label" parent="Labels"]
+offset_left = 57.0
+offset_top = 322.0
+offset_right = 101.0
+offset_bottom = 345.0
+theme_override_font_sizes/font_size = 20
+text = "T → T"
+
+[node name="Label21" type="Label" parent="Labels"]
+offset_left = 57.0
+offset_top = 345.0
+offset_right = 103.0
+offset_bottom = 368.0
+theme_override_font_sizes/font_size = 20
+text = "U → U"
+
+[node name="Label22" type="Label" parent="Labels"]
+offset_left = 57.0
+offset_top = 368.0
+offset_right = 101.0
+offset_bottom = 391.0
+theme_override_font_sizes/font_size = 20
+text = "V → V"
+
+[node name="Label23" type="Label" parent="Labels"]
+offset_left = 57.0
+offset_top = 391.0
+offset_right = 110.0
+offset_bottom = 414.0
+theme_override_font_sizes/font_size = 20
+text = "W → W"
+
+[node name="Label24" type="Label" parent="Labels"]
+offset_left = 57.0
+offset_top = 414.0
+offset_right = 101.0
+offset_bottom = 437.0
+theme_override_font_sizes/font_size = 20
+text = "X → X"
+
+[node name="Label25" type="Label" parent="Labels"]
+offset_left = 57.0
+offset_top = 437.0
+offset_right = 101.0
+offset_bottom = 460.0
+theme_override_font_sizes/font_size = 20
+text = "Y → Y"
+
+[node name="Label26" type="Label" parent="Labels"]
+offset_left = 57.0
+offset_top = 460.0
+offset_right = 101.0
+offset_bottom = 483.0
+theme_override_font_sizes/font_size = 20
+text = "Z → Z"
+
+[connection signal="added_rotor" from="." to="Labels" method="_on_option_button_added_rotor"]
+[connection signal="item_selected" from="." to="." method="modif_rotor"]
+[connection signal="modif_label" from="." to="Label" method="_on_option_button_modif_label"]
+[connection signal="removed_rotor" from="." to="Labels" method="_on_option_button_removed_rotor"]
+[connection signal="rotor_moved" from="." to="Labels" method="_on_option_button_rotor_moved"]
+[connection signal="pressed" from="down" to="." method="_on_down_pressed"]
+[connection signal="pressed" from="up" to="." method="_on_up_pressed"]

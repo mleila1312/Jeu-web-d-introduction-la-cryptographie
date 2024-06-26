@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://byots7fskmlof"]
+
+[ext_resource type="Texture2D" uid="uid://gj8cey3qhpwu" path="res://images/bureau.png" id="1_5f1am"]
+[ext_resource type="Script" path="res://bureau.gd" id="1_7svfy"]
+[ext_resource type="Texture2D" uid="uid://dcuyqekexg7lf" path="res://images/droite.png" id="3_fh0jj"]
+[ext_resource type="Texture2D" uid="uid://dsnoqo8kd3qy1" path="res://images/gauche.png" id="4_te2y6"]
+[ext_resource type="PackedScene" uid="uid://c7t3p6ocjkfc8" path="res://feuilles_post_dechiffre.tscn" id="5_04rmc"]
+
+[node name="bureau" type="Node2D"]
+script = ExtResource("1_7svfy")
+
+[node name="background" type="TextureRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 648.0
+texture = ExtResource("1_5f1am")
+
+[node name="button_bureau" type="TextureButton" parent="."]
+offset_left = 306.0
+offset_top = 328.0
+offset_right = 896.0
+offset_bottom = 645.0
+
+[node name="button_feuilles" type="Button" parent="."]
+offset_left = 471.0
+offset_top = 586.0
+offset_right = 722.0
+offset_bottom = 638.0
+theme_override_font_sizes/font_size = 30
+text = "Retour"
+
+[node name="droite" type="TextureButton" parent="."]
+offset_left = 1083.0
+offset_top = 271.0
+offset_right = 1140.0
+offset_bottom = 356.0
+texture_normal = ExtResource("3_fh0jj")
+texture_pressed = ExtResource("3_fh0jj")
+texture_hover = ExtResource("3_fh0jj")
+texture_disabled = ExtResource("3_fh0jj")
+texture_focused = ExtResource("3_fh0jj")
+
+[node name="gauche" type="TextureButton" parent="."]
+offset_left = 10.0
+offset_top = 282.0
+offset_right = 67.0
+offset_bottom = 367.0
+texture_normal = ExtResource("4_te2y6")
+
+[node name="retour_question" type="Button" parent="."]
+offset_left = 18.0
+offset_top = 14.0
+offset_right = 284.0
+offset_bottom = 72.0
+theme_override_font_sizes/font_size = 20
+text = "Répondre à la question"
+
+[node name="feuilles_post_dechiffre" parent="." instance=ExtResource("5_04rmc")]
+
+[connection signal="pressed" from="button_bureau" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="button_feuilles" to="." method="_on_button_feuilles_pressed"]
+[connection signal="pressed" from="droite" to="." method="_on_droite_pressed"]
+[connection signal="pressed" from="gauche" to="." method="_on_gauche_pressed"]
+[connection signal="pressed" from="retour_question" to="." method="_on_retour_question_pressed"]
+[connection signal="goback_feuilles" from="feuilles_post_dechiffre" to="." method="_on_feuilles_post_dechiffre_goback_feuilles"]

@@ -1,0 +1,133 @@
+[gd_scene load_steps=12 format=3 uid="uid://b67mrjodvdvcf"]
+
+[ext_resource type="Script" path="res://jeu_bibliotheque.gd" id="1_3d81b"]
+[ext_resource type="Texture2D" uid="uid://i7wvkuacje4d" path="res://images/etagere_vide.png" id="1_hkhc2"]
+[ext_resource type="Texture2D" uid="uid://baj6icnt66v38" path="res://images/book1.png" id="2_iu426"]
+[ext_resource type="Texture2D" uid="uid://fu6koildshtk" path="res://images/book2.png" id="3_2xh28"]
+[ext_resource type="Texture2D" uid="uid://dlefgff5kj5uv" path="res://images/book3.png" id="4_3mpws"]
+[ext_resource type="Texture2D" uid="uid://cky2hlq8wffbk" path="res://images/book4.png" id="5_3212w"]
+[ext_resource type="Texture2D" uid="uid://c5lh228dacmnk" path="res://images/book5.png" id="6_ce30w"]
+[ext_resource type="Texture2D" uid="uid://ccwdi4vqgiwts" path="res://images/book6.png" id="7_8dw16"]
+[ext_resource type="Texture2D" uid="uid://bggh1d0kjanth" path="res://images/book7.png" id="8_koxns"]
+[ext_resource type="Texture2D" uid="uid://bkqar2ip64yvv" path="res://images/book8.png" id="9_8ixg2"]
+
+[sub_resource type="Theme" id="Theme_yjf8c"]
+
+[node name="jeu_bibliotheque" type="Node2D"]
+script = ExtResource("1_3d81b")
+
+[node name="background" type="TextureRect" parent="."]
+offset_right = 1155.0
+offset_bottom = 652.0
+texture = ExtResource("1_hkhc2")
+
+[node name="book1" type="TextureButton" parent="."]
+offset_left = 8.0
+offset_top = 123.0
+offset_right = 88.0
+offset_bottom = 542.0
+texture_normal = ExtResource("2_iu426")
+
+[node name="book2" type="TextureButton" parent="."]
+offset_left = 152.0
+offset_top = 124.0
+offset_right = 276.0
+offset_bottom = 543.0
+texture_normal = ExtResource("3_2xh28")
+
+[node name="book3" type="TextureButton" parent="."]
+offset_left = 298.0
+offset_top = 123.0
+offset_right = 420.0
+offset_bottom = 542.0
+texture_normal = ExtResource("4_3mpws")
+
+[node name="book4" type="TextureButton" parent="."]
+offset_left = 445.0
+offset_top = 124.0
+offset_right = 567.0
+offset_bottom = 543.0
+texture_normal = ExtResource("5_3212w")
+
+[node name="book5" type="TextureButton" parent="."]
+offset_left = 590.0
+offset_top = 125.0
+offset_right = 712.0
+offset_bottom = 544.0
+texture_normal = ExtResource("6_ce30w")
+
+[node name="book6" type="TextureButton" parent="."]
+offset_left = 734.0
+offset_top = 124.0
+offset_right = 856.0
+offset_bottom = 543.0
+texture_normal = ExtResource("7_8dw16")
+
+[node name="book7" type="TextureButton" parent="."]
+offset_left = 876.0
+offset_top = 125.0
+offset_right = 998.0
+offset_bottom = 544.0
+texture_normal = ExtResource("8_koxns")
+
+[node name="book8" type="TextureButton" parent="."]
+offset_left = 1016.0
+offset_top = 124.0
+offset_right = 1138.0
+offset_bottom = 543.0
+texture_normal = ExtResource("9_8ixg2")
+
+[node name="page1" type="Label" parent="."]
+offset_left = 83.0
+offset_top = 127.0
+offset_right = 506.0
+offset_bottom = 301.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="page2" type="Label" parent="."]
+offset_left = 590.0
+offset_top = 126.0
+offset_right = 1021.0
+offset_bottom = 709.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="retour" type="Button" parent="."]
+offset_left = 489.0
+offset_top = 594.0
+offset_right = 620.0
+offset_bottom = 640.0
+theme = SubResource("Theme_yjf8c")
+theme_override_font_sizes/font_size = 0
+text = "Retour"
+
+[node name="ferme_livre" type="Button" parent="."]
+offset_left = 458.0
+offset_top = 590.0
+offset_right = 671.0
+offset_bottom = 636.0
+text = "fermer le livre"
+
+[node name="poignard_button" type="Button" parent="."]
+offset_left = 777.0
+offset_top = 484.0
+offset_right = 952.0
+offset_bottom = 527.0
+text = "Utiliser le poignard"
+
+[connection signal="pressed" from="book1" to="." method="on_book_pressed" binds= [1]]
+[connection signal="pressed" from="book2" to="." method="on_book_pressed" binds= [2]]
+[connection signal="pressed" from="book3" to="." method="on_book_pressed" binds= [3]]
+[connection signal="pressed" from="book4" to="." method="on_book_pressed" binds= [4]]
+[connection signal="pressed" from="book5" to="." method="on_book_pressed" binds= [5]]
+[connection signal="pressed" from="book6" to="." method="on_book_pressed" binds= [6]]
+[connection signal="pressed" from="book7" to="." method="on_book_pressed" binds= [7]]
+[connection signal="pressed" from="book8" to="." method="on_book_pressed" binds= [8]]
+[connection signal="pressed" from="retour" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ferme_livre" to="." method="_on_ferme_livre_pressed"]
+[connection signal="pressed" from="poignard_button" to="." method="_on_poignard_button_pressed"]

@@ -1,0 +1,105 @@
+[gd_scene load_steps=12 format=3 uid="uid://c6wogw72gpeh7"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_st20j"]
+[ext_resource type="Resource" uid="uid://dq81hdnw4tmc4" path="res://inventory/playerInv.tres" id="2_d4pvr"]
+[ext_resource type="Script" path="res://phase1/Boite_dialogue.gd" id="2_nr2xe"]
+[ext_resource type="PackedScene" uid="uid://cv2rpiirlmx7h" path="res://phase1/display.tscn" id="2_qc3fx"]
+[ext_resource type="PackedScene" uid="uid://mnxdo3y1mvcg" path="res://inventory/inv_ui.tscn" id="5_ko4l0"]
+[ext_resource type="Texture2D" uid="uid://c0cskeuckhlc5" path="res://art/post_it.png" id="6_0bbwe"]
+[ext_resource type="PackedScene" uid="uid://cmxtben3f7b2x" path="res://Mot_croise/mot_croise.tscn" id="7_vea4l"]
+[ext_resource type="Texture2D" uid="uid://d356crsgfxcpp" path="res://art/enigma batiment brumeux.png" id="8_uw1cc"]
+[ext_resource type="PackedScene" uid="uid://csboyeqj5w0ie" path="res://labyrinthe/labyrinthe.tscn" id="9_gqu65"]
+[ext_resource type="Texture2D" uid="uid://bqojykji0yw0v" path="res://art/mapButton.png" id="10_ngrpu"]
+[ext_resource type="PackedScene" uid="uid://b36i55ppvfbu" path="res://Turing/turing.tscn" id="11_lso4t"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_st20j")
+inventory = ExtResource("2_d4pvr")
+
+[node name="Boite_dialogue" type="CanvasLayer" parent="."]
+script = ExtResource("2_nr2xe")
+
+[node name="outside" type="Polygon2D" parent="Boite_dialogue"]
+position = Vector2(-0.113041, 0)
+scale = Vector2(0.886957, 1)
+polygon = PackedVector2Array(1, 540, 1149, 541, 1149, 594.231, 1149, 647, 1149, 647, -1, 649, 0.0171204, 593.568)
+
+[node name="inside" type="Polygon2D" parent="Boite_dialogue"]
+position = Vector2(1.04854, -3)
+scale = Vector2(0.883495, 1)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(10, 550, 9, 641, 1142, 642, 1142, 590.448, 1142, 552)
+
+[node name="text" type="Label" parent="Boite_dialogue"]
+offset_left = 20.0
+offset_top = 557.0
+offset_right = 1001.0
+offset_bottom = 627.0
+autowrap_mode = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-2, -3, 0, 648, 1151, 649, 1149, -1)
+
+[node name="display" parent="." instance=ExtResource("2_qc3fx")]
+
+[node name="Inv_UI" parent="." instance=ExtResource("5_ko4l0")]
+offset_left = 1020.0
+offset_top = 1.0
+offset_right = 1149.0
+offset_bottom = 646.0
+
+[node name="InvPostIt" type="TextureButton" parent="Inv_UI"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 21.0
+offset_right = 103.0
+offset_bottom = 96.0
+
+[node name="InvMap" type="TextureButton" parent="Inv_UI"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 127.0
+offset_right = 103.0
+offset_bottom = 202.0
+
+[node name="MotCroise" parent="." instance=ExtResource("7_vea4l")]
+
+[node name="Batiment" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 547.0
+texture = ExtResource("8_uw1cc")
+
+[node name="Labyrinthe" parent="." instance=ExtResource("9_gqu65")]
+
+[node name="InvBig" type="CanvasLayer" parent="."]
+
+[node name="Map" type="TextureButton" parent="InvBig"]
+offset_left = 310.0
+offset_top = 21.0
+offset_right = 810.0
+offset_bottom = 521.0
+texture_normal = ExtResource("10_ngrpu")
+
+[node name="PostIt" type="TextureButton" parent="InvBig"]
+offset_left = 297.0
+offset_top = 19.0
+offset_right = 797.0
+offset_bottom = 519.0
+texture_normal = ExtResource("6_0bbwe")
+
+[node name="Turing" parent="." instance=ExtResource("11_lso4t")]
+
+[connection signal="espion_dialogue_off" from="." to="Turing" method="_on_main_espion_dialogue_off"]
+[connection signal="espion_dialogue_on" from="." to="Turing" method="_on_main_espion_dialogue_on"]
+[connection signal="turing_dialogue_off" from="." to="Turing" method="_on_main_turing_dialogue_off"]
+[connection signal="turing_dialogue_on" from="." to="Turing" method="_on_main_turing_dialogue_on"]
+[connection signal="pressed" from="Inv_UI/InvPostIt" to="." method="_on_inv_post_it_pressed"]
+[connection signal="pressed" from="Inv_UI/InvMap" to="." method="_on_inv_map_pressed"]
+[connection signal="motCroiseFini" from="MotCroise" to="." method="_on_mot_croise_mot_croise_fini"]
+[connection signal="finished" from="Labyrinthe" to="." method="_on_labyrinthe_finished"]
+[connection signal="map" from="Labyrinthe" to="." method="_on_labyrinthe_map"]
+[connection signal="perdu" from="Labyrinthe" to="." method="_on_labyrinthe_perdu"]
+[connection signal="tunnel" from="Labyrinthe" to="." method="_on_labyrinthe_tunnel"]
+[connection signal="pressed" from="InvBig/Map" to="." method="_on_map_pressed"]
+[connection signal="pressed" from="InvBig/PostIt" to="." method="_on_post_it_pressed"]

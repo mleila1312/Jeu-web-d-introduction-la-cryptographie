@@ -1,0 +1,68 @@
+[gd_scene load_steps=9 format=3 uid="uid://c6ihnbyeuy3kg"]
+
+[ext_resource type="Texture2D" uid="uid://d354vu2eeb2tp" path="res://img/img_salle_coffres/fonds/salle des coffres.png" id="1_0qamn"]
+[ext_resource type="Texture2D" uid="uid://c8o4wumbmuw6r" path="res://img/img_salle_coffres/coffres/coffre1 fermé.png" id="2_hxlcl"]
+[ext_resource type="Script" path="res://salle_coffres_background.gd" id="2_xnukc"]
+[ext_resource type="Texture2D" uid="uid://beqcqoja3r1sb" path="res://img/img_salle_coffres/coffres/coffre2 fermé.png" id="3_usdn2"]
+[ext_resource type="Texture2D" uid="uid://dh0jefqtpf8pq" path="res://img/img_salle_coffres/coffres/coffre3 fermé.png" id="4_mfhmr"]
+[ext_resource type="Texture2D" uid="uid://bml1dbjv7bw8g" path="res://img/img_salle_coffres/coffres/coffre4 fermé.png" id="5_mmkl2"]
+[ext_resource type="Texture2D" uid="uid://dlhkkffscwo65" path="res://img/img_salle_coffres/coffres/coffre5 fermé.png" id="6_idk6v"]
+[ext_resource type="Texture2D" uid="uid://es6ovkhwvqf0" path="res://img/img_salle_coffres/boutons/trappe.png" id="8_1nln2"]
+
+[node name="salle_coffres_background" type="Sprite2D"]
+position = Vector2(577, 322)
+texture = ExtResource("1_0qamn")
+script = ExtResource("2_xnukc")
+
+[node name="coffre1_close" type="TextureButton" parent="."]
+offset_left = -576.0
+offset_top = -135.0
+offset_right = -406.0
+offset_bottom = 115.0
+scale = Vector2(0.9, 0.9)
+texture_normal = ExtResource("2_hxlcl")
+
+[node name="coffre2_close" type="TextureButton" parent="."]
+offset_left = -407.0
+offset_top = -188.0
+offset_right = -237.0
+offset_bottom = 62.0
+texture_normal = ExtResource("3_usdn2")
+
+[node name="coffre3_close" type="TextureButton" parent="."]
+offset_left = -119.0
+offset_top = -210.0
+offset_right = 51.0
+offset_bottom = 40.0
+texture_normal = ExtResource("4_mfhmr")
+
+[node name="coffre4_close" type="TextureButton" parent="."]
+offset_left = 169.0
+offset_top = -188.0
+offset_right = 339.0
+offset_bottom = 62.0
+texture_normal = ExtResource("5_mmkl2")
+
+[node name="coffre5_close" type="TextureButton" parent="."]
+offset_left = 408.0
+offset_top = -151.0
+offset_right = 578.0
+offset_bottom = 99.0
+scale = Vector2(0.9, 0.9)
+texture_normal = ExtResource("6_idk6v")
+
+[node name="trappe_close" type="Sprite2D" parent="."]
+texture = ExtResource("8_1nln2")
+
+[node name="trappe_button" type="TextureButton" parent="trappe_close"]
+offset_left = -133.0
+offset_top = 62.0
+offset_right = 134.0
+offset_bottom = 162.0
+
+[connection signal="pressed" from="coffre1_close" to="." method="_on_coffre_1_close_pressed"]
+[connection signal="pressed" from="coffre2_close" to="." method="_on_coffre_2_close_pressed"]
+[connection signal="pressed" from="coffre3_close" to="." method="_on_coffre_3_close_pressed"]
+[connection signal="pressed" from="coffre4_close" to="." method="_on_coffre_4_close_pressed"]
+[connection signal="pressed" from="coffre5_close" to="." method="_on_coffre_5_close_pressed"]
+[connection signal="pressed" from="trappe_close/trappe_button" to="." method="_on_trappe_button_pressed"]

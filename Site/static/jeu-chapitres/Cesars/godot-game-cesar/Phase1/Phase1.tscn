@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbcu1yw5juolt"]
+
+[ext_resource type="Script" path="res://Phase1/phase1_display.gd" id="1_blxve"]
+
+[node name="Main" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+scale = Vector2(1.6875, 1)
+polygon = PackedVector2Array(0, 0, 640, 0, 640, 47, 640, 84, 640, 168, 320, 168, 0, 168)
+
+[node name="Display" type="Node2D" parent="."]
+script = ExtResource("1_blxve")
+
+[node name="display" type="CanvasLayer" parent="Display"]
+script = ExtResource("1_blxve")
+
+[node name="small_Z" type="Label" parent="Display/display"]
+offset_left = 501.0
+offset_top = 160.0
+offset_right = 541.0
+offset_bottom = 183.0
+theme_override_font_sizes/font_size = 50
+text = "Z"
+
+[node name="middle_Z" type="Label" parent="Display/display"]
+offset_left = 335.0
+offset_top = 239.0
+offset_right = 483.0
+offset_bottom = 376.0
+theme_override_font_sizes/font_size = 100
+text = "Z"
+
+[node name="big_Z" type="Label" parent="Display/display"]
+offset_left = 92.0
+offset_top = 382.0
+offset_right = 178.0
+offset_bottom = 587.0
+theme_override_font_sizes/font_size = 150
+text = "Z"
+
+[node name="dialogues" type="CanvasLayer" parent="."]

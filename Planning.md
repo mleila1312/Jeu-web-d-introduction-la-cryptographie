@@ -85,7 +85,7 @@ Pour les design :
 
 équipe 1 : Leïla, Vivien  
 équipe 2 : Nathan, Jennifer  
-équipe 3 : Vivien, Sarah  
+équipe 3 : Lyla, Sarah  
 [08/05 -> 22/05] Travail en binôme sur l'implémentation et les illustrations de phases de jeu.   
 
 **respo github : Leïla puis Vivien**  
@@ -108,6 +108,7 @@ Nous ferons en priorité les révision de design, puis si le temps le permet, de
 équipe 1 : Leïla, Sarah, Lyla  
 équipe 2 : Vivien, Jennifer, Nathan  
 [12/06  -> 19/06] Travail en trio sur des design de certains niveaux.  
+14/06 à 12h30 : réunion, salle à déterminer  
 **respo github : Sarah**  
 
 équipe 1 : Jennifer, Vivien, Lyla  

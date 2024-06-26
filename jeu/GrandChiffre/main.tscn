@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6wogw72gpeh7"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_st20j"]
+[ext_resource type="Script" path="res://Boite_dialogue.gd" id="2_nr2xe"]
+[ext_resource type="PackedScene" uid="uid://cv2rpiirlmx7h" path="res://display.tscn" id="2_qc3fx"]
+
+[node name="Main" type="Node2D"]
+position = Vector2(1, -1)
+script = ExtResource("1_st20j")
+
+[node name="Boite_dialogue" type="CanvasLayer" parent="."]
+script = ExtResource("2_nr2xe")
+
+[node name="outside" type="Polygon2D" parent="Boite_dialogue"]
+position = Vector2(13.9062, 52.4492)
+scale = Vector2(0.980064, 0.889909)
+polygon = PackedVector2Array(1, 540, 1149, 541, 1149, 647, 1149, 647, -1, 649)
+
+[node name="inside" type="Polygon2D" parent="Boite_dialogue"]
+position = Vector2(6.54993, 24.9377)
+scale = Vector2(0.984632, 0.930144)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(13.1654, 551.628, 13.1654, 645.128, 1142, 642, 1142, 552, 578.621, 550.656)
+
+[node name="text" type="Label" parent="Boite_dialogue"]
+anchors_preset = -1
+anchor_left = 0.019
+anchor_top = 0.841
+anchor_right = 0.019
+anchor_bottom = 0.841
+offset_left = 0.112
+offset_top = 0.0319824
+offset_right = 1104.11
+offset_bottom = 71.032
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(-0.00520301, -0.00460052)
+scale = Vector2(0.997398, 0.998466)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-2, -3, 0, 648, 1151, 649, 1149, -1)
+
+[node name="display" parent="." instance=ExtResource("2_qc3fx")]

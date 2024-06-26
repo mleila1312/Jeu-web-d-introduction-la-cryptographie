@@ -1,0 +1,363 @@
+[gd_scene load_steps=13 format=3 uid="uid://coktt7fyua8ej"]
+
+[ext_resource type="Script" path="res://display.gd" id="1_fwwyk"]
+[ext_resource type="Texture2D" uid="uid://cghiflvw7aqb7" path="res://images/1.png" id="2_nnhn4"]
+[ext_resource type="Texture2D" uid="uid://cjmk7k02fcoxw" path="res://images/New_mail.png" id="3_ygi1b"]
+[ext_resource type="Texture2D" uid="uid://qwh6c1gj1xuc" path="res://images/Mail.png" id="7_1478x"]
+[ext_resource type="Texture2D" uid="uid://c2iswaa32uyt3" path="res://images/Check.png" id="7_m2y4c"]
+[ext_resource type="Script" path="res://identity.gd" id="8_n2xdp"]
+[ext_resource type="Texture2D" uid="uid://ddaq6y3umwsgs" path="res://images/Security.png" id="9_3ji2i"]
+[ext_resource type="Texture2D" uid="uid://dhtp221xvmr68" path="res://images/search_button.png" id="9_dlcxg"]
+[ext_resource type="Script" path="res://security.gd" id="10_tp0xr"]
+[ext_resource type="Texture2D" uid="uid://dt4pkvr61og5t" path="res://images/Decision.png" id="11_bn0w6"]
+[ext_resource type="Texture2D" uid="uid://di4i4mpcy80be" path="res://images/send_button.png" id="11_opemj"]
+[ext_resource type="Script" path="res://decision.gd" id="12_i6ied"]
+
+[node name="display" type="CanvasLayer"]
+script = ExtResource("1_fwwyk")
+
+[node name="small_Z" type="Label" parent="."]
+offset_left = 501.0
+offset_top = 160.0
+offset_right = 541.0
+offset_bottom = 229.0
+theme_override_font_sizes/font_size = 50
+text = "Z"
+
+[node name="middle_Z" type="Label" parent="."]
+offset_left = 335.0
+offset_top = 239.0
+offset_right = 483.0
+offset_bottom = 376.0
+theme_override_font_sizes/font_size = 100
+text = "Z"
+
+[node name="big_Z" type="Label" parent="."]
+offset_left = 92.0
+offset_top = 382.0
+offset_right = 178.0
+offset_bottom = 587.0
+theme_override_font_sizes/font_size = 150
+text = "Z"
+
+[node name="image_bg" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_nnhn4")
+
+[node name="Mail_notification" type="TextureRect" parent="."]
+offset_left = 765.0
+offset_top = 417.0
+offset_right = 1059.0
+offset_bottom = 564.0
+texture = ExtResource("3_ygi1b")
+
+[node name="Control_M_notif" type="Control" parent="Mail_notification"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="mail" type="TextureRect" parent="."]
+offset_left = 241.0
+offset_top = 18.0
+offset_right = 768.0
+offset_bottom = 454.0
+texture = ExtResource("7_1478x")
+
+[node name="envoyeur" type="Label" parent="mail"]
+layout_mode = 0
+offset_left = 286.0
+offset_top = 75.0
+offset_right = 679.0
+offset_bottom = 115.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+
+[node name="Scroll" type="ScrollContainer" parent="mail"]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 165.0
+offset_right = 695.0
+offset_bottom = 543.0
+horizontal_scroll_mode = 0
+
+[node name="contenu" type="Label" parent="mail/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+autowrap_mode = 2
+justification_flags = 171
+
+[node name="identity" type="TextureRect" parent="."]
+offset_left = 229.0
+offset_top = 38.0
+offset_right = 740.0
+offset_bottom = 487.0
+texture = ExtResource("7_m2y4c")
+script = ExtResource("8_n2xdp")
+
+[node name="Polygon2D" type="Polygon2D" parent="identity"]
+color = Color(0.633757, 0.633757, 0.633757, 1)
+polygon = PackedVector2Array(294, 203, 296, 260, 693, 260, 693, 203)
+
+[node name="Polygon2D2" type="Polygon2D" parent="identity"]
+polygon = PackedVector2Array(302, 206, 300, 256, 687, 256, 686, 207)
+
+[node name="Control" type="Control" parent="identity"]
+anchors_preset = 0
+offset_left = 460.0
+offset_top = 269.0
+offset_right = 521.0
+offset_bottom = 322.0
+
+[node name="TextureRect" type="TextureRect" parent="identity/Control"]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 62.0
+offset_bottom = 59.0
+texture = ExtResource("9_dlcxg")
+
+[node name="Scroll" type="ScrollContainer" parent="identity"]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 338.0
+offset_right = 733.0
+offset_bottom = 528.0
+horizontal_scroll_mode = 0
+
+[node name="infos" type="Label" parent="identity/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+autowrap_mode = 2
+justification_flags = 171
+
+[node name="entry" type="LineEdit" parent="identity"]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 211.0
+offset_right = 684.0
+offset_bottom = 251.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Entrez le nom de l'entreprise"
+
+[node name="security" type="TextureRect" parent="."]
+offset_left = 213.0
+offset_top = 22.0
+offset_right = 767.0
+offset_bottom = 463.0
+texture = ExtResource("9_3ji2i")
+script = ExtResource("10_tp0xr")
+
+[node name="OptionButton" type="OptionButton" parent="security"]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 257.0
+offset_right = 554.0
+offset_bottom = 289.0
+
+[node name="Polygon2D" type="Polygon2D" parent="security"]
+position = Vector2(-110, 101)
+color = Color(0.633757, 0.633757, 0.633757, 1)
+polygon = PackedVector2Array(294, 203, 296, 260, 693, 260, 693, 203)
+
+[node name="Polygon2D2" type="Polygon2D" parent="security"]
+position = Vector2(-109, 102)
+polygon = PackedVector2Array(302, 206, 300, 256, 687, 256, 686, 207)
+
+[node name="entry" type="LineEdit" parent="security"]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 312.0
+offset_right = 576.0
+offset_bottom = 352.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Entrez le challenge chiffré : "
+placeholder_text = "Entrez le challenge chiffré"
+
+[node name="Control" type="Control" parent="security"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 614.0
+offset_top = 303.0
+offset_right = 675.0
+offset_bottom = 356.0
+
+[node name="TextureRect" type="TextureRect" parent="security/Control"]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 62.0
+offset_bottom = 59.0
+texture = ExtResource("11_opemj")
+
+[node name="retour" type="Label" parent="security"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 403.0
+offset_right = 709.0
+offset_bottom = 502.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="decision" type="TextureRect" parent="."]
+offset_left = 183.0
+offset_top = 23.0
+offset_right = 710.0
+offset_bottom = 457.0
+texture = ExtResource("11_bn0w6")
+script = ExtResource("12_i6ied")
+
+[node name="infos_dossier" type="Label" parent="decision"]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 98.0
+offset_right = 731.0
+offset_bottom = 518.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+autowrap_mode = 3
+justification_flags = 171
+visible_characters_behavior = 1
+
+[node name="dossier1" type="Control" parent="decision"]
+anchors_preset = 0
+offset_left = 171.0
+offset_top = 241.0
+offset_right = 224.0
+offset_bottom = 287.0
+
+[node name="dossier2" type="Control" parent="decision"]
+anchors_preset = 0
+offset_left = 177.0
+offset_top = 292.0
+offset_right = 231.0
+offset_bottom = 335.0
+
+[node name="dossier3" type="Control" parent="decision"]
+anchors_preset = 0
+offset_left = 182.0
+offset_top = 340.0
+offset_right = 235.0
+offset_bottom = 386.0
+
+[node name="dossier4" type="Control" parent="decision"]
+anchors_preset = 0
+offset_left = 190.0
+offset_top = 393.0
+offset_right = 244.0
+offset_bottom = 446.0
+
+[node name="decision" type="Control" parent="decision"]
+anchors_preset = 0
+offset_left = 19.0
+offset_top = 85.0
+offset_right = 224.0
+offset_bottom = 145.0
+
+[node name="dossier5" type="Control" parent="decision"]
+anchors_preset = 0
+offset_left = 199.0
+offset_top = 450.0
+offset_right = 243.0
+offset_bottom = 499.0
+
+[node name="display_decision" type="Node2D" parent="decision"]
+
+[node name="dossier" type="OptionButton" parent="decision/display_decision"]
+offset_left = 291.0
+offset_top = 161.0
+offset_right = 514.0
+offset_bottom = 189.0
+
+[node name="raison" type="OptionButton" parent="decision/display_decision"]
+offset_left = 292.0
+offset_top = 210.0
+offset_right = 515.0
+offset_bottom = 238.0
+
+[node name="indic" type="Label" parent="decision/display_decision"]
+offset_left = 295.0
+offset_top = 265.0
+offset_right = 335.0
+offset_bottom = 288.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Mot-clé : 
+"
+
+[node name="Polygon2D" type="Polygon2D" parent="decision/display_decision"]
+position = Vector2(79, 49)
+color = Color(0.633757, 0.633757, 0.633757, 1)
+polygon = PackedVector2Array(312, 210, 311, 254, 582, 255, 581, 209)
+
+[node name="Polygon2D2" type="Polygon2D" parent="decision/display_decision"]
+position = Vector2(79, 49)
+polygon = PackedVector2Array(317, 215, 318, 249, 574, 248, 573, 215)
+
+[node name="keyword" type="LineEdit" parent="decision/display_decision"]
+offset_left = 403.0
+offset_top = 266.0
+offset_right = 647.0
+offset_bottom = 294.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Entrez le mot-clé : "
+placeholder_text = "Entrez le mot-clé"
+
+[node name="Control" type="Control" parent="decision/display_decision"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 395.0
+offset_top = 335.0
+offset_right = 547.0
+offset_bottom = 397.0
+
+[node name="Label" type="Label" parent="decision/display_decision/Control"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 20.0
+offset_right = 76.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Valider 
+"
+
+[node name="TextureRect" type="TextureRect" parent="decision/display_decision/Control"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 1.0
+offset_right = 148.0
+offset_bottom = 59.0
+texture = ExtResource("11_opemj")
+
+[node name="icone_decision" type="Polygon2D" parent="."]
+position = Vector2(291, 76)
+polygon = PackedVector2Array(178, 559, 218, 558, 215, 524, 183, 526)
+
+[node name="FinPhase" type="Label" parent="."]
+offset_left = 393.0
+offset_top = 210.0
+offset_right = 780.0
+offset_bottom = 351.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "FIN PHASE CERTIFICATS"
+autowrap_mode = 2
+
+[connection signal="mouse_entered" from="identity/Control" to="identity" method="hover_button"]
+[connection signal="mouse_exited" from="identity/Control" to="identity" method="unhover_button"]
+[connection signal="mouse_entered" from="security/Control" to="security" method="hover_button"]
+[connection signal="mouse_exited" from="security/Control" to="security" method="unhover_button"]
+[connection signal="change_background" from="decision" to="." method="_on_decision_change_background"]
+[connection signal="mouse_entered" from="decision/dossier1" to="decision" method="doss1_hover"]
+[connection signal="mouse_exited" from="decision/dossier1" to="decision" method="doss1_unhover"]
+[connection signal="mouse_entered" from="decision/dossier2" to="decision" method="doss2_hover"]
+[connection signal="mouse_exited" from="decision/dossier2" to="decision" method="doss2_unhover"]
+[connection signal="mouse_entered" from="decision/dossier3" to="decision" method="doss3_hover"]
+[connection signal="mouse_exited" from="decision/dossier3" to="decision" method="doss3_unhover"]
+[connection signal="mouse_entered" from="decision/dossier4" to="decision" method="doss4_hover"]
+[connection signal="mouse_exited" from="decision/dossier4" to="decision" method="doss4_unhover"]
+[connection signal="mouse_entered" from="decision/decision" to="decision" method="decision_hover"]
+[connection signal="mouse_exited" from="decision/decision" to="decision" method="decision_unhover"]
+[connection signal="mouse_entered" from="decision/dossier5" to="decision" method="doss5_hover"]
+[connection signal="mouse_exited" from="decision/dossier5" to="decision" method="doss5_unhover"]
+[connection signal="mouse_entered" from="decision/display_decision/Control" to="decision" method="hover_button"]
+[connection signal="mouse_exited" from="decision/display_decision/Control" to="decision" method="unhover_button"]

@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://bapfxoo172r78"]
+
+[ext_resource type="Texture2D" uid="uid://kgo51dmv4m54" path="res://images/feu.png" id="1_05ifv"]
+[ext_resource type="Script" path="res://feu.gd" id="1_n8ohy"]
+[ext_resource type="Texture2D" uid="uid://dsnoqo8kd3qy1" path="res://images/gauche.png" id="3_g7x6c"]
+[ext_resource type="Texture2D" uid="uid://dcuyqekexg7lf" path="res://images/droite.png" id="4_bllw2"]
+[ext_resource type="PackedScene" uid="uid://dc5vgt5aqtlxq" path="res://affiche.tscn" id="5_o3sg0"]
+[ext_resource type="PackedScene" uid="uid://csg78ysibnv4m" path="res://machine.tscn" id="6_lex4g"]
+
+[node name="feu" type="Node2D"]
+script = ExtResource("1_n8ohy")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1149.0
+offset_bottom = 648.0
+texture = ExtResource("1_05ifv")
+
+[node name="button_gauche" type="TextureButton" parent="."]
+offset_left = 10.0
+offset_top = 287.0
+offset_right = 67.0
+offset_bottom = 372.0
+texture_normal = ExtResource("3_g7x6c")
+
+[node name="button_right" type="TextureButton" parent="."]
+offset_left = 1088.0
+offset_top = 263.0
+offset_right = 1145.0
+offset_bottom = 348.0
+texture_normal = ExtResource("4_bllw2")
+
+[node name="affiche_button" type="TextureButton" parent="."]
+offset_left = 58.0
+offset_top = 55.0
+offset_right = 229.0
+offset_bottom = 285.0
+
+[node name="machine_button" type="TextureButton" parent="."]
+offset_left = 649.0
+offset_top = 158.0
+offset_right = 960.0
+offset_bottom = 489.0
+
+[node name="affiche" parent="." instance=ExtResource("5_o3sg0")]
+
+[node name="machine" parent="." instance=ExtResource("6_lex4g")]
+
+[connection signal="pressed" from="button_gauche" to="." method="_on_button_gauche_pressed"]
+[connection signal="pressed" from="button_right" to="." method="_on_button_right_pressed"]
+[connection signal="pressed" from="affiche_button" to="." method="_on_affiche_button_pressed"]
+[connection signal="pressed" from="machine_button" to="." method="_on_machine_button_pressed"]
+[connection signal="retour" from="affiche" to="." method="_on_affiche_retour"]
+[connection signal="goback" from="machine" to="." method="_on_machine_goback"]

@@ -1,0 +1,1372 @@
+[gd_scene load_steps=28 format=3 uid="uid://djprl3x68usct"]
+
+[ext_resource type="Script" path="res://second_decode.gd" id="1_07liy"]
+[ext_resource type="Texture2D" uid="uid://bpd8obpien6hy" path="res://images/decryptage.png" id="2_dlabr"]
+[ext_resource type="Script" path="res://dechiffre.gd" id="3_bsq7h"]
+[ext_resource type="Texture2D" uid="uid://cu3fb1ko1qk10" path="res://images/syllabes2/..png" id="3_lvsxu"]
+[ext_resource type="Texture2D" uid="uid://cnj48we4yu4kh" path="res://images/syllabes2/a.png" id="4_hqyll"]
+[ext_resource type="Texture2D" uid="uid://bxtermp1labvh" path="res://images/syllabes2/c.png" id="5_n6i4l"]
+[ext_resource type="Texture2D" uid="uid://dpn3u36t0tusl" path="res://images/syllabes2/dans.png" id="6_1m1yy"]
+[ext_resource type="Texture2D" uid="uid://c35kjp5iyh0kj" path="res://images/syllabes2/de.png" id="7_1plxo"]
+[ext_resource type="Texture2D" uid="uid://4i3oxm16uxd4" path="res://images/syllabes2/e.png" id="8_a82wp"]
+[ext_resource type="Texture2D" uid="uid://c1lydqmrpwl3d" path="res://images/syllabes2/ez.png" id="9_3a7en"]
+[ext_resource type="Texture2D" uid="uid://dxgpebbgoa0bg" path="res://images/syllabes2/il.png" id="10_m5tpt"]
+[ext_resource type="Texture2D" uid="uid://bb76ugqjxux2i" path="res://images/syllabes2/l.png" id="11_djast"]
+[ext_resource type="Texture2D" uid="uid://bdcymolfugf1n" path="res://images/syllabes2/la.png" id="12_6vceo"]
+[ext_resource type="Texture2D" uid="uid://bw7l0x6ju5i6s" path="res://images/syllabes2/me.png" id="13_jgkdj"]
+[ext_resource type="Texture2D" uid="uid://c6xc6dekp1ol2" path="res://images/syllabes2/ne.png" id="14_mcokj"]
+[ext_resource type="Texture2D" uid="uid://c21csfg0syj5o" path="res://images/syllabes2/on.png" id="15_1cque"]
+[ext_resource type="Texture2D" uid="uid://ffv3ai2n73bm" path="res://images/syllabes2/pa.png" id="16_yu5no"]
+[ext_resource type="Texture2D" uid="uid://v7aiwsh1k701" path="res://images/syllabes2/que.png" id="17_iqgnj"]
+[ext_resource type="Texture2D" uid="uid://b4fb70wa5cpeq" path="res://images/syllabes2/r.png" id="18_i1qyh"]
+[ext_resource type="Texture2D" uid="uid://d0u1oc8he8ch3" path="res://images/syllabes2/ra.png" id="19_qfg47"]
+[ext_resource type="Texture2D" uid="uid://bnc63n5amgge2" path="res://images/syllabes2/re.png" id="20_l657t"]
+[ext_resource type="Texture2D" uid="uid://b0jqbj3g8sd5b" path="res://images/syllabes2/s.png" id="21_cfg3r"]
+[ext_resource type="Texture2D" uid="uid://ca0uoy2d18cy6" path="res://images/syllabes2/se.png" id="22_7jqs7"]
+[ext_resource type="Texture2D" uid="uid://db6gblye1l2dw" path="res://images/syllabes2/su.png" id="23_p583a"]
+[ext_resource type="Texture2D" uid="uid://d08wpqnehu3ny" path="res://images/syllabes2/t.png" id="24_tduj1"]
+[ext_resource type="Texture2D" uid="uid://bd6ch6aytwjio" path="res://images/syllabes2/un.png" id="25_8imor"]
+[ext_resource type="Texture2D" uid="uid://bn8swg0p6unu5" path="res://images/syllabes2/vous.png" id="26_n78ek"]
+
+[node name="second_decode" type="Node2D"]
+script = ExtResource("1_07liy")
+
+[node name="bg" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_dlabr")
+
+[node name="dechiffre" type="Node2D" parent="."]
+script = ExtResource("3_bsq7h")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="dechiffre"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 164.0
+offset_top = 86.0
+offset_right = 1018.0
+offset_bottom = 365.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="dechiffre/ScrollContainer"]
+custom_minimum_size = Vector2(850, 800)
+layout_mode = 2
+
+[node name="texte" type="Label" parent="dechiffre/ScrollContainer/Control"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 12.0
+offset_right = 830.0
+offset_bottom = 737.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 35
+theme_override_font_sizes/font_size = 21
+text = "623      605  47  345  896      579  163  522      309      481      308  56  522  122  822      634  436  396  308  896  753      10      713  125  963  171      579      386  986  229  579      52      842      792      761      830  441  248  288      308      95      274  53  522  345  655      579      427  701  819      939      792      655  963      22  589  56  436      372      160  53      826  171  300  10      314  56  579  53      95      547      52      939      792      766  56  963      655      446  436  125  56      998  56      124      350  576  56  288  345      372      95      336  125  53      22      509  288  231      160      330  309  478      481      766  56  56  822      122  56  326      160  756  830  441  830  300  163  441      998  56      826      309      481      246  822      372      95      547  478  949  171  171  822      308      95      274  53  522  345  655  478      45      576  345      211      998  804  478      23      576  345      211      39  56  804  478"
+autowrap_mode = 3
+
+[node name="buttons" type="Node2D" parent="dechiffre/ScrollContainer/Control"]
+position = Vector2(-164, -86)
+
+[node name="Button1" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 191.0
+offset_top = 129.0
+offset_right = 232.0
+offset_bottom = 152.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+
+[node name="Button2" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 257.0
+offset_top = 130.0
+offset_right = 296.0
+offset_bottom = 154.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+
+[node name="Button3" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 298.0
+offset_top = 130.0
+offset_right = 332.0
+offset_bottom = 153.0
+
+[node name="Button4" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 335.0
+offset_top = 130.0
+offset_right = 372.0
+offset_bottom = 155.0
+
+[node name="Button5" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 377.0
+offset_top = 132.0
+offset_right = 415.0
+offset_bottom = 154.0
+
+[node name="Button6" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 450.0
+offset_top = 130.0
+offset_right = 487.0
+offset_bottom = 154.0
+
+[node name="Button7" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 496.0
+offset_top = 131.0
+offset_right = 531.0
+offset_bottom = 153.0
+
+[node name="Button8" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 546.0
+offset_top = 132.0
+offset_right = 583.0
+offset_bottom = 154.0
+
+[node name="Button9" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 608.0
+offset_top = 129.0
+offset_right = 642.0
+offset_bottom = 153.0
+
+[node name="Button10" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 675.0
+offset_top = 131.0
+offset_right = 710.0
+offset_bottom = 153.0
+
+[node name="Button11" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 742.0
+offset_top = 129.0
+offset_right = 776.0
+offset_bottom = 154.0
+
+[node name="Button12" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 782.0
+offset_top = 131.0
+offset_right = 815.0
+offset_bottom = 156.0
+
+[node name="Button13" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 822.0
+offset_top = 130.0
+offset_right = 857.0
+offset_bottom = 154.0
+
+[node name="Button14" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 866.0
+offset_top = 131.0
+offset_right = 902.0
+offset_bottom = 154.0
+
+[node name="Button15" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 908.0
+offset_top = 130.0
+offset_right = 948.0
+offset_bottom = 156.0
+
+[node name="Button16" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 188.0
+offset_top = 194.0
+offset_right = 228.0
+offset_bottom = 217.0
+
+[node name="Button17" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 234.0
+offset_top = 194.0
+offset_right = 277.0
+offset_bottom = 222.0
+
+[node name="Button18" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 281.0
+offset_top = 195.0
+offset_right = 320.0
+offset_bottom = 219.0
+
+[node name="Button19" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 327.0
+offset_top = 197.0
+offset_right = 366.0
+offset_bottom = 217.0
+
+[node name="Button20" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 373.0
+offset_top = 194.0
+offset_right = 411.0
+offset_bottom = 221.0
+
+[node name="Button21" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 421.0
+offset_top = 195.0
+offset_right = 458.0
+offset_bottom = 219.0
+
+[node name="Button22" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 484.0
+offset_top = 196.0
+offset_right = 521.0
+offset_bottom = 219.0
+
+[node name="Button23" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 546.0
+offset_top = 199.0
+offset_right = 580.0
+offset_bottom = 221.0
+
+[node name="Button24" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 590.0
+offset_top = 198.0
+offset_right = 626.0
+offset_bottom = 221.0
+
+[node name="Button25" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 634.0
+offset_top = 197.0
+offset_right = 676.0
+offset_bottom = 222.0
+
+[node name="Button26" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 682.0
+offset_top = 193.0
+offset_right = 721.0
+offset_bottom = 221.0
+
+[node name="Button27" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 745.0
+offset_top = 193.0
+offset_right = 783.0
+offset_bottom = 221.0
+
+[node name="Button28" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 811.0
+offset_top = 195.0
+offset_right = 848.0
+offset_bottom = 220.0
+
+[node name="Button29" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 858.0
+offset_top = 192.0
+offset_right = 900.0
+offset_bottom = 220.0
+
+[node name="Button30" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 902.0
+offset_top = 191.0
+offset_right = 944.0
+offset_bottom = 219.0
+
+[node name="Button31" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 194.0
+offset_top = 262.0
+offset_right = 227.0
+offset_bottom = 288.0
+
+[node name="Button32" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 253.0
+offset_top = 260.0
+offset_right = 290.0
+offset_bottom = 284.0
+
+[node name="Button33" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 311.0
+offset_top = 260.0
+offset_right = 346.0
+offset_bottom = 284.0
+
+[node name="Button34" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 377.0
+offset_top = 256.0
+offset_right = 416.0
+offset_bottom = 282.0
+
+[node name="Button35" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 444.0
+offset_top = 259.0
+offset_right = 481.0
+offset_bottom = 287.0
+
+[node name="Button36" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 509.0
+offset_top = 258.0
+offset_right = 550.0
+offset_bottom = 283.0
+
+[node name="Button37" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 554.0
+offset_top = 258.0
+offset_right = 591.0
+offset_bottom = 281.0
+
+[node name="Button38" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 602.0
+offset_top = 259.0
+offset_right = 639.0
+offset_bottom = 284.0
+
+[node name="Button39" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 648.0
+offset_top = 257.0
+offset_right = 684.0
+offset_bottom = 279.0
+
+[node name="Button40" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 710.0
+offset_top = 257.0
+offset_right = 750.0
+offset_bottom = 282.0
+
+[node name="Button41" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 775.0
+offset_top = 259.0
+offset_right = 813.0
+offset_bottom = 286.0
+
+[node name="Button42" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 834.0
+offset_top = 260.0
+offset_right = 868.0
+offset_bottom = 281.0
+
+[node name="Button43" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 872.0
+offset_top = 260.0
+offset_right = 909.0
+offset_bottom = 283.0
+
+[node name="Button44" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 914.0
+offset_top = 260.0
+offset_right = 948.0
+offset_bottom = 285.0
+
+[node name="Button45" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 192.0
+offset_top = 321.0
+offset_right = 232.0
+offset_bottom = 349.0
+
+[node name="Button46" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 237.0
+offset_top = 321.0
+offset_right = 278.0
+offset_bottom = 349.0
+
+[node name="Button47" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 303.0
+offset_top = 321.0
+offset_right = 339.0
+offset_bottom = 350.0
+
+[node name="Button48" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 363.0
+offset_top = 321.0
+offset_right = 406.0
+offset_bottom = 349.0
+
+[node name="Button49" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 412.0
+offset_top = 322.0
+offset_right = 454.0
+offset_bottom = 349.0
+
+[node name="Button50" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 462.0
+offset_top = 320.0
+offset_right = 500.0
+offset_bottom = 347.0
+
+[node name="Button51" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 527.0
+offset_top = 324.0
+offset_right = 565.0
+offset_bottom = 350.0
+
+[node name="Button52" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 592.0
+offset_top = 321.0
+offset_right = 635.0
+offset_bottom = 350.0
+
+[node name="Button53" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 659.0
+offset_top = 323.0
+offset_right = 702.0
+offset_bottom = 354.0
+
+[node name="Button54" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 707.0
+offset_top = 322.0
+offset_right = 749.0
+offset_bottom = 351.0
+
+[node name="Button55" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 770.0
+offset_top = 323.0
+offset_right = 800.0
+offset_bottom = 348.0
+
+[node name="Button56" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 804.0
+offset_top = 321.0
+offset_right = 845.0
+offset_bottom = 348.0
+
+[node name="Button57" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 848.0
+offset_top = 323.0
+offset_right = 877.0
+offset_bottom = 347.0
+
+[node name="Button58" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 888.0
+offset_top = 322.0
+offset_right = 919.0
+offset_bottom = 351.0
+
+[node name="Button59" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 196.0
+offset_top = 386.0
+offset_right = 227.0
+offset_bottom = 417.0
+
+[node name="Button60" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 262.0
+offset_top = 388.0
+offset_right = 299.0
+offset_bottom = 415.0
+
+[node name="Button61" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 300.0
+offset_top = 388.0
+offset_right = 330.0
+offset_bottom = 415.0
+
+[node name="Button62" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 360.0
+offset_top = 388.0
+offset_right = 394.0
+offset_bottom = 415.0
+
+[node name="Button63" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 405.0
+offset_top = 388.0
+offset_right = 437.0
+offset_bottom = 415.0
+
+[node name="Button64" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 449.0
+offset_top = 387.0
+offset_right = 483.0
+offset_bottom = 417.0
+
+[node name="Button65" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 489.0
+offset_top = 390.0
+offset_right = 526.0
+offset_bottom = 414.0
+
+[node name="Button66" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 548.0
+offset_top = 389.0
+offset_right = 585.0
+offset_bottom = 416.0
+
+[node name="Button67" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 587.0
+offset_top = 389.0
+offset_right = 624.0
+offset_bottom = 416.0
+
+[node name="Button68" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 629.0
+offset_top = 389.0
+offset_right = 662.0
+offset_bottom = 417.0
+
+[node name="Button69" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 667.0
+offset_top = 388.0
+offset_right = 698.0
+offset_bottom = 415.0
+
+[node name="Button70" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 729.0
+offset_top = 389.0
+offset_right = 758.0
+offset_bottom = 409.0
+
+[node name="Button71" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 783.0
+offset_top = 387.0
+offset_right = 818.0
+offset_bottom = 416.0
+
+[node name="Button72" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 843.0
+offset_top = 389.0
+offset_right = 879.0
+offset_bottom = 414.0
+
+[node name="Button73" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 902.0
+offset_top = 388.0
+offset_right = 939.0
+offset_bottom = 415.0
+
+[node name="Button74" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 192.0
+offset_top = 452.0
+offset_right = 229.0
+offset_bottom = 479.0
+
+[node name="Button75" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 260.0
+offset_top = 455.0
+offset_right = 293.0
+offset_bottom = 481.0
+
+[node name="Button76" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 298.0
+offset_top = 456.0
+offset_right = 335.0
+offset_bottom = 479.0
+
+[node name="Button77" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 339.0
+offset_top = 456.0
+offset_right = 373.0
+offset_bottom = 481.0
+
+[node name="Button78" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 401.0
+offset_top = 457.0
+offset_right = 438.0
+offset_bottom = 483.0
+
+[node name="Button79" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 473.0
+offset_top = 454.0
+offset_right = 509.0
+offset_bottom = 478.0
+
+[node name="Button80" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 516.0
+offset_top = 453.0
+offset_right = 549.0
+offset_bottom = 479.0
+
+[node name="Button81" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 559.0
+offset_top = 452.0
+offset_right = 601.0
+offset_bottom = 479.0
+
+[node name="Button82" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 602.0
+offset_top = 452.0
+offset_right = 639.0
+offset_bottom = 478.0
+
+[node name="Button83" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 662.0
+offset_top = 451.0
+offset_right = 697.0
+offset_bottom = 474.0
+
+[node name="Button84" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 702.0
+offset_top = 450.0
+offset_right = 738.0
+offset_bottom = 474.0
+
+[node name="Button85" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 768.0
+offset_top = 451.0
+offset_right = 805.0
+offset_bottom = 477.0
+
+[node name="Button86" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 830.0
+offset_top = 452.0
+offset_right = 861.0
+offset_bottom = 477.0
+
+[node name="Button87" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 868.0
+offset_top = 453.0
+offset_right = 907.0
+offset_bottom = 477.0
+
+[node name="Button88" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 917.0
+offset_top = 453.0
+offset_right = 948.0
+offset_bottom = 476.0
+
+[node name="Button89" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 195.0
+offset_top = 516.0
+offset_right = 226.0
+offset_bottom = 541.0
+
+[node name="Button90" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 235.0
+offset_top = 517.0
+offset_right = 271.0
+offset_bottom = 543.0
+
+[node name="Button91" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 308.0
+offset_top = 515.0
+offset_right = 337.0
+offset_bottom = 542.0
+
+[node name="Button92" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 364.0
+offset_top = 518.0
+offset_right = 399.0
+offset_bottom = 545.0
+
+[node name="Button93" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 428.0
+offset_top = 518.0
+offset_right = 460.0
+offset_bottom = 544.0
+
+[node name="Button94" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 466.0
+offset_top = 518.0
+offset_right = 504.0
+offset_bottom = 542.0
+
+[node name="Button95" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 511.0
+offset_top = 519.0
+offset_right = 544.0
+offset_bottom = 545.0
+
+[node name="Button96" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 567.0
+offset_top = 515.0
+offset_right = 604.0
+offset_bottom = 543.0
+
+[node name="Button97" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 630.0
+offset_top = 518.0
+offset_right = 662.0
+offset_bottom = 542.0
+
+[node name="Button98" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 668.0
+offset_top = 519.0
+offset_right = 707.0
+offset_bottom = 542.0
+
+[node name="Button99" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 717.0
+offset_top = 515.0
+offset_right = 753.0
+offset_bottom = 545.0
+
+[node name="Button100" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 788.0
+offset_top = 519.0
+offset_right = 821.0
+offset_bottom = 541.0
+
+[node name="Button101" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 850.0
+offset_top = 519.0
+offset_right = 885.0
+offset_bottom = 542.0
+
+[node name="Button102" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 891.0
+offset_top = 519.0
+offset_right = 933.0
+offset_bottom = 544.0
+
+[node name="Button103" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 193.0
+offset_top = 581.0
+offset_right = 223.0
+offset_bottom = 607.0
+
+[node name="Button104" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 255.0
+offset_top = 580.0
+offset_right = 293.0
+offset_bottom = 605.0
+
+[node name="Button105" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 324.0
+offset_top = 582.0
+offset_right = 358.0
+offset_bottom = 609.0
+
+[node name="Button106" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 363.0
+offset_top = 582.0
+offset_right = 398.0
+offset_bottom = 606.0
+
+[node name="Button107" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 403.0
+offset_top = 580.0
+offset_right = 437.0
+offset_bottom = 605.0
+
+[node name="Button108" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 441.0
+offset_top = 580.0
+offset_right = 477.0
+offset_bottom = 608.0
+
+[node name="Button109" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 507.0
+offset_top = 582.0
+offset_right = 541.0
+offset_bottom = 607.0
+
+[node name="Button110" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 545.0
+offset_top = 580.0
+offset_right = 578.0
+offset_bottom = 606.0
+
+[node name="Button111" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 583.0
+offset_top = 580.0
+offset_right = 616.0
+offset_bottom = 608.0
+
+[node name="Button112" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 655.0
+offset_top = 581.0
+offset_right = 687.0
+offset_bottom = 607.0
+
+[node name="Button113" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 698.0
+offset_top = 582.0
+offset_right = 731.0
+offset_bottom = 609.0
+
+[node name="Button114" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 740.0
+offset_top = 580.0
+offset_right = 776.0
+offset_bottom = 608.0
+
+[node name="Button115" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 786.0
+offset_top = 581.0
+offset_right = 820.0
+offset_bottom = 611.0
+
+[node name="Button116" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 829.0
+offset_top = 582.0
+offset_right = 866.0
+offset_bottom = 609.0
+
+[node name="Button117" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 878.0
+offset_top = 581.0
+offset_right = 916.0
+offset_bottom = 607.0
+
+[node name="Button118" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 923.0
+offset_top = 582.0
+offset_right = 964.0
+offset_bottom = 606.0
+
+[node name="Button119" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 192.0
+offset_top = 647.0
+offset_right = 233.0
+offset_bottom = 678.0
+
+[node name="Button120" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 257.0
+offset_top = 647.0
+offset_right = 296.0
+offset_bottom = 680.0
+
+[node name="Button121" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 303.0
+offset_top = 649.0
+offset_right = 335.0
+offset_bottom = 679.0
+
+[node name="Button122" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 358.0
+offset_top = 648.0
+offset_right = 391.0
+offset_bottom = 676.0
+
+[node name="Button123" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 427.0
+offset_top = 649.0
+offset_right = 465.0
+offset_bottom = 680.0
+
+[node name="Button124" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 488.0
+offset_top = 649.0
+offset_right = 527.0
+offset_bottom = 681.0
+
+[node name="Button125" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 557.0
+offset_top = 647.0
+offset_right = 596.0
+offset_bottom = 680.0
+
+[node name="Button126" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 603.0
+offset_top = 648.0
+offset_right = 638.0
+offset_bottom = 678.0
+
+[node name="Button127" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 669.0
+offset_top = 649.0
+offset_right = 705.0
+offset_bottom = 679.0
+
+[node name="Button128" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 730.0
+offset_top = 649.0
+offset_right = 773.0
+offset_bottom = 680.0
+
+[node name="Button129" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 795.0
+offset_top = 647.0
+offset_right = 829.0
+offset_bottom = 677.0
+
+[node name="Button130" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 836.0
+offset_top = 648.0
+offset_right = 871.0
+offset_bottom = 676.0
+
+[node name="Button131" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 885.0
+offset_top = 645.0
+offset_right = 919.0
+offset_bottom = 675.0
+
+[node name="Button132" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 929.0
+offset_top = 647.0
+offset_right = 965.0
+offset_bottom = 675.0
+
+[node name="Button133" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 194.0
+offset_top = 715.0
+offset_right = 231.0
+offset_bottom = 747.0
+
+[node name="Button134" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 237.0
+offset_top = 715.0
+offset_right = 275.0
+offset_bottom = 743.0
+
+[node name="Button135" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 306.0
+offset_top = 713.0
+offset_right = 343.0
+offset_bottom = 742.0
+
+[node name="Button136" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 364.0
+offset_top = 711.0
+offset_right = 403.0
+offset_bottom = 742.0
+
+[node name="Button137" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 422.0
+offset_top = 713.0
+offset_right = 462.0
+offset_bottom = 745.0
+
+[node name="Button138" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 464.0
+offset_top = 714.0
+offset_right = 500.0
+offset_bottom = 743.0
+
+[node name="Button139" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 506.0
+offset_top = 716.0
+offset_right = 539.0
+offset_bottom = 742.0
+
+[node name="Button140" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 550.0
+offset_top = 714.0
+offset_right = 587.0
+offset_bottom = 741.0
+
+[node name="Button141" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 595.0
+offset_top = 713.0
+offset_right = 635.0
+offset_bottom = 741.0
+
+[node name="Button142" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 640.0
+offset_top = 712.0
+offset_right = 683.0
+offset_bottom = 742.0
+
+[node name="Button143" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 703.0
+offset_top = 716.0
+offset_right = 742.0
+offset_bottom = 742.0
+
+[node name="Button144" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 763.0
+offset_top = 716.0
+offset_right = 803.0
+offset_bottom = 744.0
+
+[node name="Button145" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 806.0
+offset_top = 714.0
+offset_right = 847.0
+offset_bottom = 742.0
+
+[node name="Button146" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 871.0
+offset_top = 716.0
+offset_right = 913.0
+offset_bottom = 743.0
+
+[node name="Button147" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 940.0
+offset_top = 715.0
+offset_right = 979.0
+offset_bottom = 743.0
+
+[node name="Button148" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 193.0
+offset_top = 780.0
+offset_right = 230.0
+offset_bottom = 808.0
+
+[node name="Button149" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 237.0
+offset_top = 780.0
+offset_right = 274.0
+offset_bottom = 811.0
+
+[node name="Button150" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 299.0
+offset_top = 781.0
+offset_right = 339.0
+offset_bottom = 807.0
+
+[node name="Button151" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 359.0
+offset_top = 779.0
+offset_right = 395.0
+offset_bottom = 808.0
+
+[node name="Button152" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 403.0
+offset_top = 777.0
+offset_right = 439.0
+offset_bottom = 808.0
+
+[node name="Button153" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 473.0
+offset_top = 780.0
+offset_right = 510.0
+offset_bottom = 809.0
+
+[node name="Button154" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 532.0
+offset_top = 779.0
+offset_right = 566.0
+offset_bottom = 811.0
+
+[node name="Button155" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 571.0
+offset_top = 780.0
+offset_right = 606.0
+offset_bottom = 809.0
+
+[node name="Button156" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 612.0
+offset_top = 777.0
+offset_right = 645.0
+offset_bottom = 808.0
+
+[node name="Button157" type="Button" parent="dechiffre/ScrollContainer/Control/buttons"]
+offset_left = 653.0
+offset_top = 776.0
+offset_right = 687.0
+offset_bottom = 809.0
+
+[node name="point" type="TextureButton" parent="dechiffre"]
+offset_left = 4.0
+offset_top = 454.0
+offset_right = 83.0
+offset_bottom = 514.0
+texture_normal = ExtResource("3_lvsxu")
+
+[node name="a" type="TextureButton" parent="dechiffre"]
+offset_left = 94.0
+offset_top = 453.0
+offset_right = 173.0
+offset_bottom = 513.0
+texture_normal = ExtResource("4_hqyll")
+
+[node name="c" type="TextureButton" parent="dechiffre"]
+offset_left = 185.0
+offset_top = 455.0
+offset_right = 264.0
+offset_bottom = 515.0
+texture_normal = ExtResource("5_n6i4l")
+
+[node name="dans" type="TextureButton" parent="dechiffre"]
+offset_left = 276.0
+offset_top = 453.0
+offset_right = 355.0
+offset_bottom = 513.0
+texture_normal = ExtResource("6_1m1yy")
+
+[node name="de" type="TextureButton" parent="dechiffre"]
+offset_left = 366.0
+offset_top = 454.0
+offset_right = 445.0
+offset_bottom = 514.0
+texture_normal = ExtResource("7_1plxo")
+
+[node name="e" type="TextureButton" parent="dechiffre"]
+offset_left = 460.0
+offset_top = 452.0
+offset_right = 539.0
+offset_bottom = 512.0
+texture_normal = ExtResource("8_a82wp")
+
+[node name="ez" type="TextureButton" parent="dechiffre"]
+offset_left = 554.0
+offset_top = 453.0
+offset_right = 633.0
+offset_bottom = 513.0
+texture_normal = ExtResource("9_3a7en")
+
+[node name="il" type="TextureButton" parent="dechiffre"]
+offset_left = 644.0
+offset_top = 453.0
+offset_right = 723.0
+offset_bottom = 513.0
+texture_normal = ExtResource("10_m5tpt")
+
+[node name="l" type="TextureButton" parent="dechiffre"]
+offset_left = 735.0
+offset_top = 452.0
+offset_right = 814.0
+offset_bottom = 512.0
+texture_normal = ExtResource("11_djast")
+
+[node name="la" type="TextureButton" parent="dechiffre"]
+offset_left = 831.0
+offset_top = 450.0
+offset_right = 910.0
+offset_bottom = 510.0
+texture_normal = ExtResource("12_6vceo")
+
+[node name="me" type="TextureButton" parent="dechiffre"]
+offset_left = 923.0
+offset_top = 450.0
+offset_right = 1002.0
+offset_bottom = 510.0
+texture_normal = ExtResource("13_jgkdj")
+
+[node name="ne" type="TextureButton" parent="dechiffre"]
+offset_left = 1012.0
+offset_top = 448.0
+offset_right = 1091.0
+offset_bottom = 508.0
+texture_normal = ExtResource("14_mcokj")
+
+[node name="on" type="TextureButton" parent="dechiffre"]
+offset_left = 52.0
+offset_top = 526.0
+offset_right = 131.0
+offset_bottom = 586.0
+texture_normal = ExtResource("15_1cque")
+
+[node name="pa" type="TextureButton" parent="dechiffre"]
+offset_left = 142.0
+offset_top = 528.0
+offset_right = 221.0
+offset_bottom = 588.0
+texture_normal = ExtResource("16_yu5no")
+
+[node name="que" type="TextureButton" parent="dechiffre"]
+offset_left = 235.0
+offset_top = 526.0
+offset_right = 314.0
+offset_bottom = 586.0
+texture_normal = ExtResource("17_iqgnj")
+
+[node name="r" type="TextureButton" parent="dechiffre"]
+offset_left = 324.0
+offset_top = 525.0
+offset_right = 403.0
+offset_bottom = 585.0
+texture_normal = ExtResource("18_i1qyh")
+
+[node name="ra" type="TextureButton" parent="dechiffre"]
+offset_left = 415.0
+offset_top = 526.0
+offset_right = 494.0
+offset_bottom = 586.0
+texture_normal = ExtResource("19_qfg47")
+
+[node name="re" type="TextureButton" parent="dechiffre"]
+offset_left = 507.0
+offset_top = 525.0
+offset_right = 586.0
+offset_bottom = 585.0
+texture_normal = ExtResource("20_l657t")
+
+[node name="s" type="TextureButton" parent="dechiffre"]
+offset_left = 603.0
+offset_top = 524.0
+offset_right = 682.0
+offset_bottom = 584.0
+texture_normal = ExtResource("21_cfg3r")
+
+[node name="se" type="TextureButton" parent="dechiffre"]
+offset_left = 695.0
+offset_top = 522.0
+offset_right = 774.0
+offset_bottom = 582.0
+texture_normal = ExtResource("22_7jqs7")
+
+[node name="su" type="TextureButton" parent="dechiffre"]
+offset_left = 786.0
+offset_top = 523.0
+offset_right = 865.0
+offset_bottom = 583.0
+texture_normal = ExtResource("23_p583a")
+
+[node name="t" type="TextureButton" parent="dechiffre"]
+offset_left = 877.0
+offset_top = 521.0
+offset_right = 956.0
+offset_bottom = 581.0
+texture_normal = ExtResource("24_tduj1")
+
+[node name="un" type="TextureButton" parent="dechiffre"]
+offset_left = 968.0
+offset_top = 523.0
+offset_right = 1047.0
+offset_bottom = 583.0
+texture_normal = ExtResource("25_8imor")
+
+[node name="vous" type="TextureButton" parent="dechiffre"]
+offset_left = 1062.0
+offset_top = 524.0
+offset_right = 1141.0
+offset_bottom = 584.0
+texture_normal = ExtResource("26_n78ek")
+
+[node name="submit_but" type="Button" parent="dechiffre"]
+offset_left = 502.0
+offset_top = 596.0
+offset_right = 627.0
+offset_bottom = 641.0
+text = "Vérifier"
+
+[connection signal="fin_jeu" from="dechiffre" to="." method="_on_dechiffre_fin_jeu"]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button1" to="dechiffre" method="replace_str" binds= [623]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button2" to="dechiffre" method="replace_str" binds= [605]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button3" to="dechiffre" method="replace_str" binds= [45]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button4" to="dechiffre" method="replace_str" binds= [345]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button5" to="dechiffre" method="replace_str" binds= [896]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button6" to="dechiffre" method="replace_str" binds= [579]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button7" to="dechiffre" method="replace_str" binds= [163]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button8" to="dechiffre" method="replace_str" binds= [522]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button9" to="dechiffre" method="replace_str" binds= [309]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button10" to="dechiffre" method="replace_str" binds= [481]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button11" to="dechiffre" method="replace_str" binds= [308]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button12" to="dechiffre" method="replace_str" binds= [56]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button13" to="dechiffre" method="replace_str" binds= [522]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button14" to="dechiffre" method="replace_str" binds= [122]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button15" to="dechiffre" method="replace_str" binds= [822]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button16" to="dechiffre" method="replace_str" binds= [634]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button17" to="dechiffre" method="replace_str" binds= [436]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button18" to="dechiffre" method="replace_str" binds= [396]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button19" to="dechiffre" method="replace_str" binds= [308]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button20" to="dechiffre" method="replace_str" binds= [896]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button21" to="dechiffre" method="replace_str" binds= [753]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button22" to="dechiffre" method="replace_str" binds= [10]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button23" to="dechiffre" method="replace_str" binds= [713]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button24" to="dechiffre" method="replace_str" binds= [125]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button25" to="dechiffre" method="replace_str" binds= [963]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button26" to="dechiffre" method="replace_str" binds= [171]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button27" to="dechiffre" method="replace_str" binds= [579]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button28" to="dechiffre" method="replace_str" binds= [386]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button29" to="dechiffre" method="replace_str" binds= [986]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button30" to="dechiffre" method="replace_str" binds= [229]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button31" to="dechiffre" method="replace_str" binds= [579]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button32" to="dechiffre" method="replace_str" binds= [52]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button33" to="dechiffre" method="replace_str" binds= [842]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button34" to="dechiffre" method="replace_str" binds= [792]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button35" to="dechiffre" method="replace_str" binds= [761]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button36" to="dechiffre" method="replace_str" binds= [830]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button37" to="dechiffre" method="replace_str" binds= [441]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button38" to="dechiffre" method="replace_str" binds= [248]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button39" to="dechiffre" method="replace_str" binds= [288]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button40" to="dechiffre" method="replace_str" binds= [308]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button41" to="dechiffre" method="replace_str" binds= [95]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button42" to="dechiffre" method="replace_str" binds= [274]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button43" to="dechiffre" method="replace_str" binds= [53]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button44" to="dechiffre" method="replace_str" binds= [522]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button45" to="dechiffre" method="replace_str" binds= [345]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button46" to="dechiffre" method="replace_str" binds= [655]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button47" to="dechiffre" method="replace_str" binds= [579]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button48" to="dechiffre" method="replace_str" binds= [427]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button49" to="dechiffre" method="replace_str" binds= [701]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button50" to="dechiffre" method="replace_str" binds= [819]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button51" to="dechiffre" method="replace_str" binds= [939]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button52" to="dechiffre" method="replace_str" binds= [792]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button53" to="dechiffre" method="replace_str" binds= [655]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button54" to="dechiffre" method="replace_str" binds= [963]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button55" to="dechiffre" method="replace_str" binds= [22]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button56" to="dechiffre" method="replace_str" binds= [589]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button57" to="dechiffre" method="replace_str" binds= [56]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button58" to="dechiffre" method="replace_str" binds= [436]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button59" to="dechiffre" method="replace_str" binds= [372]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button60" to="dechiffre" method="replace_str" binds= [160]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button61" to="dechiffre" method="replace_str" binds= [53]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button62" to="dechiffre" method="replace_str" binds= [826]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button63" to="dechiffre" method="replace_str" binds= [171]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button64" to="dechiffre" method="replace_str" binds= [300]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button65" to="dechiffre" method="replace_str" binds= [10]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button66" to="dechiffre" method="replace_str" binds= [314]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button67" to="dechiffre" method="replace_str" binds= [56]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button68" to="dechiffre" method="replace_str" binds= [579]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button69" to="dechiffre" method="replace_str" binds= [53]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button70" to="dechiffre" method="replace_str" binds= [95]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button71" to="dechiffre" method="replace_str" binds= [547]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button72" to="dechiffre" method="replace_str" binds= [52]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button73" to="dechiffre" method="replace_str" binds= [939]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button74" to="dechiffre" method="replace_str" binds= [792]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button75" to="dechiffre" method="replace_str" binds= [766]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button76" to="dechiffre" method="replace_str" binds= [56]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button77" to="dechiffre" method="replace_str" binds= [963]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button78" to="dechiffre" method="replace_str" binds= [655]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button79" to="dechiffre" method="replace_str" binds= [446]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button80" to="dechiffre" method="replace_str" binds= [436]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button81" to="dechiffre" method="replace_str" binds= [125]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button82" to="dechiffre" method="replace_str" binds= [56]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button83" to="dechiffre" method="replace_str" binds= [998]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button84" to="dechiffre" method="replace_str" binds= [56]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button85" to="dechiffre" method="replace_str" binds= [124]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button86" to="dechiffre" method="replace_str" binds= [350]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button87" to="dechiffre" method="replace_str" binds= [576]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button88" to="dechiffre" method="replace_str" binds= [56]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button89" to="dechiffre" method="replace_str" binds= [288]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button90" to="dechiffre" method="replace_str" binds= [345]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button91" to="dechiffre" method="replace_str" binds= [372]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button92" to="dechiffre" method="replace_str" binds= [95]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button93" to="dechiffre" method="replace_str" binds= [336]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button94" to="dechiffre" method="replace_str" binds= [125]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button95" to="dechiffre" method="replace_str" binds= [53]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button96" to="dechiffre" method="replace_str" binds= [22]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button97" to="dechiffre" method="replace_str" binds= [509]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button98" to="dechiffre" method="replace_str" binds= [288]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button99" to="dechiffre" method="replace_str" binds= [231]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button100" to="dechiffre" method="replace_str" binds= [160]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button101" to="dechiffre" method="replace_str" binds= [330]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button102" to="dechiffre" method="replace_str" binds= [309]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button103" to="dechiffre" method="replace_str" binds= [478]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button104" to="dechiffre" method="replace_str" binds= [481]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button105" to="dechiffre" method="replace_str" binds= [766]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button106" to="dechiffre" method="replace_str" binds= [56]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button107" to="dechiffre" method="replace_str" binds= [56]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button108" to="dechiffre" method="replace_str" binds= [822]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button109" to="dechiffre" method="replace_str" binds= [122]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button110" to="dechiffre" method="replace_str" binds= [56]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button111" to="dechiffre" method="replace_str" binds= [326]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button112" to="dechiffre" method="replace_str" binds= [160]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button113" to="dechiffre" method="replace_str" binds= [756]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button114" to="dechiffre" method="replace_str" binds= [830]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button115" to="dechiffre" method="replace_str" binds= [441]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button116" to="dechiffre" method="replace_str" binds= [830]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button117" to="dechiffre" method="replace_str" binds= [300]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button118" to="dechiffre" method="replace_str" binds= [163]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button119" to="dechiffre" method="replace_str" binds= [441]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button120" to="dechiffre" method="replace_str" binds= [998]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button121" to="dechiffre" method="replace_str" binds= [56]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button122" to="dechiffre" method="replace_str" binds= [826]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button123" to="dechiffre" method="replace_str" binds= [309]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button124" to="dechiffre" method="replace_str" binds= [481]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button125" to="dechiffre" method="replace_str" binds= [246]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button126" to="dechiffre" method="replace_str" binds= [822]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button127" to="dechiffre" method="replace_str" binds= [372]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button128" to="dechiffre" method="replace_str" binds= [95]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button129" to="dechiffre" method="replace_str" binds= [547]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button130" to="dechiffre" method="replace_str" binds= [478]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button131" to="dechiffre" method="replace_str" binds= [949]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button132" to="dechiffre" method="replace_str" binds= [171]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button133" to="dechiffre" method="replace_str" binds= [171]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button134" to="dechiffre" method="replace_str" binds= [822]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button135" to="dechiffre" method="replace_str" binds= [308]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button137" to="dechiffre" method="replace_str" binds= [274]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button138" to="dechiffre" method="replace_str" binds= [53]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button139" to="dechiffre" method="replace_str" binds= [522]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button140" to="dechiffre" method="replace_str" binds= [345]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button141" to="dechiffre" method="replace_str" binds= [655]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button142" to="dechiffre" method="replace_str" binds= [478]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button143" to="dechiffre" method="replace_str" binds= [45]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button144" to="dechiffre" method="replace_str" binds= [576]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button145" to="dechiffre" method="replace_str" binds= [345]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button146" to="dechiffre" method="replace_str" binds= [211]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button147" to="dechiffre" method="replace_str" binds= [998]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button148" to="dechiffre" method="replace_str" binds= [804]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button149" to="dechiffre" method="replace_str" binds= [478]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button150" to="dechiffre" method="replace_str" binds= [23]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button151" to="dechiffre" method="replace_str" binds= [576]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button152" to="dechiffre" method="replace_str" binds= [345]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button153" to="dechiffre" method="replace_str" binds= [211]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button154" to="dechiffre" method="replace_str" binds= [39]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button155" to="dechiffre" method="replace_str" binds= [56]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button156" to="dechiffre" method="replace_str" binds= [804]]
+[connection signal="pressed" from="dechiffre/ScrollContainer/Control/buttons/Button157" to="dechiffre" method="replace_str" binds= [478]]
+[connection signal="pressed" from="dechiffre/point" to="dechiffre" method="send_syllable_str" binds= ["."]]
+[connection signal="pressed" from="dechiffre/a" to="dechiffre" method="send_syllable_str" binds= ["a"]]
+[connection signal="pressed" from="dechiffre/c" to="dechiffre" method="send_syllable_str" binds= ["c"]]
+[connection signal="pressed" from="dechiffre/dans" to="dechiffre" method="send_syllable_str" binds= ["dans"]]
+[connection signal="pressed" from="dechiffre/de" to="dechiffre" method="send_syllable_str" binds= ["de"]]
+[connection signal="pressed" from="dechiffre/e" to="dechiffre" method="send_syllable_str" binds= ["e"]]
+[connection signal="pressed" from="dechiffre/ez" to="dechiffre" method="send_syllable_str" binds= ["ez"]]
+[connection signal="pressed" from="dechiffre/il" to="dechiffre" method="send_syllable_str" binds= ["il"]]
+[connection signal="pressed" from="dechiffre/l" to="dechiffre" method="send_syllable_str" binds= ["l"]]
+[connection signal="pressed" from="dechiffre/la" to="dechiffre" method="send_syllable_str" binds= ["la"]]
+[connection signal="pressed" from="dechiffre/me" to="dechiffre" method="send_syllable_str" binds= ["me"]]
+[connection signal="pressed" from="dechiffre/ne" to="dechiffre" method="send_syllable_str" binds= ["ne"]]
+[connection signal="pressed" from="dechiffre/on" to="dechiffre" method="send_syllable_str" binds= ["on"]]
+[connection signal="pressed" from="dechiffre/pa" to="dechiffre" method="send_syllable_str" binds= ["pa"]]
+[connection signal="pressed" from="dechiffre/que" to="dechiffre" method="send_syllable_str" binds= ["que"]]
+[connection signal="pressed" from="dechiffre/r" to="dechiffre" method="send_syllable_str" binds= ["r"]]
+[connection signal="pressed" from="dechiffre/ra" to="dechiffre" method="send_syllable_str" binds= ["ra"]]
+[connection signal="pressed" from="dechiffre/re" to="dechiffre" method="send_syllable_str" binds= ["re"]]
+[connection signal="pressed" from="dechiffre/s" to="dechiffre" method="send_syllable_str" binds= ["s"]]
+[connection signal="pressed" from="dechiffre/se" to="dechiffre" method="send_syllable_str" binds= ["se"]]
+[connection signal="pressed" from="dechiffre/su" to="dechiffre" method="send_syllable_str" binds= ["su"]]
+[connection signal="pressed" from="dechiffre/t" to="dechiffre" method="send_syllable_str" binds= ["t"]]
+[connection signal="pressed" from="dechiffre/un" to="dechiffre" method="send_syllable_str" binds= ["un"]]
+[connection signal="pressed" from="dechiffre/vous" to="dechiffre" method="send_syllable_str" binds= ["vous"]]
+[connection signal="pressed" from="dechiffre/submit_but" to="dechiffre" method="_on_submit_but_pressed"]

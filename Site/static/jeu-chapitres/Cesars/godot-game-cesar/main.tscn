@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxvc5svwtwys"]
+
+[ext_resource type="Texture2D" uid="uid://se6tsr3cb480" path="res://img/arene1.png" id="1_qhwoa"]
+[ext_resource type="PackedScene" uid="uid://bog4xe12lclfw" path="res://mechant.tscn" id="2_np811"]
+[ext_resource type="PackedScene" uid="uid://bbcu1yw5juolt" path="res://Phase1/Phase1.tscn" id="3_4rsvj"]
+
+[node name="Main" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_qhwoa")
+
+[node name="Mechant" parent="." instance=ExtResource("2_np811")]
+position = Vector2(339, 576)
+
+[node name="boiteDialogue" parent="." instance=ExtResource("3_4rsvj")]
+position = Vector2(-2, 912)

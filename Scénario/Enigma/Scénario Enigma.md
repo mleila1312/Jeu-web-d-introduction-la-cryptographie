@@ -1,5 +1,5 @@
 # Scène 1
-Le joueur est téléporté à Londres, et il se réveille sur une table dans un gymnase devant un mot croisé. Il trouve sur son front un post-it disant "T'as intérêt à te faire recruter, si tu l'es, pour sortir de cette époque, tu devra récupérer et décrypter un message que tu recevras le 25 mars à 3h45 du matin. Tu auras besoin des rotors 15, 21, 63."  
+Le joueur est téléporté à Londres, et il se réveille sur une table dans un gymnase devant un mot croisé. Il trouve sur son front un post-it disant "T'as intérêt à te faire recruter, si tu l'es, pour sortir de cette époque, tu devra récupérer et décrypter un message que tu recevras le 25 mars à 3h45 du matin. Tu auras besoin des rotors 3, 2, 5."  
 Le joueur devra alors résoudre le mot croisé, et il sera recruté. Il sera ensuite amené devant un grand bâtiment, les personnes l'accompagnant lui diront de trouver son chemin, que ce serait le dernier test pour voir si il était fait pour travailler ici et si on pouvait lui faire confiance.
 
 # Scène 2

@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://n65qjeyyltyl"]
+
+[ext_resource type="Script" path="res://salle_coffres.gd" id="1_2y1lg"]
+[ext_resource type="PackedScene" uid="uid://c6ihnbyeuy3kg" path="res://salle_coffres_background.tscn" id="1_qbclq"]
+[ext_resource type="PackedScene" uid="uid://vrehjh0b7kp" path="res://coffres_background.tscn" id="2_5cw7e"]
+[ext_resource type="PackedScene" uid="uid://yijynhnkiy7o" path="res://trappe_background.tscn" id="4_qt80w"]
+[ext_resource type="Texture2D" uid="uid://btarbhdiauqqe" path="res://img/img_salle_coffres/boutons/feu vert.png" id="5_nxoiu"]
+
+[node name="salle_coffres" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_2y1lg")
+
+[node name="salle_coffres_background" parent="." instance=ExtResource("1_qbclq")]
+
+[node name="coffres_background" parent="." instance=ExtResource("2_5cw7e")]
+
+[node name="trappe_background" parent="." instance=ExtResource("4_qt80w")]
+
+[node name="feu_vert_coffre1" type="Sprite2D" parent="trappe_background"]
+position = Vector2(-201, 277)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_nxoiu")
+
+[node name="feu_vert_coffre2" type="Sprite2D" parent="trappe_background"]
+position = Vector2(-101, 277)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_nxoiu")
+
+[node name="feu_vert_coffre3" type="Sprite2D" parent="trappe_background"]
+position = Vector2(-1, 277)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_nxoiu")
+
+[node name="feu_vert_coffre4" type="Sprite2D" parent="trappe_background"]
+position = Vector2(100, 276)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_nxoiu")
+
+[node name="feu_vert_coffre5" type="Sprite2D" parent="trappe_background"]
+position = Vector2(201, 276)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_nxoiu")
+
+[connection signal="entree_coffre1" from="salle_coffres_background" to="." method="_on_salle_coffres_background_entree_coffre_1"]
+[connection signal="entree_coffre1" from="salle_coffres_background" to="coffres_background" method="_on_salle_coffres_background_entree_coffre_1"]
+[connection signal="entree_coffre2" from="salle_coffres_background" to="." method="_on_salle_coffres_background_entree_coffre_2"]
+[connection signal="entree_coffre2" from="salle_coffres_background" to="coffres_background" method="_on_salle_coffres_background_entree_coffre_2"]
+[connection signal="entree_coffre3" from="salle_coffres_background" to="." method="_on_salle_coffres_background_entree_coffre_3"]
+[connection signal="entree_coffre3" from="salle_coffres_background" to="coffres_background" method="_on_salle_coffres_background_entree_coffre_3"]
+[connection signal="entree_coffre4" from="salle_coffres_background" to="." method="_on_salle_coffres_background_entree_coffre_4"]
+[connection signal="entree_coffre4" from="salle_coffres_background" to="coffres_background" method="_on_salle_coffres_background_entree_coffre_4"]
+[connection signal="entree_coffre5" from="salle_coffres_background" to="." method="_on_salle_coffres_background_entree_coffre_5"]
+[connection signal="entree_coffre5" from="salle_coffres_background" to="coffres_background" method="_on_salle_coffres_background_entree_coffre_5"]
+[connection signal="entree_trappe" from="salle_coffres_background" to="." method="_on_salle_coffres_background_entree_trappe"]
+[connection signal="coffre1_ouvert" from="coffres_background" to="." method="_on_coffres_background_coffre_1_ouvert"]
+[connection signal="coffre2_ouvert" from="coffres_background" to="." method="_on_coffres_background_coffre_2_ouvert"]
+[connection signal="coffre3_ouvert" from="coffres_background" to="." method="_on_coffres_background_coffre_3_ouvert"]
+[connection signal="coffre4_ouvert" from="coffres_background" to="." method="_on_coffres_background_coffre_4_ouvert"]
+[connection signal="coffre5_ouvert" from="coffres_background" to="." method="_on_coffres_background_coffre_5_ouvert"]
+[connection signal="retour_salle" from="coffres_background" to="." method="_on_coffres_background_retour_salle"]
+[connection signal="retour_salle" from="trappe_background" to="." method="_on_trappe_background_retour_salle"]
