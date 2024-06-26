@@ -67,6 +67,10 @@ def site_Vernam():
 def site_Vigenere():
     return app.send_static_file("Vigenere/Vigenere.html")
 
+@app.route('/A_propos')
+def site_Vigenere():
+    return app.send_static_file("A_propos/A_propos.html")
+
 # Site du dossier 5, fait pour masquer le chemin jusqu'au fichier
 @app.route('/B')
 def site_dossier5_certif():
