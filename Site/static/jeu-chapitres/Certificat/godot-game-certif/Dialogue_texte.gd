@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-# Called when the node enters the scene tree for the first time.
+# Contient l'ensemble des dialogues à afficher en fonction de l'état dans lequel est le jeu
 func display_dialogue(state):
 	if state==1 : 
 		$Dialogue.text = "Hummmm, j'étais si confortable...";

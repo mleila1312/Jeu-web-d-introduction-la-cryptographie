@@ -1,14 +1,17 @@
 extends TextureRect
 
+#vrai si on est au dessus du bouton de check d'identité
 var over =false;
-# Called when the node enters the scene tree for the first time.
 
+#si au dessus du bouton"
 func hover_button() : 
 	over=true;
-	
+
+#si on sort de la zone du bouton
 func unhover_button() : 
 	over=false;
 	
+#match le nom cherché entré à un résultat
 func search() : 
 	var searched = ($entry.text).to_upper();
 	var infos = get_node("Scroll/infos");
@@ -52,7 +55,7 @@ func search() :
 	else : 
 		infos.text ="Error 404 : not found"
 		
-	
+#gère les clicks sur le bouton
 func _input(event) : 
 	if event is InputEventMouseButton and event.is_pressed() && not event.is_echo() and over == true :
 		search();

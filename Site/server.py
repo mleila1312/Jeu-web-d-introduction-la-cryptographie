@@ -114,10 +114,6 @@ def site_dossier3():
 def site_dossier4():
     return app.send_static_file(f"jeu-chapitres/Certificat/dossier4/Random.html")
 
-# url de test pour les jeux godots (spoiler ça marche, thank god)
-@app.route('/DodgeTheCreeps')
-def site_dodge_the_creeps():
-    return send_from_directory(app.static_folder+"/dodge_the_creeps/web_tes/", "Index_test.html")
 
 #pour les certificats
 @app.route('/Chapitre-certificat')
@@ -154,10 +150,6 @@ def cesartestiframe():
 def vigtestiframe():
     return app.send_static_file(f"jeu-chapitres/Vigenere/Vigenere-chap.html")
 
-#test iframe
-@app.route('/testiframe')
-def sitetestiframe():
-    return app.send_static_file(f"jeu-chapitres/page_test_iframe.html")
 
 # pour ne pas avoir de pb de SharedArrayBuffer et CORS
 @app.after_request
