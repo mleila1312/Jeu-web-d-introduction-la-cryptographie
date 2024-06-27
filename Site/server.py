@@ -151,4 +151,4 @@ def add_header_home(response):
 
 
 # lance le server
-serve(debug = False, host='::', port=4444)
+serve(app, host='::', port=4444)
