@@ -89,7 +89,7 @@ def check_mdp():
     login = request.form.get('login')
     mdp= request.form.get('mdp')
     #si le mdp et login sont corrects
-    if login =="admin" and mdp == "5FruitsEtLégumes" :
+    if login =="admin" and mdp == "5FruitsEtLegumes" :
         return app.send_static_file(f"jeu-chapitres/Certificat/dossier5/secret-site/home.html")
     else :
         return app.send_static_file(f"jeu-chapitres/Certificat/dossier5/Home.html")
