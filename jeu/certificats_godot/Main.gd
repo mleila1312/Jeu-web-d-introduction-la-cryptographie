@@ -1,36 +1,48 @@
 extends Node
 
+#répertorie l'état dans lequel le jeu est
 var state = 0;
+
+#garde en mémoire si la souris est en ce moment même au dessus d'un des boutons
 var detection = [false, false, false, false, false];
+
 var prec;
+#retiens en mémoire si les fichiers ont été vérifiés ou non
 var files_verified = [false, false, false, false, false];
+#check si un logiciel a déjà été ouvert, si oui, on n'affichera pas de texte d'explication
 var logiciel_seen = [false, false, false];
+
 var id_text=1;
 
+
+#signal qui indique que les 4 premiers dossiers ont été checkés
 signal all_seen_except_5;
+
+#en fonction de si le joueur a bien résolu le fichier ou non, il recevra un mail différent de son patron
 func check_file(file, outcome): 
 	if outcome ==1 or outcome ==2 : 
 		files_verified[file]=true;
 		prec.hide();
 		var web = get_node("display/mail");
-		#web.texture = load ("res://images/Mail.png");
 		web.show();
 		$display.text_mail(outcome, file);
 		prec=web;
 		if files_verified[0] and files_verified[1] and files_verified[2] and files_verified[3] and file <4 :
-			get_node("display/mail/Scroll/contenu").text+= "\nD'ailleurs, un nouveau dossier est arrivé."
+			get_node("display/mail/Scroll/contenu").text+= "\nD'ailleurs, un nouveau dossier est arrivé. Tu sais, je pense que pour celui là, il pourrait être intéressant d'inspecter sa page web. POur inspecter une page web, il te suffit de faire click droit et de sélectionner inspecter. Tu pourras alors voir le code de la page, les commentaires etc. Qui sait, des informations intéressantes pourraient s'y trouver."
 	else :
 		prec.hide();
 		var web = get_node("display/mail");
-		#web.texture = load ("res://images/Mail.png");
 		web.show();
 		$display.text_mail(outcome, file);
 		prec=web;
-# Called when the node enters the scene tree for the first time.
+
+#lance les zzz d'intro
 func _ready():
 	$display.set_zzz(); 
 	$Dialogue_texte.hide()
 	
+	
+#fonction qui checkent si la souris est au dessus d'un élément
 func hover_computer():
 	detection[0]=true;
 	
@@ -56,6 +68,7 @@ func hover_decision():
 func unhover_decision():
 	detection[3]=false;
 
+# les prochaines fonctions cré les zones de détection de la souris
 func create_detection_description1() : 
 	var detection_files= Control.new();
 	detection_files.set_name("detection_files");
@@ -90,7 +103,8 @@ func create_detection_description1() :
 	accessories.mouse_entered.connect(self.hover_accessories);
 	accessories.mouse_exited.connect(self.unhover_accessories);
 	accessories.show()
-	
+
+
 func create_detection_computer() : 
 	var Mail= Control.new();
 	Mail.set_name("Mail");
@@ -144,7 +158,7 @@ func create_detection_computer() :
 	dec.mouse_entered.connect(self.hover_decision);
 	dec.mouse_exited.connect(self.unhover_decision);
 
-
+#gère les click
 func _input(event):
 	if event is InputEventMouseButton and event.is_pressed() && not event.is_echo():
 		if state ==0:
@@ -188,7 +202,6 @@ func _input(event):
 			$Dialogue_texte.display_dialogue(7);
 			$Dialogue_texte.show();
 			var web = get_node("display/mail");
-			#web.texture = load ("res://images/Mail.png");
 			web.show();
 			$display.text_mail(0, 0);
 			prec=web;
@@ -208,7 +221,6 @@ func _input(event):
 					$Dialogue_texte.show();
 					logiciel_seen[0]=true;
 				var web = get_node("display/security");
-				#web.texture = load ("res://images/Security.png");
 				web.show();
 				prec=web;
 			elif detection[1]==true: 
@@ -218,13 +230,11 @@ func _input(event):
 					$Dialogue_texte.show();
 					logiciel_seen[1]=true;
 				var web = get_node("display/identity");
-				#web.texture = load ("res://images/Check.png");
 				web.show();
 				prec=web;
 			elif detection[2]==true : 
 				prec.hide();
 				var web = get_node("display/mail");
-				#web.texture = load ("res://images/Mail.png");
 				web.show();
 				prec=web;
 			elif detection[3]==true : 
@@ -234,7 +244,6 @@ func _input(event):
 					$Dialogue_texte.show();
 					logiciel_seen[2]=true;
 				var web = get_node("display/decision");
-				#web.texture = load ("res://images/Decision.png");
 				web.show();
 				prec=web;
 			elif files_verified[4] : 

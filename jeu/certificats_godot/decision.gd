@@ -1,27 +1,37 @@
 extends TextureRect
 
+#signal pour indiquer qu'on check un dossier
 signal verify_file(file, outcome);
 
+#pour changer le fond
 signal change_background;
+
+#est vrai si on est au dessus du bouton d'envoie
 var over =false;
 
+#contient les valeurs de vérité de si un dossier à été étudié ou non
 var verified = [false, false, false, false];
 
+#si nous sommes au dessus du bouton de décision
 func hover_button() : 
 	over=true;
-	
+
+#si nous ne sommes plus sur le bouton
 func unhover_button() : 
 	over=false;
 
+#Vérifie au dessus de quel dossier la souris est, pour savoir quel dossier le joueur sélectionne
 var over_file=[false, false, false, false, false, false, false]
 
-
+#si la souris est au dessus du bouton de décision
 func decision_hover():
 	over_file[0]=true;
-	
+
+#si la souris n'est plus au dessus du bouton de décision	
 func decision_unhover():
 	over_file[0]=false;
 
+#si on est au dessus du dossier n ou si la souri sort de la zone délimitée comme étant celle du dossier n
 func doss1_hover():
 	over_file[1]=true;
 	
@@ -52,6 +62,7 @@ func doss5_hover():
 func doss5_unhover():
 	over_file[5]=false;
 
+#est lancée à l'apparition du node dans la scène, initialise la scène
 func _ready():
 	var doss=get_node("display_decision/dossier");
 	var rais =get_node("display_decision/raison");
@@ -67,6 +78,7 @@ func _ready():
 	rais.add_item("mot clé");
 	pass # Replace with function body.
 
+#fonction pour vérifier la réponse du joueur sur un dossier, file = numéro du dossier-1
 func verify() : 
 	var files =get_node("display_decision/dossier");
 	var file = get_node("display_decision/dossier").get_selected_id();
@@ -110,6 +122,7 @@ func verify() :
 		change_background.emit();
 		
 	
+#Les différents textes à afficher en fonction du dossier que le joueur souhaite ouvrir
 func text_dossier():
 	var text_doss= get_node("infos_dossier");
 	if over_file[1] :
@@ -121,7 +134,7 @@ func text_dossier():
 		Adresse du responsable légal : 5 rue du ruisseau inversé, Galet-des-sous-Bois, Auvergne, 63023\n
 		clé publique : MFswDQYJKoZIhvcNAQEBBQADSgAwRwJATACbdXIoAyam9a+pBgrvvLFOONbTJn9L
 /rRXuk+9ZqhalG5Z0oP7k0N61qiYLQaMmbjf66fxfZKh1WOUf+XyHQIDAQAB\n
-	url du site : http://127.0.0.1:4444/ArtisaMiel"
+	url du site : https://cryptoquest.rezel.net//ArtisaMiel"
 	if over_file[2] :
 		get_node("display_decision").hide();
 		text_doss.show();
@@ -131,7 +144,7 @@ func text_dossier():
 		Adresse du responsable légal : 19 Place Marguerite Perey, Palaiseau, 91120\n
 		clé publique : MFswDQYJKoZIhvcNAQEBBQADSgAwRwJAW0nJVD9a8tKzVGyfr7CYyuP0ZEtwREhh
 0G3rN4qRtHxUXkDZPn06let/nBwPHDO2uF6x6WwHkHJa13LSXlNa2wIDAQAB\n
-	url du site : http://127.0.0.1:4444/Artichaut"
+	url du site : https://cryptoquest.rezel.net/Artichaut"
 	if over_file[3] :
 		get_node("display_decision").hide();
 		text_doss.show();
@@ -140,7 +153,7 @@ func text_dossier():
 		Responsable légal de l'entreprise : InnovationTechFutur Inc.\n
 		Adresse du responsable légal : 19 road of the Innovators, Sillicon Valley 2.0, 11560\n
 		clé publique : MFswDQYJKoZIhvcNAQEBBQADS\n
-	url du site : http://127.0.0.1:4444/Headband"
+	url du site : https://cryptoquest.rezel.net/Headband"
 	if over_file[4]  :
 		get_node("display_decision").hide();
 		text_doss.show();
@@ -150,7 +163,7 @@ func text_dossier():
 		Adresse du responsable légal : Sea of Tranquility, Moon\n
 		clé publique : MFswDQYJKoZIhvcNAQEBBQADSgAwRwJAeTxhIxe/1EGF9GhIQMMQOOb71Zxs8PlQ
 XiHGq1za86tYVS1UAK3UIvQXGlT6gZLon0QyhjO/tXYEvEcUDy+SoQIDAQAB\n
-		url du site : http://127.0.0.1:4444/Random"
+		url du site : https://cryptoquest.rezel.net/Random"
 	if over_file[5]  and verified.all(func s(x) : return x):
 		get_node("display_decision").hide();
 		text_doss.show();
@@ -160,28 +173,16 @@ XiHGq1za86tYVS1UAK3UIvQXGlT6gZLon0QyhjO/tXYEvEcUDy+SoQIDAQAB\n
 		Adresse du responsable légal : 19 Place Marguerite Perey, Palaiseau, 91120\n
 		clé publique : MFswDQYJKoZIhvcNAQEBBQADSgAwRwJAZyClfJSKlv0KJNXUmMwb+I55UYpccLEn
 05yOSE8Oy+eTx8EYzHGbGZHPdSiFd7blIILBRT7Eep4ty8yBJkhn7wIDAQAB\n
-	url du site : http://127.0.0.1:4444/Login"
+	url du site : https://cryptoquest.rezel.net/Login"
 	if over_file[0] :
 		text_doss.hide()
 		get_node("display_decision").show();
 
 
-	
+# gère le moment où le joueur clique sur le bouton
 func _input(event) : 
 	var keyword=get_node("display_decision/keyword");
 	if event is InputEventMouseButton and event.is_pressed() && not event.is_echo() and over == true :
 		verify();
 		keyword.text = ""
-	if event is InputEventKey and event.is_pressed():
-		if keyword.text=="Entrez le mot-clé : " : 
-			keyword.text=""
-		var key_text = event.as_text();
-		if key_text == "BackSpace":
-			var new_text = keyword.text
-			new_text.erase(keyword.text.length()-1,1)
-			keyword.text = new_text
-		elif key_text == "Space":
-			keyword.text += " "
-		elif key_text.to_lower() in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '0',\
-		'2', '3','4', '5', '6', '7', '8', '9']:
-			keyword.text += key_text
+

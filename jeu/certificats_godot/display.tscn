@@ -134,7 +134,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 autowrap_mode = 2
 justification_flags = 171
 
-[node name="entry" type="Label" parent="identity"]
+[node name="entry" type="LineEdit" parent="identity"]
 layout_mode = 0
 offset_left = 303.0
 offset_top = 211.0
@@ -167,7 +167,7 @@ polygon = PackedVector2Array(294, 203, 296, 260, 693, 260, 693, 203)
 position = Vector2(-109, 102)
 polygon = PackedVector2Array(302, 206, 300, 256, 687, 256, 686, 207)
 
-[node name="entry" type="Label" parent="security"]
+[node name="entry" type="LineEdit" parent="security"]
 layout_mode = 0
 offset_left = 195.0
 offset_top = 312.0
@@ -175,6 +175,7 @@ offset_right = 576.0
 offset_bottom = 352.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Entrez le challenge chiffré : "
+placeholder_text = "Entrez le challenge chiffré"
 
 [node name="Control" type="Control" parent="security"]
 layout_mode = 3
@@ -292,13 +293,14 @@ polygon = PackedVector2Array(312, 210, 311, 254, 582, 255, 581, 209)
 position = Vector2(79, 49)
 polygon = PackedVector2Array(317, 215, 318, 249, 574, 248, 573, 215)
 
-[node name="keyword" type="Label" parent="decision/display_decision"]
+[node name="keyword" type="LineEdit" parent="decision/display_decision"]
 offset_left = 403.0
 offset_top = 266.0
 offset_right = 647.0
 offset_bottom = 294.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Entrez le mot-clé : "
+placeholder_text = "Entrez le mot-clé"
 
 [node name="Control" type="Control" parent="decision/display_decision"]
 layout_mode = 3

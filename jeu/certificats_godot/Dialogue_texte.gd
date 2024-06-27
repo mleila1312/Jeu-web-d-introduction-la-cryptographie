@@ -1,13 +1,13 @@
 extends CanvasLayer
 
-# Called when the node enters the scene tree for the first time.
+# Contient l'ensemble des dialogues à afficher en fonction de l'état dans lequel est le jeu
 func display_dialogue(state):
 	if state==1 : 
 		$Dialogue.text = "Hummmm, j'étais si confortable...";
 	elif state==2 : 
-		$Dialogue.text = "Tu te réveille sur ton bureau";
+		$Dialogue.text = "Tu te réveilles sur ton bureau";
 	elif state==-1: 
-		$Dialogue.text = "Cela semble être votre ordinateur... Vous avez un nouveau mail de votre boss qui semble plutôt aggresif...";
+		$Dialogue.text = "Cela semble être votre ordinateur... Vous avez un nouveau mail de votre boss qui semble plutôt aggressif...";
 	elif state==-2 : 
 		$Dialogue.text = "Quel énorme tas de dossiers... ça ne donne pas envie de s'y mettre...";
 	elif state==-3 : 
@@ -15,17 +15,17 @@ func display_dialogue(state):
 	elif state==4 : 
 		$Dialogue.text = "Bon, voyons voir ce qu'on me veut.";
 	elif state==6: 
-		$Dialogue.text = "C'est donc comme ça qu'ils vérifient les ifnormations d'identité...";
+		$Dialogue.text = "C'est donc comme ça qu'ils vérifient les informations d'identité...";
 	elif state==7: 
 		$Dialogue.text = "Mes mails...";
 	elif state==8 : 
 		$Dialogue.text = "Voici la page pour vérifier que la clé est bien sécurisée et que le client possède la clé privée.";
 	elif state==9: 
-		$Dialogue.text = "Bon, je peux renntrer ici ma décision pour le dossier";
+		$Dialogue.text = "Bon, je peux rentrer ici ma décision pour le dossier";
 	elif state==10 : 
-		$Dialogue.text = "Bon, j’imagine qu’il faut que j’inspecte ces sites. Pour donner un certificat à un site, il faut que je vérifie sa clé publique, si celle-ci est assez sécurisée et si ils possèdent bien la clé privé en leur envoyant un message chiffré avec leur clé publique qu'ils ";
+		$Dialogue.text = "J’imagine qu’il faut que j’inspecte ces sites. Pour donner un certificat à un site, il faut que je vérifie sa clé publique, si celle-ci est assez sécurisée et s'ils possèdent bien la clé privé en leur envoyant un message chiffré avec leur clé publique qu'ils ";
 	elif state==11 : 
-		$Dialogue.text = "devront me renvoyer déchiffré. Pour cela, je pourrais utiliser le logiciel au logo orangeavec une croix dans un carré sur la barre du bas.";
+		$Dialogue.text = "devront me renvoyer déchiffré. Pour cela, je pourrais utiliser le logiciel au logo orange avec une croix dans un carré sur la barre du bas.";
 	elif state==12 : 
 		$Dialogue.text = "Il faudra aussi que je vérifie les informations sur le responsable légal de l’entreprise, pour cela il faudra que j'utilise le logiciel au logo rose sur la barre du bas.";
 	elif state==13 : 
@@ -35,6 +35,6 @@ func display_dialogue(state):
 	elif state==15 : 
 		$Dialogue.text = "C'est tout de même étrange.... Pourquoi demander un certificat alors que dans le site même il y a la raison pour ne pas le donner?";
 	elif state==16 : 
-		$Dialogue.text = "Tienss, nouveau mail? Encore un nouveau dossier?";
+		$Dialogue.text = "Tiens, nouveau mail ? Encore un nouveau dossier ?";
 	elif state==17 : 
 		$Dialogue.text = "Puis, tout devint noir, je sentais ma tête tourner, je me sentais tomber.";

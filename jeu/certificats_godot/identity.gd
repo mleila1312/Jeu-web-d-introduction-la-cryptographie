@@ -1,16 +1,19 @@
 extends TextureRect
 
+#vrai si on est au dessus du bouton de check d'identité
 var over =false;
-# Called when the node enters the scene tree for the first time.
 
+#si au dessus du bouton"
 func hover_button() : 
 	over=true;
-	
+
+#si on sort de la zone du bouton
 func unhover_button() : 
 	over=false;
 	
+#match le nom cherché entré à un résultat
 func search() : 
-	var searched = $entry.text;
+	var searched = ($entry.text).to_upper();
 	var infos = get_node("Scroll/infos");
 	if searched =="ARTISAMIEL" : 
 		infos.text="Responsable légal de l'entreprise : Rémy Artiller\n
@@ -46,29 +49,15 @@ func search() :
 		infos.text="Error 418 : I'm a teapot"
 	elif searched=="SLAY THE PRINCESS" : 
 		infos.text="the tower, obviously"
+	elif searched== "CAT" : 
+		infos.text="Responsable légal de l'entreprise : Kitty cats\n
+		Adresse du responsable légal : partout. Ils sont partout.\n";
 	else : 
 		infos.text ="Error 404 : not found"
 		
-	if searched== "CAT" : 
-		infos.text="Responsable légal de l'entreprise : Kitty cats\n
-		Adresse du responsable légal : partout. Ils sont partout.\n";
-	
+#gère les clicks sur le bouton
 func _input(event) : 
 	if event is InputEventMouseButton and event.is_pressed() && not event.is_echo() and over == true :
 		search();
-	if event is InputEventKey and event.is_pressed():
-		if $entry.text=="Entrez le nom de l'entreprise" : 
-			$entry.text=""
-		var key_text = event.as_text();
-		if key_text == "BackSpace":
-			var new_text = $entry.text
-			new_text.erase($entry.text.length()-1,1)
-			$entry.text = new_text
-		elif key_text == "Space":
-			$entry.text += " "
-		elif key_text == "Enter":
-			search();
-			$entry.text=""
-		elif key_text.to_lower() in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '\'']:
-			$entry.text += key_text
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
