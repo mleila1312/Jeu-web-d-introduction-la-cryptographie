@@ -1,0 +1,176 @@
+[gd_scene load_steps=13 format=3 uid="uid://dp3g50k2iir5t"]
+
+[ext_resource type="Texture2D" uid="uid://uxo3baqyc4mr" path="res://Télécom Paris/ScèneFinale1.png" id="1_2h7ph"]
+[ext_resource type="Script" path="res://scènes_de_transition.gd" id="1_y42im"]
+[ext_resource type="Texture2D" uid="uid://crtk8i2vjnihb" path="res://Télécom Paris/Retour.png" id="3_dw6ck"]
+[ext_resource type="Texture2D" uid="uid://dcdpwlgpll750" path="res://Télécom Paris/ScèneFinale2.png" id="4_ld5e2"]
+[ext_resource type="Texture2D" uid="uid://cj3rsugnj22np" path="res://Télécom Paris/ScèneFinale3.png" id="5_ntnt3"]
+[ext_resource type="Texture2D" uid="uid://dvc6wkmvx2mty" path="res://Télécom Paris/ScèneFinale4.png" id="6_xcaty"]
+[ext_resource type="Texture2D" uid="uid://bq51gi6osxf3c" path="res://Télécom Paris/ScèneFinale5.png" id="7_4shht"]
+[ext_resource type="Texture2D" uid="uid://dten6jr65j8bj" path="res://Télécom Paris/VFlongueurClé.png" id="8_bl4hk"]
+[ext_resource type="Texture2D" uid="uid://dx0jt2wigjnen" path="res://Télécom Paris/arrierePlanBureau.png" id="9_1ihln"]
+[ext_resource type="Texture2D" uid="uid://rcwotqa18euh" path="res://Télécom Paris/AideLongueurClé.png" id="10_julnh"]
+[ext_resource type="Texture2D" uid="uid://l0urre6pv0w4" path="res://Télécom Paris/MauvaiseLongueurClé.png" id="12_7unut"]
+[ext_resource type="Texture2D" uid="uid://dvebke32q0ne2" path="res://Télécom Paris/LongueurCléCorrecte.png" id="13_5q7xw"]
+
+[node name="scènes_de_transition" type="Node2D"]
+script = ExtResource("1_y42im")
+
+[node name="ScèneFinale1" type="Sprite2D" parent="."]
+position = Vector2(633, 92)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2h7ph")
+
+[node name="Retour" type="Sprite2D" parent="ScèneFinale1"]
+position = Vector2(562.5, 616.25)
+rotation = -3.13669
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_dw6ck")
+
+[node name="TextureButton" type="TextureButton" parent="ScèneFinale1/Retour"]
+offset_left = -341.662
+offset_top = -338.33
+offset_right = -301.662
+offset_bottom = -298.33
+scale = Vector2(15, 15)
+
+[node name="ScèneFinale2" type="Sprite2D" parent="."]
+position = Vector2(633, 92)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_ld5e2")
+
+[node name="Retour" type="Sprite2D" parent="ScèneFinale2"]
+position = Vector2(562.5, 613.75)
+rotation = -3.13669
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_dw6ck")
+
+[node name="TextureButton" type="TextureButton" parent="ScèneFinale2/Retour"]
+offset_left = -341.662
+offset_top = -338.33
+offset_right = -301.662
+offset_bottom = -298.33
+scale = Vector2(15, 15)
+
+[node name="ScèneFinale3" type="Sprite2D" parent="."]
+position = Vector2(599, 141)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_ntnt3")
+
+[node name="Retour" type="Sprite2D" parent="ScèneFinale3"]
+position = Vector2(602.5, 551.25)
+rotation = -3.13669
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_dw6ck")
+
+[node name="TextureButton" type="TextureButton" parent="ScèneFinale3/Retour"]
+offset_left = -341.662
+offset_top = -338.33
+offset_right = -301.662
+offset_bottom = -298.33
+scale = Vector2(15, 15)
+
+[node name="ScèneFinale4" type="Sprite2D" parent="."]
+position = Vector2(588, 61)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("6_xcaty")
+
+[node name="Retour" type="Sprite2D" parent="ScèneFinale4"]
+position = Vector2(543.333, 573.333)
+rotation = -3.13669
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_dw6ck")
+
+[node name="TextureButton" type="TextureButton" parent="ScèneFinale4/Retour"]
+offset_left = -341.662
+offset_top = -338.33
+offset_right = -301.662
+offset_bottom = -298.33
+scale = Vector2(15, 15)
+
+[node name="ScèneFinale5" type="Sprite2D" parent="."]
+position = Vector2(588, 61)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("7_4shht")
+
+[node name="Retour" type="Sprite2D" parent="ScèneFinale5"]
+position = Vector2(541.111, 567.778)
+rotation = -3.13669
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_dw6ck")
+
+[node name="TextureButton" type="TextureButton" parent="ScèneFinale5/Retour"]
+offset_left = -341.662
+offset_top = -338.33
+offset_right = -301.662
+offset_bottom = -298.33
+scale = Vector2(15, 15)
+
+[node name="VFlongueurClé" type="Sprite2D" parent="."]
+position = Vector2(570, 366)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_bl4hk")
+
+[node name="TextureButton" type="TextureButton" parent="VFlongueurClé"]
+offset_left = -263.75
+offset_top = 47.5
+offset_right = -223.75
+offset_bottom = 87.5
+scale = Vector2(4.15123, 4.2261)
+
+[node name="TextureButton2" type="TextureButton" parent="VFlongueurClé"]
+offset_left = 240.0
+offset_top = 108.75
+offset_right = 280.0
+offset_bottom = 148.75
+scale = Vector2(10.5141, 2.88261)
+
+[node name="LineEdit" type="LineEdit" parent="VFlongueurClé"]
+offset_left = 10.0
+offset_top = 75.0
+offset_right = 77.0625
+offset_bottom = 106.0
+scale = Vector2(2.37996, 5.1115)
+theme_override_font_sizes/font_size = 15
+max_length = 1
+
+[node name="ArrierePlanBureau" type="Sprite2D" parent="."]
+position = Vector2(630, 359)
+texture = ExtResource("9_1ihln")
+
+[node name="AideLongueurClé" type="Sprite2D" parent="ArrierePlanBureau"]
+position = Vector2(-78, -280)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("10_julnh")
+
+[node name="Retour" type="Sprite2D" parent="ArrierePlanBureau/AideLongueurClé"]
+position = Vector2(-545, 618.75)
+rotation = -0.00345302
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_dw6ck")
+
+[node name="TextureButton" type="TextureButton" parent="ArrierePlanBureau/AideLongueurClé/Retour"]
+offset_left = -341.662
+offset_top = -338.33
+offset_right = -301.662
+offset_bottom = -298.33
+scale = Vector2(15, 15)
+
+[node name="MauvaiseLongueurClé" type="Sprite2D" parent="."]
+position = Vector2(550, 208)
+scale = Vector2(0.9, 1)
+texture = ExtResource("12_7unut")
+
+[node name="LongueurClécorrecte" type="Sprite2D" parent="."]
+position = Vector2(591, 56)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("13_5q7xw")
+
+[connection signal="pressed" from="ScèneFinale1/Retour/TextureButton" to="." method="_on_texture_button_pressed_sf1"]
+[connection signal="pressed" from="ScèneFinale2/Retour/TextureButton" to="." method="_on_texture_button_pressed_sf2"]
+[connection signal="pressed" from="ScèneFinale3/Retour/TextureButton" to="." method="_on_texture_button_pressed_sf3"]
+[connection signal="pressed" from="ScèneFinale4/Retour/TextureButton" to="." method="_on_texture_button_pressed_sf4"]
+[connection signal="pressed" from="ScèneFinale5/Retour/TextureButton" to="." method="_on_texture_button_pressed_sf5"]
+[connection signal="pressed" from="VFlongueurClé/TextureButton" to="." method="_on_texture_button_pressed_aide"]
+[connection signal="pressed" from="VFlongueurClé/TextureButton2" to="." method="_on_texture_button_2_pressed_validation_clé_chiffrement"]
+[connection signal="pressed" from="ArrierePlanBureau/AideLongueurClé/Retour/TextureButton" to="." method="_on_texture_button_retour_aide"]

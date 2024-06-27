@@ -1,0 +1,253 @@
+[gd_scene load_steps=17 format=3 uid="uid://bmdujml11sq1f"]
+
+[ext_resource type="Script" path="res://Cryptanalyse.gd" id="1_dbrtn"]
+[ext_resource type="Texture2D" uid="uid://dqjfutc0mycrt" path="res://Télécom Paris/CryptanalyseFondGlobal.png" id="2_ak0es"]
+[ext_resource type="Script" path="res://L1Cryptanalyse.gd" id="3_hx8t2"]
+[ext_resource type="Texture2D" uid="uid://cd3dilbdjpk1u" path="res://Télécom Paris/BoutonOutilsD'analyseFréquentielle.png" id="3_kglpe"]
+[ext_resource type="Texture2D" uid="uid://ctoxdwroy1nvw" path="res://Télécom Paris/BoutonAidepourtrouverCléChiffr.png" id="3_wk6oq"]
+[ext_resource type="Texture2D" uid="uid://djavoxbd2v8xe" path="res://Télécom Paris/BoutonValider.png" id="5_5skch"]
+[ext_resource type="Texture2D" uid="uid://dx0jt2wigjnen" path="res://Télécom Paris/arrierePlanBureau.png" id="5_k5du2"]
+[ext_resource type="Script" path="res://ArrierePlanBureau.gd" id="6_r48k6"]
+[ext_resource type="Texture2D" uid="uid://crtk8i2vjnihb" path="res://Télécom Paris/Retour.png" id="7_3hwnk"]
+[ext_resource type="Texture2D" uid="uid://dnt5p3ee66igi" path="res://Télécom Paris/BoutonFréquenceFrancais.png" id="7_vashn"]
+[ext_resource type="Texture2D" uid="uid://c5rk0smxlgpse" path="res://Télécom Paris/BoutonFréquencesTexte.png" id="8_4qp5j"]
+[ext_resource type="Texture2D" uid="uid://ialwu4kangsi" path="res://Télécom Paris/LettresFréquenceTexte.png" id="9_vxuca"]
+[ext_resource type="Texture2D" uid="uid://vsm1ap0mhwpb" path="res://Télécom Paris/Lettres fréquencesFrançais.png" id="10_uqxlr"]
+[ext_resource type="Texture2D" uid="uid://biiofco0v5m0u" path="res://Télécom Paris/MauvaiseClé.png" id="13_ioseh"]
+[ext_resource type="Texture2D" uid="uid://lkw0820oj8dk" path="res://Télécom Paris/AidepourtrouverCléChiffr.png" id="15_j4ij3"]
+[ext_resource type="Texture2D" uid="uid://bvv2dclgq0uvn" path="res://Télécom Paris/ScèneFinaleBonneClé.png" id="16_uk0rd"]
+
+[node name="Cryptanalyse" type="Node2D"]
+script = ExtResource("1_dbrtn")
+
+[node name="CryptanalyseFondGlobal" type="Sprite2D" parent="."]
+position = Vector2(594, 319)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_ak0es")
+
+[node name="BoutonAidepourtrouverCléchiffr" type="Sprite2D" parent="CryptanalyseFondGlobal"]
+position = Vector2(-658.667, 69.3333)
+scale = Vector2(0.395247, 0.373412)
+texture = ExtResource("3_wk6oq")
+
+[node name="TextureButton" type="TextureButton" parent="CryptanalyseFondGlobal/BoutonAidepourtrouverCléchiffr"]
+offset_left = 195.658
+offset_top = -203.529
+offset_right = 235.658
+offset_bottom = -163.529
+scale = Vector2(-10.0122, 9.71294)
+
+[node name="TextureButton" type="TextureButton" parent="CryptanalyseFondGlobal"]
+offset_left = 102.667
+offset_top = 265.333
+offset_right = 142.667
+offset_bottom = 305.333
+scale = Vector2(12.7474, 2.47453)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CryptanalyseFondGlobal"]
+offset_left = -300.0
+offset_top = -373.333
+offset_right = 190.0
+offset_bottom = -14.3333
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Hwr Mwm wqii-imhm,
+Xza qjbw nwro crz lspki hmpjlmz yyd nedb zdjvzz qjv gjmym, crz uigwhdm hjcgz, crz uigwhdm gcmvz. Ri hm pvvkpqw hwm vcwnq hz kin qrnbeibw qwpza, pjqr ymw mmkvzhn agmcxvbipzw, gwmi lin wvzqpgmw hipqmmgteibw. Vkgzxxz usi pyhjpz igxwvy mx kmvhmxn-usd l'iozi gm vzxmo yyz by xpimklza, upm xp linqvza. Hvvw g'wqwzi ym pv vydb, rja wzkvzbw nmvjvx ymw zbsdtin jvdtpvvxza, io vsn zmmmw, ymw ewcvcb dvinbmhifgmw, ymw ewcvcb zuimdidtpza. Nz b'eobiilvvq eqmg dutvbmzvgz.
+I nvueda xdmrim,
+Kvjvdmpgm
+"
+
+[node name="BoutonOutilsD\'analyseFréquentielle" type="Sprite2D" parent="CryptanalyseFondGlobal"]
+position = Vector2(413.333, 148)
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("3_kglpe")
+
+[node name="Lettre1" type="Label" parent="CryptanalyseFondGlobal"]
+offset_left = -506.667
+offset_top = 236.0
+offset_right = 383.333
+offset_bottom = 1598.0
+scale = Vector2(0.15, 0.129)
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 1000
+text = "
+"
+max_lines_visible = 1
+visible_characters = 1
+script = ExtResource("3_hx8t2")
+
+[node name="Control" type="Control" parent="CryptanalyseFondGlobal/Lettre1"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -151.111
+offset_top = 113.695
+offset_right = 972.889
+offset_bottom = 1240.69
+scale = Vector2(0.803, 0.9)
+
+[node name="Lettre2" type="Label" parent="CryptanalyseFondGlobal"]
+offset_left = -329.333
+offset_top = 237.333
+offset_right = 560.667
+offset_bottom = 1599.33
+scale = Vector2(0.15, 0.129)
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 1000
+text = "
+"
+max_lines_visible = 1
+visible_characters = 1
+script = ExtResource("3_hx8t2")
+
+[node name="Control" type="Control" parent="CryptanalyseFondGlobal/Lettre2"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -204.444
+offset_top = 113.695
+offset_right = 919.556
+offset_bottom = 1240.7
+scale = Vector2(0.803, 0.9)
+
+[node name="Lettre3" type="Label" parent="CryptanalyseFondGlobal"]
+offset_left = -164.0
+offset_top = 233.333
+offset_right = 726.0
+offset_bottom = 1595.33
+scale = Vector2(0.15, 0.129)
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 1000
+text = "
+"
+max_lines_visible = 1
+visible_characters = 1
+script = ExtResource("3_hx8t2")
+
+[node name="Control" type="Control" parent="CryptanalyseFondGlobal/Lettre3"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -204.444
+offset_top = 113.695
+offset_right = 919.556
+offset_bottom = 1240.7
+scale = Vector2(0.803, 0.9)
+
+[node name="TextureButton2" type="TextureButton" parent="CryptanalyseFondGlobal"]
+offset_left = 138.667
+offset_top = 76.0
+offset_right = 178.667
+offset_bottom = 116.0
+scale = Vector2(12.7474, 2.47453)
+
+[node name="BoutonValider" type="Sprite2D" parent="CryptanalyseFondGlobal"]
+position = Vector2(-660, 328)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_5skch")
+
+[node name="TextureButton" type="TextureButton" parent="CryptanalyseFondGlobal/BoutonValider"]
+offset_left = -203.333
+offset_top = -236.667
+offset_right = -163.333
+offset_bottom = -196.667
+scale = Vector2(10, 10)
+
+[node name="ArrierePlanBureau" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(602, 402)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("5_k5du2")
+script = ExtResource("6_r48k6")
+
+[node name="Retour" type="Sprite2D" parent="ArrierePlanBureau"]
+position = Vector2(-624, -72.0001)
+scale = Vector2(0.133333, 0.133333)
+texture = ExtResource("7_3hwnk")
+
+[node name="TextureButton" type="TextureButton" parent="ArrierePlanBureau/Retour"]
+offset_left = -260.001
+offset_top = -340.0
+offset_right = -220.001
+offset_bottom = -300.0
+scale = Vector2(15, 15)
+
+[node name="BoutonFréquenceFrancais" type="Sprite2D" parent="ArrierePlanBureau"]
+position = Vector2(-626.667, 184)
+scale = Vector2(0.533333, 0.533333)
+texture = ExtResource("7_vashn")
+
+[node name="TextureButton" type="TextureButton" parent="ArrierePlanBureau/BoutonFréquenceFrancais"]
+offset_left = -182.5
+offset_top = -227.5
+offset_right = -142.5
+offset_bottom = -187.5
+scale = Vector2(10, 10)
+
+[node name="BoutonFréquencesTexte" type="Sprite2D" parent="ArrierePlanBureau"]
+position = Vector2(-630.667, -312)
+scale = Vector2(0.533333, 0.533333)
+texture = ExtResource("8_4qp5j")
+
+[node name="TextureButton" type="TextureButton" parent="ArrierePlanBureau/BoutonFréquencesTexte"]
+offset_left = -182.5
+offset_top = -227.5
+offset_right = -142.5
+offset_bottom = -187.5
+scale = Vector2(10, 10)
+
+[node name="LettresFréquenceTexte" type="Sprite2D" parent="ArrierePlanBureau"]
+position = Vector2(250.667, -269.333)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("9_vxuca")
+
+[node name="LettresFréquencesFrançais" type="Sprite2D" parent="ArrierePlanBureau"]
+position = Vector2(264, 237.333)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("10_uqxlr")
+
+[node name="MauvaiseClé" type="Sprite2D" parent="."]
+position = Vector2(582, 335)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("13_ioseh")
+
+[node name="ArrierePlanBureau2" type="Sprite2D" parent="."]
+position = Vector2(425, 334)
+texture = ExtResource("5_k5du2")
+
+[node name="AidepourtrouverCléchiffr" type="Sprite2D" parent="ArrierePlanBureau2"]
+position = Vector2(35, -269)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("15_j4ij3")
+
+[node name="Retour" type="Sprite2D" parent="ArrierePlanBureau2"]
+position = Vector2(-326, 220)
+rotation = -0.00821805
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("7_3hwnk")
+
+[node name="TextureButton" type="TextureButton" parent="ArrierePlanBureau2/Retour"]
+offset_left = -341.662
+offset_top = -338.33
+offset_right = -301.662
+offset_bottom = -298.33
+scale = Vector2(15, 15)
+
+[node name="ScèneFinaleBonneClé" type="Sprite2D" parent="."]
+position = Vector2(590, 96)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("16_uk0rd")
+
+[connection signal="pressed" from="CryptanalyseFondGlobal/BoutonAidepourtrouverCléchiffr/TextureButton" to="." method="_on_texture_button_pressed_aide"]
+[connection signal="pressed" from="CryptanalyseFondGlobal/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="mouse_entered" from="CryptanalyseFondGlobal/Lettre1/Control" to="CryptanalyseFondGlobal/Lettre1" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="CryptanalyseFondGlobal/Lettre1/Control" to="CryptanalyseFondGlobal/Lettre1" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="CryptanalyseFondGlobal/Lettre2/Control" to="CryptanalyseFondGlobal/Lettre2" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="CryptanalyseFondGlobal/Lettre2/Control" to="CryptanalyseFondGlobal/Lettre2" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="CryptanalyseFondGlobal/Lettre3/Control" to="CryptanalyseFondGlobal/Lettre3" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="CryptanalyseFondGlobal/Lettre3/Control" to="CryptanalyseFondGlobal/Lettre3" method="_on_control_mouse_exited"]
+[connection signal="pressed" from="CryptanalyseFondGlobal/TextureButton2" to="." method="_on_texture_button_pressed_vers_outils"]
+[connection signal="pressed" from="CryptanalyseFondGlobal/BoutonValider/TextureButton" to="." method="_on_texture_button_pressed_valider"]
+[connection signal="pressed" from="ArrierePlanBureau/Retour/TextureButton" to="." method="_on_texture_button_pressed_retour"]
+[connection signal="pressed" from="ArrierePlanBureau/BoutonFréquenceFrancais/TextureButton" to="ArrierePlanBureau" method="_on_texture_button_pressed"]
+[connection signal="pressed" from="ArrierePlanBureau/BoutonFréquencesTexte/TextureButton" to="ArrierePlanBureau" method="_on_texture_button_pressed_texte"]
+[connection signal="pressed" from="ArrierePlanBureau2/Retour/TextureButton" to="." method="_on_texture_button_pressed_retour_aide"]

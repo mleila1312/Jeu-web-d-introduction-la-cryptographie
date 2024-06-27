@@ -1,0 +1,616 @@
+[gd_scene load_steps=43 format=3 uid="uid://cbx5he1kbx68f"]
+
+[ext_resource type="Texture2D" uid="uid://dcapteoe2xlfl" path="res://Télécom Paris/arrierePlan.png" id="1_46dg3"]
+[ext_resource type="Script" path="res://Main.gd" id="1_rs5hc"]
+[ext_resource type="Texture2D" uid="uid://dx0jt2wigjnen" path="res://Télécom Paris/arrierePlanBureau.png" id="2_dvkl5"]
+[ext_resource type="Texture2D" uid="uid://c8nmlakw5cws1" path="res://Télécom Paris/bureau.png" id="2_h5iic"]
+[ext_resource type="Texture2D" uid="uid://tq25e62ceet1" path="res://Télécom Paris/machineATaper.png" id="3_julce"]
+[ext_resource type="Texture2D" uid="uid://cx5jgn6ejs5s8" path="res://Télécom Paris/coeur.png" id="3_oolkn"]
+[ext_resource type="Texture2D" uid="uid://bsiqgyam2knx3" path="res://Télécom Paris/4saisons.png" id="4_qhdg7"]
+[ext_resource type="Texture2D" uid="uid://1sa6ih5d33s4" path="res://Télécom Paris/livreOuvert.png" id="5_syjji"]
+[ext_resource type="Texture2D" uid="uid://rmuqr4fo7m53" path="res://Télécom Paris/vieuxCoffre.png" id="6_qsfb8"]
+[ext_resource type="Texture2D" uid="uid://bmrlw6hlwkuts" path="res://Télécom Paris/machineATaperZoom.png" id="7_87bhq"]
+[ext_resource type="Script" path="res://MachineATaperZoom.gd" id="8_nuuw3"]
+[ext_resource type="Texture2D" uid="uid://d3lqx3xdgdiik" path="res://Télécom Paris/LivreOuvertPoesie.png" id="9_8x2e1"]
+[ext_resource type="Texture2D" uid="uid://8wwiyerbeqp0" path="res://Télécom Paris/Coffre_Zoom.png" id="10_ejn1v"]
+[ext_resource type="Texture2D" uid="uid://crtk8i2vjnihb" path="res://Télécom Paris/Retour.png" id="10_g0ypw"]
+[ext_resource type="Script" path="res://Chiffre1.gd" id="11_64ny4"]
+[ext_resource type="Texture2D" uid="uid://c4by6x8em06rr" path="res://Télécom Paris/Félicitations, vous avez trouvé la clé de chiffrement !.png" id="11_grky0"]
+[ext_resource type="Script" path="res://CodeZoom.gd" id="11_meh0j"]
+[ext_resource type="Texture2D" uid="uid://cqqxriwpmhvy0" path="res://Télécom Paris/case1.png" id="11_unahx"]
+[ext_resource type="Script" path="res://Lettre1.gd" id="12_bcpnj"]
+[ext_resource type="Script" path="res://Chiffre2.gd" id="12_t28qd"]
+[ext_resource type="Script" path="res://Lettre2.gd" id="13_bm1gy"]
+[ext_resource type="Script" path="res://Chiffre3.gd" id="13_elt7e"]
+[ext_resource type="Script" path="res://Chiffre4.gd" id="14_dnrpw"]
+[ext_resource type="Script" path="res://Lettre3.gd" id="14_pg6t3"]
+[ext_resource type="Script" path="res://Lettre4.gd" id="15_4i5hq"]
+[ext_resource type="Script" path="res://Lettre5.gd" id="16_5bbol"]
+[ext_resource type="Texture2D" uid="uid://bx878feowj0tp" path="res://Télécom Paris/PeinturesZoom.png" id="21_u4s8d"]
+[ext_resource type="Texture2D" uid="uid://dminu6rxcy6hs" path="res://Télécom Paris/codeZoom.png" id="23_mqv3r"]
+[ext_resource type="Texture2D" uid="uid://5klxdyl22gmh" path="res://Télécom Paris/Mauvaise clé de chiffrement.png" id="28_2q18g"]
+[ext_resource type="Texture2D" uid="uid://bnlnfitk4cy40" path="res://Télécom Paris/mauvaisCodeAvecFond.png" id="30_eline"]
+[ext_resource type="Texture2D" uid="uid://7w4yv1artl2l" path="res://Télécom Paris/VieuxCoffreOuvertAvecTresors.png" id="31_ihfly"]
+[ext_resource type="Texture2D" uid="uid://1s2l031gqjdp" path="res://Télécom Paris/LightRed.png" id="32_2fac1"]
+[ext_resource type="Texture2D" uid="uid://bx2tctdocxh67" path="res://Télécom Paris/ZoomTabChiffrementExplication.png" id="32_ltn38"]
+[ext_resource type="Texture2D" uid="uid://c52miumerdx23" path="res://Télécom Paris/LightYellow.png" id="33_gulsi"]
+[ext_resource type="Texture2D" uid="uid://b0gfod4a1rqkm" path="res://Télécom Paris/LettreZoom.png" id="33_iskiv"]
+[ext_resource type="PackedScene" uid="uid://bbokc2ymbgdrt" path="res://scenes_debut.tscn" id="34_4n35f"]
+[ext_resource type="Texture2D" uid="uid://b16agpkgbqg4x" path="res://Télécom Paris/ZoomExplicationPpeChiffrementVigenère.png" id="35_3xd81"]
+[ext_resource type="Texture2D" uid="uid://73yhj0g5wyo7" path="res://Télécom Paris/ScèneTransition.png" id="38_j6r8t"]
+[ext_resource type="PackedScene" uid="uid://cc8oleqxshaov" path="res://chiffrement.tscn" id="39_g3tw6"]
+[ext_resource type="PackedScene" uid="uid://dp3g50k2iir5t" path="res://scènes_de_transition.tscn" id="40_ixdoa"]
+[ext_resource type="PackedScene" uid="uid://bmdujml11sq1f" path="res://cryptanalyse.tscn" id="41_bblqj"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_2hv30"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_rs5hc")
+
+[node name="ArrierePlanBureau" type="Sprite2D" parent="."]
+position = Vector2(599.875, 284.125)
+scale = Vector2(0.760082, 0.824833)
+texture = ExtResource("2_dvkl5")
+
+[node name="ArrierePlan" type="Sprite2D" parent="."]
+position = Vector2(580, 349)
+scale = Vector2(0.73661, 0.619154)
+texture = ExtResource("1_46dg3")
+
+[node name="Bureau" type="Sprite2D" parent="."]
+position = Vector2(261, 472)
+scale = Vector2(0.288437, 0.237528)
+texture = ExtResource("2_h5iic")
+
+[node name="Area2D" type="Area2D" parent="Bureau"]
+position = Vector2(-3.46696, 0)
+
+[node name="MachineATaper" type="Sprite2D" parent="Bureau/Area2D"]
+position = Vector2(-91, -591)
+scale = Vector2(0.46999, 0.422216)
+texture = ExtResource("3_julce")
+
+[node name="TextureButton" type="TextureButton" parent="Bureau/Area2D"]
+offset_left = -331.0
+offset_top = -854.0
+offset_right = 72.0
+offset_bottom = -478.0
+metadata/_edit_use_anchors_ = true
+
+[node name="PeinturesZoom" type="Sprite2D" parent="."]
+position = Vector2(579, 224)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("21_u4s8d")
+
+[node name="Retour" type="Sprite2D" parent="PeinturesZoom"]
+position = Vector2(-696, 497.333)
+scale = Vector2(0.166667, 0.166667)
+texture = ExtResource("10_g0ypw")
+
+[node name="TextureButton" type="TextureButton" parent="PeinturesZoom"]
+offset_left = -742.667
+offset_top = 444.0
+offset_right = -642.667
+offset_bottom = 544.0
+
+[node name="4Saisons" type="Sprite2D" parent="."]
+position = Vector2(613, 155)
+scale = Vector2(0.160114, 0.185605)
+texture = ExtResource("4_qhdg7")
+
+[node name="TextureButton" type="TextureButton" parent="4Saisons"]
+offset_left = -736.973
+offset_top = -172.409
+offset_right = 743.027
+offset_bottom = 227.591
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(340, 366)
+
+[node name="LivreOuvert" type="Sprite2D" parent="Area2D"]
+position = Vector2(27.0078, -9.00006)
+scale = Vector2(0.100809, 0.129176)
+texture = ExtResource("5_syjji")
+
+[node name="TextureButton" type="TextureButton" parent="Area2D"]
+offset_left = -17.0
+offset_top = -37.0
+offset_right = 83.0
+offset_bottom = 33.0
+
+[node name="CodeZoom" type="Sprite2D" parent="."]
+position = Vector2(624, 307)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_mqv3r")
+script = ExtResource("11_meh0j")
+
+[node name="Retour" type="Sprite2D" parent="CodeZoom"]
+position = Vector2(-700, 358.75)
+scale = Vector2(0.166667, 0.166667)
+texture = ExtResource("10_g0ypw")
+
+[node name="TextureButton" type="TextureButton" parent="CodeZoom"]
+offset_left = -740.0
+offset_top = 313.75
+offset_right = -650.0
+offset_bottom = 403.75
+
+[node name="Chiffre1" type="Label" parent="CodeZoom"]
+top_level = true
+offset_left = 139.0
+offset_top = 89.0
+offset_right = 358.0
+offset_bottom = 498.0
+theme_override_font_sizes/font_size = 225
+text = "0"
+script = ExtResource("11_64ny4")
+
+[node name="Control1" type="Control" parent="CodeZoom"]
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+layout_mode = 3
+anchors_preset = 0
+offset_left = -641.25
+offset_top = -193.75
+offset_right = -383.25
+offset_bottom = 52.25
+
+[node name="Chiffre2" type="Label" parent="CodeZoom"]
+top_level = true
+offset_left = 386.0
+offset_top = 93.0
+offset_right = 605.0
+offset_bottom = 502.0
+theme_override_font_sizes/font_size = 225
+text = "0"
+script = ExtResource("12_t28qd")
+
+[node name="Control2" type="Control" parent="CodeZoom"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -350.0
+offset_top = -200.0
+offset_right = -94.0
+offset_bottom = 45.0
+
+[node name="Chiffre3" type="Label" parent="CodeZoom"]
+top_level = true
+offset_left = 630.0
+offset_top = 93.0
+offset_right = 849.0
+offset_bottom = 502.0
+theme_override_font_sizes/font_size = 225
+text = "0"
+script = ExtResource("13_elt7e")
+
+[node name="Control3" type="Control" parent="CodeZoom"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -26.0
+offset_top = -200.0
+offset_right = 242.0
+offset_bottom = 48.0
+
+[node name="Chiffre4" type="Label" parent="CodeZoom"]
+top_level = true
+offset_left = 879.0
+offset_top = 94.0
+offset_right = 1098.0
+offset_bottom = 503.0
+theme_override_font_sizes/font_size = 225
+text = "0"
+script = ExtResource("14_dnrpw")
+
+[node name="Control" type="Control" parent="CodeZoom"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 277.0
+offset_top = -197.0
+offset_right = 529.0
+offset_bottom = 53.0
+
+[node name="Button" type="Button" parent="CodeZoom"]
+offset_left = -245.0
+offset_top = 138.75
+offset_right = 110.0
+offset_bottom = 328.75
+theme_override_font_sizes/font_size = 44
+text = "VALIDER"
+icon = SubResource("ViewportTexture_2hv30")
+
+[node name="CoffreZoom" type="Sprite2D" parent="."]
+position = Vector2(581, 193)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("10_ejn1v")
+
+[node name="Retour" type="Sprite2D" parent="CoffreZoom"]
+position = Vector2(-686.667, 537.333)
+scale = Vector2(0.166667, 0.166667)
+texture = ExtResource("10_g0ypw")
+
+[node name="TextureButton" type="TextureButton" parent="CoffreZoom"]
+offset_left = -734.667
+offset_top = 489.333
+offset_right = -644.667
+offset_bottom = 579.333
+
+[node name="TextureButton2" type="TextureButton" parent="CoffreZoom"]
+offset_left = -102.667
+offset_top = 12.0
+offset_right = -22.6667
+offset_bottom = 102.0
+scale = Vector2(3, 3)
+
+[node name="VieuxCoffre" type="Sprite2D" parent="."]
+position = Vector2(782, 423)
+scale = Vector2(0.137843, 0.154339)
+texture = ExtResource("6_qsfb8")
+
+[node name="TextureButton" type="TextureButton" parent="VieuxCoffre"]
+offset_left = -652.915
+offset_top = -388.753
+offset_right = -562.915
+offset_bottom = -328.753
+scale = Vector2(15, 15)
+
+[node name="LivreOuvertPoesie" type="Sprite2D" parent="."]
+position = Vector2(590, 323)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("9_8x2e1")
+
+[node name="Retour" type="Sprite2D" parent="LivreOuvertPoesie"]
+position = Vector2(-878.333, 451.667)
+scale = Vector2(0.166667, 0.166667)
+texture = ExtResource("10_g0ypw")
+
+[node name="TextureButton" type="TextureButton" parent="LivreOuvertPoesie"]
+offset_left = -926.667
+offset_top = 403.333
+offset_right = -836.667
+offset_bottom = 493.333
+
+[node name="MachineATaperZoom" type="Sprite2D" parent="."]
+position = Vector2(567, 263)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_87bhq")
+script = ExtResource("8_nuuw3")
+
+[node name="Retour" type="Sprite2D" parent="MachineATaperZoom"]
+position = Vector2(-1696.67, 1103.33)
+scale = Vector2(0.333333, 0.333333)
+texture = ExtResource("10_g0ypw")
+
+[node name="TextureButton" type="TextureButton" parent="MachineATaperZoom/Retour"]
+offset_left = -260.0
+offset_top = -270.0
+offset_right = 240.0
+offset_bottom = 230.0
+
+[node name="Button" type="Button" parent="MachineATaperZoom"]
+offset_left = -93.6449
+offset_top = 1001.18
+offset_right = 261.355
+offset_bottom = 1191.18
+theme_override_font_sizes/font_size = 44
+text = "VALIDER"
+icon = SubResource("ViewportTexture_2hv30")
+
+[node name="Case1" type="Sprite2D" parent="MachineATaperZoom"]
+position = Vector2(-418.475, 855.901)
+scale = Vector2(0.138068, 0.145782)
+texture = ExtResource("11_unahx")
+
+[node name="Lettre1" type="Label" parent="MachineATaperZoom/Case1"]
+offset_left = -381.517
+offset_top = -411.629
+offset_right = 508.483
+offset_bottom = 950.371
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 1000
+text = "
+"
+max_lines_visible = 1
+visible_characters = 1
+script = ExtResource("12_bcpnj")
+
+[node name="Control" type="Control" parent="MachineATaperZoom/Case1"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -615.0
+offset_top = -325.0
+offset_right = 509.0
+offset_bottom = 802.0
+
+[node name="Case2" type="Sprite2D" parent="MachineATaperZoom"]
+position = Vector2(-187.29, 855.901)
+scale = Vector2(0.138068, 0.145782)
+texture = ExtResource("11_unahx")
+
+[node name="Control" type="Control" parent="MachineATaperZoom/Case2"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -615.0
+offset_top = -303.0
+offset_right = 509.0
+offset_bottom = 780.0
+
+[node name="Lettre2" type="Label" parent="MachineATaperZoom/Case2"]
+offset_left = -333.486
+offset_top = -429.188
+offset_right = 556.514
+offset_bottom = 932.812
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 1000
+text = "
+"
+max_lines_visible = 1
+script = ExtResource("13_bm1gy")
+
+[node name="Case3" type="Sprite2D" parent="MachineATaperZoom"]
+position = Vector2(49.7486, 859.059)
+scale = Vector2(0.138068, 0.145782)
+texture = ExtResource("11_unahx")
+
+[node name="Lettre3" type="Label" parent="MachineATaperZoom/Case3"]
+offset_left = -339.125
+offset_top = -433.293
+offset_right = 550.875
+offset_bottom = 928.707
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 1000
+text = "
+"
+max_lines_visible = 1
+script = ExtResource("14_pg6t3")
+
+[node name="Control" type="Control" parent="MachineATaperZoom/Case3"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -572.0
+offset_top = -217.0
+offset_right = 445.0
+offset_bottom = 737.0
+
+[node name="Case4" type="Sprite2D" parent="MachineATaperZoom"]
+position = Vector2(289.713, 859.059)
+scale = Vector2(0.138068, 0.145782)
+texture = ExtResource("11_unahx")
+
+[node name="Lettre4" type="Label" parent="MachineATaperZoom/Case4"]
+offset_left = -297.0
+offset_top = -433.0
+offset_right = 551.0
+offset_bottom = 929.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 1000
+text = "
+"
+max_lines_visible = 1
+script = ExtResource("15_4i5hq")
+
+[node name="Control" type="Control" parent="MachineATaperZoom/Case4"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -572.0
+offset_top = -260.0
+offset_right = 487.0
+offset_bottom = 867.0
+
+[node name="Case5" type="Sprite2D" parent="MachineATaperZoom"]
+position = Vector2(520.899, 859.059)
+scale = Vector2(0.138068, 0.145782)
+texture = ExtResource("11_unahx")
+
+[node name="Lettre5" type="Label" parent="MachineATaperZoom/Case5"]
+offset_left = -403.0
+offset_top = -477.0
+offset_right = 508.0
+offset_bottom = 885.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 1000
+text = "
+"
+max_lines_visible = 1
+script = ExtResource("16_5bbol")
+
+[node name="Control" type="Control" parent="MachineATaperZoom/Case5"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -593.0
+offset_top = -347.0
+offset_right = 445.0
+offset_bottom = 823.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Félicitations,VousAvezTrouvéLaCléDeChiffrement!" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(585, 243)
+scale = Vector2(0.70022, 0.784076)
+texture = ExtResource("11_grky0")
+
+[node name="MauvaiseCléDeChiffrement" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(594, 304)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("28_2q18g")
+
+[node name="Coeur" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(570, 486)
+scale = Vector2(0.317226, 0.338808)
+texture = ExtResource("3_oolkn")
+
+[node name="MauvaisCodeAvecFond" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(576, 278)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("30_eline")
+
+[node name="VieuxCoffreOuvertAvecTresors" type="Sprite2D" parent="."]
+position = Vector2(582, 395)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("31_ihfly")
+
+[node name="LightYellow3" type="Sprite2D" parent="VieuxCoffreOuvertAvecTresors"]
+position = Vector2(-626.667, 196)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("33_gulsi")
+
+[node name="LightYellow2" type="Sprite2D" parent="VieuxCoffreOuvertAvecTresors"]
+position = Vector2(-626.667, -76)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("33_gulsi")
+
+[node name="LightRed3" type="Sprite2D" parent="VieuxCoffreOuvertAvecTresors"]
+position = Vector2(-626.667, 196)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("32_2fac1")
+
+[node name="LightRed2" type="Sprite2D" parent="VieuxCoffreOuvertAvecTresors"]
+position = Vector2(-626.667, -76)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("32_2fac1")
+
+[node name="LightYellow" type="Sprite2D" parent="VieuxCoffreOuvertAvecTresors"]
+position = Vector2(-626.667, -320)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("33_gulsi")
+
+[node name="LightRed" type="Sprite2D" parent="VieuxCoffreOuvertAvecTresors"]
+position = Vector2(-626.667, -320)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("32_2fac1")
+
+[node name="TextureButton" type="TextureButton" parent="VieuxCoffreOuvertAvecTresors"]
+offset_left = -52.0
+offset_top = -196.0
+offset_right = -12.0
+offset_bottom = -156.0
+scale = Vector2(3.45549, 5.26227)
+
+[node name="TextureButton2" type="TextureButton" parent="VieuxCoffreOuvertAvecTresors"]
+offset_left = -206.667
+offset_top = -280.0
+offset_right = -166.667
+offset_bottom = -240.0
+scale = Vector2(3.34729, 5.39093)
+
+[node name="TextureButton3" type="TextureButton" parent="VieuxCoffreOuvertAvecTresors"]
+offset_left = -58.6666
+offset_top = -189.333
+offset_right = -13.6666
+offset_bottom = -149.333
+scale = Vector2(3.34729, 5.39093)
+
+[node name="TextureButton4" type="TextureButton" parent="VieuxCoffreOuvertAvecTresors"]
+offset_left = 269.333
+offset_top = -154.667
+offset_right = 314.333
+offset_bottom = -114.667
+rotation = 0.870687
+scale = Vector2(3.34729, 5.39093)
+
+[node name="ZoomTabChiffrementExplication" type="Sprite2D" parent="."]
+position = Vector2(596, 327)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("32_ltn38")
+
+[node name="Retour" type="Sprite2D" parent="ZoomTabChiffrementExplication"]
+position = Vector2(-710.667, 361.333)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_g0ypw")
+
+[node name="TextureButton" type="TextureButton" parent="ZoomTabChiffrementExplication"]
+offset_left = -741.333
+offset_top = 324.0
+offset_right = -701.333
+offset_bottom = 364.0
+scale = Vector2(1.6, 1.6)
+
+[node name="LettreZoom" type="Sprite2D" parent="."]
+position = Vector2(596, 327)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("33_iskiv")
+
+[node name="Retour" type="Sprite2D" parent="LettreZoom"]
+position = Vector2(-710.667, 361.333)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_g0ypw")
+
+[node name="TextureButton" type="TextureButton" parent="LettreZoom"]
+offset_left = -741.333
+offset_top = 324.0
+offset_right = -701.333
+offset_bottom = 364.0
+scale = Vector2(1.6, 1.6)
+
+[node name="ScenesDebut" parent="." instance=ExtResource("34_4n35f")]
+
+[node name="ZoomExplicationPpeChiffrementVigenère" type="Sprite2D" parent="."]
+position = Vector2(596, 327)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("35_3xd81")
+
+[node name="Retour" type="Sprite2D" parent="ZoomExplicationPpeChiffrementVigenère"]
+position = Vector2(-710.667, 361.333)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_g0ypw")
+
+[node name="TextureButton" type="TextureButton" parent="ZoomExplicationPpeChiffrementVigenère"]
+offset_left = -741.333
+offset_top = 324.0
+offset_right = -701.333
+offset_bottom = 364.0
+scale = Vector2(1.6, 1.6)
+
+[node name="ScèneTransition" type="Sprite2D" parent="."]
+position = Vector2(577, 21)
+scale = Vector2(0.83, 1)
+texture = ExtResource("38_j6r8t")
+
+[node name="Chiffrement" parent="." instance=ExtResource("39_g3tw6")]
+
+[node name="scènes_de_transition" parent="." instance=ExtResource("40_ixdoa")]
+
+[node name="Cryptanalyse" parent="." instance=ExtResource("41_bblqj")]
+
+[connection signal="input_event" from="Bureau/Area2D" to="Bureau/Area2D" method="_on_input_event"]
+[connection signal="pressed" from="Bureau/Area2D/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="PeinturesZoom/TextureButton" to="." method="_on_texture_button_pressed_retour_peintures"]
+[connection signal="pressed" from="4Saisons/TextureButton" to="." method="_on_texture_button_pressed_peintures_zoom"]
+[connection signal="pressed" from="Area2D/TextureButton" to="." method="_on_texture_button_pressed_livre_poesie"]
+[connection signal="pastrouve" from="CodeZoom" to="." method="_on_code_zoom_pastrouve"]
+[connection signal="trouve" from="CodeZoom" to="." method="_on_code_zoom_trouve"]
+[connection signal="pressed" from="CodeZoom/TextureButton" to="." method="_on_texture_button_pressed_zoom_code_retour"]
+[connection signal="mouse_entered" from="CodeZoom/Control1" to="CodeZoom/Chiffre1" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="CodeZoom/Control1" to="CodeZoom/Chiffre1" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="CodeZoom/Control2" to="CodeZoom/Chiffre2" method="_on_control_mouse_enteredLabel2"]
+[connection signal="mouse_exited" from="CodeZoom/Control2" to="CodeZoom/Chiffre2" method="_on_control_mouse_exitedLabel2"]
+[connection signal="mouse_entered" from="CodeZoom/Control3" to="CodeZoom/Chiffre3" method="_on_control_mouse_enteredLabel3"]
+[connection signal="mouse_exited" from="CodeZoom/Control3" to="CodeZoom/Chiffre3" method="_on_control_mouse_exitedLabel3"]
+[connection signal="mouse_entered" from="CodeZoom/Control" to="CodeZoom/Chiffre4" method="_on_control_mouse_enteredLabel4"]
+[connection signal="mouse_exited" from="CodeZoom/Control" to="CodeZoom/Chiffre4" method="_on_control_mouse_exitedLabel4"]
+[connection signal="pressed" from="CodeZoom/Button" to="CodeZoom" method="_on_SubmitButton_pressed"]
+[connection signal="pressed" from="CoffreZoom/TextureButton" to="." method="_on_texture_button_pressed_zoom_coffre_retour"]
+[connection signal="pressed" from="CoffreZoom/TextureButton2" to="." method="_on_texture_button_2_pressed_zoom_code"]
+[connection signal="pressed" from="VieuxCoffre/TextureButton" to="." method="_on_texture_button_pressed_zoom_coffre"]
+[connection signal="pressed" from="LivreOuvertPoesie/TextureButton" to="." method="_on_texture_button_pressed_retour"]
+[connection signal="pastrouve" from="MachineATaperZoom" to="." method="_on_machine_a_taper_zoom_pastrouve"]
+[connection signal="trouve" from="MachineATaperZoom" to="." method="_on_machine_a_taper_zoom_trouve"]
+[connection signal="pressed" from="MachineATaperZoom/Retour/TextureButton" to="." method="_on_texture_button_pressed_retour_machine_zoom"]
+[connection signal="pressed" from="MachineATaperZoom/Button" to="MachineATaperZoom" method="_on_SubmitButton_pressed"]
+[connection signal="mouse_entered" from="MachineATaperZoom/Case1/Control" to="MachineATaperZoom/Case1/Lettre1" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="MachineATaperZoom/Case1/Control" to="MachineATaperZoom/Case1/Lettre1" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="MachineATaperZoom/Case2/Control" to="MachineATaperZoom/Case2/Lettre2" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="MachineATaperZoom/Case2/Control" to="MachineATaperZoom/Case2/Lettre2" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="MachineATaperZoom/Case3/Control" to="MachineATaperZoom/Case3/Lettre3" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="MachineATaperZoom/Case3/Control" to="MachineATaperZoom/Case3/Lettre3" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="MachineATaperZoom/Case4/Control" to="MachineATaperZoom/Case4/Lettre4" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="MachineATaperZoom/Case4/Control" to="MachineATaperZoom/Case4/Lettre4" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="MachineATaperZoom/Case5/Control" to="MachineATaperZoom/Case5/Lettre5" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="MachineATaperZoom/Case5/Control" to="MachineATaperZoom/Case5/Lettre5" method="_on_control_mouse_exited"]
+[connection signal="pressed" from="VieuxCoffreOuvertAvecTresors/TextureButton" to="." method="_on_texture_button_pressed_zoom_coffre_retour"]
+[connection signal="pressed" from="VieuxCoffreOuvertAvecTresors/TextureButton2" to="." method="_on_texture_button_2_pressed_zoom_lettre"]
+[connection signal="pressed" from="VieuxCoffreOuvertAvecTresors/TextureButton3" to="." method="_on_texture_button_2_pressed_zoom_tabchiffr"]
+[connection signal="pressed" from="VieuxCoffreOuvertAvecTresors/TextureButton4" to="." method="_on_texture_button_2_pressed_zoom_ppechiffr"]
+[connection signal="pressed" from="ZoomTabChiffrementExplication/TextureButton" to="." method="_on_texture_button_pressed_tabchiffr_retour"]
+[connection signal="pressed" from="LettreZoom/TextureButton" to="." method="_on_texture_button_pressed_lettre_zoom_retour"]
+[connection signal="pressed" from="ZoomExplicationPpeChiffrementVigenère/TextureButton" to="." method="_on_texture_button_pressed_ppechiffr_retour"]
