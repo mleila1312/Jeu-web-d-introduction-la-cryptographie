@@ -10,7 +10,7 @@ func _ready():
 func _process(delta):
 	pass
 
-
+# allume la lumière correspondante
 func _on_enigma_light(lettre):
 	match lettre:
 		1:

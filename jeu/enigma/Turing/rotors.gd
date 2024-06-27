@@ -16,7 +16,7 @@ func _ready():
 func _process(delta):
 	pass
 
-
+# mets tout à jour dès lors qu'un rotor a changé
 func one_rotor_changed():
 	print("one rotor changed")
 	ready1 = $Interne/Rotor1.is_ready
@@ -25,8 +25,8 @@ func one_rotor_changed():
 	is_ready = ready1 and ready2 and ready3
 	update_square()
 	update_interne()
-	
-	
+
+# mets à jour le carré
 func update_square():
 	if is_ready:
 		$Interne/Bad.hide()
@@ -35,7 +35,7 @@ func update_square():
 		$Interne/Bad.show()
 		$Interne/Good.hide()
 
-
+# remets les positions des rotors sur A
 func reset_positions():
 	$Interne/Rotor1.reset_position()
 	$Interne/Rotor2.reset_position()
@@ -43,20 +43,28 @@ func reset_positions():
 	update_interne()
 
 
+# code une lettre par un rotor
 func rotors_cypher(lettre):
 	lettre = $Interne/Rotor1.cypher_rotor(lettre)
+	print("Rotor 1 : ", lettre)
 	lettre = $Interne/Rotor2.cypher_rotor(lettre)
+	print("Rotor 2 : ", lettre)
 	lettre = $Interne/Rotor3.cypher_rotor(lettre)
+	print("Rotor 3 : ", lettre)
 	return lettre 
-	
+
+# code une lettre sur le chemin du retour
 func rotor_retour_cypher(lettre):
 	lettre = $Interne/Rotor3.cypher_reciproque(lettre)
+	print("Rotor 3 : ", lettre)
 	lettre = $Interne/Rotor2.cypher_reciproque(lettre)
+	print("Rotor 2 : ", lettre)
 	lettre = $Interne/Rotor1.cypher_reciproque(lettre)
+	print("Rotor 1 : ", lettre)
 	return lettre
 
 
-
+# rotation des rotors
 func tourner_rotor():
 	if $Interne/Rotor1.is_ready:
 		$Interne/Rotor1.rotate_rotor()
@@ -73,11 +81,20 @@ func tourner_rotor():
 
 signal retour
 
+# si le joueur veut retourner sur le clavier
 func _on_button_pressed():
 	$Interne.hide()
 	retour.emit()
 
+# met à jour les labels
 func update_interne():
 	$AffichageRotors/LabelRotor.text = $Interne/Rotor1.texte
 	$AffichageRotors/LabelRotor2.text = $Interne/Rotor2.texte
 	$AffichageRotors/LabelRotor3.text = $Interne/Rotor3.texte
+
+
+signal aide_rotors
+
+# signale a enigma que le joueur veut une explication
+func _on_aide_rotors_pressed():
+	aide_rotors.emit()

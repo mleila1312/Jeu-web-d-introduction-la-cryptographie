@@ -1,0 +1,1132 @@
+[gd_scene load_steps=52 format=3 uid="uid://cv2rpiirlmx7h"]
+
+[ext_resource type="Script" path="res://phase1.gd" id="1_82mw4"]
+[ext_resource type="Script" path="res://bg_Image.gd" id="2_5cga6"]
+[ext_resource type="Texture2D" uid="uid://bdyxnyggu7wqs" path="res://images/Bureau couvert.png" id="2_xlgy8"]
+[ext_resource type="Script" path="res://bureau.gd" id="4_dk3s6"]
+[ext_resource type="Script" path="res://feuille.gd" id="5_b6h4g"]
+[ext_resource type="Texture2D" uid="uid://cygsq0aa247l6" path="res://images/resto_bg.png" id="5_cex6b"]
+[ext_resource type="Script" path="res://post-it.gd" id="6_e43mg"]
+[ext_resource type="Texture2D" uid="uid://ba8rosehdenhp" path="res://images/Feuille.png" id="6_mrvkk"]
+[ext_resource type="Texture2D" uid="uid://bk2x3ct28kh3s" path="res://images/coffre_ferme.png" id="8_44jem"]
+[ext_resource type="Script" path="res://dialogue.gd" id="8_lpqn3"]
+[ext_resource type="Texture2D" uid="uid://cxgh4wb4r1rn" path="res://images/coffre_ouvert.png" id="9_wb7tj"]
+[ext_resource type="Texture2D" uid="uid://814ssiuh7sdx" path="res://images/resto_mini.png" id="10_gk4ng"]
+[ext_resource type="Script" path="res://interaction.gd" id="10_sha07"]
+[ext_resource type="Texture2D" uid="uid://dg5223h8eddkg" path="res://images/postit.png" id="10_ufy3a"]
+[ext_resource type="Texture2D" uid="uid://dadfs5kk75cvw" path="res://images_old/Alice0.png" id="11_42fs1"]
+[ext_resource type="Script" path="res://Alice.gd" id="11_jaxcd"]
+[ext_resource type="Texture2D" uid="uid://b0eayjn3iuyuu" path="res://images_old/Bob0.png" id="12_5yig0"]
+[ext_resource type="Script" path="res://Boite_dialogue_resto.gd" id="12_nv6sc"]
+[ext_resource type="PackedScene" uid="uid://bi23eqjkdnsra" path="res://transition_screen.tscn" id="13_6dwyg"]
+[ext_resource type="Texture2D" uid="uid://cr52g5xk22qn3" path="res://images_old/non crypté.png" id="13_dolkg"]
+[ext_resource type="Texture2D" uid="uid://wa4emlullwth" path="res://images_old/Eve0.png" id="13_w4bwl"]
+[ext_resource type="Texture2D" uid="uid://dwaklvnyyh1tq" path="res://images/mega_rivest.jpg" id="14_qlgi0"]
+[ext_resource type="Texture2D" uid="uid://cnakjr5ni33ma" path="res://images_old/envoyé.png" id="14_sfmrp"]
+[ext_resource type="Texture2D" uid="uid://dvapquftyjd2y" path="res://images_old/selecteur.png" id="14_wmmn4"]
+[ext_resource type="Texture2D" uid="uid://duxqut8ndx8j4" path="res://images/schéma.jpg" id="15_sytin"]
+[ext_resource type="Script" path="res://TextureRect_crypt.gd" id="15_yq16b"]
+[ext_resource type="Texture2D" uid="uid://g8q5b6byph64" path="res://images_old/chiffrer.png" id="16_21eks"]
+[ext_resource type="Script" path="res://Bob.gd" id="16_iqokd"]
+[ext_resource type="Texture2D" uid="uid://dc386eskesp66" path="res://images_old/le msg sera.png" id="16_nwayl"]
+[ext_resource type="Texture2D" uid="uid://1my5aldlhpyx" path="res://images/mini_rivest.jpg" id="17_l7am8"]
+[ext_resource type="Texture2D" uid="uid://dgltk0h3y45ip" path="res://images_old/décrypter.png" id="18_ho21q"]
+[ext_resource type="Texture2D" uid="uid://cxrw1mlrta50o" path="res://images_old/oragne.png" id="19_30qri"]
+[ext_resource type="Script" path="res://transition_screen.gd" id="19_peid0"]
+[ext_resource type="Texture2D" uid="uid://2pkvpjdvhip7" path="res://images_old/clés.png" id="20_rchti"]
+[ext_resource type="Texture2D" uid="uid://c2l4xeraw8uei" path="res://images_old/jaune.png" id="22_8tkwb"]
+[ext_resource type="Texture2D" uid="uid://dlftl737i3tas" path="res://images_old/déchiffrer.png" id="22_b6nk4"]
+[ext_resource type="Script" path="res://Eve.gd" id="22_l25f8"]
+[ext_resource type="Script" path="res://Popups.gd" id="25_2yn45"]
+[ext_resource type="Texture2D" uid="uid://b0kshymjy71xo" path="res://images_old/privée non dispo et inutile.png" id="26_ol1ga"]
+[ext_resource type="Script" path="res://non_dispo_inutile.gd" id="27_a1gex"]
+[ext_resource type="Texture2D" uid="uid://da5bpu3dlgq4w" path="res://images_old/pas crypté.png" id="28_1mlfc"]
+[ext_resource type="Texture2D" uid="uid://g7p8of8077bi" path="res://images_old/privée non dispo.png" id="28_2j4dy"]
+[ext_resource type="Texture2D" uid="uid://blwqsc4d534hk" path="res://images_old/publique inutile.png" id="29_ux766"]
+[ext_resource type="Script" path="res://Boite_dialogue_interactoin.gd" id="34_o25jk"]
+[ext_resource type="Script" path="res://progression.gd" id="34_tk635"]
+[ext_resource type="Script" path="res://Boite_dialogue_fin.gd" id="41_gcu4a"]
+[ext_resource type="Script" path="res://fin.gd" id="41_mfqwu"]
+[ext_resource type="Texture2D" uid="uid://bfq2mhd7juar2" path="res://images/backrivest.png" id="46_ob7oy"]
+[ext_resource type="Texture2D" uid="uid://bv4bg6kthk4fx" path="res://images/off.png" id="46_ogxk2"]
+[ext_resource type="Texture2D" uid="uid://bw3dvirxaljxj" path="res://images/mega_rivest_detoure.png" id="47_yy2lv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5lrwm"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="display" type="Node2D"]
+
+[node name="phase1" type="Node2D" parent="."]
+script = ExtResource("1_82mw4")
+
+[node name="small_Z" type="Label" parent="phase1"]
+offset_left = 631.0
+offset_top = 75.0
+offset_right = 705.0
+offset_bottom = 139.0
+theme_override_font_sizes/font_size = 50
+text = "Z"
+
+[node name="big_Z" type="Label" parent="phase1"]
+offset_left = 520.0
+offset_top = 222.0
+offset_right = 612.0
+offset_bottom = 294.0
+theme_override_font_sizes/font_size = 100
+text = "Z"
+
+[node name="middle_Z" type="Label" parent="phase1"]
+offset_left = 172.0
+offset_top = 291.0
+offset_right = 266.0
+offset_bottom = 351.0
+theme_override_font_sizes/font_size = 150
+text = "Z
+"
+
+[node name="bg_Image" type="TextureRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 647.0
+texture = ExtResource("2_xlgy8")
+script = ExtResource("2_5cga6")
+
+[node name="bureau" type="Node2D" parent="."]
+script = ExtResource("4_dk3s6")
+
+[node name="text" type="Label" parent="bureau"]
+offset_left = 20.0
+offset_top = 557.0
+offset_right = 1128.0
+offset_bottom = 627.0
+autowrap_mode = 3
+
+[node name="bg_resto" type="TextureRect" parent="bureau"]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("5_cex6b")
+
+[node name="sortie_resto" type="Button" parent="bureau"]
+offset_left = 1103.0
+offset_top = 603.0
+offset_right = 1154.0
+offset_bottom = 648.0
+
+[node name="coffre_ferme" type="TextureRect" parent="bureau"]
+offset_left = 871.0
+offset_top = 165.0
+offset_right = 1173.0
+offset_bottom = 467.0
+texture = ExtResource("8_44jem")
+expand_mode = 1
+
+[node name="coffre_ouvert" type="TextureRect" parent="bureau"]
+offset_left = 691.0
+offset_top = 168.0
+offset_right = 1140.0
+offset_bottom = 467.0
+texture = ExtResource("9_wb7tj")
+expand_mode = 1
+
+[node name="RestoMini" type="TextureRect" parent="bureau"]
+offset_left = 116.0
+offset_top = 3.0
+offset_right = 516.0
+offset_bottom = 373.0
+texture = ExtResource("10_gk4ng")
+expand_mode = 1
+
+[node name="bouton_fenetre" type="Button" parent="bureau"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 184.0
+offset_top = 2.0
+offset_right = 502.0
+offset_bottom = 245.0
+
+[node name="bouton_coffre" type="Button" parent="bureau"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 875.0
+offset_top = 163.0
+offset_right = 1137.0
+offset_bottom = 462.0
+
+[node name="post-it" type="Node2D" parent="bureau"]
+script = ExtResource("6_e43mg")
+
+[node name="Button" type="Button" parent="bureau/post-it"]
+offset_right = 1153.0
+offset_bottom = 648.0
+
+[node name="TextureRect" type="TextureRect" parent="bureau/post-it"]
+offset_left = 337.0
+offset_top = 19.0
+offset_right = 843.0
+offset_bottom = 525.0
+texture = ExtResource("10_ufy3a")
+expand_mode = 1
+
+[node name="feuille" type="Node2D" parent="."]
+position = Vector2(0, 1)
+script = ExtResource("5_b6h4g")
+
+[node name="TextureRect" type="TextureRect" parent="feuille"]
+offset_left = 393.0
+offset_top = 57.0
+offset_right = 726.0
+offset_bottom = 546.0
+texture = ExtResource("6_mrvkk")
+expand_mode = 1
+
+[node name="sortie_g" type="Button" parent="feuille"]
+modulate = Color(1, 1, 1, 0)
+offset_right = 415.0
+offset_bottom = 647.0
+
+[node name="sortie_h" type="Button" parent="feuille"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 392.0
+offset_right = 725.0
+offset_bottom = 55.0
+
+[node name="sortie_b" type="Button" parent="feuille"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 392.0
+offset_top = 537.0
+offset_right = 806.0
+offset_bottom = 648.0
+
+[node name="sortie_d" type="Button" parent="feuille"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 724.0
+offset_right = 1153.0
+offset_bottom = 648.0
+
+[node name="TextEdit" type="TextEdit" parent="feuille"]
+offset_left = 420.0
+offset_top = 55.0
+offset_right = 729.0
+offset_bottom = 537.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_5lrwm")
+
+[node name="TransitionScreen" parent="feuille" instance=ExtResource("13_6dwyg")]
+
+[node name="dialogue" type="Node2D" parent="."]
+script = ExtResource("8_lpqn3")
+
+[node name="bg" type="TextureRect" parent="dialogue"]
+offset_right = 1152.0
+offset_bottom = 726.0
+texture = ExtResource("14_qlgi0")
+
+[node name="schéma" type="TextureRect" parent="dialogue"]
+offset_left = 123.0
+offset_top = 1.0
+offset_right = 741.0
+offset_bottom = 541.0
+texture = ExtResource("15_sytin")
+
+[node name="Boite_dialogue_resto" type="CanvasLayer" parent="dialogue"]
+script = ExtResource("12_nv6sc")
+
+[node name="outside" type="Polygon2D" parent="dialogue/Boite_dialogue_resto"]
+polygon = PackedVector2Array(1, 540, 1149, 541, 1149, 647, 1149, 647, -1, 649)
+
+[node name="inside" type="Polygon2D" parent="dialogue/Boite_dialogue_resto"]
+position = Vector2(0, -3)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(10, 550, 9, 641, 1142, 642, 1142, 552)
+
+[node name="text" type="Label" parent="dialogue/Boite_dialogue_resto"]
+offset_left = 20.0
+offset_top = 557.0
+offset_right = 1128.0
+offset_bottom = 627.0
+autowrap_mode = 3
+
+[node name="tete" type="TextureRect" parent="dialogue/Boite_dialogue_resto"]
+offset_left = 13.0
+offset_top = 435.0
+offset_right = 122.0
+offset_bottom = 544.0
+texture = ExtResource("17_l7am8")
+expand_mode = 1
+
+[node name="TransitionScreen2" parent="dialogue" instance=ExtResource("13_6dwyg")]
+script = ExtResource("19_peid0")
+
+[node name="description" type="Node2D" parent="."]
+
+[node name="interaction" type="Node2D" parent="."]
+script = ExtResource("10_sha07")
+
+[node name="Alice" type="Node2D" parent="interaction"]
+script = ExtResource("11_jaxcd")
+
+[node name="bg" type="TextureRect" parent="interaction/Alice"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("11_42fs1")
+
+[node name="TextEdit" type="TextEdit" parent="interaction/Alice"]
+offset_left = 187.0
+offset_top = 121.0
+offset_right = 962.0
+offset_bottom = 232.0
+theme_override_colors/background_color = Color(0, 0, 0, 0)
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 0)
+theme_override_colors/current_line_color = Color(0, 0, 0, 0)
+theme_override_colors/caret_color = Color(0, 0, 0, 0)
+theme_override_colors/caret_background_color = Color(0, 0, 0, 0)
+theme_override_colors/word_highlighted_color = Color(0, 0, 0, 0)
+theme_override_colors/search_result_color = Color(0, 0, 0, 0)
+theme_override_colors/search_result_border_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Insérer texte"
+wrap_mode = 1
+
+[node name="crypter" type="Button" parent="interaction/Alice"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 602.0
+offset_top = 326.0
+offset_right = 779.0
+offset_bottom = 370.0
+
+[node name="envoyer" type="Button" parent="interaction/Alice"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 188.0
+offset_top = 265.0
+offset_right = 365.0
+offset_bottom = 309.0
+
+[node name="crypt_state" type="TextureRect" parent="interaction/Alice"]
+offset_left = 188.0
+offset_top = 385.0
+offset_right = 365.0
+offset_bottom = 429.0
+texture = ExtResource("13_dolkg")
+
+[node name="envoyé" type="TextureRect" parent="interaction/Alice"]
+offset_left = 447.0
+offset_top = 463.0
+offset_right = 700.0
+offset_bottom = 521.0
+texture = ExtResource("14_sfmrp")
+script = ExtResource("15_yq16b")
+
+[node name="Timer" type="Timer" parent="interaction/Alice/envoyé"]
+wait_time = 2.0
+one_shot = true
+
+[node name="Chiffrer" type="Sprite2D" parent="interaction/Alice"]
+position = Vector2(276.25, 348)
+scale = Vector2(1.00282, 1)
+texture = ExtResource("16_21eks")
+
+[node name="msg_crypté" type="Node2D" parent="interaction/Alice"]
+
+[node name="msgenvoyé" type="TextureRect" parent="interaction/Alice/msg_crypté"]
+offset_left = 395.0
+offset_top = 385.0
+offset_right = 951.0
+offset_bottom = 429.0
+texture = ExtResource("16_nwayl")
+
+[node name="orange" type="TextureRect" parent="interaction/Alice/msg_crypté"]
+offset_left = 187.0
+offset_top = 438.0
+offset_right = 962.0
+offset_bottom = 549.0
+texture = ExtResource("19_30qri")
+expand_mode = 1
+
+[node name="msgcrypté" type="Label" parent="interaction/Alice/msg_crypté"]
+offset_left = 189.0
+offset_top = 440.0
+offset_right = 960.0
+offset_bottom = 547.0
+
+[node name="Clés" type="Node2D" parent="interaction/Alice"]
+top_level = true
+
+[node name="choix" type="TextureRect" parent="interaction/Alice/Clés"]
+offset_left = 365.0
+offset_top = 326.0
+offset_right = 779.0
+offset_bottom = 370.0
+texture = ExtResource("20_rchti")
+
+[node name="choix_privée" type="Button" parent="interaction/Alice/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 602.0
+offset_top = 326.0
+offset_right = 780.0
+offset_bottom = 370.0
+
+[node name="choix_publique" type="Button" parent="interaction/Alice/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 395.0
+offset_top = 326.0
+offset_right = 573.0
+offset_bottom = 370.0
+
+[node name="Sortie1" type="Button" parent="interaction/Alice/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 2.0
+offset_top = 6.0
+offset_right = 1153.0
+offset_bottom = 264.0
+
+[node name="Sortie2" type="Button" parent="interaction/Alice/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 98.0
+offset_top = 370.0
+offset_right = 1151.0
+offset_bottom = 649.0
+
+[node name="Sortie7" type="Button" parent="interaction/Alice/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 98.0
+offset_top = 263.0
+offset_right = 1151.0
+offset_bottom = 328.0
+
+[node name="Sortie3" type="Button" parent="interaction/Alice/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 98.0
+offset_top = 309.0
+offset_right = 363.0
+offset_bottom = 649.0
+
+[node name="Sortie4" type="Button" parent="interaction/Alice/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 779.0
+offset_top = 245.0
+offset_right = 1151.0
+offset_bottom = 649.0
+
+[node name="Sortie5" type="Button" parent="interaction/Alice/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_top = 477.0
+offset_right = 98.0
+offset_bottom = 649.0
+
+[node name="Sortie6" type="Button" parent="interaction/Alice/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_top = 1.0
+offset_right = 98.0
+offset_bottom = 180.0
+
+[node name="button_decrypter" type="Button" parent="interaction/Alice"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 188.0
+offset_top = 326.0
+offset_right = 364.0
+offset_bottom = 370.0
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 0)
+
+[node name="Bob" type="Node2D" parent="interaction"]
+script = ExtResource("16_iqokd")
+
+[node name="bg" type="TextureRect" parent="interaction/Bob"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("12_5yig0")
+
+[node name="jaune0" type="TextureRect" parent="interaction/Bob"]
+offset_left = 187.0
+offset_top = 121.0
+offset_right = 340.0
+offset_bottom = 232.0
+texture = ExtResource("22_8tkwb")
+expand_mode = 1
+
+[node name="jaune1" type="TextureRect" parent="interaction/Bob"]
+offset_left = 342.0
+offset_top = 121.0
+offset_right = 495.0
+offset_bottom = 232.0
+texture = ExtResource("22_8tkwb")
+expand_mode = 1
+
+[node name="jaune2" type="TextureRect" parent="interaction/Bob"]
+offset_left = 497.0
+offset_top = 121.0
+offset_right = 650.0
+offset_bottom = 232.0
+texture = ExtResource("22_8tkwb")
+expand_mode = 1
+
+[node name="jaune3" type="TextureRect" parent="interaction/Bob"]
+offset_left = 652.0
+offset_top = 121.0
+offset_right = 805.0
+offset_bottom = 232.0
+texture = ExtResource("22_8tkwb")
+expand_mode = 1
+
+[node name="jaune4" type="TextureRect" parent="interaction/Bob"]
+offset_left = 807.0
+offset_top = 121.0
+offset_right = 960.0
+offset_bottom = 232.0
+texture = ExtResource("22_8tkwb")
+expand_mode = 1
+
+[node name="Case0" type="Label" parent="interaction/Bob"]
+offset_left = 187.0
+offset_top = 121.0
+offset_right = 340.0
+offset_bottom = 232.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 27
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Case1" type="Label" parent="interaction/Bob"]
+offset_left = 342.0
+offset_top = 121.0
+offset_right = 495.0
+offset_bottom = 232.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 27
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Case2" type="Label" parent="interaction/Bob"]
+offset_left = 497.0
+offset_top = 121.0
+offset_right = 650.0
+offset_bottom = 232.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 27
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Case3" type="Label" parent="interaction/Bob"]
+offset_left = 652.0
+offset_top = 121.0
+offset_right = 805.0
+offset_bottom = 232.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 27
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Case4" type="Label" parent="interaction/Bob"]
+offset_left = 807.0
+offset_top = 121.0
+offset_right = 962.0
+offset_bottom = 232.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 27
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button0" type="Button" parent="interaction/Bob"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 187.0
+offset_top = 121.0
+offset_right = 340.0
+offset_bottom = 232.0
+
+[node name="Button1" type="Button" parent="interaction/Bob"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 342.0
+offset_top = 121.0
+offset_right = 495.0
+offset_bottom = 232.0
+
+[node name="Button2" type="Button" parent="interaction/Bob"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 497.0
+offset_top = 121.0
+offset_right = 650.0
+offset_bottom = 232.0
+
+[node name="Button3" type="Button" parent="interaction/Bob"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 652.0
+offset_top = 121.0
+offset_right = 805.0
+offset_bottom = 232.0
+
+[node name="Button4" type="Button" parent="interaction/Bob"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 807.0
+offset_top = 121.0
+offset_right = 962.0
+offset_bottom = 232.0
+
+[node name="affiche" type="Label" parent="interaction/Bob"]
+offset_left = 189.0
+offset_top = 248.0
+offset_right = 961.0
+offset_bottom = 330.0
+
+[node name="Décrypter" type="Sprite2D" parent="interaction/Bob"]
+position = Vector2(276, 376)
+texture = ExtResource("22_b6nk4")
+
+[node name="button_decrypter" type="Button" parent="interaction/Bob"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 188.0
+offset_top = 354.0
+offset_right = 364.0
+offset_bottom = 398.0
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 0)
+
+[node name="Clés" type="Node2D" parent="interaction/Bob"]
+visible = false
+top_level = true
+
+[node name="Oragne" type="Sprite2D" parent="interaction/Bob/Clés"]
+position = Vector2(574.5, 482.5)
+scale = Vector2(3.875, 0.415)
+texture = ExtResource("19_30qri")
+
+[node name="texte_decrypte" type="Label" parent="interaction/Bob/Clés"]
+offset_left = 187.0
+offset_top = 441.0
+offset_right = 962.0
+offset_bottom = 524.0
+
+[node name="choix" type="TextureRect" parent="interaction/Bob/Clés"]
+offset_left = 364.0
+offset_top = 354.0
+offset_right = 778.0
+offset_bottom = 398.0
+texture = ExtResource("20_rchti")
+
+[node name="choix_publique" type="Button" parent="interaction/Bob/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 393.0
+offset_top = 354.0
+offset_right = 571.0
+offset_bottom = 398.0
+
+[node name="choix_privee" type="Button" parent="interaction/Bob/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 601.0
+offset_top = 354.0
+offset_right = 779.0
+offset_bottom = 398.0
+
+[node name="Sortie1" type="Button" parent="interaction/Bob/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 98.0
+offset_right = 1151.0
+offset_bottom = 355.0
+
+[node name="Sortie2" type="Button" parent="interaction/Bob/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 98.0
+offset_top = 399.0
+offset_right = 1151.0
+offset_bottom = 649.0
+
+[node name="Sortie3" type="Button" parent="interaction/Bob/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 98.0
+offset_top = 245.0
+offset_right = 363.0
+offset_bottom = 649.0
+
+[node name="Sortie4" type="Button" parent="interaction/Bob/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 779.0
+offset_top = 245.0
+offset_right = 1151.0
+offset_bottom = 649.0
+
+[node name="Sortie5" type="Button" parent="interaction/Bob/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_top = 477.0
+offset_right = 98.0
+offset_bottom = 649.0
+
+[node name="Sortie6" type="Button" parent="interaction/Bob/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_top = 1.0
+offset_right = 98.0
+offset_bottom = 180.0
+
+[node name="Eve" type="Node2D" parent="interaction"]
+script = ExtResource("22_l25f8")
+
+[node name="bg" type="TextureRect" parent="interaction/Eve"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("13_w4bwl")
+
+[node name="jaune0" type="TextureRect" parent="interaction/Eve"]
+offset_left = 187.0
+offset_top = 121.0
+offset_right = 340.0
+offset_bottom = 232.0
+texture = ExtResource("22_8tkwb")
+expand_mode = 1
+
+[node name="jaune1" type="TextureRect" parent="interaction/Eve"]
+offset_left = 342.0
+offset_top = 121.0
+offset_right = 495.0
+offset_bottom = 232.0
+texture = ExtResource("22_8tkwb")
+expand_mode = 1
+
+[node name="jaune2" type="TextureRect" parent="interaction/Eve"]
+offset_left = 497.0
+offset_top = 121.0
+offset_right = 650.0
+offset_bottom = 232.0
+texture = ExtResource("22_8tkwb")
+expand_mode = 1
+
+[node name="jaune3" type="TextureRect" parent="interaction/Eve"]
+offset_left = 652.0
+offset_top = 121.0
+offset_right = 805.0
+offset_bottom = 232.0
+texture = ExtResource("22_8tkwb")
+expand_mode = 1
+
+[node name="jaune4" type="TextureRect" parent="interaction/Eve"]
+offset_left = 807.0
+offset_top = 121.0
+offset_right = 960.0
+offset_bottom = 232.0
+texture = ExtResource("22_8tkwb")
+expand_mode = 1
+
+[node name="Case0" type="Label" parent="interaction/Eve"]
+offset_left = 187.0
+offset_top = 121.0
+offset_right = 340.0
+offset_bottom = 232.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 27
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Case1" type="Label" parent="interaction/Eve"]
+offset_left = 342.0
+offset_top = 121.0
+offset_right = 495.0
+offset_bottom = 232.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 27
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Case2" type="Label" parent="interaction/Eve"]
+offset_left = 497.0
+offset_top = 121.0
+offset_right = 650.0
+offset_bottom = 232.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 27
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Case3" type="Label" parent="interaction/Eve"]
+offset_left = 652.0
+offset_top = 121.0
+offset_right = 805.0
+offset_bottom = 232.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 27
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Case4" type="Label" parent="interaction/Eve"]
+offset_left = 807.0
+offset_top = 121.0
+offset_right = 962.0
+offset_bottom = 232.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 27
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button0" type="Button" parent="interaction/Eve"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 187.0
+offset_top = 121.0
+offset_right = 340.0
+offset_bottom = 232.0
+
+[node name="Button1" type="Button" parent="interaction/Eve"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 342.0
+offset_top = 121.0
+offset_right = 495.0
+offset_bottom = 232.0
+
+[node name="Button2" type="Button" parent="interaction/Eve"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 497.0
+offset_top = 121.0
+offset_right = 650.0
+offset_bottom = 232.0
+
+[node name="Button3" type="Button" parent="interaction/Eve"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 652.0
+offset_top = 121.0
+offset_right = 805.0
+offset_bottom = 232.0
+
+[node name="Button4" type="Button" parent="interaction/Eve"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 807.0
+offset_top = 121.0
+offset_right = 962.0
+offset_bottom = 232.0
+
+[node name="affiche" type="Label" parent="interaction/Eve"]
+offset_left = 189.0
+offset_top = 248.0
+offset_right = 961.0
+offset_bottom = 330.0
+
+[node name="Décrypter" type="Sprite2D" parent="interaction/Eve"]
+position = Vector2(276, 376)
+texture = ExtResource("18_ho21q")
+
+[node name="button_decrypter" type="Button" parent="interaction/Eve"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 188.0
+offset_top = 354.0
+offset_right = 364.0
+offset_bottom = 398.0
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 0)
+
+[node name="Clés" type="Node2D" parent="interaction/Eve"]
+top_level = true
+
+[node name="choix" type="TextureRect" parent="interaction/Eve/Clés"]
+offset_left = 364.0
+offset_top = 354.0
+offset_right = 778.0
+offset_bottom = 398.0
+texture = ExtResource("20_rchti")
+
+[node name="choix_publique" type="Button" parent="interaction/Eve/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 393.0
+offset_top = 354.0
+offset_right = 571.0
+offset_bottom = 398.0
+
+[node name="choix_privee" type="Button" parent="interaction/Eve/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 601.0
+offset_top = 354.0
+offset_right = 779.0
+offset_bottom = 398.0
+
+[node name="Sortie1" type="Button" parent="interaction/Eve/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 98.0
+offset_right = 1151.0
+offset_bottom = 355.0
+
+[node name="Sortie2" type="Button" parent="interaction/Eve/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 98.0
+offset_top = 399.0
+offset_right = 1151.0
+offset_bottom = 649.0
+
+[node name="Sortie3" type="Button" parent="interaction/Eve/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 98.0
+offset_top = 245.0
+offset_right = 363.0
+offset_bottom = 649.0
+
+[node name="Sortie4" type="Button" parent="interaction/Eve/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 779.0
+offset_top = 245.0
+offset_right = 1151.0
+offset_bottom = 649.0
+
+[node name="Sortie5" type="Button" parent="interaction/Eve/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_top = 477.0
+offset_right = 98.0
+offset_bottom = 649.0
+
+[node name="Sortie6" type="Button" parent="interaction/Eve/Clés"]
+modulate = Color(1, 1, 1, 0)
+offset_top = 1.0
+offset_right = 98.0
+offset_bottom = 180.0
+
+[node name="Selecteur" type="Node2D" parent="interaction"]
+
+[node name="TextureRect" type="TextureRect" parent="interaction/Selecteur"]
+offset_left = 1.0
+offset_top = 180.0
+offset_right = 100.0
+offset_bottom = 477.0
+texture = ExtResource("14_wmmn4")
+expand_mode = 1
+
+[node name="select_alice" type="Button" parent="interaction/Selecteur"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 2.0
+offset_top = 181.0
+offset_right = 99.0
+offset_bottom = 278.0
+
+[node name="select_bob" type="Button" parent="interaction/Selecteur"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 2.0
+offset_top = 279.0
+offset_right = 99.0
+offset_bottom = 378.0
+
+[node name="select_eve" type="Button" parent="interaction/Selecteur"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 2.0
+offset_top = 378.0
+offset_right = 99.0
+offset_bottom = 477.0
+
+[node name="Popups" type="Node2D" parent="interaction"]
+script = ExtResource("25_2yn45")
+
+[node name="alice_privée" type="TextureRect" parent="interaction/Popups"]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 276.0
+offset_top = 442.0
+offset_right = 876.0
+offset_bottom = 486.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("26_ol1ga")
+script = ExtResource("27_a1gex")
+
+[node name="Timer" type="Timer" parent="interaction/Popups/alice_privée"]
+
+[node name="bob_privée" type="TextureRect" parent="interaction/Popups"]
+top_level = true
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -875.0
+offset_top = 471.0
+offset_right = -275.0
+offset_bottom = -129.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("28_1mlfc")
+script = ExtResource("27_a1gex")
+
+[node name="Timer" type="Timer" parent="interaction/Popups/bob_privée"]
+
+[node name="eve_privée" type="TextureRect" parent="interaction/Popups"]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 276.0
+offset_top = 473.0
+offset_right = 876.0
+offset_bottom = 517.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("28_2j4dy")
+script = ExtResource("27_a1gex")
+
+[node name="Timer" type="Timer" parent="interaction/Popups/eve_privée"]
+
+[node name="eve_publique" type="TextureRect" parent="interaction/Popups"]
+top_level = true
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -875.0
+offset_top = 426.0
+offset_right = -275.0
+offset_bottom = -178.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("29_ux766")
+script = ExtResource("27_a1gex")
+
+[node name="Timer" type="Timer" parent="interaction/Popups/eve_publique"]
+
+[node name="progression" type="Node2D" parent="interaction"]
+script = ExtResource("34_tk635")
+
+[node name="Boite_dialogue_ici" type="CanvasLayer" parent="interaction/progression"]
+script = ExtResource("34_o25jk")
+
+[node name="outside" type="Polygon2D" parent="interaction/progression/Boite_dialogue_ici"]
+polygon = PackedVector2Array(1, 540, 1149, 541, 1149, 647, 1149, 647, -1, 649)
+
+[node name="inside" type="Polygon2D" parent="interaction/progression/Boite_dialogue_ici"]
+position = Vector2(0, -3)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(10, 550, 9, 641, 1142, 642, 1142, 552)
+
+[node name="text" type="Label" parent="interaction/progression/Boite_dialogue_ici"]
+offset_left = 20.0
+offset_top = 557.0
+offset_right = 1128.0
+offset_bottom = 627.0
+autowrap_mode = 3
+
+[node name="offbut" type="Node2D" parent="interaction"]
+
+[node name="Off" type="Sprite2D" parent="interaction/offbut"]
+position = Vector2(1011, 86)
+scale = Vector2(0.0252942, 0.0252942)
+texture = ExtResource("46_ogxk2")
+
+[node name="off_button" type="Button" parent="interaction/offbut"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1000.0
+offset_top = 75.0
+offset_right = 1021.0
+offset_bottom = 98.0
+
+[node name="fin" type="Node2D" parent="."]
+visible = false
+script = ExtResource("41_mfqwu")
+
+[node name="bg" type="TextureRect" parent="fin"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_xlgy8")
+
+[node name="RestoMini" type="TextureRect" parent="fin"]
+offset_left = 116.0
+offset_top = 3.0
+offset_right = 516.0
+offset_bottom = 373.0
+texture = ExtResource("10_gk4ng")
+expand_mode = 1
+
+[node name="Backrivest" type="TextureRect" parent="fin"]
+offset_left = 173.0
+offset_top = 96.0
+offset_right = 773.0
+offset_bottom = 696.0
+texture = ExtResource("46_ob7oy")
+
+[node name="MegaRivestDetoure" type="TextureRect" parent="fin"]
+offset_left = 546.0
+offset_top = -74.0
+offset_right = 1250.0
+offset_bottom = 630.0
+texture = ExtResource("47_yy2lv")
+
+[node name="Boite_dialogue_fin" type="CanvasLayer" parent="fin"]
+script = ExtResource("41_gcu4a")
+
+[node name="outside" type="Polygon2D" parent="fin/Boite_dialogue_fin"]
+polygon = PackedVector2Array(1, 540, 1149, 541, 1149, 647, 1149, 647, -1, 649)
+
+[node name="inside" type="Polygon2D" parent="fin/Boite_dialogue_fin"]
+position = Vector2(0, -3)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(10, 550, 9, 641, 1142, 642, 1142, 552)
+
+[node name="text" type="Label" parent="fin/Boite_dialogue_fin"]
+offset_left = 20.0
+offset_top = 557.0
+offset_right = 1128.0
+offset_bottom = 627.0
+autowrap_mode = 3
+
+[node name="Timer" type="Timer" parent="fin"]
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="fin"]
+one_shot = true
+
+[node name="Timer3" type="Timer" parent="fin"]
+one_shot = true
+
+[node name="Timer4" type="Timer" parent="fin"]
+one_shot = true
+
+[connection signal="pressed" from="bureau/sortie_resto" to="bureau" method="_on_sortie_resto_pressed"]
+[connection signal="pressed" from="bureau/bouton_fenetre" to="bureau" method="_on_bouton_fenetre_pressed"]
+[connection signal="pressed" from="bureau/bouton_coffre" to="bureau" method="_on_bouton_coffre_pressed"]
+[connection signal="pressed" from="feuille/sortie_g" to="feuille" method="_on_sortie_pressed"]
+[connection signal="pressed" from="feuille/sortie_h" to="feuille" method="_on_sortie_pressed"]
+[connection signal="pressed" from="feuille/sortie_b" to="feuille" method="_on_sortie_pressed"]
+[connection signal="pressed" from="feuille/sortie_d" to="feuille" method="_on_sortie_pressed"]
+[connection signal="finished" from="feuille/TransitionScreen" to="feuille" method="_on_transition_screen_finished"]
+[connection signal="transitioned" from="feuille/TransitionScreen" to="feuille" method="_on_transition_screen_transitioned"]
+[connection signal="finished" from="dialogue/TransitionScreen2" to="dialogue" method="_on_transition_screen_finished"]
+[connection signal="transitioned" from="dialogue/TransitionScreen2" to="dialogue" method="_on_transition_screen_transitioned"]
+[connection signal="text_changed" from="interaction/Alice/TextEdit" to="interaction/Alice" method="_on_text_edit_text_changed"]
+[connection signal="pressed" from="interaction/Alice/crypter" to="interaction/Alice" method="_on_crypter_pressed"]
+[connection signal="pressed" from="interaction/Alice/envoyer" to="interaction/Alice" method="_on_envoyer_pressed"]
+[connection signal="timeout" from="interaction/Alice/envoyé/Timer" to="interaction/Alice/envoyé" method="_on_timer_timeout"]
+[connection signal="pressed" from="interaction/Alice/Clés/choix_privée" to="interaction/Alice" method="_on_choix_privée_pressed"]
+[connection signal="pressed" from="interaction/Alice/Clés/choix_publique" to="interaction/Alice" method="_on_choix_publique_pressed"]
+[connection signal="pressed" from="interaction/Alice/Clés/Sortie1" to="interaction/Alice" method="_on_sortie"]
+[connection signal="pressed" from="interaction/Alice/Clés/Sortie2" to="interaction/Alice" method="_on_sortie"]
+[connection signal="pressed" from="interaction/Alice/Clés/Sortie7" to="interaction/Alice" method="_on_sortie"]
+[connection signal="pressed" from="interaction/Alice/Clés/Sortie3" to="interaction/Alice" method="_on_sortie"]
+[connection signal="pressed" from="interaction/Alice/Clés/Sortie4" to="interaction/Alice" method="_on_sortie"]
+[connection signal="pressed" from="interaction/Alice/Clés/Sortie5" to="interaction/Alice" method="_on_sortie"]
+[connection signal="pressed" from="interaction/Alice/Clés/Sortie6" to="interaction/Alice" method="_on_sortie"]
+[connection signal="pressed" from="interaction/Alice/button_decrypter" to="interaction/Alice" method="_on_button_decrypter_pressed"]
+[connection signal="pressed" from="interaction/Bob/Button0" to="interaction/Bob" method="_on_button_0_pressed"]
+[connection signal="pressed" from="interaction/Bob/Button1" to="interaction/Bob" method="_on_button_1_pressed"]
+[connection signal="pressed" from="interaction/Bob/Button2" to="interaction/Bob" method="_on_button_2_pressed"]
+[connection signal="pressed" from="interaction/Bob/Button3" to="interaction/Bob" method="_on_button_3_pressed"]
+[connection signal="pressed" from="interaction/Bob/Button4" to="interaction/Bob" method="_on_button_4_pressed"]
+[connection signal="pressed" from="interaction/Bob/button_decrypter" to="interaction/Bob" method="_on_button_decrypter_pressed"]
+[connection signal="pressed" from="interaction/Bob/Clés/choix_publique" to="interaction/Bob" method="_on_choix_publique_pressed"]
+[connection signal="pressed" from="interaction/Bob/Clés/choix_privee" to="interaction/Bob" method="_on_choix_privee_pressed"]
+[connection signal="pressed" from="interaction/Bob/Clés/Sortie1" to="interaction/Bob" method="_on_sortie"]
+[connection signal="pressed" from="interaction/Bob/Clés/Sortie2" to="interaction/Bob" method="_on_sortie"]
+[connection signal="pressed" from="interaction/Bob/Clés/Sortie3" to="interaction/Bob" method="_on_sortie"]
+[connection signal="pressed" from="interaction/Bob/Clés/Sortie4" to="interaction/Bob" method="_on_sortie"]
+[connection signal="pressed" from="interaction/Bob/Clés/Sortie5" to="interaction/Bob" method="_on_sortie"]
+[connection signal="pressed" from="interaction/Bob/Clés/Sortie6" to="interaction/Bob" method="_on_sortie"]
+[connection signal="pressed" from="interaction/Eve/Button0" to="interaction/Eve" method="_on_button_0_pressed"]
+[connection signal="pressed" from="interaction/Eve/Button1" to="interaction/Eve" method="_on_button_1_pressed"]
+[connection signal="pressed" from="interaction/Eve/Button2" to="interaction/Eve" method="_on_button_2_pressed"]
+[connection signal="pressed" from="interaction/Eve/Button3" to="interaction/Eve" method="_on_button_3_pressed"]
+[connection signal="pressed" from="interaction/Eve/Button4" to="interaction/Eve" method="_on_button_4_pressed"]
+[connection signal="pressed" from="interaction/Eve/button_decrypter" to="interaction/Eve" method="_on_button_decrypter_pressed"]
+[connection signal="pressed" from="interaction/Eve/Clés/choix_publique" to="interaction/Eve" method="_on_choix_publique_pressed"]
+[connection signal="pressed" from="interaction/Eve/Clés/choix_privee" to="interaction/Eve" method="_on_choix_privee_pressed"]
+[connection signal="pressed" from="interaction/Eve/Clés/Sortie1" to="interaction/Eve" method="_on_sortie"]
+[connection signal="pressed" from="interaction/Eve/Clés/Sortie2" to="interaction/Eve" method="_on_sortie"]
+[connection signal="pressed" from="interaction/Eve/Clés/Sortie3" to="interaction/Eve" method="_on_sortie"]
+[connection signal="pressed" from="interaction/Eve/Clés/Sortie4" to="interaction/Eve" method="_on_sortie"]
+[connection signal="pressed" from="interaction/Eve/Clés/Sortie5" to="interaction/Eve" method="_on_sortie"]
+[connection signal="pressed" from="interaction/Eve/Clés/Sortie6" to="interaction/Eve" method="_on_sortie"]
+[connection signal="pressed" from="interaction/Selecteur/select_alice" to="interaction" method="_on_select_alice_pressed"]
+[connection signal="pressed" from="interaction/Selecteur/select_bob" to="interaction" method="_on_select_bob_pressed"]
+[connection signal="pressed" from="interaction/Selecteur/select_bob" to="interaction/Alice" method="_on_text_edit_text_changed"]
+[connection signal="pressed" from="interaction/Selecteur/select_eve" to="interaction" method="_on_select_eve_pressed"]
+[connection signal="pressed" from="interaction/Selecteur/select_eve" to="interaction/Alice" method="_on_text_edit_text_changed"]
+[connection signal="timeout" from="interaction/Popups/alice_privée/Timer" to="interaction/Popups/alice_privée" method="_on_timer_timeout"]
+[connection signal="timeout" from="interaction/Popups/bob_privée/Timer" to="interaction/Popups/bob_privée" method="_on_timer_timeout"]
+[connection signal="timeout" from="interaction/Popups/eve_privée/Timer" to="interaction/Popups/eve_privée" method="_on_timer_timeout"]
+[connection signal="timeout" from="interaction/Popups/eve_publique/Timer" to="interaction/Popups/eve_publique" method="_on_timer_timeout"]
+[connection signal="pressed" from="interaction/offbut/off_button" to="interaction/progression" method="_on_off_button_pressed"]
+[connection signal="timeout" from="fin/Timer" to="fin" method="_on_timer_timeout"]
+[connection signal="timeout" from="fin/Timer2" to="fin" method="_on_timer_2_timeout"]
+[connection signal="timeout" from="fin/Timer3" to="fin" method="_on_timer_3_timeout"]
+[connection signal="timeout" from="fin/Timer4" to="fin" method="_on_timer_4_timeout"]

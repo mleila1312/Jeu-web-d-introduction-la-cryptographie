@@ -8,6 +8,7 @@ signal motCroiseFini;
 func _ready():
 	$ColorRect/bravo.hide()
 
+# lorsque le joueur a fini le mot croisé
 func bravo():
 	$ColorRect/Explications.hide();
 	$ColorRect/bravo.show();
@@ -15,6 +16,8 @@ func bravo():
 
 
 
+# quand une case est complétée, on vérifie si le mot croisé est complété 
+# pas très propre, j'ai appris comment faire ça mieux plus tard
 
 func _on_case_1_node_completed():
 	compteur += 1;

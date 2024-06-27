@@ -1,0 +1,95 @@
+[gd_scene load_steps=7 format=3 uid="uid://dtyct485mvt5i"]
+
+[ext_resource type="Script" path="res://arène/arene.gd" id="1_fv1fx"]
+[ext_resource type="Texture2D" uid="uid://c5lrqt40bpkm4" path="res://img/parchemin.png" id="2_575c2"]
+[ext_resource type="Texture2D" uid="uid://dmaykjh8rc01x" path="res://img/arène.png" id="2_r7h6u"]
+[ext_resource type="Texture2D" uid="uid://xtds0m33664h" path="res://img/parchemin texte.png" id="4_xs4c3"]
+[ext_resource type="Texture2D" uid="uid://cushm3ym5br2b" path="res://img/vae casera.png" id="5_ydf2f"]
+[ext_resource type="Texture2D" uid="uid://cmmeyuijk4p8y" path="res://img/ave caesar.png" id="6_hac1j"]
+
+[node name="arene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fv1fx")
+
+[node name="arene_background" type="Sprite2D" parent="."]
+position = Vector2(577.5, 323.5)
+scale = Vector2(1.00087, 0.998457)
+texture = ExtResource("2_r7h6u")
+
+[node name="ParchTexte" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 345.0
+offset_top = 3.0
+offset_right = 1759.0
+offset_bottom = 2003.0
+scale = Vector2(0.32, 0.32)
+texture_normal = ExtResource("4_xs4c3")
+
+[node name="ParchRoule" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 371.0
+offset_right = 1416.0
+offset_bottom = 2371.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("2_575c2")
+
+[node name="VaeCasera" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 100.0
+offset_top = -17.0
+offset_right = 250.0
+offset_bottom = 83.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("5_ydf2f")
+
+[node name="AveCaesar" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 93.0
+offset_top = -20.0
+offset_right = 243.0
+offset_bottom = 80.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("6_hac1j")
+
+[node name="anagramme_conseil" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.967
+anchor_top = 1.775
+anchor_right = 0.967
+anchor_bottom = 1.775
+offset_left = 369.0
+offset_top = 304.0
+offset_right = 675.0
+offset_bottom = 336.0
+scale = Vector2(1.5, 1.5)
+theme_override_colors/font_color = Color(0.0352941, 0.00784314, 0.00392157, 1)
+text = "Conseil : lis le parchemin pour avancer !"
+
+[node name="anagramme_texte" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 491.0
+offset_top = 406.0
+offset_right = 723.0
+offset_bottom = 473.0
+
+[node name="porte_button" type="TextureButton" parent="anagramme_texte"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = -264.0
+offset_right = 170.0
+offset_bottom = -188.0
+
+[connection signal="pressed" from="ParchTexte" to="." method="_on_parch_texte_pressed"]
+[connection signal="pressed" from="ParchRoule" to="." method="_on_parch_roule_pressed"]
+[connection signal="mouse_entered" from="VaeCasera" to="." method="_on_vae_casera_mouse_entered"]
+[connection signal="mouse_exited" from="VaeCasera" to="." method="_on_vae_casera_mouse_exited"]
+[connection signal="pressed" from="VaeCasera" to="." method="_on_vae_casera_pressed"]
+[connection signal="pressed" from="AveCaesar" to="." method="_on_ave_caesar_pressed"]
+[connection signal="text_change_rejected" from="anagramme_texte" to="." method="_on_anagramme_texte_text_change_rejected"]
+[connection signal="text_changed" from="anagramme_texte" to="." method="_on_anagramme_texte_text_changed"]
+[connection signal="text_submitted" from="anagramme_texte" to="." method="_on_anagramme_texte_text_submitted"]
+[connection signal="pressed" from="anagramme_texte/porte_button" to="." method="_on_porte_button_pressed"]

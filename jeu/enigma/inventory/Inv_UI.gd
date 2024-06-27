@@ -1,5 +1,7 @@
 extends Control
 
+# L'inventaire !
+
 var is_open = true #on verra si ça se trouve il faudra le fermer de temps en temps
 
 @onready var inv: Inventory = preload("res://inventory/playerInv.tres")

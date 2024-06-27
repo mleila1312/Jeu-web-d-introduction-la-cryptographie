@@ -4,7 +4,6 @@ import webbrowser
 import argparse
 from pathlib import Path
 from flask_cors import CORS
-from waitress import serve
 # Pour run le server installer:
 # pip install flask
 # pip install flask_cors
@@ -137,6 +136,42 @@ def jeu_grandchiffre():
 def grandchiffretestiframe():
     return app.send_static_file(f"jeu-chapitres/GrandChiffre/Chapitre-grandchiffre.html")
 
+#pour Scytale
+@app.route('/Scytale-game')
+def site_scytale():
+    return app.send_static_file(f"jeu-chapitres/Scytale/web/Scytale.html")
+
+@app.route('/Chapitre-scytale')
+def scytaletestiframe():
+    return app.send_static_file(f"jeu-chapitres/Scytale/Scytale.html")
+
+# Clé publique
+@app.route('/Cle_publique-game')
+def site_cle_publique():
+    return app.send_static_file(f"jeu-chapitres/Cle_publique/web/Cle_publique.html")
+
+@app.route('/Chapitre-cle_publique')
+def cle_publiquetestiframe():
+    return app.send_static_file(f"jeu-chapitres/Cle_publique/Cle_publique.html")
+
+# Enigma
+@app.route('/enigma-game')
+def site_enigma():
+    return app.send_static_file(f"jeu-chapitres/enigma/web/enigma.html")
+
+@app.route('/Chapitre-enigma')
+def enigmatestiframe():
+    return app.send_static_file(f"jeu-chapitres/enigma/enigma.html")
+
+#Pour Cesar
+@app.route('/Cesar-game')
+def site_cesar():
+    return app.send_static_file(f"jeu-chapitres/Cesar/web/Cesar.html")
+
+@app.route('/Chapitre-cesar')
+def certiftestiframe():
+    return app.send_static_file(f"jeu-chapitres/Cesar/Cesar.html")
+
 #test iframe
 @app.route('/testiframe')
 def sitetestiframe():
@@ -151,4 +186,5 @@ def add_header_home(response):
 
 
 # lance le server
-serve(app, host='::', port=4444)
+if __name__ == "__main__":
+    app.run(debug = False, host='::', port=4444)

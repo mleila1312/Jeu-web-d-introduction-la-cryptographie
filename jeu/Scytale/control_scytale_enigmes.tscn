@@ -1,0 +1,185 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxuy3ixr1p2ld"]
+
+[ext_resource type="Script" path="res://Control_enigmes.gd" id="1_48qwg"]
+[ext_resource type="Script" path="res://case_enigme.gd" id="2_c6tpf"]
+
+[node name="Control" type="Node2D"]
+script = ExtResource("1_48qwg")
+
+[node name="case1" type="Label" parent="."]
+offset_left = 73.349
+offset_top = -13.249
+offset_right = 293.349
+offset_bottom = 202.751
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 158
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("2_c6tpf")
+
+[node name="case2" type="Label" parent="."]
+offset_left = 336.666
+offset_top = 0.587
+offset_right = 556.666
+offset_bottom = 216.587
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 158
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("2_c6tpf")
+
+[node name="case3" type="Label" parent="."]
+offset_left = 633.35
+offset_top = -8.895
+offset_right = 853.35
+offset_bottom = 207.105
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 158
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="case4" type="Label" parent="."]
+offset_left = 903.355
+offset_top = -11.757
+offset_right = 1123.35
+offset_bottom = 204.243
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 158
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="case5" type="Label" parent="."]
+offset_left = 1180.03
+offset_top = -14.607
+offset_right = 1400.03
+offset_bottom = 201.393
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 158
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="case6" type="Label" parent="."]
+offset_left = 1460.03
+offset_top = -14.119
+offset_right = 1680.03
+offset_bottom = 201.881
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 158
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="case7" type="Label" parent="."]
+offset_left = 1736.69
+offset_top = -10.303
+offset_right = 1956.69
+offset_bottom = 205.697
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 158
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="case8" type="Label" parent="."]
+offset_left = 2010.03
+offset_top = -13.159
+offset_right = 2230.03
+offset_bottom = 202.841
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 158
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="case9" type="Label" parent="."]
+offset_left = 89.674
+offset_top = 186.823
+offset_right = 309.674
+offset_bottom = 402.823
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 158
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="case10" type="Label" parent="."]
+offset_left = 363.042
+offset_top = 167.3
+offset_right = 583.042
+offset_bottom = 383.3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 158
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="case11" type="Label" parent="."]
+offset_left = 649.708
+offset_top = 167.801
+offset_right = 869.708
+offset_bottom = 383.801
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 158
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="case12" type="Label" parent="."]
+offset_left = 936.369
+offset_top = 171.634
+offset_right = 1156.37
+offset_bottom = 387.634
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 158
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="case13" type="Label" parent="."]
+offset_left = 1213.01
+offset_top = 185.45
+offset_right = 1433.01
+offset_bottom = 401.45
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 158
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="case14" type="Label" parent="."]
+offset_left = 1496.35
+offset_top = 182.612
+offset_right = 1716.35
+offset_bottom = 398.612
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 158
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="case15" type="Label" parent="."]
+offset_left = 1773.04
+offset_top = 169.761
+offset_right = 1993.04
+offset_bottom = 385.761
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 158
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="case16" type="Label" parent="."]
+offset_left = 2056.35
+offset_top = 183.589
+offset_right = 2276.35
+offset_bottom = 399.589
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 158
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true

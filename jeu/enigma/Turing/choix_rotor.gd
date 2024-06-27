@@ -24,10 +24,10 @@ func _process(delta):
 	pass
 
 # Gère les zones grisées
-
 var disabled1: int
 var disabled2: int
 
+# calcul le rotor réciproque (A -> B devient B -> A)
 func calcul_reciproque(l):
 	if l == []:  return []
 	var ll = []
@@ -37,6 +37,9 @@ func calcul_reciproque(l):
 				ll.append(j+1)
 	return ll
 
+
+# gère les désactivations (un même rotor ne peut pas être sélectionné deux fois)
+
 func _disabled1(index):
 	disabled1 = index
 	update_rotor_choisi()
@@ -45,6 +48,8 @@ func _disabled2(index):
 	disabled2 = index
 	update_rotor_choisi()
 
+
+# met à jour le rotor 
 func update_rotor_choisi():
 	for i in range(6):
 		set_item_disabled(i, false)
@@ -63,6 +68,9 @@ var texte = ""
 var rotor = []
 var reciproque = []
 
+# les rotors de base et leurs réciproques
+# rotor1[1-1] = 3 signifie que A est codée en C par le rotor 1 dans so état A
+
 const rotor1 = [3, 9, 26, 2, 22, 13, 4, 6, 19, 8, 17, 20, 5, 21, 15, 16, 14, 7, 10, 11, 24, 23, 25, 18, 12, 1]
 const rotor2 = [25, 18, 11, 5, 19, 20, 8, 22, 24, 2, 1, 16, 23, 10, 4, 7, 26, 15, 6, 12, 17, 14, 3, 21, 9, 13]
 const rotor3 = [16, 21, 17, 22, 26, 2, 6, 8, 12, 18, 20, 4, 24, 13, 23, 15, 10, 11, 9, 19, 7, 3, 5, 1, 14, 25]
@@ -75,6 +83,8 @@ const reciproque3 = [24, 6, 22, 12, 23, 7, 21, 8, 19, 17, 18, 9, 14, 25, 16, 1, 
 const reciproque4 = [5, 23, 7, 12, 3, 9, 21, 26, 11, 20, 13, 6, 19, 17, 25, 2, 24, 4, 1, 10, 14, 18, 8, 22, 15, 16]
 const reciproque5 = [6, 4, 21, 7, 17, 19, 8, 23, 16, 2, 3, 18, 14, 20, 13, 11, 26, 5, 15, 1, 12, 22, 25, 10, 24, 9]
 
+
+# remets le rotor sur A
 func reset_position():
 	print("id ",get_selected_id())
 	print("rotor avant reset", rotor)
@@ -84,6 +94,7 @@ func reset_position():
 	nb_rotation = 0
 	rotor_moved.emit()
 
+# modifie le rotor en fonction du numéro choisi
 func modif_rotor(index):
 	if index == 0:
 		is_ready = false
@@ -122,26 +133,31 @@ func modif_rotor(index):
 	nb_rotation = 0
 	rotor_changed.emit()
 
+# calcule le code d'une lettre par un rotor
 func cypher_rotor(lettre):
 	if rotor == []:
 		return lettre
 	else:
 		return rotor[lettre-1]
 
+# calcule le code d'une lettre par un rotor lors du chemin retour 
 func cypher_reciproque(lettre):
 	if reciproque == []:
 		return lettre
 	else:
 		return reciproque[lettre-1]
 
+
+# met à jour l'affichage 
 func update_affichage():
 	$Label.text = int_to_string(lettre)
-	
 
+
+# convertit un entier en lettre (A -> 65)
 func int_to_string(lettre):
 	return char(lettre + 64)
 
-
+# fait tourner le rotor
 func rotate_rotor():
 	if rotor == []:
 		return
@@ -159,6 +175,7 @@ func rotate_rotor():
 
 signal interne
 
+# si le joueur a cliqué sur la flêche du haut
 func _on_up_pressed():
 	if lettre != 0:
 		if lettre == 1:
@@ -176,8 +193,7 @@ func _on_up_pressed():
 		rotor_moved.emit()
 		update_affichage() 
 
-
-
+# si le joueur clique sur la flèche du bas 
 func _on_down_pressed():
 	if lettre != 0:
 		lettre = (lettre % 26) + 1

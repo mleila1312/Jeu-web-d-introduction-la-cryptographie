@@ -1,0 +1,298 @@
+[gd_scene load_steps=27 format=3 uid="uid://dby0nxwjpyrk4"]
+
+[ext_resource type="Script" path="res://enigmes.gd" id="1_1xga6"]
+[ext_resource type="Resource" uid="uid://dq81hdnw4tmc4" path="res://inventory/playerInv.tres" id="2_c26dq"]
+[ext_resource type="Texture2D" uid="uid://c52cpgh7ycdr5" path="res://images/interieur_tente.png" id="2_yj0vn"]
+[ext_resource type="Texture2D" uid="uid://cmtt6hnidkxrw" path="res://images/ciel.png" id="3_0pxhw"]
+[ext_resource type="Texture2D" uid="uid://ioop2ebwpchm" path="res://images/messager/ligotte.png" id="3_1mmod"]
+[ext_resource type="Script" path="res://tente_0.gd" id="3_vtd71"]
+[ext_resource type="Texture2D" uid="uid://boko3uvks8g7p" path="res://images/tente_ext.png" id="4_5be8h"]
+[ext_resource type="Texture2D" uid="uid://v6bvcyef37jk" path="res://images/messager/plus_ligotte.png" id="6_d8xhp"]
+[ext_resource type="Texture2D" uid="uid://k68yojcgyrcn" path="res://images/corde_coupee.png" id="7_p2frx"]
+[ext_resource type="Texture2D" uid="uid://cww03elbydrsl" path="res://images/fleche_retour.png" id="7_tl0jd"]
+[ext_resource type="Texture2D" uid="uid://ksjl3yvv17du" path="res://images/tentes_colline.png" id="9_e7353"]
+[ext_resource type="Script" path="res://tente_1.gd" id="10_vdu3t"]
+[ext_resource type="Texture2D" uid="uid://c25jnvtd3d7yp" path="res://images/scytale/rose/scytale_8.png" id="11_23ysu"]
+[ext_resource type="Script" path="res://tente_2.gd" id="12_0qw6m"]
+[ext_resource type="Texture2D" uid="uid://dfqyutb5jqter" path="res://images/scytale/rose/scytale_vide.png" id="12_7yipa"]
+[ext_resource type="Script" path="res://scytale_enigme.gd" id="12_qm6ux"]
+[ext_resource type="Script" path="res://corde_2.gd" id="13_2wpo8"]
+[ext_resource type="Texture2D" uid="uid://w5kqaskkx2q5" path="res://images/corde_defaite.png" id="13_ss5bs"]
+[ext_resource type="Texture2D" uid="uid://kuq4fbfljdb8" path="res://images/corde_droite.png" id="14_6i523"]
+[ext_resource type="PackedScene" uid="uid://cxuy3ixr1p2ld" path="res://control_scytale_enigmes.tscn" id="15_ijncu"]
+[ext_resource type="Texture2D" uid="uid://m8ptksduht8t" path="res://images/fleche_rotate.png" id="16_2cxkg"]
+[ext_resource type="Texture2D" uid="uid://cctxqh6i3t8ma" path="res://images/scytale/bleu/scytale_8.png" id="18_by7h4"]
+[ext_resource type="Texture2D" uid="uid://dkpxmpc8g7axv" path="res://images/scytale/bleu/scytale_vide.png" id="19_rg3ll"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_blv0f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1mmod")
+}],
+"loop": false,
+"name": &"attache",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_d8xhp")
+}],
+"loop": false,
+"name": &"libre",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tygkx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_ss5bs")
+}],
+"loop": true,
+"name": &"coupee",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_6i523")
+}],
+"loop": true,
+"name": &"tendue",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gje43"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_by7h4")
+}],
+"loop": false,
+"name": &"bleu_8",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_rg3ll")
+}],
+"loop": false,
+"name": &"bleu_vide",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_23ysu")
+}],
+"loop": false,
+"name": &"rose_8",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_7yipa")
+}],
+"loop": false,
+"name": &"rose_vide",
+"speed": 5.0
+}]
+
+[node name="enigmes" type="Node2D"]
+script = ExtResource("1_1xga6")
+inventory = ExtResource("2_c26dq")
+
+[node name="fond_blanc" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.6907, 16.2252)
+texture = ExtResource("3_0pxhw")
+expand_mode = 2
+
+[node name="fond_colline" type="TextureRect" parent="."]
+offset_top = -105.0
+offset_right = 2736.0
+offset_bottom = 1434.0
+scale = Vector2(0.42, 0.42)
+texture = ExtResource("9_e7353")
+
+[node name="ext_tente_0" type="TextureButton" parent="."]
+offset_left = 100.0
+offset_top = 261.0
+offset_right = 411.0
+offset_bottom = 452.0
+texture_normal = ExtResource("4_5be8h")
+
+[node name="ext_tente_1" type="TextureButton" parent="."]
+offset_left = 410.0
+offset_top = 177.0
+offset_right = 721.0
+offset_bottom = 368.0
+texture_normal = ExtResource("4_5be8h")
+
+[node name="ext_tente_2" type="TextureButton" parent="."]
+offset_left = 686.0
+offset_top = 239.0
+offset_right = 997.0
+offset_bottom = 430.0
+texture_normal = ExtResource("4_5be8h")
+
+[node name="tente_0" type="Node2D" parent="."]
+script = ExtResource("3_vtd71")
+
+[node name="fond" type="TextureRect" parent="tente_0"]
+offset_right = 2304.0
+offset_bottom = 1296.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_yj0vn")
+
+[node name="messager" type="Node2D" parent="tente_0"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="tente_0/messager"]
+position = Vector2(568, 308)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_blv0f")
+animation = &"attache"
+
+[node name="bouton_corde" type="TextureButton" parent="tente_0/messager"]
+offset_left = 422.0
+offset_top = 228.0
+offset_right = 462.0
+offset_bottom = 268.0
+rotation = -0.083301
+scale = Vector2(7.10307, 2.41471)
+
+[node name="corde" type="Sprite2D" parent="tente_0"]
+position = Vector2(619, 483)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_p2frx")
+
+[node name="tente_1" type="Node2D" parent="."]
+script = ExtResource("10_vdu3t")
+
+[node name="fond" type="TextureRect" parent="tente_1"]
+offset_right = 2304.0
+offset_bottom = 1296.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_yj0vn")
+
+[node name="tente_2" type="Node2D" parent="."]
+script = ExtResource("12_0qw6m")
+
+[node name="fond" type="TextureRect" parent="tente_2"]
+offset_right = 2304.0
+offset_bottom = 1296.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_yj0vn")
+
+[node name="corde" type="Node2D" parent="tente_2"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("13_2wpo8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="tente_2/corde"]
+position = Vector2(1322, 200)
+sprite_frames = SubResource("SpriteFrames_tygkx")
+animation = &"tendue"
+
+[node name="TextureButton" type="TextureButton" parent="tente_2/corde"]
+offset_left = 1310.0
+offset_top = -2.0
+offset_right = 1350.0
+offset_bottom = 38.0
+scale = Vector2(0.545238, 16.1919)
+
+[node name="fleche" type="Node2D" parent="."]
+position = Vector2(15, 373)
+scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D" type="TextureButton" parent="fleche"]
+offset_right = 307.0
+offset_bottom = 250.0
+texture_normal = ExtResource("7_tl0jd")
+
+[node name="scytale" type="Node2D" parent="."]
+position = Vector2(692, 476)
+rotation = 0.710349
+scale = Vector2(0.3, 0.3)
+script = ExtResource("12_qm6ux")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="scytale"]
+position = Vector2(-428.3, -339.482)
+sprite_frames = SubResource("SpriteFrames_gje43")
+animation = &"bleu_vide"
+offset = Vector2(83.576, 106.421)
+
+[node name="bouton_sol" type="TextureButton" parent="scytale"]
+offset_left = -299.154
+offset_top = 332.058
+offset_right = -259.154
+offset_bottom = 372.058
+rotation = -0.782444
+scale = Vector2(23.0307, -1.1063)
+
+[node name="bouton_close" type="TextureButton" parent="scytale"]
+offset_left = -2324.43
+offset_top = 829.788
+offset_right = -2284.43
+offset_bottom = 869.788
+rotation = -0.711088
+scale = Vector2(85.4619, 9.69388)
+
+[node name="Control" parent="scytale" instance=ExtResource("15_ijncu")]
+position = Vector2(-2243.92, 764.931)
+rotation = -0.712094
+
+[node name="bouton_refile" type="TextureButton" parent="scytale/Control"]
+offset_left = 2622.25
+offset_top = 624.577
+offset_right = 2934.25
+offset_bottom = 853.577
+scale = Vector2(1.5, -1.5)
+texture_normal = ExtResource("16_2cxkg")
+
+[node name="bouton_defile" type="TextureButton" parent="scytale/Control"]
+offset_left = 2630.44
+offset_top = -248.743
+offset_right = 2942.44
+offset_bottom = -19.7433
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("16_2cxkg")
+
+[connection signal="couteau_rentre" from="." to="tente_0" method="_on_couteau_rentre"]
+[connection signal="couteau_rentre" from="." to="tente_2" method="_on_couteau_rentre"]
+[connection signal="couteau_sorti" from="." to="tente_0" method="_on_couteau_sorti"]
+[connection signal="couteau_sorti" from="." to="tente_2" method="_on_couteau_sorti"]
+[connection signal="in_tente_0" from="." to="tente_0" method="in_tente_0"]
+[connection signal="in_tente_0" from="." to="scytale" method="_in_tente_0"]
+[connection signal="in_tente_1" from="." to="tente_1" method="in_tente_1"]
+[connection signal="in_tente_1" from="." to="scytale" method="_in_tente_1"]
+[connection signal="in_tente_2" from="." to="tente_2" method="in_tente_2"]
+[connection signal="in_tente_2" from="." to="scytale" method="_in_tente_2"]
+[connection signal="scytale_bleu_sortie" from="." to="scytale" method="_on_scytale_bleu_sortie"]
+[connection signal="scytale_rose_sortie" from="." to="scytale" method="_on_scytale_rose_sortie"]
+[connection signal="pressed" from="ext_tente_0" to="." method="_on_ext_tente_0_pressed"]
+[connection signal="pressed" from="ext_tente_1" to="." method="_on_ext_tente_1_pressed"]
+[connection signal="pressed" from="ext_tente_2" to="." method="_on_ext_tente_2_pressed"]
+[connection signal="affiche_message" from="tente_0" to="." method="_on_affiche_message"]
+[connection signal="enlever_couteau_inventaire" from="tente_0" to="." method="_on_enlever_couteau_inventaire"]
+[connection signal="lance_dialogue" from="tente_0" to="." method="_on_lance_dialogue"]
+[connection signal="montrer_fleche" from="tente_0" to="." method="_on_montrer_fleche"]
+[connection signal="ranger_couteau" from="tente_0" to="." method="_on_ranger_couteau"]
+[connection signal="pressed" from="tente_0/messager/bouton_corde" to="tente_0" method="_on_corde_pressed"]
+[connection signal="ajout_scytale_inv" from="tente_1" to="." method="_on_ajout_scytale_rose_inv"]
+[connection signal="lance_dialogue" from="tente_1" to="." method="_on_lance_dialogue"]
+[connection signal="montrer_fleche" from="tente_1" to="." method="_on_montrer_fleche"]
+[connection signal="ajout_scytale_inv" from="tente_2" to="." method="_on_ajout_scytale_bleu_inv"]
+[connection signal="corde_coupee" from="tente_2" to="." method="_on_ranger_couteau"]
+[connection signal="corde_coupee" from="tente_2" to="scytale" method="_on_tente_2_corde_coupee"]
+[connection signal="lance_dialogue" from="tente_2" to="." method="_on_lance_dialogue"]
+[connection signal="montrer_fleche" from="tente_2" to="." method="_on_montrer_fleche"]
+[connection signal="pressed" from="tente_2/corde/TextureButton" to="tente_2" method="_on_corde_pressed"]
+[connection signal="pressed" from="fleche/Sprite2D" to="." method="_on_fleche_pressed"]
+[connection signal="scytale_bleu_ramassee" from="scytale" to="tente_2" method="_on_scytale_ramassee"]
+[connection signal="scytale_bleu_zoom_clique" from="scytale" to="." method="_on_scytale_bleu_zoom_clique"]
+[connection signal="scytale_rose_ramassee" from="scytale" to="tente_1" method="_on_scytale_ramassee"]
+[connection signal="scytale_rose_zoom_clique" from="scytale" to="." method="_on_scytale_rose_zoom_clique"]
+[connection signal="pressed" from="scytale/bouton_sol" to="scytale" method="_on_scytale_ramassee"]
+[connection signal="pressed" from="scytale/bouton_close" to="scytale" method="_on_close_scytale_pressed"]
+[connection signal="pressed" from="scytale/Control/bouton_refile" to="scytale/Control" method="_on_refilement"]
+[connection signal="pressed" from="scytale/Control/bouton_defile" to="scytale/Control" method="_on_defilement"]

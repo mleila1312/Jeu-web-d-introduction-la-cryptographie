@@ -1,16 +1,18 @@
-[gd_scene load_steps=12 format=3 uid="uid://c6wogw72gpeh7"]
+[gd_scene load_steps=14 format=3 uid="uid://c6wogw72gpeh7"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_st20j"]
 [ext_resource type="Resource" uid="uid://dq81hdnw4tmc4" path="res://inventory/playerInv.tres" id="2_d4pvr"]
 [ext_resource type="Script" path="res://phase1/Boite_dialogue.gd" id="2_nr2xe"]
 [ext_resource type="PackedScene" uid="uid://cv2rpiirlmx7h" path="res://phase1/display.tscn" id="2_qc3fx"]
 [ext_resource type="PackedScene" uid="uid://mnxdo3y1mvcg" path="res://inventory/inv_ui.tscn" id="5_ko4l0"]
-[ext_resource type="Texture2D" uid="uid://c0cskeuckhlc5" path="res://art/post_it.png" id="6_0bbwe"]
 [ext_resource type="PackedScene" uid="uid://cmxtben3f7b2x" path="res://Mot_croise/mot_croise.tscn" id="7_vea4l"]
 [ext_resource type="Texture2D" uid="uid://d356crsgfxcpp" path="res://art/enigma batiment brumeux.png" id="8_uw1cc"]
 [ext_resource type="PackedScene" uid="uid://csboyeqj5w0ie" path="res://labyrinthe/labyrinthe.tscn" id="9_gqu65"]
 [ext_resource type="Texture2D" uid="uid://bqojykji0yw0v" path="res://art/mapButton.png" id="10_ngrpu"]
+[ext_resource type="Texture2D" uid="uid://bfa6k0env86oi" path="res://art/3epostit.png" id="10_nr70r"]
 [ext_resource type="PackedScene" uid="uid://b36i55ppvfbu" path="res://Turing/turing.tscn" id="11_lso4t"]
+[ext_resource type="Texture2D" uid="uid://dkfp18m0viyjh" path="res://art/wetter.png" id="12_pyypd"]
+[ext_resource type="Texture2D" uid="uid://diw20lbv3euc6" path="res://art/Merci ! (1200 x 550 px).png" id="13_bbvy6"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_st20j")
@@ -30,7 +32,7 @@ scale = Vector2(0.883495, 1)
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(10, 550, 9, 641, 1142, 642, 1142, 590.448, 1142, 552)
 
-[node name="text" type="Label" parent="Boite_dialogue"]
+[node name="text" type="RichTextLabel" parent="Boite_dialogue"]
 offset_left = 20.0
 offset_top = 557.0
 offset_right = 1001.0
@@ -82,13 +84,44 @@ offset_bottom = 521.0
 texture_normal = ExtResource("10_ngrpu")
 
 [node name="PostIt" type="TextureButton" parent="InvBig"]
-offset_left = 297.0
-offset_top = 19.0
-offset_right = 797.0
-offset_bottom = 519.0
-texture_normal = ExtResource("6_0bbwe")
+offset_left = 324.0
+offset_top = 41.0
+offset_right = 824.0
+offset_bottom = 541.0
+texture_normal = ExtResource("10_nr70r")
 
 [node name="Turing" parent="." instance=ExtResource("11_lso4t")]
+
+[node name="WETTER" type="TextureButton" parent="Turing"]
+offset_left = 331.0
+offset_top = 51.0
+offset_right = 660.0
+offset_bottom = 380.0
+texture_normal = ExtResource("12_pyypd")
+
+[node name="SolutionWETTER" type="LineEdit" parent="Turing"]
+offset_left = 849.0
+offset_top = 458.0
+offset_right = 991.0
+offset_bottom = 512.0
+placeholder_text = "Message décodé"
+max_length = 6
+
+[node name="InvWetter" type="TextureButton" parent="Turing"]
+offset_left = 1048.0
+offset_top = 230.0
+offset_right = 1123.0
+offset_bottom = 305.0
+
+[node name="TransitionFin" type="Sprite2D" parent="."]
+position = Vector2(563, 273)
+texture = ExtResource("13_bbvy6")
+
+[node name="ColorRect" type="ColorRect" parent="TransitionFin"]
+offset_left = 450.0
+offset_top = 274.0
+offset_right = 602.0
+offset_bottom = 377.0
 
 [connection signal="activate_table" from="." to="Turing" method="_on_main_activate_table"]
 [connection signal="espion_dialogue_off" from="." to="Turing" method="_on_main_espion_dialogue_off"]
@@ -104,3 +137,13 @@ texture_normal = ExtResource("6_0bbwe")
 [connection signal="tunnel" from="Labyrinthe" to="." method="_on_labyrinthe_tunnel"]
 [connection signal="pressed" from="InvBig/Map" to="." method="_on_map_pressed"]
 [connection signal="pressed" from="InvBig/PostIt" to="." method="_on_post_it_pressed"]
+[connection signal="aide_cables" from="Turing" to="." method="_on_turing_aide_cables"]
+[connection signal="aide_generale" from="Turing" to="." method="_on_turing_aide_generale"]
+[connection signal="aide_reflecteur" from="Turing" to="." method="_on_turing_aide_reflecteur"]
+[connection signal="aide_rotors" from="Turing" to="." method="_on_turing_aide_rotors"]
+[connection signal="enigma_main" from="Turing" to="." method="_on_turing_enigma_main"]
+[connection signal="suite_enigma" from="Turing" to="." method="_on_turing_suite_enigma"]
+[connection signal="turing_when_enigma" from="Turing" to="." method="_on_turing_turing_when_enigma"]
+[connection signal="pressed" from="Turing/WETTER" to="." method="_on_wetter_pressed"]
+[connection signal="text_changed" from="Turing/SolutionWETTER" to="." method="_on_solution_wetter_text_changed"]
+[connection signal="pressed" from="Turing/InvWetter" to="." method="_on_inv_wetter_pressed"]

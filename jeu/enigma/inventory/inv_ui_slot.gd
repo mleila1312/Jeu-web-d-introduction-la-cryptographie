@@ -1,5 +1,6 @@
 extends Panel
 
+# une case de l'inventaire
 
 @onready var item_visual: Sprite2D = $CenterContainer/Panel/item_display
 

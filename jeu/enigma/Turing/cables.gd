@@ -1,5 +1,6 @@
 extends Node2D
 
+# les lettres échangées par chaque connecteur
 var swap12 = [0, 0];
 var swap34 = [0, 0];
 var swap56 = [0, 0];
@@ -11,15 +12,17 @@ signal reset;
 func _ready():
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
+
+# mets à jour les connecteurs 
 func update():
 	print("updating");
 	swapped = [swap12[0], swap12[1], swap34[0], swap34[1], swap56[0], swap56[1]];
 	
+	# si deux lettres sont égales, c'est impossible, donc on reset tout 
 	for i in range(6):
 		for j in range(i+1, 6):
 			if swapped[i] == swapped[j] and swapped[i] != 0:
@@ -32,6 +35,8 @@ func update():
 				
 	print(swapped);
 
+
+# pour connecter deux lettres
 
 func _on_cable_connect(swap1, swap2):
 	swap12[0] = swap1;
@@ -52,10 +57,12 @@ func _on_cable_3_connect(swap1, swap2):
 
 signal retour
 
+# previent enigma que le joueur veut revenir au menu principal
 func _on_retour_pressed():
 	retour.emit();
 
 
+# renvoie la lettre échangée
 func swap(lettre: int):
 	if swapped[0] == lettre:
 		return swapped[1]
@@ -71,3 +78,10 @@ func swap(lettre: int):
 		return swapped[4]
 	else:
 		return lettre
+
+
+signal aide_cables
+
+# préviens enigma que le joueur veut une explication 
+func _on_aide_rotors_pressed():
+	aide_cables.emit()

@@ -1,0 +1,328 @@
+[gd_scene load_steps=21 format=3 uid="uid://cv2rpiirlmx7h"]
+
+[ext_resource type="Script" path="res://dodo_debut.gd" id="1_fpki4"]
+[ext_resource type="Script" path="res://reveil.gd" id="2_uy264"]
+[ext_resource type="Texture2D" uid="uid://dq1l7j4c2g5ns" path="res://images/ATHENES.png" id="3_iyge4"]
+[ext_resource type="Script" path="res://drapeau_date.gd" id="4_gq4me"]
+[ext_resource type="Texture2D" uid="uid://cty4ws6jtw68o" path="res://images/ATHENES_colline.png" id="4_naloj"]
+[ext_resource type="PackedScene" uid="uid://d0wpmsxvs2xlr" path="res://apparition.tscn" id="5_fr47m"]
+[ext_resource type="Script" path="res://messager.gd" id="6_fsnbu"]
+[ext_resource type="Texture2D" uid="uid://gkelif6k1xqp" path="res://images/messager/course1.png" id="6_gkx4n"]
+[ext_resource type="Texture2D" uid="uid://d4aktq2oiqjp2" path="res://images/messager/course2.png" id="7_t5r0l"]
+[ext_resource type="Texture2D" uid="uid://bnvrpb1bvgev6" path="res://images/messager/bouclier_leve.png" id="8_iqqcx"]
+[ext_resource type="Texture2D" uid="uid://bea1kq0bqyw3i" path="res://images/messager/course3.png" id="8_mor0g"]
+[ext_resource type="Script" path="res://post-it.gd" id="12_6gorl"]
+[ext_resource type="Texture2D" uid="uid://d0q220bkhmhkb" path="res://images/post-it.png" id="13_sbm3r"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eavwb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_iqqcx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_gkx4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_t5r0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mor0g")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_3nep3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("corps:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1064, 552)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("corps:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.2, 0.2)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_3ir0a"]
+resource_name = "approche"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("corps:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1064, 552), Vector2(1016, 488), Vector2(832, 392), Vector2(704, 296), Vector2(536, 312), Vector2(360, 336), Vector2(384, 464)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("corps:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.1, 0.1), Vector2(0.15, 0.15), Vector2(0.2, 0.2), Vector2(0.25, 0.25), Vector2(0.3, 0.3), Vector2(0.4, 0.4), Vector2(-0.6, 0.6)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jfsr6"]
+_data = {
+"RESET": SubResource("Animation_3nep3"),
+"approche": SubResource("Animation_3ir0a")
+}
+
+[sub_resource type="Animation" id="Animation_yeqid"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(440, 480)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.05, 0.05)]
+}
+
+[sub_resource type="Animation" id="Animation_fuadh"]
+resource_name = "pop-up"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(440, 480), Vector2(456, 464), Vector2(568, 384), Vector2(696, 280), Vector2(824, 224), Vector2(944, 224), Vector2(944, 224)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.05, 0.05), Vector2(0.1, 0.1), Vector2(0.2, 0.2), Vector2(0.3, 0.3), Vector2(0.4, 0.4), Vector2(0.5, 0.5), Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4qgg4"]
+_data = {
+"RESET": SubResource("Animation_yeqid"),
+"pop-up": SubResource("Animation_fuadh")
+}
+
+[node name="display" type="Node2D"]
+
+[node name="dodo_debut" type="Node2D" parent="."]
+script = ExtResource("1_fpki4")
+
+[node name="small_Z" type="Label" parent="dodo_debut"]
+offset_left = 631.0
+offset_top = 75.0
+offset_right = 705.0
+offset_bottom = 139.0
+theme_override_font_sizes/font_size = 50
+text = "Z"
+
+[node name="big_Z" type="Label" parent="dodo_debut"]
+offset_left = 520.0
+offset_top = 222.0
+offset_right = 612.0
+offset_bottom = 294.0
+theme_override_font_sizes/font_size = 100
+text = "Z"
+
+[node name="middle_Z" type="Label" parent="dodo_debut"]
+offset_left = 172.0
+offset_top = 291.0
+offset_right = 266.0
+offset_bottom = 351.0
+theme_override_font_sizes/font_size = 150
+text = "Z
+"
+
+[node name="reveil" type="Node2D" parent="."]
+script = ExtResource("2_uy264")
+
+[node name="fond" type="TextureRect" parent="reveil"]
+offset_right = 1152.0
+offset_bottom = 646.0
+texture = ExtResource("3_iyge4")
+expand_mode = 3
+
+[node name="fond_colline" type="TextureRect" parent="reveil"]
+z_index = 1
+offset_top = 224.0
+offset_right = 2736.0
+offset_bottom = 1763.0
+scale = Vector2(0.420686, 0.420053)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_naloj")
+
+[node name="drapeau_date" type="Node2D" parent="reveil"]
+script = ExtResource("4_gq4me")
+
+[node name="apparition" parent="reveil/drapeau_date" instance=ExtResource("5_fr47m")]
+
+[node name="outer_shape" type="Polygon2D" parent="reveil/drapeau_date"]
+position = Vector2(0, 0.410256)
+scale = Vector2(0.7, 0.7)
+color = Color(0.701961, 0, 0, 1)
+texture_scale = Vector2(0.5, 0.5)
+polygon = PackedVector2Array(16, 16, 184, 16, 184, 328, 104, 240, 16, 328)
+
+[node name="inner_shape" type="Polygon2D" parent="reveil/drapeau_date"]
+scale = Vector2(0.7, 0.7)
+polygon = PackedVector2Array(32, 32, 168, 32, 168, 280, 104, 208, 32, 280)
+
+[node name="date" type="Label" parent="reveil/drapeau_date"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 123.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(0.686275, 0, 0, 1)
+theme_override_font_sizes/font_size = 42
+text = "-405"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lieu" type="Label" parent="reveil/drapeau_date"]
+offset_left = 8.0
+offset_top = 72.0
+offset_right = 132.0
+offset_bottom = 155.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 19
+text = "Aigos
+Potamos"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="messager" type="Node2D" parent="reveil"]
+script = ExtResource("6_fsnbu")
+
+[node name="corps" type="AnimatedSprite2D" parent="reveil/messager"]
+position = Vector2(1064, 552)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_eavwb")
+animation = &"idle"
+frame_progress = 0.567757
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="reveil/messager"]
+libraries = {
+"": SubResource("AnimationLibrary_jfsr6")
+}
+
+[node name="post-it" type="Node2D" parent="reveil"]
+script = ExtResource("12_6gorl")
+
+[node name="Sprite2D" type="Sprite2D" parent="reveil/post-it"]
+visible = false
+z_index = 3
+position = Vector2(440, 480)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("13_sbm3r")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="reveil/post-it"]
+libraries = {
+"": SubResource("AnimationLibrary_4qgg4")
+}

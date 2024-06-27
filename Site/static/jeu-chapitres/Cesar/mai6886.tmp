@@ -1,0 +1,71 @@
+[gd_scene load_steps=8 format=3 uid="uid://bynxe40ix6xmq"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_hxrlq"]
+[ext_resource type="Script" path="res://phase1/boite_dialogue.gd" id="3_tsq8d"]
+[ext_resource type="PackedScene" uid="uid://butoewhekedxf" path="res://phase1/display.tscn" id="4_24cgh"]
+[ext_resource type="Texture2D" uid="uid://ctpgi3i4bskmc" path="res://img/arène fond marron.png" id="4_fddn2"]
+[ext_resource type="PackedScene" uid="uid://dtyct485mvt5i" path="res://arène/arene.tscn" id="5_h8gct"]
+[ext_resource type="PackedScene" uid="uid://dmaj8kvbp8qc8" path="res://porte_arene.tscn" id="6_gdb1w"]
+[ext_resource type="PackedScene" uid="uid://n65qjeyyltyl" path="res://salle_coffres.tscn" id="7_xwy0d"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_hxrlq")
+
+[node name="boite_dialogue" type="CanvasLayer" parent="."]
+script = ExtResource("3_tsq8d")
+
+[node name="outside" type="Polygon2D" parent="boite_dialogue"]
+position = Vector2(-0.0150516, 4.95446)
+scale = Vector2(0.885386, 0.990825)
+color = Color(0.556863, 0.258824, 0.227451, 1)
+polygon = PackedVector2Array(0.017, 540, 461.962, 540, 796.28, 540, 998.452, 540, 1240.15, 540, 1281.94, 540, 1301.14, 540, 1301.14, 594.5, 1301.14, 650.009, 1148.67, 650.009, 649.451, 650.009, 68.9135, 650.009, 0.017, 650.009, 0.017, 595.509, 0.017, 593.491)
+
+[node name="inside" type="Polygon2D" parent="boite_dialogue"]
+position = Vector2(0.00391197, -3)
+scale = Vector2(0.999121, 1)
+color = Color(0.898039, 0.74902, 0.627451, 1)
+polygon = PackedVector2Array(9.004, 550, 9.004, 596, 9.004, 642, 151.129, 642, 575.502, 642, 1143, 642, 1143, 595, 1143, 550, 573.5, 550)
+
+[node name="text" type="Label" parent="boite_dialogue"]
+offset_left = 20.0
+offset_top = 557.0
+offset_right = 1130.0
+offset_bottom = 627.0
+theme_override_colors/font_color = Color(0.556863, 0.258824, 0.227451, 1)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.898039, 0.74902, 0.627451, 1)
+polygon = PackedVector2Array(-2, -3, 0, 648, 1151, 649, 1149, -1)
+
+[node name="display" parent="." instance=ExtResource("4_24cgh")]
+
+[node name="arene_contours" type="Sprite2D" parent="."]
+position = Vector2(577.5, 323.5)
+scale = Vector2(1.00087, 0.998457)
+texture = ExtResource("4_fddn2")
+
+[node name="arene_Button" type="TextureButton" parent="arene_contours"]
+offset_left = -380.169
+offset_top = -220.841
+offset_right = 401.831
+offset_bottom = 218.159
+
+[node name="arene" parent="." instance=ExtResource("5_h8gct")]
+
+[node name="porte_arene" parent="." instance=ExtResource("6_gdb1w")]
+
+[node name="salle_coffres" parent="." instance=ExtResource("7_xwy0d")]
+
+[connection signal="entree_porte" from="." to="porte_arene" method="_on_main_entree_porte"]
+[connection signal="pressed" from="arene_contours/arene_Button" to="." method="_on_arene_button_pressed"]
+[connection signal="anagrammeFaux" from="arene" to="." method="_on_arene_anagramme_faux"]
+[connection signal="anagrammeFini" from="arene" to="." method="_on_arene_anagramme_fini"]
+[connection signal="aveCesar" from="arene" to="." method="_on_arene_ave_cesar"]
+[connection signal="bravo" from="arene" to="." method="_on_arene_bravo"]
+[connection signal="dialogue_entree" from="arene" to="." method="_on_arene_dialogue_entree"]
+[connection signal="text_long" from="arene" to="." method="_on_arene_text_long"]
+[connection signal="dialogue_arene" from="porte_arene" to="." method="_on_porte_arene_dialogue_arene"]
+[connection signal="dialogue_arene_reverse" from="porte_arene" to="." method="_on_porte_arene_dialogue_arene_reverse"]
+[connection signal="dialogue_entree" from="porte_arene" to="." method="_on_porte_arene_dialogue_entree"]
+[connection signal="sortie_porte" from="porte_arene" to="." method="_on_porte_arene_sortie_porte"]
+[connection signal="sortie_salle_coffres" from="salle_coffres" to="." method="_on_salle_coffres_sortie_salle_coffres"]

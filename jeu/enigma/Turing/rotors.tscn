@@ -8,26 +8,32 @@
 position = Vector2(56, 0)
 script = ExtResource("1_23gui")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -54.0
+offset_right = 719.0
+offset_bottom = 508.0
+color = Color(0.295867, 0.295866, 0.295866, 1)
+
 [node name="AffichageRotors" type="Node2D" parent="."]
 
 [node name="LabelRotor" parent="AffichageRotors" instance=ExtResource("2_agx6e")]
-offset_left = 773.0
+offset_left = 585.0
 offset_top = 80.0
-offset_right = 864.0
+offset_right = 676.0
 offset_bottom = 168.0
 metadata/_edit_use_anchors_ = true
 
 [node name="LabelRotor2" parent="AffichageRotors" instance=ExtResource("2_agx6e")]
-offset_left = 773.0
+offset_left = 585.0
 offset_top = 193.0
-offset_right = 864.0
+offset_right = 676.0
 offset_bottom = 281.0
 metadata/_edit_use_anchors_ = true
 
 [node name="LabelRotor3" parent="AffichageRotors" instance=ExtResource("2_agx6e")]
-offset_left = 773.0
+offset_left = 585.0
 offset_top = 309.0
-offset_right = 864.0
+offset_right = 676.0
 offset_bottom = 397.0
 metadata/_edit_use_anchors_ = true
 
@@ -82,6 +88,13 @@ text = "Réinitialiser
 positions"
 metadata/_edit_use_anchors_ = true
 
+[node name="AideRotors" type="Button" parent="."]
+offset_left = 592.0
+offset_top = 437.0
+offset_right = 649.0
+offset_bottom = 491.0
+text = "?"
+
 [connection signal="interne" from="Interne/Rotor1" to="." method="update_interne"]
 [connection signal="item_selected" from="Interne/Rotor1" to="Interne/Rotor2" method="_disabled1"]
 [connection signal="item_selected" from="Interne/Rotor1" to="Interne/Rotor3" method="_disabled2"]
@@ -96,3 +109,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="rotor_changed" from="Interne/Rotor3" to="." method="one_rotor_changed"]
 [connection signal="pressed" from="Interne/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Interne/Reset" to="." method="reset_positions"]
+[connection signal="pressed" from="AideRotors" to="." method="_on_aide_rotors_pressed"]

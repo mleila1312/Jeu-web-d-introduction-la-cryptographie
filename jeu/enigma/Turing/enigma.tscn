@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://monivps86esr"]
+[gd_scene load_steps=9 format=3 uid="uid://monivps86esr"]
 
 [ext_resource type="Script" path="res://Turing/enigma.gd" id="1_gf25g"]
 [ext_resource type="Texture2D" uid="uid://dhw7x6icwemb0" path="res://art/clavier_enigma.png" id="1_oejod"]
+[ext_resource type="Texture2D" uid="uid://bhceabqtb0gda" path="res://art/bgenigma (2).png" id="2_0qf0a"]
 [ext_resource type="Script" path="res://Turing/Light.gd" id="3_m36na"]
 [ext_resource type="Texture2D" uid="uid://bs7eao7tva0sf" path="res://art/halo.png" id="3_v17p7"]
 [ext_resource type="PackedScene" uid="uid://bhyppnbgrlc4t" path="res://Turing/cables.tscn" id="4_as4ox"]
@@ -11,6 +12,10 @@
 [node name="Enigma" type="Node2D"]
 position = Vector2(1, 0)
 script = ExtResource("1_gf25g")
+
+[node name="BgEnigma" type="Sprite2D" parent="."]
+position = Vector2(509, 276)
+texture = ExtResource("2_0qf0a")
 
 [node name="ClavierEnigma" type="Sprite2D" parent="."]
 position = Vector2(550, 260)
@@ -23,7 +28,7 @@ offset_top = 174.0
 offset_right = 252.0
 offset_bottom = 235.0
 theme_override_font_sizes/font_size = 18
-text = "Accès configuration câbles "
+text = "Accès configuration connecteurs "
 metadata/_edit_use_anchors_ = true
 
 [node name="ConfigRotors" type="Button" parent="ClavierEnigma"]
@@ -398,15 +403,23 @@ offset_bottom = 48.0
 position = Vector2(279, 75)
 
 [node name="Rotors" parent="." instance=ExtResource("5_jlffc")]
-position = Vector2(71, 21)
+position = Vector2(267, 21)
 
 [node name="Reflecteur" parent="." instance=ExtResource("6_jc5rc")]
 position = Vector2(298, 0)
+
+[node name="Suite" type="Button" parent="."]
+offset_left = 847.0
+offset_top = 460.0
+offset_right = 980.0
+offset_bottom = 510.0
+text = "Passer à la suite"
 
 [connection signal="light" from="." to="Light" method="_on_enigma_light"]
 [connection signal="pressed" from="ClavierEnigma/ConfigCables" to="." method="_on_config_cables_pressed"]
 [connection signal="pressed" from="ClavierEnigma/ConfigRotors" to="." method="_on_config_rotors_pressed"]
 [connection signal="pressed" from="ClavierEnigma/AccesReflecteur" to="." method="_on_acces_reflecteur_pressed"]
+[connection signal="pressed" from="ClavierEnigma/AideGenerale" to="." method="_on_aide_generale_pressed"]
 [connection signal="pressed" from="Boutons/Bouton1" to="." method="clavier_pressed" binds= [1]]
 [connection signal="pressed" from="Boutons/Bouton2" to="." method="clavier_pressed" binds= [2]]
 [connection signal="pressed" from="Boutons/Bouton3" to="." method="clavier_pressed" binds= [3]]
@@ -433,6 +446,10 @@ position = Vector2(298, 0)
 [connection signal="pressed" from="Boutons/Bouton24" to="." method="clavier_pressed" binds= [24]]
 [connection signal="pressed" from="Boutons/Bouton25" to="." method="clavier_pressed" binds= [25]]
 [connection signal="pressed" from="Boutons/Bouton26" to="." method="clavier_pressed" binds= [26]]
+[connection signal="aide_cables" from="Cables" to="." method="_on_cables_aide_cables"]
 [connection signal="retour" from="Cables" to="." method="_on_retour"]
+[connection signal="aide_rotors" from="Rotors" to="." method="_on_rotors_aide_rotors"]
 [connection signal="retour" from="Rotors" to="." method="_on_retour"]
+[connection signal="aide_reflecteur" from="Reflecteur" to="." method="_on_reflecteur_aide_reflecteur"]
 [connection signal="retour" from="Reflecteur" to="." method="_on_retour"]
+[connection signal="pressed" from="Suite" to="." method="_on_suite_pressed"]

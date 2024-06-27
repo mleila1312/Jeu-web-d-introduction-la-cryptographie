@@ -1,0 +1,255 @@
+[gd_scene load_steps=19 format=3 uid="uid://cv2rpiirlmx7h"]
+
+[ext_resource type="Script" path="res://phase1.gd" id="1_82mw4"]
+[ext_resource type="Script" path="res://bg_Image.gd" id="2_5cga6"]
+[ext_resource type="Texture2D" uid="uid://djv18skdrfjhi" path="res://images/Bureau découvert.png" id="2_p7ocd"]
+[ext_resource type="Script" path="res://bureau.gd" id="4_dk3s6"]
+[ext_resource type="Script" path="res://feuille.gd" id="5_b6h4g"]
+[ext_resource type="Texture2D" uid="uid://bkgg6jpr2u520" path="res://images/Vue ext.png" id="5_eqagv"]
+[ext_resource type="Texture2D" uid="uid://ckq3bmha7ea2y" path="res://images/Feuille.png" id="6_mrvkk"]
+[ext_resource type="Texture2D" uid="uid://us4yxyijbpau" path="res://images/dialogue.png" id="7_7lxxt"]
+[ext_resource type="Script" path="res://dialogue.gd" id="8_lpqn3"]
+[ext_resource type="Script" path="res://interaction.gd" id="10_sha07"]
+[ext_resource type="Texture2D" uid="uid://k6hdcr7qw64l" path="res://images/Alice0.png" id="11_42fs1"]
+[ext_resource type="Script" path="res://Alice.gd" id="11_jaxcd"]
+[ext_resource type="Texture2D" uid="uid://ukbto263xpe3" path="res://images/Bob0.png" id="12_5yig0"]
+[ext_resource type="Texture2D" uid="uid://bl41fbtdb8b6x" path="res://images/non crypté.png" id="13_dolkg"]
+[ext_resource type="Texture2D" uid="uid://sm6bokgsgoh7" path="res://images/Eve0.png" id="13_w4bwl"]
+[ext_resource type="Texture2D" uid="uid://myeka6xy80tj" path="res://images/envoyé.png" id="14_sfmrp"]
+[ext_resource type="Texture2D" uid="uid://cy1q637fu6h1v" path="res://images/selecteur.png" id="14_wmmn4"]
+[ext_resource type="Script" path="res://TextureRect_crypt.gd" id="15_yq16b"]
+
+[node name="display" type="Node2D"]
+
+[node name="phase1" type="Node2D" parent="."]
+script = ExtResource("1_82mw4")
+
+[node name="small_Z" type="Label" parent="phase1"]
+offset_left = 631.0
+offset_top = 75.0
+offset_right = 705.0
+offset_bottom = 139.0
+theme_override_font_sizes/font_size = 50
+text = "Z"
+
+[node name="big_Z" type="Label" parent="phase1"]
+offset_left = 520.0
+offset_top = 222.0
+offset_right = 612.0
+offset_bottom = 294.0
+theme_override_font_sizes/font_size = 100
+text = "Z"
+
+[node name="middle_Z" type="Label" parent="phase1"]
+offset_left = 172.0
+offset_top = 291.0
+offset_right = 266.0
+offset_bottom = 351.0
+theme_override_font_sizes/font_size = 150
+text = "Z
+"
+
+[node name="bg_Image" type="TextureRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 647.0
+texture = ExtResource("2_p7ocd")
+script = ExtResource("2_5cga6")
+
+[node name="bureau" type="Node2D" parent="."]
+script = ExtResource("4_dk3s6")
+
+[node name="bouton_fenetre" type="Button" parent="bureau"]
+offset_left = 827.0
+offset_top = 78.0
+offset_right = 1059.0
+offset_bottom = 309.0
+
+[node name="bouton_coffre" type="Button" parent="bureau"]
+offset_left = 265.0
+offset_top = 289.0
+offset_right = 384.0
+offset_bottom = 393.0
+
+[node name="bg_resto" type="TextureRect" parent="bureau"]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("5_eqagv")
+
+[node name="sortie_resto" type="Button" parent="bureau"]
+offset_left = 1103.0
+offset_top = 603.0
+offset_right = 1154.0
+offset_bottom = 648.0
+
+[node name="feuille" type="Node2D" parent="."]
+visible = false
+position = Vector2(0, 1)
+script = ExtResource("5_b6h4g")
+
+[node name="TextureRect" type="TextureRect" parent="feuille"]
+offset_top = 3.0
+offset_right = 1152.0
+offset_bottom = 651.0
+texture = ExtResource("6_mrvkk")
+
+[node name="sortie_g" type="Button" parent="feuille"]
+offset_right = 392.0
+offset_bottom = 648.0
+
+[node name="sortie_h" type="Button" parent="feuille"]
+offset_left = 392.0
+offset_right = 806.0
+offset_bottom = 53.0
+
+[node name="sortie_b" type="Button" parent="feuille"]
+offset_left = 392.0
+offset_top = 592.0
+offset_right = 806.0
+offset_bottom = 648.0
+
+[node name="sortie_d" type="Button" parent="feuille"]
+offset_left = 806.0
+offset_right = 1153.0
+offset_bottom = 648.0
+
+[node name="TextEdit" type="TextEdit" parent="feuille"]
+offset_left = 394.0
+offset_top = 55.0
+offset_right = 807.0
+offset_bottom = 593.0
+
+[node name="dialogue" type="Node2D" parent="."]
+visible = false
+script = ExtResource("8_lpqn3")
+
+[node name="TextureRect" type="TextureRect" parent="dialogue"]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("7_7lxxt")
+
+[node name="description" type="Node2D" parent="."]
+
+[node name="interaction" type="Node2D" parent="."]
+script = ExtResource("10_sha07")
+
+[node name="Alice" type="Node2D" parent="interaction"]
+script = ExtResource("11_jaxcd")
+
+[node name="bg" type="TextureRect" parent="interaction/Alice"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("11_42fs1")
+
+[node name="TextEdit" type="TextEdit" parent="interaction/Alice"]
+offset_left = 187.0
+offset_top = 121.0
+offset_right = 962.0
+offset_bottom = 232.0
+theme_override_colors/background_color = Color(0, 0, 0, 0)
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 0)
+theme_override_colors/current_line_color = Color(0, 0, 0, 0)
+theme_override_colors/caret_color = Color(0, 0, 0, 0)
+theme_override_colors/caret_background_color = Color(0, 0, 0, 0)
+theme_override_colors/word_highlighted_color = Color(0, 0, 0, 0)
+theme_override_colors/search_result_color = Color(0, 0, 0, 0)
+theme_override_colors/search_result_border_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 35
+text = "Non vraiment"
+placeholder_text = "Insérer texte, genre beaucoup de texte j'ai besoin d'avoir deux lignes merci"
+wrap_mode = 1
+
+[node name="crypter" type="Button" parent="interaction/Alice"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 188.0
+offset_top = 326.0
+offset_right = 365.0
+offset_bottom = 370.0
+
+[node name="envoyer" type="Button" parent="interaction/Alice"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 188.0
+offset_top = 265.0
+offset_right = 365.0
+offset_bottom = 309.0
+
+[node name="crypt_state" type="TextureRect" parent="interaction/Alice"]
+offset_left = 188.0
+offset_top = 385.0
+offset_right = 365.0
+offset_bottom = 429.0
+texture = ExtResource("13_dolkg")
+
+[node name="envoyé" type="TextureRect" parent="interaction/Alice"]
+offset_left = 447.0
+offset_top = 463.0
+offset_right = 700.0
+offset_bottom = 521.0
+texture = ExtResource("14_sfmrp")
+script = ExtResource("15_yq16b")
+
+[node name="Timer" type="Timer" parent="interaction/Alice/envoyé"]
+wait_time = 2.0
+one_shot = true
+
+[node name="Bob" type="Node2D" parent="interaction"]
+visible = false
+
+[node name="bg" type="TextureRect" parent="interaction/Bob"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("12_5yig0")
+
+[node name="Eve" type="Node2D" parent="interaction"]
+visible = false
+
+[node name="bg" type="TextureRect" parent="interaction/Eve"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("13_w4bwl")
+
+[node name="Selecteur" type="Node2D" parent="interaction"]
+
+[node name="TextureRect" type="TextureRect" parent="interaction/Selecteur"]
+offset_left = 1.0
+offset_top = 180.0
+offset_right = 100.0
+offset_bottom = 477.0
+texture = ExtResource("14_wmmn4")
+expand_mode = 1
+
+[node name="select_alice" type="Button" parent="interaction/Selecteur"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 2.0
+offset_top = 181.0
+offset_right = 99.0
+offset_bottom = 278.0
+
+[node name="select_bob" type="Button" parent="interaction/Selecteur"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 2.0
+offset_top = 279.0
+offset_right = 99.0
+offset_bottom = 378.0
+
+[node name="select_eve" type="Button" parent="interaction/Selecteur"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 2.0
+offset_top = 378.0
+offset_right = 99.0
+offset_bottom = 477.0
+
+[connection signal="pressed" from="bureau/bouton_fenetre" to="bureau" method="_on_bouton_fenetre_pressed"]
+[connection signal="pressed" from="bureau/bouton_coffre" to="bureau" method="_on_bouton_coffre_pressed"]
+[connection signal="pressed" from="bureau/sortie_resto" to="bureau" method="_on_sortie_resto_pressed"]
+[connection signal="pressed" from="feuille/sortie_g" to="feuille" method="_on_sortie_pressed"]
+[connection signal="pressed" from="feuille/sortie_h" to="feuille" method="_on_sortie_pressed"]
+[connection signal="pressed" from="feuille/sortie_b" to="feuille" method="_on_sortie_pressed"]
+[connection signal="pressed" from="feuille/sortie_d" to="feuille" method="_on_sortie_pressed"]
+[connection signal="pressed" from="interaction/Alice/crypter" to="interaction/Alice" method="_on_crypter_pressed"]
+[connection signal="pressed" from="interaction/Alice/envoyer" to="interaction/Alice" method="_on_envoyer_pressed"]
+[connection signal="timeout" from="interaction/Alice/envoyé/Timer" to="interaction/Alice/envoyé" method="_on_timer_timeout"]
+[connection signal="pressed" from="interaction/Selecteur/select_alice" to="interaction" method="_on_select_alice_pressed"]
+[connection signal="pressed" from="interaction/Selecteur/select_bob" to="interaction" method="_on_select_bob_pressed"]
+[connection signal="pressed" from="interaction/Selecteur/select_eve" to="interaction" method="_on_select_eve_pressed"]

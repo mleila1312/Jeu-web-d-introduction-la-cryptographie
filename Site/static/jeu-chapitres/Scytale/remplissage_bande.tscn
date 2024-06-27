@@ -1,0 +1,285 @@
+[gd_scene load_steps=3 format=3 uid="uid://8rv2f11mkwq2"]
+
+[ext_resource type="Script" path="res://case_ruban_test.gd" id="1_736g5"]
+[ext_resource type="Script" path="res://remplissage_bande.gd" id="1_t3hin"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -381.539
+offset_top = -150.769
+offset_right = 968.461
+offset_bottom = 69.231
+rotation = -0.0698132
+script = ExtResource("1_t3hin")
+
+[node name="case1" type="Label" parent="."]
+layout_mode = 0
+offset_right = 90.0
+offset_bottom = 120.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("1_736g5")
+
+[node name="case2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 113.569
+offset_top = 3.005
+offset_right = 233.569
+offset_bottom = 123.005
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("1_736g5")
+
+[node name="case3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 260.901
+offset_top = 8.765
+offset_right = 380.901
+offset_bottom = 128.765
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("1_736g5")
+
+[node name="case4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 412.838
+offset_top = 15.439
+offset_right = 532.838
+offset_bottom = 135.439
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("1_736g5")
+
+[node name="case5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 576.197
+offset_top = 2.607
+offset_right = 696.197
+offset_bottom = 122.607
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("1_736g5")
+
+[node name="case6" type="Label" parent="."]
+layout_mode = 0
+offset_left = 733.93
+offset_top = -1.239
+offset_right = 853.93
+offset_bottom = 118.761
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("1_736g5")
+
+[node name="case7" type="Label" parent="."]
+layout_mode = 0
+offset_left = 875.975
+offset_top = -2.692
+offset_right = 995.975
+offset_bottom = 117.308
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("1_736g5")
+
+[node name="case8" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1027.06
+offset_top = -2.204
+offset_right = 1147.06
+offset_bottom = 117.796
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("1_736g5")
+
+[node name="case9" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1184.45
+offset_top = -2.981
+offset_right = 1304.45
+offset_bottom = 117.019
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("1_736g5")
+
+[node name="case10" type="Label" parent="."]
+layout_mode = 0
+offset_left = 0.306
+offset_top = 108.208
+offset_right = 100.306
+offset_bottom = 218.208
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("1_736g5")
+
+[node name="case11" type="Label" parent="."]
+layout_mode = 0
+offset_left = 118.738
+offset_top = 110.091
+offset_right = 288.738
+offset_bottom = 220.091
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("1_736g5")
+
+[node name="case12" type="Label" parent="."]
+layout_mode = 0
+offset_left = 289.759
+offset_top = 111.984
+offset_right = 419.759
+offset_bottom = 221.984
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("1_736g5")
+
+[node name="case13" type="Label" parent="."]
+layout_mode = 0
+offset_left = 439.294
+offset_top = 112.67
+offset_right = 569.294
+offset_bottom = 222.67
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("1_736g5")
+
+[node name="case14" type="Label" parent="."]
+layout_mode = 0
+offset_left = 592.033
+offset_top = 111.994
+offset_right = 722.033
+offset_bottom = 221.994
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("1_736g5")
+
+[node name="case15" type="Label" parent="."]
+layout_mode = 0
+offset_left = 746.173
+offset_top = 112.939
+offset_right = 876.173
+offset_bottom = 236.939
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("1_736g5")
+
+[node name="case16" type="Label" parent="."]
+layout_mode = 0
+offset_left = 901.98
+offset_top = 112.436
+offset_right = 1031.98
+offset_bottom = 236.436
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("1_736g5")
+
+[node name="case17" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1054.72
+offset_top = 111.76
+offset_right = 1184.72
+offset_bottom = 235.76
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("1_736g5")
+
+[node name="case18" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1219.73
+offset_top = 111.773
+offset_right = 1349.73
+offset_bottom = 235.773
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("1_736g5")
+
+[connection signal="case1" from="." to="case1" method="_on_case_to_fill"]
+[connection signal="case10" from="." to="case10" method="_on_case_to_fill"]
+[connection signal="case11" from="." to="case11" method="_on_case_to_fill"]
+[connection signal="case12" from="." to="case12" method="_on_case_to_fill"]
+[connection signal="case13" from="." to="case13" method="_on_case_to_fill"]
+[connection signal="case14" from="." to="case14" method="_on_case_to_fill"]
+[connection signal="case15" from="." to="case15" method="_on_case_to_fill"]
+[connection signal="case16" from="." to="case16" method="_on_case_to_fill"]
+[connection signal="case17" from="." to="case17" method="_on_case_to_fill"]
+[connection signal="case18" from="." to="case18" method="_on_case_to_fill"]
+[connection signal="case2" from="." to="case2" method="_on_case_to_fill"]
+[connection signal="case3" from="." to="case3" method="_on_case_to_fill"]
+[connection signal="case4" from="." to="case4" method="_on_case_to_fill"]
+[connection signal="case5" from="." to="case5" method="_on_case_to_fill"]
+[connection signal="case6" from="." to="case6" method="_on_case_to_fill"]
+[connection signal="case7" from="." to="case7" method="_on_case_to_fill"]
+[connection signal="case8" from="." to="case8" method="_on_case_to_fill"]
+[connection signal="case9" from="." to="case9" method="_on_case_to_fill"]
+[connection signal="mouse_entered" from="." to="." method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_control_mouse_exited"]
+[connection signal="reset" from="." to="case1" method="_on_reset"]
+[connection signal="reset" from="." to="case2" method="_on_reset"]
+[connection signal="reset" from="." to="case3" method="_on_reset"]
+[connection signal="reset" from="." to="case4" method="_on_reset"]
+[connection signal="reset" from="." to="case5" method="_on_reset"]
+[connection signal="reset" from="." to="case6" method="_on_reset"]
+[connection signal="reset" from="." to="case7" method="_on_reset"]
+[connection signal="reset" from="." to="case8" method="_on_reset"]
+[connection signal="reset" from="." to="case9" method="_on_reset"]
+[connection signal="reset" from="." to="case10" method="_on_reset"]
+[connection signal="reset" from="." to="case11" method="_on_reset"]
+[connection signal="reset" from="." to="case12" method="_on_reset"]
+[connection signal="reset" from="." to="case13" method="_on_reset"]
+[connection signal="reset" from="." to="case14" method="_on_reset"]
+[connection signal="reset" from="." to="case15" method="_on_reset"]
+[connection signal="reset" from="." to="case16" method="_on_reset"]
+[connection signal="reset" from="." to="case17" method="_on_reset"]
+[connection signal="reset" from="." to="case18" method="_on_reset"]
