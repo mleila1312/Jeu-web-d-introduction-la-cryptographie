@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6l7t0huql4lc"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_b6fsr"]
+[ext_resource type="Texture2D" uid="uid://s4u34g070v24" path="res://images/noir.png" id="2_7o07i"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_b6fsr")
+
+[node name="background" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 649.0
+texture = ExtResource("2_7o07i")
+
+[node name="Boite_Dialogue" type="Node2D" parent="."]
+
+[node name="In" type="Polygon2D" parent="Boite_Dialogue"]
+polygon = PackedVector2Array(-2, 543, 1155, 542, 1152, 648, 0, 648)
+
+[node name="out" type="Polygon2D" parent="Boite_Dialogue"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(7, 549, 7, 638, 1145, 638, 1147, 548)
+
+[node name="Label" type="Label" parent="Boite_Dialogue"]
+offset_left = 12.0
+offset_top = 553.0
+offset_right = 1141.0
+offset_bottom = 633.0
+autowrap_mode = 3
+
+[node name="Label" type="Label" parent="."]
+offset_left = 336.0
+offset_top = 190.0
+offset_right = 686.0
+offset_bottom = 354.0
+theme_override_font_sizes/font_size = 50
+text = "FIN INTRODUCTION"

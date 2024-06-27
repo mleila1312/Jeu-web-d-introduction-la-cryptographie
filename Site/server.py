@@ -150,6 +150,10 @@ def cesartestiframe():
 def vigtestiframe():
     return app.send_static_file(f"jeu-chapitres/Vigenere/Vigenere-chap.html")
 
+#Pour Vigenre
+@app.route('/Chapitre-introduction')
+def introtestiframe():
+    return app.send_static_file(f"jeu-chapitres/Introduction/Introduction-chap.html")
 
 # pour ne pas avoir de pb de SharedArrayBuffer et CORS
 @app.after_request
