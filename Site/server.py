@@ -169,7 +169,7 @@ def site_cesar():
     return app.send_static_file(f"jeu-chapitres/Cesar/web/Cesar.html")
 
 @app.route('/Chapitre-cesar')
-def certiftestiframe():
+def cesartestiframe():
     return app.send_static_file(f"jeu-chapitres/Cesar/Cesar.html")
 
 #test iframe
