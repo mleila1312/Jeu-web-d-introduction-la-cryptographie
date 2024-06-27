@@ -17,7 +17,7 @@ let index = 0;
 document.getElementById('changeBtn').addEventListener('click', function() {
     index = (index + 1) % images.length;
     base = '.\\';
-    document.getElementById('image-to-replace').src = base.concat(images[index]);
+    document.getElementById('image-to-replace').src = base.concat('https://cryptoquest.rezel.net/jeu-chapitres/Certificat/dossier4/'+images[index]);
     document.getElementById('text-to-replace').textContent = texts[index];
     document.body.style.backgroundColor = colors[index];
 });
