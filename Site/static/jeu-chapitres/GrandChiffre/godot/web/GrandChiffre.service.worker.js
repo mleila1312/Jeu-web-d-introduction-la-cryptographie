@@ -3,7 +3,7 @@
 // that they need an Internet connection to run the project if desired.
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
-const CACHE_VERSION = "1719403265|228802288";
+const CACHE_VERSION = "1719515652|1345500108";
 const CACHE_PREFIX = "GrandChiffre-sw-cache-";
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
 const OFFLINE_URL = "GrandChiffre.offline.html";

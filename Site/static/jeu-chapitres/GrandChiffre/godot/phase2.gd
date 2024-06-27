@@ -10,6 +10,20 @@ signal fouille_piece;
 signal fin_phase2;
 # Called when the node enters the scene tree for the first time.
 
+func fige_buttons():
+	$choix1.disabled=true;
+	get_node("choix1/Label").set("theme_override_colors/font_color",Color(1.0,1.0,1.0,0.5));
+	$choix2.disabled=true;
+	$choix3.disabled=true;
+	$choix4.disabled=true;
+
+func defige_buttons():
+	$choix1.disabled=false;
+	get_node("choix1/Label").set("theme_override_colors/font_color",Color(1.0,1.0,1.0,1.0));
+	$choix2.disabled=false;
+	$choix3.disabled=false;
+	$choix4.disabled=false;
+	
 #si on souhaite revenir à la question après avoir fouillé
 func retour_question():
 	$choix1.show();
@@ -25,18 +39,21 @@ func response1():
 	choix = 1;
 	get_parent().get_parent().get_node("Boite_dialogue").dialogue(-13);
 	iteration = -14;
+	fige_buttons()
 
 #si on choisit la réponse2
 func response2():
 	choix = 2;
 	get_parent().get_parent().get_node("Boite_dialogue").dialogue(-23);
 	iteration = -23;
+	fige_buttons()
 
 #si on choisit la réponse3
 func response3():
 	choix = 3;
 	get_parent().get_parent().get_node("Boite_dialogue").dialogue(-22);
 	iteration = 1;
+	fige_buttons()
 
 #si on choisit de fouiller
 func fouille():
@@ -57,6 +74,7 @@ func _input(event):
 		elif choix==3 and iteration == 12 : 
 			get_parent().get_parent().get_node("Boite_dialogue/text").text = "Réfléchis bien à ta réponse cette fois.";
 			choix =0 ;
+			defige_buttons()
 			iteration =0 ;
 		elif choix == 1 and iteration >=-22:
 			get_parent().get_parent().get_node("Boite_dialogue").dialogue(iteration);
@@ -64,6 +82,7 @@ func _input(event):
 		elif choix == 1 and iteration == -23:
 			get_parent().get_parent().get_node("Boite_dialogue/text").text = "Réfléchis bien à ta réponse cette fois.";
 			choix =0 ;
+			defige_buttons()
 			iteration =0;
 		elif choix == 2 and iteration >= -27:
 			get_parent().get_parent().get_node("Boite_dialogue").dialogue(iteration);
@@ -73,5 +92,6 @@ func _input(event):
 			get_parent().get_parent().get_node("Boite_dialogue/text").text = "Bon, cherchons comment révéler l'écriture sur le papier qu'il m'a donné.";
 			choix=5000;
 			iteration = -1000
+			defige_buttons()
 			fin_phase2.emit();
 

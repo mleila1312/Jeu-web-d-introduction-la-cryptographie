@@ -58,7 +58,7 @@ func _on_texture_button_pressed():
 		$droite.hide();
 		$gauche.hide();
 		if fouiller : 
-			#si on est dans la phase de fouille
+			get_parent().get_parent().get_parent().get_node("Boite_dialogue").hide()
 			$retour_question.hide();
 	else : 
 		#si on a déjà fait le 1er déchiffrement
@@ -116,6 +116,7 @@ func _input(event):
 func _on_retour_question_pressed():
 	#lancé lorsque le joueur souhaite revenir à la question d'Etienne
 	retour_quest.emit();
+	get_parent().get_parent().get_parent().get_node("Boite_dialogue").show()
 
 
 func _on_feuilles_post_dechiffre_goback_feuilles(found):

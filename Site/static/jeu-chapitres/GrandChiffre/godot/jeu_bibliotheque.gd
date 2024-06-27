@@ -5,7 +5,7 @@ signal goback(finished)
 #indique si le jeu est fini
 var end_game=false;
 #indique les places des llivres à l'instant t=0
-var places = [3, 6, 1, 5, 8, 2, 7, 4];
+var places = [1,2,3,4,5,6,7,8];
 #indique le premier livre sélectionné
 var first=-1;
 #etat du jeu à l'instant t par rapport aux dialogues
@@ -108,6 +108,9 @@ func exchange_place(i, j):
 	var x_tmp= first_book.position.x;
 	first_book.position.x= second_book.position.x;
 	second_book.position.x =x_tmp;
+	var p1 = places[i-1];
+	places[i-1]=places[j-1];
+	places[j-1]=p1;
 
 #initialise la scène lors de la première arrivée dans la bibliothèque(ie la phase avec les pieces)
 func init_game():
@@ -115,6 +118,7 @@ func init_game():
 	exchange_place(5, 8);
 	exchange_place(6, 2);
 	exchange_place(4, 8);
+	print(places)
 	$background.show();
 	$retour.show();
 	$page1.hide();
@@ -144,6 +148,7 @@ func finished ():
 	
 #vérifie si le jeu est fini
 func check_finished():
+	print(places)
 	if places==[1,2,3,4,5,6,7,8] : 
 		finished();
 	
@@ -163,9 +168,6 @@ func on_book_pressed(id):
 			var book1 = get_node("book"+str(first));
 			book1.position.y+=150;
 			exchange_place(first, id);
-			var p1 = places[first-1];
-			places[first-1]=places[id-1];
-			places[id-1]=p1;
 			first = -1;
 			check_finished();
 	else : 
