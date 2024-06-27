@@ -1,0 +1,187 @@
+[gd_scene load_steps=8 format=3 uid="uid://csboyeqj5w0ie"]
+
+[ext_resource type="Texture2D" uid="uid://bglfp0pwp6mks" path="res://art/labyrinthe (1).png" id="1_d865w"]
+[ext_resource type="Script" path="res://labyrinthe/labyrinthe.gd" id="1_wigcg"]
+[ext_resource type="Texture2D" uid="uid://lgseyt1ngsax" path="res://art/trésor.png" id="2_eow0q"]
+[ext_resource type="Texture2D" uid="uid://41pb8610fw03" path="res://art/map (1).png" id="3_8300a"]
+[ext_resource type="Texture2D" uid="uid://bed83cc83qule" path="res://art/eau.png" id="5_81b4e"]
+[ext_resource type="Texture2D" uid="uid://cvyhhjmqhc232" path="res://art/feu (1).png" id="6_ffeg0"]
+[ext_resource type="Texture2D" uid="uid://bwn10opns3alj" path="res://art/foudre.png" id="7_71n7l"]
+
+[node name="Labyrinthe" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_wigcg")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_d865w")
+centered = false
+
+[node name="Round1" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Tresor1" type="Sprite2D" parent="Round1"]
+position = Vector2(212, 84)
+texture = ExtResource("2_eow0q")
+
+[node name="Tresor2" type="Sprite2D" parent="Round1"]
+position = Vector2(504, 91)
+texture = ExtResource("2_eow0q")
+
+[node name="Map" type="Sprite2D" parent="Round1"]
+position = Vector2(785, 90)
+texture = ExtResource("3_8300a")
+
+[node name="Button" type="Button" parent="Round1"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 162.0
+offset_right = 351.0
+offset_bottom = 550.0
+
+[node name="Button2" type="Button" parent="Round1"]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 162.0
+offset_right = 640.0
+offset_bottom = 550.0
+
+[node name="Button3" type="Button" parent="Round1"]
+layout_mode = 0
+offset_left = 662.0
+offset_top = 162.0
+offset_right = 926.0
+offset_bottom = 550.0
+
+[node name="Round2" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Eau" type="Sprite2D" parent="Round2"]
+position = Vector2(503, 85)
+texture = ExtResource("5_81b4e")
+
+[node name="Feu" type="Sprite2D" parent="Round2"]
+position = Vector2(786, 74)
+texture = ExtResource("6_ffeg0")
+
+[node name="Foudre" type="Sprite2D" parent="Round2"]
+position = Vector2(217, 84)
+texture = ExtResource("7_71n7l")
+
+[node name="ButtonFoudre1" type="Button" parent="Round2"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 162.0
+offset_right = 351.0
+offset_bottom = 550.0
+
+[node name="ButtonEau1" type="Button" parent="Round2"]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 162.0
+offset_right = 640.0
+offset_bottom = 550.0
+
+[node name="ButtonFeu1" type="Button" parent="Round2"]
+layout_mode = 0
+offset_left = 662.0
+offset_top = 162.0
+offset_right = 926.0
+offset_bottom = 550.0
+
+[node name="Round3" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Eau" type="Sprite2D" parent="Round3"]
+position = Vector2(214, 80)
+texture = ExtResource("5_81b4e")
+
+[node name="Feu" type="Sprite2D" parent="Round3"]
+position = Vector2(503, 86)
+texture = ExtResource("6_ffeg0")
+
+[node name="Foudre" type="Sprite2D" parent="Round3"]
+position = Vector2(789, 81)
+texture = ExtResource("7_71n7l")
+
+[node name="ButtonEau2" type="Button" parent="Round3"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 162.0
+offset_right = 351.0
+offset_bottom = 550.0
+
+[node name="ButtonFeu2" type="Button" parent="Round3"]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 162.0
+offset_right = 640.0
+offset_bottom = 550.0
+
+[node name="ButtonFoudre2" type="Button" parent="Round3"]
+layout_mode = 0
+offset_left = 662.0
+offset_top = 162.0
+offset_right = 926.0
+offset_bottom = 550.0
+
+[node name="Round4" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Eau" type="Sprite2D" parent="Round4"]
+position = Vector2(788, 85)
+texture = ExtResource("5_81b4e")
+
+[node name="Feu" type="Sprite2D" parent="Round4"]
+position = Vector2(212, 80)
+texture = ExtResource("6_ffeg0")
+
+[node name="Foudre" type="Sprite2D" parent="Round4"]
+position = Vector2(506, 86)
+texture = ExtResource("7_71n7l")
+
+[node name="ButtonFeu3" type="Button" parent="Round4"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 162.0
+offset_right = 351.0
+offset_bottom = 550.0
+
+[node name="ButtonFoudre3" type="Button" parent="Round4"]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 162.0
+offset_right = 640.0
+offset_bottom = 550.0
+
+[node name="ButtonEau3" type="Button" parent="Round4"]
+layout_mode = 0
+offset_left = 662.0
+offset_top = 162.0
+offset_right = 926.0
+offset_bottom = 550.0
+
+[connection signal="pressed" from="Round1/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Round1/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Round1/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Round2/ButtonFoudre1" to="." method="_on_button_foudre_1_pressed"]
+[connection signal="pressed" from="Round2/ButtonEau1" to="." method="_on_button_eau_1_pressed"]
+[connection signal="pressed" from="Round2/ButtonFeu1" to="." method="_on_button_feu_1_pressed"]
+[connection signal="pressed" from="Round3/ButtonEau2" to="." method="_on_button_eau_2_pressed"]
+[connection signal="pressed" from="Round3/ButtonFeu2" to="." method="_on_button_feu_2_pressed"]
+[connection signal="pressed" from="Round3/ButtonFoudre2" to="." method="_on_button_foudre_2_pressed"]
+[connection signal="pressed" from="Round4/ButtonFeu3" to="." method="_on_button_feu_3_pressed"]
+[connection signal="pressed" from="Round4/ButtonFoudre3" to="." method="_on_button_foudre_3_pressed"]
+[connection signal="pressed" from="Round4/ButtonEau3" to="." method="_on_button_eau_3_pressed"]

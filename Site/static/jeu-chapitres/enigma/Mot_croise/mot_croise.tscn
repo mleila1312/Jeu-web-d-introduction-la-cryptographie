@@ -1,0 +1,283 @@
+[gd_scene load_steps=6 format=3 uid="uid://cmxtben3f7b2x"]
+
+[ext_resource type="Script" path="res://Mot_croise/mot_croise.gd" id="1_36j1r"]
+[ext_resource type="Texture2D" uid="uid://s2n0tu2jugmp" path="res://art/mot_croise.PNG" id="1_jiqky"]
+[ext_resource type="Texture2D" uid="uid://due654ugyhprn" path="res://art/vertical.PNG" id="2_5bk3u"]
+[ext_resource type="Texture2D" uid="uid://c2jvcg1kgtarq" path="res://art/horizontal.PNG" id="3_5e4x5"]
+[ext_resource type="PackedScene" uid="uid://d0hfuyigelxr0" path="res://Mot_croise/mot_croise_case.tscn" id="5_uaale"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_36j1r")
+
+[node name="vertical" type="Sprite2D" parent="."]
+position = Vector2(877.362, 316)
+scale = Vector2(0.595843, 0.595843)
+texture = ExtResource("2_5bk3u")
+
+[node name="horizontal" type="Sprite2D" parent="."]
+position = Vector2(877.874, 548.082)
+scale = Vector2(0.643236, 0.643236)
+texture = ExtResource("3_5e4x5")
+
+[node name="mot_croise" type="Sprite2D" parent="."]
+position = Vector2(299.037, 326.575)
+scale = Vector2(0.81151, 0.81151)
+texture = ExtResource("1_jiqky")
+
+[node name="case1" parent="." instance=ExtResource("5_uaale")]
+offset_left = 331.0
+offset_top = 16.0
+offset_right = 380.0
+offset_bottom = 65.0
+correct = "S"
+
+[node name="case2" parent="." instance=ExtResource("5_uaale")]
+offset_left = 331.0
+offset_top = 68.0
+offset_right = 380.0
+offset_bottom = 117.0
+correct = "C"
+
+[node name="case3" parent="." instance=ExtResource("5_uaale")]
+offset_left = 331.0
+offset_top = 120.0
+offset_right = 380.0
+offset_bottom = 169.0
+correct = "Y"
+
+[node name="case4" parent="." instance=ExtResource("5_uaale")]
+offset_left = 331.0
+offset_top = 170.0
+offset_right = 380.0
+offset_bottom = 219.0
+correct = "T"
+
+[node name="case5" parent="." instance=ExtResource("5_uaale")]
+offset_left = 331.0
+offset_top = 221.0
+offset_right = 380.0
+offset_bottom = 270.0
+correct = "A"
+
+[node name="case6" parent="." instance=ExtResource("5_uaale")]
+offset_left = 331.0
+offset_top = 273.0
+offset_right = 380.0
+offset_bottom = 322.0
+correct = "L"
+
+[node name="case7" parent="." instance=ExtResource("5_uaale")]
+offset_left = 330.0
+offset_top = 324.0
+offset_right = 379.0
+offset_bottom = 373.0
+correct = "E"
+
+[node name="case8" parent="." instance=ExtResource("5_uaale")]
+offset_left = 485.0
+offset_top = 274.0
+offset_right = 534.0
+offset_bottom = 323.0
+correct = "G"
+
+[node name="case9" parent="." instance=ExtResource("5_uaale")]
+offset_left = 485.0
+offset_top = 325.0
+offset_right = 534.0
+offset_bottom = 374.0
+correct = "R"
+
+[node name="case10" parent="." instance=ExtResource("5_uaale")]
+offset_left = 485.0
+offset_top = 376.0
+offset_right = 534.0
+offset_bottom = 425.0
+correct = "A"
+
+[node name="case11" parent="." instance=ExtResource("5_uaale")]
+offset_left = 485.0
+offset_top = 429.0
+offset_right = 534.0
+offset_bottom = 478.0
+correct = "N"
+
+[node name="case12" parent="." instance=ExtResource("5_uaale")]
+offset_left = 485.0
+offset_top = 479.0
+offset_right = 534.0
+offset_bottom = 528.0
+correct = "D"
+
+[node name="case13" parent="." instance=ExtResource("5_uaale")]
+offset_left = 175.0
+offset_top = 326.0
+offset_right = 224.0
+offset_bottom = 375.0
+correct = "V"
+
+[node name="case14" parent="." instance=ExtResource("5_uaale")]
+offset_left = 175.0
+offset_top = 376.0
+offset_right = 224.0
+offset_bottom = 425.0
+correct = "E"
+
+[node name="case15" parent="." instance=ExtResource("5_uaale")]
+offset_left = 175.0
+offset_top = 428.0
+offset_right = 224.0
+offset_bottom = 477.0
+correct = "R"
+
+[node name="case16" parent="." instance=ExtResource("5_uaale")]
+offset_left = 176.0
+offset_top = 480.0
+offset_right = 225.0
+offset_bottom = 529.0
+correct = "N"
+
+[node name="case17" parent="." instance=ExtResource("5_uaale")]
+offset_left = 176.0
+offset_top = 531.0
+offset_right = 225.0
+offset_bottom = 580.0
+correct = "A"
+
+[node name="case18" parent="." instance=ExtResource("5_uaale")]
+offset_left = 176.0
+offset_top = 582.0
+offset_right = 225.0
+offset_bottom = 631.0
+correct = "M"
+
+[node name="case19" parent="." instance=ExtResource("5_uaale")]
+offset_left = 228.0
+offset_top = 324.0
+offset_right = 277.0
+offset_bottom = 373.0
+correct = "I"
+
+[node name="case20" parent="." instance=ExtResource("5_uaale")]
+offset_left = 279.0
+offset_top = 325.0
+offset_right = 328.0
+offset_bottom = 374.0
+correct = "G"
+
+[node name="case21" parent="." instance=ExtResource("5_uaale")]
+offset_left = 382.0
+offset_top = 324.0
+offset_right = 431.0
+offset_bottom = 373.0
+correct = "N"
+
+[node name="case22" parent="." instance=ExtResource("5_uaale")]
+offset_left = 433.0
+offset_top = 324.0
+offset_right = 482.0
+offset_bottom = 373.0
+correct = "E"
+
+[node name="case23" parent="." instance=ExtResource("5_uaale")]
+offset_left = 537.0
+offset_top = 324.0
+offset_right = 586.0
+offset_bottom = 373.0
+correct = "E"
+
+[node name="case24" parent="." instance=ExtResource("5_uaale")]
+offset_left = 22.0
+offset_top = 531.0
+offset_right = 71.0
+offset_bottom = 580.0
+correct = "C"
+
+[node name="case25" parent="." instance=ExtResource("5_uaale")]
+offset_left = 73.0
+offset_top = 531.0
+offset_right = 122.0
+offset_bottom = 580.0
+correct = "E"
+
+[node name="case26" parent="." instance=ExtResource("5_uaale")]
+offset_left = 124.0
+offset_top = 531.0
+offset_right = 173.0
+offset_bottom = 580.0
+correct = "S"
+
+[node name="case27" parent="." instance=ExtResource("5_uaale")]
+offset_left = 227.0
+offset_top = 531.0
+offset_right = 276.0
+offset_bottom = 580.0
+correct = "R"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 601.0
+offset_top = -1.0
+offset_right = 1153.0
+offset_bottom = 187.0
+
+[node name="Explications" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 26.0
+offset_right = 537.0
+offset_bottom = 168.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Il est temps de mettre en pratique tes connaissances. 
+Pour ajouter une lettre dans une case, mets ta souris sur cette case.
+Si la réponse est fausse, attends un peu et réessaie.
+
+Bonne chance !"
+
+[node name="bravo" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 46.0
+offset_right = 195.0
+offset_bottom = 151.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 44
+text = "Bravo !"
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -22.0
+offset_top = -11.0
+offset_right = 616.0
+offset_bottom = 14.0
+
+[connection signal="node_completed" from="case1" to="." method="_on_case_1_node_completed"]
+[connection signal="node_completed" from="case2" to="." method="_on_case_2_node_completed"]
+[connection signal="node_completed" from="case3" to="." method="_on_case_3_node_completed"]
+[connection signal="node_completed" from="case4" to="." method="_on_case_4_node_completed"]
+[connection signal="node_completed" from="case5" to="." method="_on_case_5_node_completed"]
+[connection signal="node_completed" from="case6" to="." method="_on_case_6_node_completed"]
+[connection signal="node_completed" from="case7" to="." method="_on_case_7_node_completed"]
+[connection signal="node_completed" from="case8" to="." method="_on_case_8_node_completed"]
+[connection signal="node_completed" from="case9" to="." method="_on_case_9_node_completed"]
+[connection signal="node_completed" from="case10" to="." method="_on_case_10_node_completed"]
+[connection signal="node_completed" from="case11" to="." method="_on_case_11_node_completed"]
+[connection signal="node_completed" from="case12" to="." method="_on_case_12_node_completed"]
+[connection signal="node_completed" from="case13" to="." method="_on_case_13_node_completed"]
+[connection signal="node_completed" from="case14" to="." method="_on_case_14_node_completed"]
+[connection signal="node_completed" from="case15" to="." method="_on_case_15_node_completed"]
+[connection signal="node_completed" from="case16" to="." method="_on_case_16_node_completed"]
+[connection signal="node_completed" from="case17" to="." method="_on_case_17_node_completed"]
+[connection signal="node_completed" from="case18" to="." method="_on_case_18_node_completed"]
+[connection signal="node_completed" from="case19" to="." method="_on_case_19_node_completed"]
+[connection signal="node_completed" from="case20" to="." method="_on_case_20_node_completed"]
+[connection signal="node_completed" from="case21" to="." method="_on_case_21_node_completed"]
+[connection signal="node_completed" from="case22" to="." method="_on_case_22_node_completed"]
+[connection signal="node_completed" from="case23" to="." method="_on_case_23_node_completed"]
+[connection signal="node_completed" from="case24" to="." method="_on_case_24_node_completed"]
+[connection signal="node_completed" from="case25" to="." method="_on_case_25_node_completed"]
+[connection signal="node_completed" from="case26" to="." method="_on_case_26_node_completed"]
+[connection signal="node_completed" from="case27" to="." method="_on_case_27_node_completed"]

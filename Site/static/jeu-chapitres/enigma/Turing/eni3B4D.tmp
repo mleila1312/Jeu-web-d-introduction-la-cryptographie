@@ -1,0 +1,428 @@
+[gd_scene load_steps=8 format=3 uid="uid://monivps86esr"]
+
+[ext_resource type="Script" path="res://Turing/enigma.gd" id="1_gf25g"]
+[ext_resource type="Texture2D" uid="uid://dhw7x6icwemb0" path="res://art/clavier_enigma.png" id="1_oejod"]
+[ext_resource type="Script" path="res://Turing/Light.gd" id="3_m36na"]
+[ext_resource type="Texture2D" uid="uid://bs7eao7tva0sf" path="res://art/halo.png" id="3_v17p7"]
+[ext_resource type="PackedScene" uid="uid://bhyppnbgrlc4t" path="res://Turing/cables.tscn" id="4_as4ox"]
+[ext_resource type="PackedScene" uid="uid://6jyye5sal5ls" path="res://Turing/rotors.tscn" id="5_jlffc"]
+[ext_resource type="PackedScene" uid="uid://d2wm5u2kbq2d4" path="res://Turing/reflecteur.tscn" id="6_jc5rc"]
+
+[node name="Enigma" type="Node2D"]
+script = ExtResource("1_gf25g")
+
+[node name="ClavierEnigma" type="Sprite2D" parent="."]
+position = Vector2(550, 260)
+scale = Vector2(1.08, 1.08)
+texture = ExtResource("1_oejod")
+
+[node name="ConfigCables" type="Button" parent="ClavierEnigma"]
+offset_left = -252.0
+offset_top = 174.0
+offset_right = 252.0
+offset_bottom = 235.0
+theme_override_font_sizes/font_size = 18
+text = "Accès configuration câbles "
+metadata/_edit_use_anchors_ = true
+
+[node name="ConfigRotors" type="Button" parent="ClavierEnigma"]
+offset_left = -252.0
+offset_top = -233.0
+offset_right = 252.0
+offset_bottom = -171.0
+theme_override_font_sizes/font_size = 18
+text = "Accès configuration rotors"
+metadata/_edit_use_anchors_ = true
+
+[node name="AccesReflecteur" type="Button" parent="ClavierEnigma"]
+offset_left = -300.444
+offset_top = -169.0
+offset_right = -251.444
+offset_bottom = 174.0
+theme_override_font_sizes/font_size = 14
+text = "A
+c
+c
+è
+s
+
+r
+é
+f
+l
+e
+c
+t
+e
+u
+r"
+
+[node name="Light" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 279.0
+offset_top = 75.0
+offset_right = 819.0
+offset_bottom = 231.0
+script = ExtResource("3_m36na")
+
+[node name="Halo" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(88, 91)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo2" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(332, 133)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo3" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(217, 135)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo4" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(200, 87)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo5" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(182, 47)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo6" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(256, 86)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo7" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(312, 87)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo8" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(368, 87)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo9" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(462, 42)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo10" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(426, 85)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo11" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(482, 86)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo12" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(506, 130)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo13" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(445, 130)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo14" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(388, 130)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo15" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(515, 42)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo16" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(47, 135)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo17" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(72, 45)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo18" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(239, 44)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo19" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(143, 89)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo20" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(295, 44)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo21" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(405, 44)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo22" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(274, 135)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo23" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(128, 47)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo24" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(159, 132)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo25" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(103, 133)
+texture = ExtResource("3_v17p7")
+
+[node name="Halo26" type="Sprite2D" parent="Light"]
+modulate = Color(1, 1, 1, 0.607843)
+position = Vector2(350, 44)
+texture = ExtResource("3_v17p7")
+
+[node name="Boutons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 279.0
+offset_top = 237.0
+offset_right = 823.0
+offset_bottom = 425.0
+
+[node name="Bouton1" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 68.0
+offset_right = 87.0
+offset_bottom = 104.0
+
+[node name="Bouton2" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 126.0
+offset_right = 346.0
+offset_bottom = 162.0
+
+[node name="Bouton3" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 189.0
+offset_top = 127.0
+offset_right = 225.0
+offset_bottom = 163.0
+
+[node name="Bouton4" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 68.0
+offset_right = 206.0
+offset_bottom = 104.0
+
+[node name="Bouton5" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 12.0
+offset_right = 187.0
+offset_bottom = 48.0
+
+[node name="Bouton6" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 69.0
+offset_right = 265.0
+offset_bottom = 105.0
+
+[node name="Bouton7" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 69.0
+offset_right = 327.0
+offset_bottom = 105.0
+
+[node name="Bouton8" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 351.0
+offset_top = 69.0
+offset_right = 387.0
+offset_bottom = 105.0
+
+[node name="Bouton9" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 452.0
+offset_top = 12.0
+offset_right = 488.0
+offset_bottom = 48.0
+
+[node name="Bouton10" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 411.0
+offset_top = 68.0
+offset_right = 447.0
+offset_bottom = 104.0
+
+[node name="Bouton11" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 68.0
+offset_right = 509.0
+offset_bottom = 104.0
+
+[node name="Bouton12" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 495.0
+offset_top = 126.0
+offset_right = 531.0
+offset_bottom = 162.0
+
+[node name="Bouton13" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 433.0
+offset_top = 126.0
+offset_right = 469.0
+offset_bottom = 162.0
+
+[node name="Bouton14" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 126.0
+offset_right = 408.0
+offset_bottom = 162.0
+
+[node name="Bouton15" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 511.0
+offset_top = 12.0
+offset_right = 547.0
+offset_bottom = 48.0
+
+[node name="Bouton16" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 126.0
+offset_right = 44.0
+offset_bottom = 162.0
+
+[node name="Bouton17" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 12.0
+offset_right = 69.0
+offset_bottom = 48.0
+
+[node name="Bouton18" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 12.0
+offset_right = 247.0
+offset_bottom = 48.0
+
+[node name="Bouton19" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 68.0
+offset_right = 146.0
+offset_bottom = 104.0
+
+[node name="Bouton20" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 12.0
+offset_right = 306.0
+offset_bottom = 48.0
+
+[node name="Bouton21" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 12.0
+offset_right = 427.0
+offset_bottom = 48.0
+
+[node name="Bouton22" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 126.0
+offset_right = 285.0
+offset_bottom = 162.0
+
+[node name="Bouton23" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 12.0
+offset_right = 128.0
+offset_bottom = 48.0
+
+[node name="Bouton24" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 127.0
+offset_right = 164.0
+offset_bottom = 163.0
+
+[node name="Bouton25" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 127.0
+offset_right = 104.0
+offset_bottom = 163.0
+
+[node name="Bouton26" type="TextureButton" parent="Boutons"]
+layout_mode = 0
+offset_left = 331.0
+offset_top = 12.0
+offset_right = 367.0
+offset_bottom = 48.0
+
+[node name="Cables" parent="." instance=ExtResource("4_as4ox")]
+position = Vector2(279, 75)
+
+[node name="Rotors" parent="." instance=ExtResource("5_jlffc")]
+position = Vector2(305, 87)
+
+[node name="Reflecteur" parent="." instance=ExtResource("6_jc5rc")]
+position = Vector2(305, 87)
+
+[connection signal="light" from="." to="Light" method="_on_enigma_light"]
+[connection signal="pressed" from="ClavierEnigma/ConfigCables" to="." method="_on_config_cables_pressed"]
+[connection signal="pressed" from="ClavierEnigma/ConfigRotors" to="." method="_on_config_rotors_pressed"]
+[connection signal="pressed" from="Boutons/Bouton1" to="." method="clavier_pressed" binds= [1]]
+[connection signal="pressed" from="Boutons/Bouton2" to="." method="clavier_pressed" binds= [2]]
+[connection signal="pressed" from="Boutons/Bouton3" to="." method="clavier_pressed" binds= [3]]
+[connection signal="pressed" from="Boutons/Bouton4" to="." method="clavier_pressed" binds= [4]]
+[connection signal="pressed" from="Boutons/Bouton5" to="." method="clavier_pressed" binds= [5]]
+[connection signal="pressed" from="Boutons/Bouton6" to="." method="clavier_pressed" binds= [6]]
+[connection signal="pressed" from="Boutons/Bouton7" to="." method="clavier_pressed" binds= [7]]
+[connection signal="pressed" from="Boutons/Bouton8" to="." method="clavier_pressed" binds= [8]]
+[connection signal="pressed" from="Boutons/Bouton9" to="." method="clavier_pressed" binds= [9]]
+[connection signal="pressed" from="Boutons/Bouton10" to="." method="clavier_pressed" binds= [10]]
+[connection signal="pressed" from="Boutons/Bouton11" to="." method="clavier_pressed" binds= [11]]
+[connection signal="pressed" from="Boutons/Bouton12" to="." method="clavier_pressed" binds= [12]]
+[connection signal="pressed" from="Boutons/Bouton13" to="." method="clavier_pressed" binds= [13]]
+[connection signal="pressed" from="Boutons/Bouton14" to="." method="clavier_pressed" binds= [14]]
+[connection signal="pressed" from="Boutons/Bouton15" to="." method="clavier_pressed" binds= [15]]
+[connection signal="pressed" from="Boutons/Bouton16" to="." method="clavier_pressed" binds= [16]]
+[connection signal="pressed" from="Boutons/Bouton17" to="." method="clavier_pressed" binds= [17]]
+[connection signal="pressed" from="Boutons/Bouton18" to="." method="clavier_pressed" binds= [18]]
+[connection signal="pressed" from="Boutons/Bouton19" to="." method="clavier_pressed" binds= [19]]
+[connection signal="pressed" from="Boutons/Bouton20" to="." method="clavier_pressed" binds= [20]]
+[connection signal="pressed" from="Boutons/Bouton21" to="." method="clavier_pressed" binds= [21]]
+[connection signal="pressed" from="Boutons/Bouton22" to="." method="clavier_pressed" binds= [22]]
+[connection signal="pressed" from="Boutons/Bouton23" to="." method="clavier_pressed" binds= [23]]
+[connection signal="pressed" from="Boutons/Bouton24" to="." method="clavier_pressed" binds= [24]]
+[connection signal="pressed" from="Boutons/Bouton25" to="." method="clavier_pressed" binds= [25]]
+[connection signal="pressed" from="Boutons/Bouton26" to="." method="clavier_pressed" binds= [26]]
+[connection signal="retour" from="Cables" to="." method="_on_retour"]
+[connection signal="retour" from="Rotors" to="." method="_on_retour"]

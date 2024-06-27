@@ -119,58 +119,39 @@ def site_dodge_the_creeps():
     return send_from_directory(app.static_folder+"/dodge_the_creeps/web_tes/", "Index_test.html")
 
 #pour les certificats
-@app.route('/Certificats-game')
-def site_certificat():
-    return app.send_static_file(f"jeu-chapitres/Certificat/godot-game-certif/web/Certificats.html")
-
 @app.route('/Chapitre-certificat')
 def certiftestiframe():
     return app.send_static_file(f"jeu-chapitres/Certificat/Chapitre-certificat.html")
 
 #grand chiffre
-@app.route('/GrandChiffre-game')
-def jeu_grandchiffre():
-    return app.send_static_file(f"jeu-chapitres/GrandChiffre/godot/web/GrandChiffre.html")
-
 @app.route('/Chapitre-GrandChiffre')
 def grandchiffretestiframe():
     return app.send_static_file(f"jeu-chapitres/GrandChiffre/Chapitre-grandchiffre.html")
 
 #pour Scytale
-@app.route('/Scytale-game')
-def site_scytale():
-    return app.send_static_file(f"jeu-chapitres/Scytale/web/Scytale.html")
-
 @app.route('/Chapitre-scytale')
 def scytaletestiframe():
     return app.send_static_file(f"jeu-chapitres/Scytale/Scytale.html")
 
 # Clé publique
-@app.route('/Cle_publique-game')
-def site_cle_publique():
-    return app.send_static_file(f"jeu-chapitres/Cle_publique/web/Cle_publique.html")
-
 @app.route('/Chapitre-cle_publique')
 def cle_publiquetestiframe():
     return app.send_static_file(f"jeu-chapitres/Cle_publique/Cle_publique.html")
 
 # Enigma
-@app.route('/enigma-game')
-def site_enigma():
-    return app.send_static_file(f"jeu-chapitres/enigma/web/enigma.html")
-
 @app.route('/Chapitre-enigma')
 def enigmatestiframe():
     return app.send_static_file(f"jeu-chapitres/enigma/enigma.html")
 
 #Pour Cesar
-@app.route('/Cesar-game')
-def site_cesar():
-    return app.send_static_file(f"jeu-chapitres/Cesar/web/Cesar.html")
-
 @app.route('/Chapitre-cesar')
 def cesartestiframe():
     return app.send_static_file(f"jeu-chapitres/Cesar/Cesar.html")
+
+#Pour Vigenre
+@app.route('/Chapitre-vigenere')
+def vigtestiframe():
+    return app.send_static_file(f"jeu-chapitres/Vigenere/Vigenere-chap.html")
 
 #test iframe
 @app.route('/testiframe')

@@ -1,0 +1,559 @@
+[gd_scene load_steps=17 format=3 uid="uid://cc8oleqxshaov"]
+
+[ext_resource type="Texture2D" uid="uid://wt0v5rv7iw5w" path="res://Télécom Paris/FondBois.png" id="1_fvqfh"]
+[ext_resource type="Script" path="res://chiffrement.gd" id="1_rrx07"]
+[ext_resource type="Texture2D" uid="uid://gyjavysqavs6" path="res://Télécom Paris/LettreChiffrementVF.png" id="2_5gent"]
+[ext_resource type="Texture2D" uid="uid://dpk1gkrbbp74l" path="res://Télécom Paris/tableChiffrement.png" id="3_6hq68"]
+[ext_resource type="Texture2D" uid="uid://clb4ern80jexd" path="res://Télécom Paris/BoutonTC.png" id="4_gk0ik"]
+[ext_resource type="Texture2D" uid="uid://bx2tctdocxh67" path="res://Télécom Paris/ZoomTabChiffrementExplication.png" id="4_h6nx6"]
+[ext_resource type="Script" path="res://Lettre1.gd" id="5_12rm2"]
+[ext_resource type="Texture2D" uid="uid://b16agpkgbqg4x" path="res://Télécom Paris/ZoomExplicationPpeChiffrementVigenère.png" id="5_r06oj"]
+[ext_resource type="Texture2D" uid="uid://cbdkwr262dgxw" path="res://Télécom Paris/BoutonAccèsTable.png" id="6_a55u4"]
+[ext_resource type="Texture2D" uid="uid://crtk8i2vjnihb" path="res://Télécom Paris/Retour.png" id="6_itbxb"]
+[ext_resource type="Texture2D" uid="uid://dd6e2xrfosryu" path="res://Télécom Paris/BoutonAccèsPpeDeChiffr.png" id="7_c4aml"]
+[ext_resource type="Texture2D" uid="uid://b3y8esljr0fwj" path="res://Télécom Paris/LigneMalChiffrée.png" id="8_pwhvk"]
+[ext_resource type="Texture2D" uid="uid://d3g44a46nt273" path="res://Télécom Paris/LigneBienChiffrée.png" id="9_mturp"]
+[ext_resource type="Texture2D" uid="uid://dycsy7k1swtv0" path="res://Télécom Paris/LettreChiffréeComplétée.png" id="10_gs31m"]
+[ext_resource type="Texture2D" uid="uid://btoerrgrri21f" path="res://Télécom Paris/ScèneTransition2.png" id="15_ldl50"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_r7s01"]
+
+[node name="Chiffrement" type="Node2D"]
+script = ExtResource("1_rrx07")
+
+[node name="FondBois" type="Sprite2D" parent="."]
+position = Vector2(571.875, 485.625)
+scale = Vector2(0.772684, 0.598107)
+texture = ExtResource("1_fvqfh")
+
+[node name="TableChiffrement" type="Sprite2D" parent="."]
+position = Vector2(588, 327)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6hq68")
+
+[node name="BoutonAccèsTable" type="Sprite2D" parent="TableChiffrement"]
+position = Vector2(806, 186)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_a55u4")
+
+[node name="TextureButton" type="TextureButton" parent="TableChiffrement/BoutonAccèsTable"]
+offset_left = -168.571
+offset_top = -197.143
+offset_right = -128.571
+offset_bottom = -157.143
+scale = Vector2(10, 10)
+
+[node name="BoutonAccèsPpeDeChiffr" type="Sprite2D" parent="TableChiffrement"]
+position = Vector2(806, -286)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_c4aml")
+
+[node name="TextureButton" type="TextureButton" parent="TableChiffrement/BoutonAccèsPpeDeChiffr"]
+offset_left = -168.571
+offset_top = -197.143
+offset_right = -128.571
+offset_bottom = -157.143
+scale = Vector2(10, 10)
+
+[node name="Retour" type="Sprite2D" parent="TableChiffrement"]
+position = Vector2(-1046, 532)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_itbxb")
+
+[node name="TextureButton" type="TextureButton" parent="TableChiffrement"]
+offset_left = -1102.0
+offset_top = 472.0
+offset_right = -1062.0
+offset_bottom = 512.0
+scale = Vector2(3.2127, 3.61184)
+
+[node name="LettreChiffrementVf" type="Sprite2D" parent="."]
+position = Vector2(555, 332)
+scale = Vector2(0.41, 0.41)
+texture = ExtResource("2_5gent")
+
+[node name="BoutonTc" type="Sprite2D" parent="LettreChiffrementVf"]
+position = Vector2(643.902, 400)
+scale = Vector2(0.609756, 0.609756)
+texture = ExtResource("4_gk0ik")
+
+[node name="TextureButton" type="TextureButton" parent="LettreChiffrementVf"]
+offset_left = 237.0
+offset_top = 320.0
+offset_right = 1013.0
+offset_bottom = 464.0
+pivot_offset = Vector2(636, -50)
+
+[node name="L1" type="Label" parent="."]
+offset_left = 135.0
+offset_top = 53.0
+offset_right = 809.0
+offset_bottom = 1375.0
+scale = Vector2(0.05, 0.05)
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 300
+text = "
+"
+max_lines_visible = 1
+visible_characters = 1
+script = ExtResource("5_12rm2")
+
+[node name="Control" type="Control" parent="L1"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -146.0
+offset_top = -244.0
+offset_right = 360.0
+offset_bottom = 900.0
+
+[node name="L2" type="Label" parent="."]
+offset_left = 162.0
+offset_top = 51.0
+offset_right = 956.0
+offset_bottom = 1353.0
+scale = Vector2(0.05, 0.05)
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 300
+text = "
+"
+max_lines_visible = 1
+visible_characters = 1
+script = ExtResource("5_12rm2")
+
+[node name="Control" type="Control" parent="L2"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -146.0
+offset_top = -244.0
+offset_right = 340.0
+offset_bottom = 600.0
+
+[node name="L3" type="Label" parent="."]
+offset_left = 201.0
+offset_top = 52.0
+offset_right = 995.0
+offset_bottom = 1354.0
+scale = Vector2(0.05, 0.05)
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 300
+text = "
+"
+max_lines_visible = 1
+visible_characters = 1
+script = ExtResource("5_12rm2")
+
+[node name="Control" type="Control" parent="L3"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -146.0
+offset_top = -244.0
+offset_right = 340.0
+offset_bottom = 600.0
+
+[node name="L4" type="Label" parent="."]
+offset_left = 225.0
+offset_top = 52.0
+offset_right = 1019.0
+offset_bottom = 1354.0
+scale = Vector2(0.05, 0.05)
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 300
+text = "
+"
+max_lines_visible = 1
+visible_characters = 1
+script = ExtResource("5_12rm2")
+
+[node name="Control" type="Control" parent="L4"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -146.0
+offset_top = -244.0
+offset_right = 340.0
+offset_bottom = 600.0
+
+[node name="L5" type="Label" parent="."]
+offset_left = 251.0
+offset_top = 50.0
+offset_right = 1045.0
+offset_bottom = 1352.0
+scale = Vector2(0.05, 0.05)
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 300
+text = "
+"
+max_lines_visible = 1
+visible_characters = 1
+script = ExtResource("5_12rm2")
+
+[node name="Control" type="Control" parent="L5"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -146.0
+offset_top = -244.0
+offset_right = 340.0
+offset_bottom = 600.0
+
+[node name="L6" type="Label" parent="."]
+offset_left = 277.0
+offset_top = 51.0
+offset_right = 1071.0
+offset_bottom = 1353.0
+scale = Vector2(0.05, 0.05)
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 300
+text = "
+"
+max_lines_visible = 1
+visible_characters = 1
+script = ExtResource("5_12rm2")
+
+[node name="Control" type="Control" parent="L6"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -146.0
+offset_top = -244.0
+offset_right = 340.0
+offset_bottom = 600.0
+
+[node name="L7" type="Label" parent="."]
+offset_left = 301.0
+offset_top = 52.0
+offset_right = 1095.0
+offset_bottom = 1354.0
+scale = Vector2(0.05, 0.05)
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 300
+text = "
+"
+max_lines_visible = 1
+visible_characters = 1
+script = ExtResource("5_12rm2")
+
+[node name="Control" type="Control" parent="L7"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -146.0
+offset_top = -244.0
+offset_right = 340.0
+offset_bottom = 600.0
+
+[node name="L8" type="Label" parent="."]
+offset_left = 341.0
+offset_top = 53.0
+offset_right = 1135.0
+offset_bottom = 1355.0
+scale = Vector2(0.05, 0.05)
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 300
+text = "
+"
+max_lines_visible = 1
+visible_characters = 1
+script = ExtResource("5_12rm2")
+
+[node name="Control" type="Control" parent="L8"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -146.0
+offset_top = -244.0
+offset_right = 340.0
+offset_bottom = 600.0
+
+[node name="L9" type="Label" parent="."]
+offset_left = 367.0
+offset_top = 52.0
+offset_right = 1161.0
+offset_bottom = 1354.0
+scale = Vector2(0.05, 0.05)
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 300
+text = "
+"
+max_lines_visible = 1
+visible_characters = 1
+script = ExtResource("5_12rm2")
+
+[node name="Control" type="Control" parent="L9"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -146.0
+offset_top = -244.0
+offset_right = 340.0
+offset_bottom = 600.0
+
+[node name="L10" type="Label" parent="."]
+offset_left = 392.0
+offset_top = 51.0
+offset_right = 1186.0
+offset_bottom = 1353.0
+scale = Vector2(0.05, 0.05)
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 300
+text = "
+"
+max_lines_visible = 1
+visible_characters = 1
+script = ExtResource("5_12rm2")
+
+[node name="Control" type="Control" parent="L10"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -146.0
+offset_top = -244.0
+offset_right = 340.0
+offset_bottom = 600.0
+
+[node name="L11" type="Label" parent="."]
+offset_left = 417.0
+offset_top = 51.0
+offset_right = 1211.0
+offset_bottom = 1353.0
+scale = Vector2(0.05, 0.05)
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 300
+text = "
+"
+max_lines_visible = 1
+visible_characters = 1
+script = ExtResource("5_12rm2")
+
+[node name="Control" type="Control" parent="L11"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -146.0
+offset_top = -244.0
+offset_right = 340.0
+offset_bottom = 600.0
+
+[node name="L12" type="Label" parent="."]
+offset_left = 443.0
+offset_top = 51.0
+offset_right = 1237.0
+offset_bottom = 1353.0
+scale = Vector2(0.05, 0.05)
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 300
+text = "
+"
+max_lines_visible = 1
+visible_characters = 1
+script = ExtResource("5_12rm2")
+
+[node name="Control" type="Control" parent="L12"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -146.0
+offset_top = -244.0
+offset_right = 340.0
+offset_bottom = 600.0
+
+[node name="L13" type="Label" parent="."]
+offset_left = 468.0
+offset_top = 50.0
+offset_right = 1262.0
+offset_bottom = 1352.0
+scale = Vector2(0.05, 0.05)
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 300
+text = "
+"
+max_lines_visible = 1
+visible_characters = 1
+script = ExtResource("5_12rm2")
+
+[node name="Control" type="Control" parent="L13"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -146.0
+offset_top = -244.0
+offset_right = 340.0
+offset_bottom = 600.0
+
+[node name="L14" type="Label" parent="."]
+offset_left = 493.0
+offset_top = 52.0
+offset_right = 1287.0
+offset_bottom = 1354.0
+scale = Vector2(0.05, 0.05)
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 300
+text = "
+"
+max_lines_visible = 1
+visible_characters = 1
+script = ExtResource("5_12rm2")
+
+[node name="Control" type="Control" parent="L14"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -146.0
+offset_top = -244.0
+offset_right = 340.0
+offset_bottom = 600.0
+
+[node name="L15" type="Label" parent="."]
+offset_left = 518.0
+offset_top = 52.0
+offset_right = 1312.0
+offset_bottom = 1354.0
+scale = Vector2(0.05, 0.05)
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 300
+text = "
+"
+max_lines_visible = 1
+visible_characters = 1
+script = ExtResource("5_12rm2")
+
+[node name="Control" type="Control" parent="L15"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -146.0
+offset_top = -244.0
+offset_right = 340.0
+offset_bottom = 600.0
+
+[node name="L16" type="Label" parent="."]
+offset_left = 543.0
+offset_top = 52.0
+offset_right = 1337.0
+offset_bottom = 1354.0
+scale = Vector2(0.05, 0.05)
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 300
+text = "
+"
+max_lines_visible = 1
+visible_characters = 1
+script = ExtResource("5_12rm2")
+
+[node name="Control" type="Control" parent="L16"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -146.0
+offset_top = -244.0
+offset_right = 340.0
+offset_bottom = 600.0
+
+[node name="Button" type="Button" parent="."]
+offset_left = 748.0
+offset_top = 536.0
+offset_right = 1103.0
+offset_bottom = 726.0
+scale = Vector2(0.4, 0.4)
+theme_override_font_sizes/font_size = 44
+text = "VALIDER"
+icon = SubResource("ViewportTexture_r7s01")
+
+[node name="LigneMalChiffrée" type="Sprite2D" parent="."]
+position = Vector2(576, 312)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("8_pwhvk")
+
+[node name="LigneBienChiffrée" type="Sprite2D" parent="."]
+position = Vector2(572, 333)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("9_mturp")
+
+[node name="LettreChiffréeComplétée" type="Sprite2D" parent="."]
+position = Vector2(555, 332)
+scale = Vector2(0.41, 0.41)
+texture = ExtResource("10_gs31m")
+
+[node name="ZoomTabChiffrementExplication" type="Sprite2D" parent="."]
+position = Vector2(596, 327)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_h6nx6")
+
+[node name="Retour" type="Sprite2D" parent="ZoomTabChiffrementExplication"]
+position = Vector2(-701.333, 365)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_itbxb")
+
+[node name="TextureButton" type="TextureButton" parent="ZoomTabChiffrementExplication/Retour"]
+offset_left = -280.003
+offset_top = -343.333
+offset_right = -240.003
+offset_bottom = -303.333
+scale = Vector2(15, 15)
+
+[node name="ZoomExplicationPpeChiffrementVigenère" type="Sprite2D" parent="."]
+position = Vector2(596, 327)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("5_r06oj")
+
+[node name="Retour" type="Sprite2D" parent="ZoomExplicationPpeChiffrementVigenère"]
+position = Vector2(-701.333, 364)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_itbxb")
+
+[node name="TextureButton" type="TextureButton" parent="ZoomExplicationPpeChiffrementVigenère/Retour"]
+offset_left = -280.003
+offset_top = -343.333
+offset_right = -240.003
+offset_bottom = -303.333
+scale = Vector2(15, 15)
+
+[node name="ScèneTransition2" type="Sprite2D" parent="."]
+position = Vector2(541, 107)
+scale = Vector2(0.83, 0.83)
+texture = ExtResource("15_ldl50")
+
+[connection signal="pastrouve" from="." to="." method="_on_pastrouve"]
+[connection signal="trouve" from="." to="." method="_on_trouve"]
+[connection signal="pressed" from="TableChiffrement/BoutonAccèsTable/TextureButton" to="." method="_on_texture_button_pressed_acces_table"]
+[connection signal="pressed" from="TableChiffrement/BoutonAccèsPpeDeChiffr/TextureButton" to="." method="_on_texture_button_pressed_acces_ppe_chiffr"]
+[connection signal="pressed" from="TableChiffrement/TextureButton" to="." method="_on_texture_button_pressed_retour"]
+[connection signal="pressed" from="LettreChiffrementVf/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="mouse_entered" from="L1/Control" to="L1" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="L1/Control" to="L1" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="L2/Control" to="L2" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="L2/Control" to="L2" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="L3/Control" to="L3" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="L3/Control" to="L3" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="L4/Control" to="L4" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="L4/Control" to="L4" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="L5/Control" to="L5" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="L5/Control" to="L5" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="L6/Control" to="L6" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="L6/Control" to="L6" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="L7/Control" to="L7" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="L7/Control" to="L7" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="L8/Control" to="L8" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="L8/Control" to="L8" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="L9/Control" to="L9" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="L9/Control" to="L9" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="L10/Control" to="L10" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="L10/Control" to="L10" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="L11/Control" to="L11" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="L11/Control" to="L11" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="L12/Control" to="L12" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="L12/Control" to="L12" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="L13/Control" to="L13" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="L13/Control" to="L13" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="L14/Control" to="L14" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="L14/Control" to="L14" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="L15/Control" to="L15" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="L15/Control" to="L15" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="L16/Control" to="L16" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="L16/Control" to="L16" method="_on_control_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_SubmitButton_pressed"]
+[connection signal="pressed" from="ZoomTabChiffrementExplication/Retour/TextureButton" to="." method="_on_texture_button_pressed_tab_chiffr_retour"]
+[connection signal="pressed" from="ZoomExplicationPpeChiffrementVigenère/Retour/TextureButton" to="." method="_on_texture_button_pressed_ppe_chiffr_retour"]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bq0184ht436ev"]
+
+[ext_resource type="Script" path="res://Turing/label_rotor.gd" id="1_t2w2j"]
+
+[node name="LabelRotor" type="Label"]
+offset_right = 159.0
+offset_bottom = 154.0
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_t2w2j")

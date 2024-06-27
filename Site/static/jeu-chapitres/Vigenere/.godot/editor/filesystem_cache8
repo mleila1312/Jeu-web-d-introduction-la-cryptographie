@@ -1,0 +1,107 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1719506821
+Area2D.gd::GDScript::-1::1719506454::0::1::::<>Area2D<>::
+ArrierePlanBureau.gd::GDScript::-1::1719506454::0::1::::<>Sprite2D<>::
+Chiffre1.gd::GDScript::-1::1719506454::0::1::::<>Label<>::
+Chiffre2.gd::GDScript::-1::1719506454::0::1::::<>Label<>::
+Chiffre3.gd::GDScript::-1::1719506454::0::1::::<>Label<>::
+Chiffre4.gd::GDScript::-1::1719506454::0::1::::<>Label<>::
+chiffre.gd::GDScript::-1::1719506455::0::1::::<>Label<>::
+chiffrement.gd::GDScript::-1::1719506455::0::1::::<>Node2D<>::
+chiffrement.tscn::PackedScene::4982213438057539497::1719506455::0::1::::<><>::uid://wt0v5rv7iw5w::::res://Télécom Paris/FondBois.png<>res://chiffrement.gd<>uid://gyjavysqavs6::::res://Télécom Paris/LettreChiffrementVF.png<>uid://dpk1gkrbbp74l::::res://Télécom Paris/tableChiffrement.png<>uid://clb4ern80jexd::::res://Télécom Paris/BoutonTC.png<>uid://bx2tctdocxh67::::res://Télécom Paris/ZoomTabChiffrementExplication.png<>res://Lettre1.gd<>uid://b16agpkgbqg4x::::res://Télécom Paris/ZoomExplicationPpeChiffrementVigenère.png<>uid://cbdkwr262dgxw::::res://Télécom Paris/BoutonAccèsTable.png<>uid://crtk8i2vjnihb::::res://Télécom Paris/Retour.png<>uid://dd6e2xrfosryu::::res://Télécom Paris/BoutonAccèsPpeDeChiffr.png<>uid://b3y8esljr0fwj::::res://Télécom Paris/LigneMalChiffrée.png<>uid://d3g44a46nt273::::res://Télécom Paris/LigneBienChiffrée.png<>uid://dycsy7k1swtv0::::res://Télécom Paris/LettreChiffréeComplétée.png<>uid://btoerrgrri21f::::res://Télécom Paris/ScèneTransition2.png
+CodeZoom.gd::GDScript::-1::1719506454::0::1::::<>Sprite2D<>::
+Cryptanalyse.gd::GDScript::-1::1719506454::0::1::::<>Node2D<>::
+cryptanalyse.tscn::PackedScene::3236111001101985257::1719506455::0::1::::<><>::res://Cryptanalyse.gd<>uid://dqjfutc0mycrt::::res://Télécom Paris/CryptanalyseFondGlobal.png<>res://L1Cryptanalyse.gd<>uid://cd3dilbdjpk1u::::res://Télécom Paris/BoutonOutilsD'analyseFréquentielle.png<>uid://ctoxdwroy1nvw::::res://Télécom Paris/BoutonAidepourtrouverCléChiffr.png<>uid://djavoxbd2v8xe::::res://Télécom Paris/BoutonValider.png<>uid://dx0jt2wigjnen::::res://Télécom Paris/arrierePlanBureau.png<>res://ArrierePlanBureau.gd<>uid://crtk8i2vjnihb::::res://Télécom Paris/Retour.png<>uid://dnt5p3ee66igi::::res://Télécom Paris/BoutonFréquenceFrancais.png<>uid://c5rk0smxlgpse::::res://Télécom Paris/BoutonFréquencesTexte.png<>uid://ialwu4kangsi::::res://Télécom Paris/LettresFréquenceTexte.png<>uid://vsm1ap0mhwpb::::res://Télécom Paris/Lettres fréquencesFrançais.png<>uid://biiofco0v5m0u::::res://Télécom Paris/MauvaiseClé.png<>uid://lkw0820oj8dk::::res://Télécom Paris/AidepourtrouverCléChiffr.png<>uid://bvv2dclgq0uvn::::res://Télécom Paris/ScèneFinaleBonneClé.png
+icon.svg::CompressedTexture2D::3248916236799257928::1719506455::1719506822::1::::<><>::
+L1Cryptanalyse.gd::GDScript::-1::1719506454::0::1::::<>Label<>::
+Lettre1.gd::GDScript::-1::1719506454::0::1::::<>Label<>::
+Lettre2.gd::GDScript::-1::1719506454::0::1::::<>Label<>::
+Lettre3.gd::GDScript::-1::1719506454::0::1::::<>Label<>::
+Lettre4.gd::GDScript::-1::1719506454::0::1::::<>Label<>::
+Lettre5.gd::GDScript::-1::1719506454::0::1::::<>Label<>::
+LettreZoom.png::CompressedTexture2D::1145016942025551194::1719506454::1719506824::1::::<><>::
+MachineATaperZoom.gd::GDScript::-1::1719506454::0::1::::<>Sprite2D<>::
+Main.gd::GDScript::-1::1719506454::0::1::::<>Node2D<>::
+Main.tscn::PackedScene::4892345160422884459::1719506454::0::1::::<><>::uid://dcapteoe2xlfl::::res://Télécom Paris/arrierePlan.png<>res://Main.gd<>uid://dx0jt2wigjnen::::res://Télécom Paris/arrierePlanBureau.png<>uid://c8nmlakw5cws1::::res://Télécom Paris/bureau.png<>uid://tq25e62ceet1::::res://Télécom Paris/machineATaper.png<>uid://cx5jgn6ejs5s8::::res://Télécom Paris/coeur.png<>uid://bsiqgyam2knx3::::res://Télécom Paris/4saisons.png<>uid://1sa6ih5d33s4::::res://Télécom Paris/livreOuvert.png<>uid://rmuqr4fo7m53::::res://Télécom Paris/vieuxCoffre.png<>uid://bmrlw6hlwkuts::::res://Télécom Paris/machineATaperZoom.png<>res://MachineATaperZoom.gd<>uid://d3lqx3xdgdiik::::res://Télécom Paris/LivreOuvertPoesie.png<>uid://8wwiyerbeqp0::::res://Télécom Paris/Coffre_Zoom.png<>uid://crtk8i2vjnihb::::res://Télécom Paris/Retour.png<>res://Chiffre1.gd<>uid://c4by6x8em06rr::::res://Télécom Paris/Félicitations, vous avez trouvé la clé de chiffrement !.png<>res://CodeZoom.gd<>uid://cqqxriwpmhvy0::::res://Télécom Paris/case1.png<>res://Lettre1.gd<>res://Chiffre2.gd<>res://Lettre2.gd<>res://Chiffre3.gd<>res://Chiffre4.gd<>res://Lettre3.gd<>res://Lettre4.gd<>res://Lettre5.gd<>uid://bx878feowj0tp::::res://Télécom Paris/PeinturesZoom.png<>uid://dminu6rxcy6hs::::res://Télécom Paris/codeZoom.png<>uid://5klxdyl22gmh::::res://Télécom Paris/Mauvaise clé de chiffrement.png<>uid://bnlnfitk4cy40::::res://Télécom Paris/mauvaisCodeAvecFond.png<>uid://7w4yv1artl2l::::res://Télécom Paris/VieuxCoffreOuvertAvecTresors.png<>uid://1s2l031gqjdp::::res://Télécom Paris/LightRed.png<>uid://bx2tctdocxh67::::res://Télécom Paris/ZoomTabChiffrementExplication.png<>uid://c52miumerdx23::::res://Télécom Paris/LightYellow.png<>uid://b0gfod4a1rqkm::::res://Télécom Paris/LettreZoom.png<>uid://bbokc2ymbgdrt::::res://scenes_debut.tscn<>uid://b16agpkgbqg4x::::res://Télécom Paris/ZoomExplicationPpeChiffrementVigenère.png<>uid://73yhj0g5wyo7::::res://Télécom Paris/ScèneTransition.png<>uid://cc8oleqxshaov::::res://chiffrement.tscn<>uid://dp3g50k2iir5t::::res://scènes_de_transition.tscn<>uid://bmdujml11sq1f::::res://cryptanalyse.tscn
+ScenesDebut.gd::GDScript::-1::1719506454::0::1::::<>Node2D<>::
+scenes_debut.tscn::PackedScene::2486123013156005921::1719506455::0::1::::<><>::res://ScenesDebut.gd<>uid://4hge11xhdpvk::::res://Télécom Paris/Scène1.png<>uid://crtk8i2vjnihb::::res://Télécom Paris/Retour.png<>uid://c0xdknjuquaml::::res://Télécom Paris/Scène2.png<>uid://bfysfmb4j08x0::::res://Télécom Paris/Scène3.png<>uid://bof8y6ca3k0kb::::res://Télécom Paris/Scène4.png<>uid://84ssatm64upa::::res://Télécom Paris/Scène5.png<>uid://bqiik6d4w87jx::::res://Télécom Paris/Scène6.png<>uid://c61vxxekbxreo::::res://Télécom Paris/Scène7.png<>uid://dtxrf71t7o2ge::::res://Télécom Paris/Scène8.png<>uid://bfkx5wtfdrfps::::res://Télécom Paris/Scène9.png
+scènes_de_transition.gd::GDScript::-1::1719506455::0::1::::<>Node2D<>::
+scènes_de_transition.tscn::PackedScene::8270316488306788339::1719506455::0::1::::<><>::uid://uxo3baqyc4mr::::res://Télécom Paris/ScèneFinale1.png<>res://scènes_de_transition.gd<>uid://crtk8i2vjnihb::::res://Télécom Paris/Retour.png<>uid://dcdpwlgpll750::::res://Télécom Paris/ScèneFinale2.png<>uid://cj3rsugnj22np::::res://Télécom Paris/ScèneFinale3.png<>uid://dvc6wkmvx2mty::::res://Télécom Paris/ScèneFinale4.png<>uid://bq51gi6osxf3c::::res://Télécom Paris/ScèneFinale5.png<>uid://dten6jr65j8bj::::res://Télécom Paris/VFlongueurClé.png<>uid://dx0jt2wigjnen::::res://Télécom Paris/arrierePlanBureau.png<>uid://rcwotqa18euh::::res://Télécom Paris/AideLongueurClé.png<>uid://l0urre6pv0w4::::res://Télécom Paris/MauvaiseLongueurClé.png<>uid://dvebke32q0ne2::::res://Télécom Paris/LongueurCléCorrecte.png
+TableauZoom.png::CompressedTexture2D::6258439347758741974::1719506454::1719506823::1::::<><>::
+TableChiffrement.gd::GDScript::-1::1719506454::0::1::::<>Sprite2D<>::
+test.tscn::PackedScene::3557900119423969944::1719506455::0::1::::<><>::
+::res://Télécom Paris/::1719506790
+4saisons.png::CompressedTexture2D::3667318338999973470::1719506454::1719506825::1::::<><>::
+AideLongueurClé.png::CompressedTexture2D::1198700895006771303::1719506454::1719506825::1::::<><>::
+AidepourtrouverCléChiffr.png::CompressedTexture2D::794103252382698876::1719506454::1719506825::1::::<><>::
+arrierePlan.png::CompressedTexture2D::7300584655270459977::1719506455::1719506825::1::::<><>::
+arrierePlanBureau.png::CompressedTexture2D::8825796734112654961::1719506455::1719506825::1::::<><>::
+BoutonAccèsPpeDeChiffr.png::CompressedTexture2D::7434116611321093592::1719506454::1719506824::1::::<><>::
+BoutonAccèsTable.png::CompressedTexture2D::4849870737731362724::1719506454::1719506824::1::::<><>::
+BoutonAidepourtrouverCléChiffr.png::CompressedTexture2D::6136733715725581540::1719506454::1719506824::1::::<><>::
+BoutonFréquenceFrancais.png::CompressedTexture2D::8112789969449844956::1719506454::1719506824::1::::<><>::
+BoutonFréquencesTexte.png::CompressedTexture2D::6914253878139400676::1719506454::1719506824::1::::<><>::
+BoutonOutilsD'analyseFréquentielle.png::CompressedTexture2D::5041407492194102872::1719506454::1719506824::1::::<><>::
+BoutonTC.png::CompressedTexture2D::5548751875637011545::1719506454::1719506824::1::::<><>::
+BoutonValider.png::CompressedTexture2D::7792262911539468302::1719506454::1719506824::1::::<><>::
+bureau.png::CompressedTexture2D::7116658382378017542::1719506455::1719506825::1::::<><>::
+case1.png::CompressedTexture2D::5930320213860054517::1719506455::1719506824::1::::<><>::
+case2.png::CompressedTexture2D::563684754418343160::1719506455::1719506824::1::::<><>::
+case3.png::CompressedTexture2D::1617737620837885527::1719506455::1719506824::1::::<><>::
+case4.png::CompressedTexture2D::7485938159431854573::1719506455::1719506824::1::::<><>::
+case5.png::CompressedTexture2D::409759028555246451::1719506455::1719506824::1::::<><>::
+Chiffrement.png::CompressedTexture2D::6974007224427956681::1719506454::1719506825::1::::<><>::
+codeZoom.png::CompressedTexture2D::8018869889086428284::1719506455::1719506825::1::::<><>::
+coeur.png::CompressedTexture2D::6449674002268068061::1719506455::1719506825::1::::<><>::
+CoffreOuvertFinal.png::CompressedTexture2D::5109649814706858535::1719506454::1719506826::1::::<><>::
+CoffrePasOuvert.png::CompressedTexture2D::4305240302480006876::1719506454::1719506825::1::::<><>::
+Coffre_Zoom.png::CompressedTexture2D::2362999478350021031::1719506454::1719506825::1::::<><>::
+CryptanalyseFondGlobal.png::CompressedTexture2D::8301203252102418941::1719506454::1719506825::1::::<><>::
+FondBois.png::CompressedTexture2D::1584934766814439562::1719506454::1719506825::1::::<><>::
+Félicitations, vous avez trouvé la clé de chiffrement !.png::CompressedTexture2D::6811896037295043735::1719506454::1719506825::1::::<><>::
+LettreAChiffrer.png::CompressedTexture2D::7030138624556982505::1719506454::1719506825::1::::<><>::
+LettreChiffrementBouton.png::CompressedTexture2D::7438202966192409816::1719506454::1719506825::1::::<><>::
+LettreChiffrementVF.png::CompressedTexture2D::471225721765430039::1719506454::1719506825::1::::<><>::
+LettreChiffréeComplétée.png::CompressedTexture2D::8849060516225225023::1719506454::1719506825::1::::<><>::
+Lettres fréquencesFrançais.png::CompressedTexture2D::1511899574850769839::1719506454::1719506824::1::::<><>::
+LettresFréquenceTexte.png::CompressedTexture2D::562219019211801580::1719506454::1719506824::1::::<><>::
+LettreZoom.png::CompressedTexture2D::4153856829651580424::1719506454::1719506825::1::::<><>::
+LightRed.png::CompressedTexture2D::1863729094227822009::1719506454::1719506825::1::::<><>::
+LightYellow.png::CompressedTexture2D::6934988835360485046::1719506454::1719506825::1::::<><>::
+LigneBienChiffrée.png::CompressedTexture2D::9138748566508015696::1719506454::1719506825::1::::<><>::
+LigneMalChiffrée.png::CompressedTexture2D::4403265138438132161::1719506454::1719506825::1::::<><>::
+livreOuvert.png::CompressedTexture2D::1862124526141607041::1719506455::1719506823::1::::<><>::
+LivreOuvertPoesie.png::CompressedTexture2D::9148271879711700818::1719506454::1719506824::1::::<><>::
+LongueurCléCorrecte.png::CompressedTexture2D::8641564108023097599::1719506455::1719506824::1::::<><>::
+machineATaper.png::CompressedTexture2D::1368311265021342224::1719506455::1719506823::1::::<><>::
+machineATaperZoom.png::CompressedTexture2D::3264490043121935928::1719506455::1719506824::1::::<><>::
+mauvaisCodeAvecFond.png::CompressedTexture2D::3322382506188968499::1719506455::1719506823::1::::<><>::
+Mauvaise clé de chiffrement.png::CompressedTexture2D::2127018242044108703::1719506455::1719506823::1::::<><>::
+MauvaiseClé.png::CompressedTexture2D::2965305549537197942::1719506455::1719506823::1::::<><>::
+MauvaiseLongueurClé.png::CompressedTexture2D::824932322727131493::1719506455::1719506823::1::::<><>::
+PeinturesZoom.png::CompressedTexture2D::4070890697681053921::1719506455::1719506823::1::::<><>::
+PhaseLongueurClé.png::CompressedTexture2D::3035040252107976445::1719506455::1719506824::1::::<><>::
+Retour.png::CompressedTexture2D::6005941450549626343::1719506455::1719506823::1::::<><>::
+Scène1.png::CompressedTexture2D::2050299961740099576::1719506455::1719506823::1::::<><>::
+Scène2.png::CompressedTexture2D::6575243853235402883::1719506455::1719506823::1::::<><>::
+Scène3.png::CompressedTexture2D::2788012435975700451::1719506455::1719506823::1::::<><>::
+Scène4.png::CompressedTexture2D::3381434534562167113::1719506455::1719506823::1::::<><>::
+Scène5.png::CompressedTexture2D::2377223875021985510::1719506455::1719506823::1::::<><>::
+Scène6.png::CompressedTexture2D::3526462432021906833::1719506455::1719506823::1::::<><>::
+Scène7.png::CompressedTexture2D::7003686686551553890::1719506455::1719506823::1::::<><>::
+Scène8.png::CompressedTexture2D::8541373608210584588::1719506455::1719506825::1::::<><>::
+Scène9.png::CompressedTexture2D::2759459929171483964::1719506455::1719506825::1::::<><>::
+ScèneFinale1.png::CompressedTexture2D::1452157654514591661::1719506455::1719506825::1::::<><>::
+ScèneFinale2.png::CompressedTexture2D::7306783501697331453::1719506455::1719506824::1::::<><>::
+ScèneFinale3.png::CompressedTexture2D::5463408930749095101::1719506455::1719506824::1::::<><>::
+ScèneFinale4.png::CompressedTexture2D::8639278581984880694::1719506455::1719506824::1::::<><>::
+ScèneFinale5.png::CompressedTexture2D::3572963339835568678::1719506455::1719506823::1::::<><>::
+ScèneFinaleBonneClé.png::CompressedTexture2D::3905383171447994863::1719506455::1719506824::1::::<><>::
+ScèneTransition2.png::CompressedTexture2D::3749184130801247701::1719506455::1719506824::1::::<><>::
+ScèneTransition.png::CompressedTexture2D::2305315793558296684::1719506455::1719506824::1::::<><>::
+tableChiffrement.png::CompressedTexture2D::8234328391308319949::1719506455::1719506823::1::::<><>::
+VFlongueurClé.png::CompressedTexture2D::8501952772155979895::1719506455::1719506824::1::::<><>::
+vieuxCoffre.png::CompressedTexture2D::1219226725396514440::1719506455::1719506823::1::::<><>::
+VieuxCoffreOuvertAvecTresors.png::CompressedTexture2D::2293264102029042293::1719506455::1719506823::1::::<><>::
+ZoomExplicationPpeChiffrementVigenère.png::CompressedTexture2D::4275337846994107481::1719506455::1719506824::1::::<><>::
+ZoomTabChiffrementExplication.png::CompressedTexture2D::4057660484395580210::1719506455::1719506823::1::::<><>::

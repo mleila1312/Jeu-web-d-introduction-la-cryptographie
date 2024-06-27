@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://b36i55ppvfbu"]
+
+[ext_resource type="Texture2D" uid="uid://cempa41mkqymo" path="res://art/bletchley_front (1020 x 550 px).png" id="1_e0uko"]
+[ext_resource type="Script" path="res://Turing/turing.gd" id="1_yvi8d"]
+[ext_resource type="Texture2D" uid="uid://rms17npncd1y" path="res://art/inside (1).png" id="3_gqsv4"]
+[ext_resource type="Texture2D" uid="uid://djs7uysbxjhy3" path="res://art/turing.png" id="4_2hga6"]
+[ext_resource type="Texture2D" uid="uid://tia4v2cncu17" path="res://art/table.png" id="4_usuif"]
+[ext_resource type="PackedScene" uid="uid://monivps86esr" path="res://Turing/enigma.tscn" id="6_ot56i"]
+
+[node name="Turing" type="Node2D"]
+script = ExtResource("1_yvi8d")
+
+[node name="BgFront" type="Sprite2D" parent="."]
+texture = ExtResource("1_e0uko")
+centered = false
+
+[node name="EspionDialogue" type="Polygon2D" parent="BgFront"]
+position = Vector2(-3, -43)
+polygon = PackedVector2Array(206, 311, 226, 595, 265, 595, 280, 595)
+
+[node name="BgInside" type="Sprite2D" parent="."]
+texture = ExtResource("3_gqsv4")
+centered = false
+
+[node name="Table" type="Sprite2D" parent="BgInside"]
+position = Vector2(641, 350)
+scale = Vector2(0.935, 0.935)
+texture = ExtResource("4_usuif")
+
+[node name="EnigmaTable" type="TextureButton" parent="BgInside/Table"]
+offset_left = -115.0
+offset_top = -203.0
+offset_right = 80.0
+offset_bottom = -8.0
+rotation = 0.191986
+
+[node name="Enigma" parent="." instance=ExtResource("6_ot56i")]
+
+[node name="Face" type="Sprite2D" parent="."]
+position = Vector2(99, 380.5)
+scale = Vector2(1.17, 1.17)
+texture = ExtResource("4_2hga6")
+
+[node name="TuringDialogue" type="Polygon2D" parent="Face"]
+position = Vector2(-23.4568, 4.32096)
+polygon = PackedVector2Array(105.508, 69.6106, 110.636, 108.072, 114.815, 141.77, 146.534, 142.26)
+
+[connection signal="pressed" from="BgInside/Table/EnigmaTable" to="." method="_on_enigma_table_pressed"]
+[connection signal="aide_cables" from="Enigma" to="." method="_on_enigma_aide_cables"]
+[connection signal="aide_generale" from="Enigma" to="." method="_on_enigma_aide_generale"]
+[connection signal="aide_reflecteurs" from="Enigma" to="." method="_on_enigma_aide_reflecteurs"]
+[connection signal="aide_rotors" from="Enigma" to="." method="_on_enigma_aide_rotors"]
+[connection signal="enigma_main" from="Enigma" to="." method="_on_enigma_enigma_main"]
+[connection signal="suite_enigma" from="Enigma" to="." method="_on_enigma_suite_enigma"]
