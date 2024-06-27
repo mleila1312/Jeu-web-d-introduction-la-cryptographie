@@ -4,6 +4,7 @@ import webbrowser
 import argparse
 from pathlib import Path
 from flask_cors import CORS
+from waitress import serve
 # Pour run le server installer:
 # pip install flask
 # pip install flask_cors
@@ -167,5 +168,4 @@ def add_header_home(response):
 
 
 # lance le server
-if __name__ == "__main__":
-    app.run(debug = False, host='::', port=4444)
+serve(app, host='::', port=4444)
