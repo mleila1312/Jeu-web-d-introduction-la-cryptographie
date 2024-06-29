@@ -1,5 +1,4 @@
 # Jeu-web-d-introduction-la-cryptographie
 
-google docs : https://docs.google.com/document/d/1rL3iGeWNqTtVk3szQiZfKJxRKdPLWAPZwekaUVw6Rdg/edit?usp=sharing  
-
-lettre de récap : https://docs.google.com/document/d/1vyS60XXYE8hyDDjPpXCv9XeahbJzkRLe6vEpyUgKAjA/edit?usp=sharing
+Voici notre jeu d'introduction à la cryptographie en escape game! Vous pouvez ici voir tout le code que nous avons réalisé, si vous voyez un bug dans un jeu/ sur le site ou autre, hésitez pas à créer une issue.  
+Voici le lien du site web ù il est hébergé : https://cryptoquest.rezel.net
